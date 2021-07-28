@@ -4,7 +4,7 @@
 ---
 ### Leonardo Dávalos
 - 27 años. Profesor suplente de Inglés en Nivel Secundario en DGCyE, Programador Java (UTN), estudiante de Programación Web Fullstack en Digital House y Fundación Formar.
-### Rodrigo Garayalde
+### Rodrigo Garayalde Borges
 - 22 años. Técnico electromecánico, estudiante de Programación Web Fullstack en Digital House y Fundación Formar.
 ### Germán Gutiérrez
 - 44 años. Bachiller técnico, vendedor independiente, estudiante de Programación Web Fullstack en Digital House y Fundación Formar.
