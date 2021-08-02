@@ -9,7 +9,7 @@
 ### Germán Gutiérrez
 - 44 años. Bachiller técnico, vendedor independiente, estudiante de Programación Web Fullstack en Digital House y Fundación Formar.
 ###  Vladimir Morales  
-- 20 años. Estudiante de Programación Web Fullstack en Digital House y Fundación Formar.
+- 20 años. Estudiante de Programación Web Fullstack en Digital House y Fundación Formar .
 ---
 
 ### *¡Bienvenidos a **Forja!***
