@@ -6,8 +6,6 @@
 - 27 años. Profesor suplente de Inglés en Nivel Secundario en DGCyE, Programador Java (UTN), estudiante de Programación Web Fullstack en Digital House y Fundación Formar.
 ### Rodrigo Garayalde Borges
 - 22 años. Técnico electromecánico, estudiante de Programación Web Fullstack en Digital House y Fundación Formar.
-### Germán Gutiérrez
-- 44 años. Bachiller técnico, vendedor independiente, estudiante de Programación Web Fullstack en Digital House y Fundación Formar.
 ###  Vladimir Morales  
 - 20 años. Estudiante de Programación Web Fullstack en Digital House y Fundación Formar .
 ---
@@ -23,13 +21,13 @@ Presentamos la tienda online de Forja, una página donde practicantes de artes m
 
 ---
 
-- Por los productos o servicios que ofrecen.
+- Por los productos o servicios que ofrecen:
     + [https://www.granmarctiendaonline.com.ar/](https://www.granmarctiendaonline.com.ar/)
 
-- Por los clientes a los que apuntan.
+- Por los clientes a los que apuntan:
     + [http://www.gran-marc.com.ar](http://www.gran-marc.com.ar)
 
-- Por la estética que presentan.
+- Por la estética que presentan:
     + [https://www.granmarctiendaonline.com.ar/](https://www.granmarctiendaonline.com.ar/)
     + [https://www.decathlon.es/](https://www.decathlon.es/)
 
