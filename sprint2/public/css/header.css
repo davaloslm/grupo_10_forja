@@ -3,17 +3,62 @@ header div.banner{
     width: 100%;
     height: 100px;
 }
+
 header nav{
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     background-color: var(--blue);
     padding: 10px 0;
+    
+
 }
 
-/* productos----main */
-main{
-    background-color: blueviolet;
-    width:375px;
-    height: 300px;
+header nav label i{
+    background-color: var(--lightBlue);
+    color: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+    
+
+
+    
 }
+
+header nav form {
+    width: 60%; 
+    display: flex;
+    justify-content: center;
+    
+}
+
+header nav form input{
+    width: 90%;
+    border: solid 1px var(--lightBlue);
+}
+
+header nav form button{
+    height: 26px;
+    border-radius: 0 5px 5px 0;
+    display: flex;
+    
+}
+
+header nav form button.search i{
+    
+    color: var(--white);
+    padding: 5px;
+    border-radius: 0px 5px 5px 0px;
+    align-self: center;
+    
+    
+}
+
+header nav button.cart i{
+    background-color: var(--lightBlue);
+    color: var(--white);
+    padding: 5px;
+    border-radius: 5px;
+}
+

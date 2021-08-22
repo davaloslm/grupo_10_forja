@@ -16,3 +16,11 @@
     --roboto: 'Roboto', sans-serif;
 
 }
+
+button{
+    background-color: var(--lightBlue);
+    border: none;    
+    border-radius: 5px;
+
+}
+
