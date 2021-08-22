@@ -1,0 +1,12 @@
+header div.banner{
+    background-color: aqua;
+    width: 100%;
+    height: 100px;
+}
+header nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--blue);
+    padding: 10px 0;
+}
