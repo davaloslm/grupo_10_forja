@@ -1,12 +1,15 @@
-header div.banner{
-    background-color: aqua;
+
+section{
+    background-color: #fcfcff;
+    opacity: 0.8;
+    background-image:  repeating-radial-gradient( circle at 0 0, transparent 0, #fcfcff 10px ),     repeating-linear-gradient( #6c41ee55, #6c41ee );
     width: 100%;
-    height: 100px;
-}
-header nav{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    background-color: var(--blue);
-    padding: 10px 0;
+    height: 300px;
+    
+    /* margin: 20px 20px 20px 20px;
+    width: 50%; */
+};
+
+section form{
+    background-color: rgb(255, 255, 255);
 }
