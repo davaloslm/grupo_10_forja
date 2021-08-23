@@ -1,7 +1,20 @@
 header div.banner{
-    background-color: aqua;
+    position: relative;
     width: 100%;
-    height: 100px;
+    display: flex;
+    max-width: 1024px;
+}
+header img {
+    width: 100%;
+    display: flex;
+}
+
+header .logo {
+    position: absolute;
+    width: 17%;
+    top: 1%;
+    left: 41.5%;
+
 }
 
 header nav{
@@ -11,7 +24,7 @@ header nav{
     justify-content: space-around;
     background-color: var(--blue);
     padding: 10px 0;
-    
+    border: 1px solid var(--lightBlue);
 
 }
 
@@ -62,3 +75,26 @@ header nav button.cart i{
     border-radius: 5px;
 }
 
+@media (min-width: 768px){
+
+    header nav label {
+        display: none;
+    }
+}
+
+
+
+
+@media (min-width: 1024px) {
+
+    header .banner {
+        
+        margin: 0 auto;
+    }
+
+    header .container {
+        background-image: url(/img/fondo.png);
+        background-repeat: repeat;
+    }
+
+}
