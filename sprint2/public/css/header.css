@@ -38,6 +38,9 @@ header nav label i{
 
     
 }
+header .home, .user{
+    display: none;
+}
 
 header nav form {
     width: 60%; 
@@ -80,6 +83,29 @@ header nav button.cart i{
     header nav label {
         display: none;
     }
+    header nav button.home{
+        display: flex;
+    }
+
+    header nav button.home i{
+        background-color: var(--lightBlue);
+        color: var(--white);
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    header .user{
+        display: flex;
+        color: var(--white);
+        padding: 5px;
+        border-radius: 5px;
+        align-self: center;
+    }
+
+    header nav button a{
+        color: var(--white);
+    }
+    
 }
 
 

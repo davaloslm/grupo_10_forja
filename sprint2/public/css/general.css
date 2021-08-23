@@ -23,4 +23,10 @@ button{
     border-radius: 5px;
 
 }
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
 
