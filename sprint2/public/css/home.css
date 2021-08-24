@@ -1,0 +1,36 @@
+/* main label i {
+    color: var(--white);
+    padding-right: 5px;
+}
+
+main label {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--lightBlue);
+    color: var(--white);
+    padding: 5px
+} */
+
+
+/* main nav {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: var(--lightBlue);
+    padding: 10px 0;
+}
+
+main nav ul li a {
+    color: var(--white);
+    text-transform: uppercase;
+}
+main nav ul li ul {
+    display: flex;
+    flex-direction: column;
+    display: none;
+}
+
+main nav ul {
+    display: flex;
+} */
