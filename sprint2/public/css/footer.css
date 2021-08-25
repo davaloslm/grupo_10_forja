@@ -27,10 +27,6 @@ footer section ul li a, footer section h3{
     color: var(--white);
 }
 
-main{
-    display:none  /* borrar */
-}
-
 @media(min-width: 425px){
 
        
