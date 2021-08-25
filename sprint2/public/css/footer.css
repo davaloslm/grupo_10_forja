@@ -1,25 +1,28 @@
 footer{
     background: radial-gradient(#053742, #000);
     width: 100%;
-    height: 120px;
+    display:flex;
     display: inline-flex;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
 }
 
 footer section.contntF{
-    /* background-color: aqua; */
-    width: 100px;
-    height: 100px;
+    text-align: center;
+    width: 20%;
+    margin: 20px 0px;
     
 }
 
-footer section img{
-    margin: auto;
-    width: 90%;
-    
+main{
+    display: none;
 }
 
-footer section h3, footer section ul{
-    margin: auto;
+footer section.contntF img{
+    /* max-height:30%; */
+    position: absolute;
+    width: 25%;
+    padding-right: 20%;
 }
+
