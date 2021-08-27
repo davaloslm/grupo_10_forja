@@ -1,36 +1,82 @@
-/* main label i {
-    color: var(--white);
-    padding-right: 5px;
+main {
+    background: linear-gradient(180deg, #053742 40.94%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, rgba(5, 55, 66, 0.2) 39.9%, rgba(0, 0, 0, 0) 100%);
 }
 
-main label {
-    display: flex;
-    justify-content: flex-end;
+main section.carrusel {
+    display: none;
+}
+/* sección categorías más populares */
+main section.populares h2 {
     background-color: var(--lightBlue);
+    text-align: center;
     color: var(--white);
-    padding: 5px
-} */
+    padding: 5px 0 5px 0;
+    margin-bottom: 10px;
+}
 
-
-/* main nav {
+main section.populares div.populares_categorias {
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
-    justify-content: space-around;
-    background-color: var(--lightBlue);
-    padding: 10px 0;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
 }
 
-main nav ul li a {
-    color: var(--white);
-    text-transform: uppercase;
-}
-main nav ul li ul {
+main section.populares div.populares_categorias article.categorias {
+    margin-top: 10px;
+    width: 45%;
+    text-align: center;
     display: flex;
     flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+main section.populares div.populares_categorias article.categorias h4 {
+    background-color: var(--lightBlue);
+    color: white;
+    width: 100%;
+}
+
+main section.populares div.populares_categorias article a img {
+    width: 100%;
+}
+
+/* sección productos destacados */
+main section.destacados h2 {
+    background-color: var(--lightBlue);
+    text-align: center;
+    color: var(--white);
+    padding: 5px 0 5px 0;
+    margin: 20px 0 10px 0;
+}
+
+main section.destacados div.destacados_contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main section.destacados div.destacados_contenedor article.producto_des {
+    margin-top: 10px;
+    width: 45%;
+    background-color: var(--white);
+}
+
+main section.destacados div.destacados_contenedor article.producto_des a img {
+    width: 100%;
+}
+
+main section.destacados div.destacados_contenedor article.producto_des p {
     display: none;
 }
 
-main nav ul {
-    display: flex;
-} */
+main section.destacados div.destacados_contenedor article.producto_des div.image_container a img {
+    width: 100%;
+}
+
+main section.destacados div.destacados_contenedor article.producto_des div.detail_container label img {
+    width: 30%;
+}
+
