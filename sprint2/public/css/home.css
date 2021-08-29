@@ -34,14 +34,16 @@ main section.populares div.populares_categorias article.categorias {
 }
 
 main section.populares div.populares_categorias article.categorias h4 {
-    background-color: var(--lightBlue);
+    background-color: var(--black);
     color: white;
     width: 100%;
     text-transform: uppercase;
+    border-radius: 5px;
 }
 
 main section.populares div.populares_categorias article a img {
-    width: 100%
+    width: 100%;
+    border-radius: 5px;
 }
 
 /* sección productos destacados */
@@ -65,7 +67,7 @@ main section.destacados div.destacados_contenedor article.producto_des {
     margin-top: 10px;
     width: 45%;
     background-color: var(--white);
-    border: 3px solid var(--lightBlue);
+    border-radius: 5px;
 }
 
 main section.destacados div.destacados_contenedor article.producto_des a img {
@@ -76,16 +78,26 @@ main section.destacados div.destacados_contenedor article.producto_des a img {
 main section.destacados div.destacados_contenedor article.producto_des div.image_container a img {
     width: 100%;
     padding: 5%;
+    border-radius: 10px;
 }
 
 main section.destacados div.destacados_contenedor article.producto_des div.detail_container {
-    padding: 10px;
+    position: relative;
+    padding: 0px 10px 10px 10px;
     text-align: center;
 }
 
+main section.destacados div.destacados_contenedor article.producto_des div.detail_container i {
+    position: absolute;
+    top: -35px;
+    left: 15px;
+    color: var(--lightBlue);
+}
+
 main section.destacados div.destacados_contenedor article.producto_des div.detail_container p.precio{
-    background-color: var(--lightBlue);
-    color: var(--white);
+    color: var(--black);
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+    font-size: 20px;
 }
 
 main section.destacados div.destacados_contenedor article.producto_des div.detail_container p.descripcion {
@@ -118,23 +130,28 @@ main section.ofertas div.ofertas_contenedor article.producto_ofer {
     margin-top: 10px;
     width: 45%;
     background-color: var(--white);
-    border: 3px solid var(--lightBlue);
+    border-radius: 5px;
 }
 
 main section.ofertas div.ofertas_contenedor article.producto_ofer div.image_container a img {
     width: 100%;
     padding: 5%;
+    border-radius: 10px;
 }
 
 main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container {
+    position: relative;
     text-align: center;
-    padding: 10px;
+    padding: 0px 10px 10px 10px;
 }
 
 main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
+    position: absolute;
+    top: -35px;
+    left: 10px;
     color: var(--white);
     background-color: var(--lightBlue);
-    border: 1px solid var(--white);
+    font-size: 20px;
 }
 
 main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descripcion {
@@ -148,9 +165,9 @@ main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_con
 }
 
 main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.precio_des  {
-    background-color: var(--lightBlue);
-    color: var(--white);
-    text-align: center;
+    color: var(--black);
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+    font-size: 20px;
     
 }
 
@@ -158,7 +175,7 @@ main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_con
 main div.go-top {
     display: flex;
     justify-content: space-between;
-    flex-direction: column;
+    flex-direction: column-reverse;
     position: fixed;
     z-index: 100;
     bottom: 15%;
@@ -168,10 +185,11 @@ main div.go-top {
 }
 
 main div.go-top a.top {
-    margin-bottom: 10px;
+    margin-top: 10px;
     border-radius: 20px;
     background-color: var(--lightBlue);
     padding: 3px;
+    font-size: 13px;
 }
 
 main div.go-top a.top span {
@@ -186,36 +204,36 @@ main div.go-top a.top i {
 }
 
 main div.go-top a.whatsapp {
-    width:60px;
-    height:60px;
-    bottom:40px;
-    right:40px;
+    width:30px;
+    height:30px;
+    bottom:20px;
+    right:20px;
     background-color:#25d366;
     color:#FFF;
     border-radius:50px;
     text-align:center;
-    font-size:30px;
+    font-size:20px;
     align-self: flex-end;
 }
 
 main div.go-top a.whatsapp i {
-    margin-top:13px;
+    margin-top:5px;
 }
 
 /* Tablet */
 @media (min-width: 425px) {
 
-    /* carrusel */
-    main section.carrusel {
-        display: block;
-    }
     /* señuelo */
     main section.carrusel div.carrusel_container img {
         width: 100%;
         max-height: 768px;
         max-width: 1024px;
     }
-
+    
+    /* carrusel */
+    main section.carrusel {
+        display: block;
+    }
     main section.carrusel div.carrusel_container {
         width: 100%;
         text-align: center;
@@ -236,8 +254,9 @@ main div.go-top a.whatsapp i {
     main section.carrusel div.carrusel_container ul.slider li img {
         width: 100%;
         max-height: 768px;
-        max-width: 1024px;
+        /* max-width: 1024px; */
         object-fit: cover;
+        box-shadow: 0px 5px 10px 0px rgba(42,210,210,1);
     }
 
     main section.carrusel div.carrusel_container ul.slider li:first-child {
@@ -248,29 +267,76 @@ main div.go-top a.whatsapp i {
         opacity: 1;
     }
 
-    main section.carrusel div.botones_container {
-        padding-bottom: 5px;
-    }
-
-    main section.carrusel div.botones_container ul.botones_slide {
-        display: flex;
-        justify-content: center;
-    }
-
     main section.carrusel div.botones_container ul.botones_slide li {
-        margin: 20px;
+        display: inline-block;
     }
 
     main section.carrusel div.botones_container ul.botones_slide li a{
-        color: var(--white);
-        background-color: var(--lightBlue);
-        padding: 5px;
-        border-radius: 50px;
+        position: relative;
+        display: inline-block;
+        background-color: var(--black);
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
     }
 
+    main section.destacados div.destacados_contenedor article.producto_des div.detail_container i {
+        top: -35px;
+        left: 15px;
+    }
+
+    main section.populares div.populares_categorias article a img {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+    }
+
+    main section.destacados div.destacados_contenedor article.producto_des, main section.ofertas div.ofertas_contenedor article.producto_ofer {
+        width: 30%;
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+    }
+
+    main section.destacados div.destacados_contenedor article.producto_des div.detail_container p.descripcion, main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descripcion {
+        display: block;
+    }
+
+
+
+    /* whatsapp & goTop */
+    main div.go-top a.top {
+        font-size: 20px;
+    }
+    
+
+    main div.go-top {
+        bottom: 20%;
+        
+    }
+
+    main div.go-top a.whatsapp i {
+        margin-top:13px;
+    }
+
+    main div.go-top a.whatsapp {
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+        font-size:30px;
+        align-self: flex-end;
+    }
 }
 
 /* Laptop */
 @media (min-width: 768px) {
-
+    main section.destacados div.destacados_contenedor article.producto_des, main section.ofertas div.ofertas_contenedor article.producto_ofer {
+        width: 24%;
+        box-shadow: none;
+    }
+    main section.destacados div.destacados_contenedor article.producto_des:hover, main section.ofertas div.ofertas_contenedor article.producto_ofer:hover {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+        transition: box-shadow .5s;
+    }
 }
