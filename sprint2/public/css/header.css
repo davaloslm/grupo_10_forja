@@ -28,14 +28,14 @@ header nav{
 
 }
 
-/* desplegable burger */
+/* ///////////////////////////////menu///////////////////////// */
 
 header nav input.burger{
     display: none;
     
 }
 
-header nav div.desplegable{
+header nav div.menu{
     display: none;
     background-color: var(--white);
     position: fixed;
@@ -43,67 +43,57 @@ header nav div.desplegable{
     top: 0;
     left: 0;
     box-shadow:  0px 0px 20px rgb(0 0 0);
+    width: 180px; 
+    z-index: 300;  
 
 
 }
 
-header nav div.desplegable ul li{
-    padding: 10px 0;
-}
 
-header nav input.burger:checked ~ div.desplegable{
+
+header nav input.burger:checked ~ div.menu{
     display: block;
 }
 
 
-div ul.list li{
-    display: none;
+header nav div.menu ul.listaCategorias li.categorias{
+    position: relative;
+    overflow: hidden;
 }
 
-header nav div.desplegable label i{
+header nav div.menu ul.listaCategorias li.categorias a{
+    line-height: 40px;
+}
+
+header nav div.menu ul.listaCategorias li.categorias div.submenu{
+    display: flex;
+    flex-direction: column;
+    /* position: absolute; */ /* solo en laptop y + */
+    background-color: var(--lightBlue);
+    max-height: 0;
+    transition: .5s;
+}
+
+header nav div.menu ul.listaCategorias li.categorias:target div.submenu{
+    max-height: 300px;
+}
+
+header nav div.menu label i{
     display: block;
     text-align: end;
     padding: 5px;
-}
-
- input.boxeo, input.taekwondo, input.kick-muay, input.entrenamiento, input.jiujitsu, input.judo{
-     display: none;
- }
-
-header nav div.desplegable ul input.boxeo:checked ~ li {
-    display: block;
-}
-
-header nav div.desplegable ul input.taekwondo:checked ~ li {
-    display: block;
-}
-
-header nav div.desplegable ul input.kick-muay:checked ~ li {
-    display: block;
-}
-
-header nav div.desplegable ul input.judo:checked ~ li {
-    display: block;
-}
-
-header nav div.desplegable ul input.jiujitsu:checked ~ li {
-    display: block;
-}
-
-header nav div.desplegable ul input.entrenamiento:checked ~ li {
-    display: block;
 }
 
 header nav input.close{
     display: none;
 }
 
-header nav input.close:checked ~ div.desplegable{
+header nav input.close:checked ~ div.menu{
     display: none;
     
 }
 
-/* fin */
+/* //////////////////////////////fin menu//////////////////////////*/
 
 header nav label i.fa-bars{
     background-color: var(--lightBlue);
@@ -159,6 +149,10 @@ header nav button.cart i{
 
 @media (min-width: 768px){
 
+    header nav{
+        padding: 10px 0 0 0 ;
+    }
+
     header nav label {
         display: none;
     }
@@ -173,6 +167,10 @@ header nav button.cart i{
         border-radius: 5px;
     }
 
+    header nav div.shadow{
+        display: none;
+    }
+
     header .user{
         display: flex;
         color: var(--white);
@@ -185,46 +183,46 @@ header nav button.cart i{
         color: var(--white);
     }
     
-    /* desplega */
+    /* menu */
 
-    header nav div.desplegable{
+    header nav div.menu{
     display: block;
     width: 100%;
-    background-color: var(--blue);
+    background-color: var(--lightBlue);
     position: static;
-    /* height: 100vh; */
-    /* top: 0;
-    left: 0; */
     box-shadow:none;
     margin-top: 10px;
     max-height: 40px;
     border: 1px solid var(--lightBlue);
 
-    }
+    }    
 
-    header nav div.desplegable label i{
-        display: none;
-    }
-
-    header nav div.desplegable ul{
+    header nav div.menu ul{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
-    }
+        position: relative;
+        text-align: center;
+        width: 100%;
 
-    header nav div.desplegable ul label{
-        display: flex;
-    }
+   }
 
-    
+   header nav div.menu ul.listaCategorias li.categorias div.submenu a:hover{
+       background-color: #2dbdbd;
+   }
 
+   header nav div.menu ul.listaCategorias li.categorias div.submenu a {
+       display: none;
+   }
 
+   header nav div.menu ul.listaCategorias li.categorias:target div.submenu a {
+       display: block;
+
+   }  
+ 
 }
 
-/*  */
-
-@media (min-width: 1024px) {
-
+@media (min-width: 1024px){
     header .banner {
         
         margin: 0 auto;
@@ -234,5 +232,4 @@ header nav button.cart i{
         background-image: url(/img/fondo.png);
         background-repeat: repeat;
     }
-
 }

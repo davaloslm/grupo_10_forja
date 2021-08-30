@@ -1,2 +1,74 @@
+main.login{
+    background: linear-gradient(0deg, #020202 28.86%, rgba(2, 2, 2, 0) 85.81%), linear-gradient(180deg, #053742 49.22%, rgba(5, 55, 66, 0) 100%);
+    padding: 40px 0 ;
+}
 
+main.login section{
+    background-color: var(--white);
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    border: solid 1px var(--lightBlue);
+    border-radius: 5px;
+}
 
+main.login section h2{
+    padding: 10px;
+}
+
+main.login section samp{
+    display: block;
+    padding: 10px;
+}
+
+main.login section a{
+    padding: 10px;
+    color: black;
+}
+
+main.login section form{
+    padding: 10px;
+}
+
+main.login section form input{
+    border-radius: 5px;
+    margin: 10px;
+    border: solid 1px var(--lightBlue);
+    padding: 4px;
+    cursor: pointer;
+    outline-color: #3db7b6;
+}
+
+main.login section h5{
+    padding: 10px;
+}
+
+main.login section h5 a{
+    color: rgb(110, 110, 110);
+}
+
+main.login section button{
+    margin: 15px;
+    padding: 5px;
+}
+
+main.login section button a{
+    color: var(--white);
+}
+
+@media(min-width: 425px){
+
+    main.login section h2{
+        font-size: 1.8rem;
+    }
+    
+    
+}
+@media(min-width: 768px){
+
+    main.login section button:hover{
+        background-color: #2dbdbd;
+        display: contents;
+    }
+}
