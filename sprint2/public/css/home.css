@@ -331,9 +331,26 @@ main div.go-top a.whatsapp i {
 
 /* Laptop */
 @media (min-width: 768px) {
-    main section.destacados div.destacados_contenedor article.producto_des, main section.ofertas div.ofertas_contenedor article.producto_ofer {
+
+    main section.carrusel div.botones_container ul.botones_slide li a:hover {
+        background-color: var(--white);
+        transition: all .5s;
+    }
+
+    main section.populares div.populares_categorias article.categorias {
         width: 24%;
+    }
+
+    main section.populares div.populares_categorias article.categorias:hover {
+        transform: scale(1.2);
+        transition: all 1s;
+    }
+    
+
+    main section.destacados div.destacados_contenedor article.producto_des, main section.ofertas div.ofertas_contenedor article.producto_ofer {
+        width: 23%;
         box-shadow: none;
+        max-width: 250px;
     }
     main section.destacados div.destacados_contenedor article.producto_des:hover, main section.ofertas div.ofertas_contenedor article.producto_ofer:hover {
         box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
