@@ -1,13 +1,9 @@
-main {
-    background: linear-gradient(0deg, #020202 28.86%, rgba(2, 2, 2, 0) 85.81%), linear-gradient(180deg, #053742 49.22%, rgba(5, 55, 66, 0) 100%);
-}
-
 main section.carrusel {
     display: none;
 }
-/* sección categorías más populares */
+/*                                       sección categorías más populares                               */
 main section.populares h2 {
-    background-color: var(--lightBlue);
+    background-color: var(--black);
     text-align: center;
     color: var(--white);
     padding: 5px 0 5px 0;
@@ -46,7 +42,7 @@ main section.populares div.populares_categorias article a img {
     border-radius: 5px;
 }
 
-/* sección productos destacados */
+/*                                   sección productos destacados                        */
 main section.destacados h2 {
     background-color: var(--lightBlue);
     text-align: center;
@@ -104,7 +100,7 @@ main section.destacados div.destacados_contenedor article.producto_des div.detai
     display: none;
 }
 
-/* sección productos en oferta */
+/*                                sección productos en oferta                         */
 
 main section.ofertas {
     padding-bottom: 20px;
@@ -220,7 +216,7 @@ main div.go-top a.whatsapp i {
     margin-top:5px;
 }
 
-/* Tablet */
+/*                                                 Tablet                                      */
 @media (min-width: 425px) {
 
     /* señuelo */
@@ -256,7 +252,8 @@ main div.go-top a.whatsapp i {
         max-height: 768px;
         /* max-width: 1024px; */
         object-fit: cover;
-        box-shadow: 0px 5px 10px 0px rgba(42,210,210,1);
+        animation: respiracion1 5s linear alternate infinite;
+        animation-delay: 5s;
     }
 
     main section.carrusel div.carrusel_container ul.slider li:first-child {
@@ -286,7 +283,8 @@ main div.go-top a.whatsapp i {
     }
 
     main section.populares div.populares_categorias article a img {
-        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+        animation: respiracion 5s linear alternate infinite;
+        animation-delay: 5s;
     }
 
     main section.destacados div.destacados_contenedor article.producto_des, main section.ofertas div.ofertas_contenedor article.producto_ofer {
@@ -329,13 +327,25 @@ main div.go-top a.whatsapp i {
     }
 }
 
-/* Laptop */
+/*                                                     Laptop                                          */
 @media (min-width: 768px) {
+
+    main section.carrusel div.carrusel_container {
+        background-image: url("/img/fondo.png");
+        background-repeat: repeat;
+        
+    }
 
     main section.carrusel div.botones_container ul.botones_slide li a:hover {
         background-color: var(--white);
         transition: all .5s;
     }
+
+    main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
+        animation: vibracion .5s linear alternate 2;
+        animation-delay: 40s;
+    }
+    
 
     main section.populares div.populares_categorias article.categorias {
         width: 24%;
@@ -343,17 +353,124 @@ main div.go-top a.whatsapp i {
 
     main section.populares div.populares_categorias article.categorias:hover {
         transform: scale(1.2);
-        transition: all 1s;
+        transition: all .6s;
     }
-    
 
     main section.destacados div.destacados_contenedor article.producto_des, main section.ofertas div.ofertas_contenedor article.producto_ofer {
-        width: 23%;
+        width: 22%;
         box-shadow: none;
         max-width: 250px;
     }
     main section.destacados div.destacados_contenedor article.producto_des:hover, main section.ofertas div.ofertas_contenedor article.producto_ofer:hover {
         box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
         transition: box-shadow .5s;
+    }
+}
+
+
+@media (min-width: 1137px) {
+
+    main section.destacados div.destacados_contenedor article.producto_des, main section.ofertas div.ofertas_contenedor article.producto_ofer {
+        width: 100%;
+    }
+
+    main section.destacados div.destacados_contenedor, main section.ofertas div.ofertas_contenedor {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 10px;
+    }
+
+    main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
+        top: -41px;
+        left: 13px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    main section.destacados div.destacados_contenedor, main section.ofertas div.ofertas_contenedor {
+        grid-template-columns: repeat(5, auto);
+    }
+
+    main div.go-top {
+        bottom: 0;
+    }
+}
+
+@media (min-width: 1560px) {
+
+    main section.destacados div.destacados_contenedor, main section.ofertas div.ofertas_contenedor {
+        grid-template-columns: repeat(6, auto);
+    }
+}
+
+
+body {
+    /* max-width: 1660px;
+    margin: 0 auto; */
+    background: linear-gradient(0deg, #020202 28.86%, rgba(2, 2, 2, 0) 85.81%), linear-gradient(180deg, #053742 49.22%, rgba(5, 55, 66, 0) 100%);
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////// */
+/*                                 ANIMACIONES                                       */
+
+/*                    animacion categorias populares                          */
+@keyframes respiracion {
+    0% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0);
+    }
+
+    25% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.25);
+    }
+
+    50% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.50);
+    }
+
+    75% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.75);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+    }
+}
+
+/*                animacion carrusel                          */
+
+@keyframes respiracion1 {
+    0% {
+        box-shadow: 0px 5px 20px 0px rgba(42,210,210,0);
+    }
+
+    25% {
+        box-shadow: 0px 5px 20px 0px rgba(42,210,210,0.25);
+    }
+
+    50% {
+        box-shadow: 0px 5px 20px 0px rgba(42,210,210,0.50);
+    }
+
+    75% {
+        box-shadow: 0px 5px 20px 0px rgba(42,210,210,0.75);
+    }
+
+    100% {
+        box-shadow: 0px 5px 20px 0px rgba(42,210,210,1);
+    }
+}
+
+/*               animacion descuento                */
+@keyframes vibracion {
+    
+    5%, 25%, 45%, 65%, 85%  {
+        transform: translateX(-5px);
+    }
+
+    15%, 35%, 55%, 75%, 95% {
+        transform: translateX(5px);
     }
 }
