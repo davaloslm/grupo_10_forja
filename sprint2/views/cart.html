@@ -4,10 +4,163 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <title>Forja Cart</title>
 </head>
 <body>
-    <h1>cart</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repudiandae neque beatae possimus placeat tempore! Illo cumque recusandae ullam, molestiae consectetur debitis vero a officiis, nam repellat labore provident illum.</p>
+    <header>
+
+
+        <div class="container">
+            <div class="banner">
+                <img src="/img/banner.png" alt="Banner">
+                <a href="/"><img src="/img/logo.png" alt="" class="logo"></a>
+            </div>
+        </div>
+        <nav>
+            <button class="home">
+                <a href="">
+                    <i class="fas fa-home"></i>
+                </a>
+            </button>
+            <input class="burger" name="open-close" type="radio" id="categorias">
+            <label for="categorias">
+                <i class="fas fa-bars"></i>
+            </label>
+            <form action="">
+                <input type="text" name="search" id="search" placeholder="Buscar marcas, productos y más">
+                <button class="search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="user">
+                <a href="">Iniciar sesión</a>
+            </button>
+            <button class="user">
+                <a href="">Registrate</a>
+            </button>
+            <button class="cart">
+                <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
+            </button>
+
+
+            <input class="close" type="radio" name="open-close" id="close">
+            <div class="menu">
+                <label for="close"><i class="fas fa-times"></i></label>
+                
+                
+                <ul class="listaCategorias">
+                    <li class="categorias" id="taekwondo">
+                        <a href="#taekwondo">TaeKwon-Do</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="boxeo">
+                        <a href="#boxeo">Boxeo</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="kick-muay">
+                        <a href="#kick-muay">KickBoxing/MuayThai</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="judo">
+                        <a href="#judo">Judo</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="jiujitsu">
+                        <a href="#jiujitsu">Jiu-Jitsu</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="entrenamiento">
+                        <a href="#entrenamiento">Entrenamiento</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>                    
+
+                    
+
+                </ul>
+
+
+            </div>
+
+        
+
+        </nav>
+
+
+    </header>
+
+    <main class="cart">
+
+    </main>
+
+    <footer>
+
+
+        <section>
+            <h3>REDES</h3>
+            <ul>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+            </ul>
+        </section>
+
+        <section class="footerLogo">
+            <img src="../img/logo.png" alt="forja">
+        </section>
+
+        <section>
+            <h3>CONTACTO</h3>
+            <ul>
+                <li><a href="">E-mail</a></li>
+                <li><a href="">Telefono</a></li>
+                <li><a href="">Dirección</a></li>
+            </ul>
+        </section>
+
+
+    </footer>
 </body>
 </html>
