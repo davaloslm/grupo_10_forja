@@ -11,6 +11,10 @@ main.login section{
     text-align: center;
     border: solid 1px var(--lightBlue);
     border-radius: 5px;
+
+    animation: respiracion 2s linear alternate infinite;
+    animation-delay: 2s;
+
 }
 
 main.login section h2{
