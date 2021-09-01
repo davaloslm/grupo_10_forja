@@ -1,8 +1,8 @@
-main section.carrusel {
+.home section.carrusel {
     display: none;
 }
 /*                                       sección categorías más populares                               */
-main section.populares h2 {
+.home section.populares h2 {
     background-color: var(--black);
     text-align: center;
     color: var(--white);
@@ -11,7 +11,7 @@ main section.populares h2 {
     text-transform: uppercase;
 }
 
-main section.populares div.populares_categorias {
+.home section.populares div.populares_categorias {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -19,7 +19,7 @@ main section.populares div.populares_categorias {
 
 }
 
-main section.populares div.populares_categorias article.categorias {
+.home section.populares div.populares_categorias article.categorias {
     margin-top: 10px;
     width: 45%;
     text-align: center;
@@ -29,7 +29,7 @@ main section.populares div.populares_categorias article.categorias {
     justify-content: space-between;
 }
 
-main section.populares div.populares_categorias article.categorias h4 {
+.home section.populares div.populares_categorias article.categorias h4 {
     background-color: var(--black);
     color: white;
     width: 100%;
@@ -37,13 +37,13 @@ main section.populares div.populares_categorias article.categorias h4 {
     border-radius: 5px;
 }
 
-main section.populares div.populares_categorias article a img {
+.home section.populares div.populares_categorias article a img {
     width: 100%;
     border-radius: 5px;
 }
 
 /*                                   sección productos destacados                        */
-main section.destacados h2 {
+.home section.destacados h2 {
     background-color: var(--lightBlue);
     text-align: center;
     color: var(--white);
@@ -52,61 +52,61 @@ main section.destacados h2 {
     text-transform: uppercase;
 }
 
-main section.destacados div.destacados_contenedor {
+.home section.destacados div.destacados_contenedor {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-main section.destacados div.destacados_contenedor article.producto_des {
+.home section.destacados div.destacados_contenedor article.producto_des {
     margin-top: 10px;
     width: 45%;
     background-color: var(--white);
     border-radius: 5px;
 }
 
-main section.destacados div.destacados_contenedor article.producto_des a img {
+.home section.destacados div.destacados_contenedor article.producto_des a img {
     width: 100%;
 }
 
 
-main section.destacados div.destacados_contenedor article.producto_des div.image_container a img {
+.home section.destacados div.destacados_contenedor article.producto_des div.image_container a img {
     width: 100%;
     padding: 5%;
     border-radius: 10px;
 }
 
-main section.destacados div.destacados_contenedor article.producto_des div.detail_container {
+.home section.destacados div.destacados_contenedor article.producto_des div.detail_container {
     position: relative;
     padding: 0px 10px 10px 10px;
     text-align: center;
 }
 
-main section.destacados div.destacados_contenedor article.producto_des div.detail_container i {
+.home section.destacados div.destacados_contenedor article.producto_des div.detail_container i {
     position: absolute;
     top: -35px;
     left: 15px;
     color: var(--lightBlue);
 }
 
-main section.destacados div.destacados_contenedor article.producto_des div.detail_container p.precio{
+.home section.destacados div.destacados_contenedor article.producto_des div.detail_container p.precio{
     color: var(--black);
     text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
     font-size: 20px;
 }
 
-main section.destacados div.destacados_contenedor article.producto_des div.detail_container p.descripcion {
+.home section.destacados div.destacados_contenedor article.producto_des div.detail_container p.descripcion {
     display: none;
 }
 
 /*                                sección productos en oferta                         */
 
-main section.ofertas {
+.home section.ofertas {
     padding-bottom: 20px;
 }
 
-main section.ofertas h2 {
+.home section.ofertas h2 {
     background-color: var(--lightBlue);
     text-align: center;
     color: var(--white);
@@ -115,33 +115,33 @@ main section.ofertas h2 {
     text-transform: uppercase;
 }
 
-main section.ofertas div.ofertas_contenedor {
+.home section.ofertas div.ofertas_contenedor {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-main section.ofertas div.ofertas_contenedor article.producto_ofer {
+.home section.ofertas div.ofertas_contenedor article.producto_ofer {
     margin-top: 10px;
     width: 45%;
     background-color: var(--white);
     border-radius: 5px;
 }
 
-main section.ofertas div.ofertas_contenedor article.producto_ofer div.image_container a img {
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.image_container a img {
     width: 100%;
     padding: 5%;
     border-radius: 10px;
 }
 
-main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container {
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container {
     position: relative;
     text-align: center;
     padding: 0px 10px 10px 10px;
 }
 
-main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
     position: absolute;
     top: -35px;
     left: 10px;
@@ -150,17 +150,17 @@ main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_con
     font-size: 20px;
 }
 
-main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descripcion {
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descripcion {
     display: none;
 }
 
-main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.precio {
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.precio {
     text-decoration: line-through;
     color: red;
     text-align: center;
 }
 
-main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.precio_des  {
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.precio_des  {
     color: var(--black);
     text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
     font-size: 20px;
@@ -168,7 +168,7 @@ main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_con
 }
 
 /* goTop y whatsapp */
-main div.go-top {
+.home div.go-top {
     display: flex;
     justify-content: space-between;
     flex-direction: column-reverse;
@@ -180,7 +180,7 @@ main div.go-top {
     margin-right: 10px;
 }
 
-main div.go-top a.top {
+.home div.go-top a.top {
     margin-top: 10px;
     border-radius: 20px;
     background-color: var(--lightBlue);
@@ -188,18 +188,18 @@ main div.go-top a.top {
     font-size: 13px;
 }
 
-main div.go-top a.top span {
+.home div.go-top a.top span {
     margin-left: 5px;
     margin-right: 5px;
     color: var(--white);
 }
 
-main div.go-top a.top i {
+.home div.go-top a.top i {
     color: white;
     margin-right: 4px;
 }
 
-main div.go-top a.whatsapp {
+.home div.go-top a.whatsapp {
     width:30px;
     height:30px;
     bottom:20px;
@@ -212,7 +212,7 @@ main div.go-top a.whatsapp {
     align-self: flex-end;
 }
 
-main div.go-top a.whatsapp i {
+.home div.go-top a.whatsapp i {
     margin-top:5px;
 }
 
@@ -220,14 +220,14 @@ main div.go-top a.whatsapp i {
 @media (min-width: 425px) {
 
     /* señuelo */
-    main section.carrusel div.carrusel_container img {
+    .home section.carrusel div.carrusel_container img {
         width: 100%;
         max-height: 768px;
         max-width: 1024px;
     }
     
     /* carrusel */
-    main section.carrusel {
+    .home section.carrusel {
         display: block;
     }
     main section.carrusel div.carrusel_container {
@@ -235,11 +235,11 @@ main div.go-top a.whatsapp i {
         text-align: center;
     }
 
-    main section.carrusel div.carrusel_container ul.slider {
+    .home section.carrusel div.carrusel_container ul.slider {
         position: relative;
     }
 
-    main section.carrusel div.carrusel_container ul.slider li {
+    .home section.carrusel div.carrusel_container ul.slider li {
         position: absolute;
         top: 0;
         opacity: 0;
@@ -247,7 +247,7 @@ main div.go-top a.whatsapp i {
         transition: opacity 1s;
     }
 
-    main section.carrusel div.carrusel_container ul.slider li img {
+    .home section.carrusel div.carrusel_container ul.slider li img {
         width: 100%;
         max-height: 768px;
         /* max-width: 1024px; */
@@ -256,19 +256,19 @@ main div.go-top a.whatsapp i {
         animation-delay: 5s;
     }
 
-    main section.carrusel div.carrusel_container ul.slider li:first-child {
+    .home section.carrusel div.carrusel_container ul.slider li:first-child {
         opacity: 1;
     }
 
-    main section.carrusel div.carrusel_container ul.slider li:target {
+    .home section.carrusel div.carrusel_container ul.slider li:target {
         opacity: 1;
     }
 
-    main section.carrusel div.botones_container ul.botones_slide li {
+    .home section.carrusel div.botones_container ul.botones_slide li {
         display: inline-block;
     }
 
-    main section.carrusel div.botones_container ul.botones_slide li a{
+    .home section.carrusel div.botones_container ul.botones_slide li a{
         position: relative;
         display: inline-block;
         background-color: var(--black);
@@ -277,43 +277,43 @@ main div.go-top a.whatsapp i {
         border-radius: 100%;
     }
 
-    main section.destacados div.destacados_contenedor article.producto_des div.detail_container i {
+    .home section.destacados div.destacados_contenedor article.producto_des div.detail_container i {
         top: -35px;
         left: 15px;
     }
 
-    main section.populares div.populares_categorias article a img {
+    .home section.populares div.populares_categorias article a img {
         animation: respiracion 5s linear alternate infinite;
         animation-delay: 5s;
     }
 
-    main section.destacados div.destacados_contenedor article.producto_des, main section.ofertas div.ofertas_contenedor article.producto_ofer {
+    .home section.destacados div.destacados_contenedor article.producto_des, .home section.ofertas div.ofertas_contenedor article.producto_ofer {
         width: 30%;
         box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
     }
 
-    main section.destacados div.destacados_contenedor article.producto_des div.detail_container p.descripcion, main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descripcion {
+    .home section.destacados div.destacados_contenedor article.producto_des div.detail_container p.descripcion, .home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descripcion {
         display: block;
     }
 
 
 
     /* whatsapp & goTop */
-    main div.go-top a.top {
+    .home div.go-top a.top {
         font-size: 20px;
     }
     
 
-    main div.go-top {
+    .home div.go-top {
         bottom: 20%;
         
     }
 
-    main div.go-top a.whatsapp i {
+    .home div.go-top a.whatsapp i {
         margin-top:13px;
     }
 
-    main div.go-top a.whatsapp {
+    .home div.go-top a.whatsapp {
         width:60px;
         height:60px;
         bottom:40px;
@@ -330,38 +330,38 @@ main div.go-top a.whatsapp i {
 /*                                                     Laptop                                          */
 @media (min-width: 768px) {
 
-    main section.carrusel div.carrusel_container {
+    .home section.carrusel div.carrusel_container {
         background-image: url("/img/fondo.png");
         background-repeat: repeat;
         
     }
 
-    main section.carrusel div.botones_container ul.botones_slide li a:hover {
+    .home section.carrusel div.botones_container ul.botones_slide li a:hover {
         background-color: var(--white);
         transition: all .5s;
     }
 
-    main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
+    .home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
         animation: vibracion .5s linear alternate 2;
         animation-delay: 40s;
     }
     
 
-    main section.populares div.populares_categorias article.categorias {
+    .home section.populares div.populares_categorias article.categorias {
         width: 24%;
     }
 
-    main section.populares div.populares_categorias article.categorias:hover {
+    .home section.populares div.populares_categorias article.categorias:hover {
         transform: scale(1.2);
         transition: all .6s;
     }
 
-    main section.destacados div.destacados_contenedor article.producto_des, main section.ofertas div.ofertas_contenedor article.producto_ofer {
+    .home section.destacados div.destacados_contenedor article.producto_des, .home section.ofertas div.ofertas_contenedor article.producto_ofer {
         width: 22%;
         box-shadow: none;
         max-width: 250px;
     }
-    main section.destacados div.destacados_contenedor article.producto_des:hover, main section.ofertas div.ofertas_contenedor article.producto_ofer:hover {
+    .home section.destacados div.destacados_contenedor article.producto_des:hover, .home section.ofertas div.ofertas_contenedor article.producto_ofer:hover {
         box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
         transition: box-shadow .5s;
     }
@@ -370,17 +370,17 @@ main div.go-top a.whatsapp i {
 
 @media (min-width: 1137px) {
 
-    main section.destacados div.destacados_contenedor article.producto_des, main section.ofertas div.ofertas_contenedor article.producto_ofer {
+    .home section.destacados div.destacados_contenedor article.producto_des, .home section.ofertas div.ofertas_contenedor article.producto_ofer {
         width: 100%;
     }
 
-    main section.destacados div.destacados_contenedor, main section.ofertas div.ofertas_contenedor {
+    .home section.destacados div.destacados_contenedor, .home section.ofertas div.ofertas_contenedor {
         display: grid;
         grid-template-columns: repeat(4, auto);
         gap: 10px;
     }
 
-    main section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
+    .home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
         top: -41px;
         left: 13px;
     }
@@ -388,18 +388,18 @@ main div.go-top a.whatsapp i {
 
 @media (min-width: 1400px) {
 
-    main section.destacados div.destacados_contenedor, main section.ofertas div.ofertas_contenedor {
+    .home section.destacados div.destacados_contenedor, .home section.ofertas div.ofertas_contenedor {
         grid-template-columns: repeat(5, auto);
     }
 
-    main div.go-top {
+    .home div.go-top {
         bottom: 0;
     }
 }
 
 @media (min-width: 1560px) {
 
-    main section.destacados div.destacados_contenedor, main section.ofertas div.ofertas_contenedor {
+    main section.destacados div.destacados_contenedor, .home section.ofertas div.ofertas_contenedor {
         grid-template-columns: repeat(6, auto);
     }
 }

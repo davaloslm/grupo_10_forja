@@ -1,0 +1,97 @@
+.cart h1.titulo {
+    color: var(--white);
+    margin: 20px 0px 20px 20px;
+}
+
+.cart section.container {
+    background-color: var(--white);
+    width: 90%;
+    margin: 0 auto;
+}
+
+.cart section.container div.info_cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart section.container div.info_cart h2 {
+    margin: 15px 0 0 15px;
+    padding-right: 25px;
+    border-bottom: 1px solid var(--black);
+    font-weight: 300;
+}
+
+.cart section.container div.info_cart h2:last-child {
+    margin: 15px 15px 0 0;
+    padding-left: 25px;
+    padding-right: 0px;
+}
+
+.cart section.container article.product_info {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    gap: 10px;
+    border-bottom: 1px solid #ebebeb;
+    padding: 15px 0 15px 0;
+}
+
+.cart section.container article.product_info div.foto_product {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cart section.container article.product_info div.foto_product a {
+    width: inherit;
+    align-self: center;
+}
+
+.cart section.container article.product_info div.foto_product a img {
+    padding-left: 10px;
+    width: 100%;
+}
+
+.cart section.container article.product_info div.foto_product a i.trash {
+    color: var(--black);
+}
+
+.cart section.container article.product_info div.detail_product {
+    display: flex;
+}
+
+.cart section.container article.product_info div.detail_product div.detail_article_cart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+/* .cart section.container article.product_info div.detail_product div.detail_article_cart h4.tittle_article {
+    
+} */
+
+.cart section.container article.product_info div.detail_product div.cantidad_container {
+    width: 25%;
+}
+
+.cart section.container article.product_info div.detail_product div.cantidad_container p.stock {
+    text-align: center;
+}
+
+.cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity {
+    display: flex;
+}
+
+.cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button {
+    background-color: var(--lightBlue);
+    color: var(--white);
+    width: 15px;
+}
+
+.cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity input {
+    width: 30px;
+}
+
+.cart section.container article.product_info div.detail_product div.monto_container {
+    width: 20%;
+}
