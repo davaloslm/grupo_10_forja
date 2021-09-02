@@ -188,3 +188,132 @@ main.product section.relacionados div.relacionados_contenedor article.producto_r
 
 
 
+/*/////////////////////////////////// Tablet//////////////////////////////////// */
+
+
+@media(min-width:425px){
+    /* señuelo */
+main.product section.carrusel div.carrusel_container img {
+    
+    height: 400px;/* para media q */
+    width: 400px;
+}
+
+/* carrusel */
+main.product section.carrusel {
+    display: block;
+    margin: 15px 0;
+}
+main.product section.carrusel div.carrusel_container { /* listo */
+    width: 400px;
+    text-align: center;
+    margin: 30px auto;
+    height: 400px;
+}
+
+main.product section.carrusel div.carrusel_container ul.slider {
+    position: relative;
+}
+
+main.product section.carrusel div.carrusel_container ul.slider li {
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    width: 100%;
+    transition: opacity 1s;
+    max-width: 400px;
+    max-height:  400px;
+}
+
+main.product section.carrusel div.carrusel_container ul.slider li img {
+    width: 100%;
+    /* max-height: 768px; */
+    /* max-width: 1024px; */
+    object-fit: cover;
+    animation: respiracion1 5s linear alternate infinite;
+    animation-delay: 5s;
+}
+
+main.product section.carrusel div.carrusel_container ul.slider li:first-child {
+    opacity: 1;
+}
+
+main.product section.carrusel div.carrusel_container ul.slider li:target {
+    opacity: 1;
+}
+
+main.product section.carrusel div.botones_container ul.botones_slide li {
+    display: inline-block;
+}
+
+main.product section.carrusel div.botones_container ul.botones_slide li a{
+    position: relative;
+    display: inline-block;
+    background-color: var(--black);
+    width: 15px;
+    height: 15px;
+    border-radius: 100%;
+}
+/* fin carrusel */
+
+
+main.product section.detalles{
+    max-width: 500px;
+}
+
+main.product section.relacionados div.relacionados_contenedor article.producto_relacionado{
+    width: 30%;
+    box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+}
+
+}
+
+/* ////////////////////////////////Laptop///////////////////////////// */
+@media(min-width:768px){
+
+    main.product{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    main.product section.carrusel{
+        width: 55%;
+        align-self: center;
+    }
+
+    main.product section.detalles{
+        width:35%;
+        margin: 20px auto 0;
+    }
+
+    main.product section.relacionados{
+        width: 100%
+    }
+
+    main.product section.relacionados div.relacionados_contenedor article.producto_relacionado{
+        width: 22%;
+        box-shadow: none;
+        max-width: 250px;
+    }
+
+    main.product section.relacionados div.relacionados_contenedor article.producto_relacionado:hover{
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+        transition: box-shadow .5s;
+    }
+
+    
+}
+
+@media (min-width: 1137px){
+
+    main.product section.relacionados div.relacionados_contenedor{
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 10px;
+    }
+
+    main.product section.relacionados div.relacionados_contenedor article.producto_relacionado{
+        width: 100%;
+    }
+        
+}
