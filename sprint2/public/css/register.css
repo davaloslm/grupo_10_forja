@@ -70,6 +70,13 @@ main.register section form button{
     display: block;
 }
 
+@media (min-width: 768px){
+    main.register section form div.input-container{
+        max-width: 600px;
+    }
+    
+}
+
 
 
 
