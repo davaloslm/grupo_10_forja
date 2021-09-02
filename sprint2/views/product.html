@@ -4,9 +4,287 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css">
     <title>Document</title>
+    <link rel="icon" href="../img/logo.png">
 </head>
 <body>
-    <h1>product</h1>
+    <header>
+        <div class="container">
+            <div class="banner">
+                <img src="/img/banner.png" alt="Banner">
+                <a href=""><img src="/img/logo.png" alt="" class="logo"></a>
+            </div>
+        </div>
+        <nav>
+            <button class="home">
+                <a href="">
+                    <i class="fas fa-home"></i>
+                </a>
+            </button>
+            <input class="burger" name="open-close" type="radio" id="categorias">
+            <label for="categorias">
+                <i class="fas fa-bars"></i>
+            </label>
+            <form action="">
+                <input type="text" name="search" id="search" placeholder="Buscar marcas, productos y más">
+                <button class="search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="user">
+                <a href="">Iniciar sesión</a>
+            </button>
+            <button class="user">
+                <a href="">Registrate</a>
+            </button>
+            <button class="cart">
+                <i class="fas fa-shopping-cart"></i>
+            </button>
+
+
+            <input class="close" type="radio" name="open-close" id="close">
+            <div class="menu">
+                <label for="close"><i class="fas fa-times"></i></label>
+                
+                
+                <ul class="listaCategorias">
+                    <li class="categorias" id="taekwondo">
+                        <a href="#taekwondo">TaeKwon-Do</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="boxeo">
+                        <a href="#boxeo">Boxeo</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="kick-muay">
+                        <a href="#kick-muay">KickBoxing/MuayThai</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="judo">
+                        <a href="#judo">Judo</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="jiujitsu">
+                        <a href="#jiujitsu">Jiu-Jitsu</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="entrenamiento">
+                        <a href="#entrenamiento">Entrenamiento</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>               
+                 
+                </ul>
+            </div>        
+
+        </nav>
+
+    </header>
+
+    <main class="product">
+        
+
+        <section class="carrusel">
+            <div class="carrusel_container">
+                <ul class="slider">
+                    <li id="slide-1">
+                        <img src="\img\productos\product-9.jpg" alt="Forja">
+                    </li>
+                    <li id="slide-2">
+                        <img src="/img/productos/product-25.jpg" alt="Foto">
+                    </li>
+                    <li id="slide-3">
+                        <img src="/img/productos/product-26.jpg" alt="Foto">
+                    </li>
+                </ul>
+                <img src="/img/carrusel/señuelo.jpg" alt="Señuelo">
+                <div class="botones_container">
+                    <ul class="botones_slide">
+                        <li>
+                            <a href="#slide-1"> </a>
+                        </li>
+                        <li>
+                            <a href="#slide-2"> </a>
+                        </li>
+                        <li>
+                            <a href="#slide-3"> </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="detalles">
+
+            <h1>Dobok TaeKwon-Do ITF (Adultos)</h1>
+            <div class="detalles">
+                <h2 class="precio">$4.500</h2>
+                
+                <div class="marca">
+                    <h4>Marca:</h4><span>Gran-Marc</span>
+                </div>
+
+                <div class="modelo">
+                    <h4>Modelo:</h4><span>Gup</span>
+                </div>
+                
+                <form action="">
+                    <label for="talle"><h4>Talle:</h4></label>
+                    <select name="talle" id="talle">
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                
+                    </select>
+                
+                    <div class="cantidad">
+                        <label for="cantidad"><h4>Cantidad:</h4></label>
+                        <input type="number" name="cantidad" id="cantidad">
+                    </div>
+                
+                
+                </form>
+                <button>Añadir al carrito</button>
+            </div>
+            
+            <h4>Descripción:</h4>
+
+            <p class="descripcion">Elaborado con tejido plano ripstop (antidesgarro) de 6 onz de peso. Diseño clásico, corte amplio, pantalón con cintura elastizada con cordón de 3 cm, chaqueta cómoda y resistente, logos oficiales estampados. Ideal para principiantes, soporta continuos lavados y es de fácil planchado. Sujeción con cinta de abrojo. Incluye cinto blanco.</p>                       
+
+
+        </section>
+
+        <section class="relacionados">
+
+            <h2>Productos relacionados</h2>
+
+            <div class="relacionados_contenedor">
+                <article class="producto_relacionado">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-13.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">4.800 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">2.400 $</p>
+                        <h4 class="titulo">Manoplas almohadilla entrenamiento wushengreen</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_relacionado">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-17.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">26.499 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">13.249 $</p>
+                        <h4 class="titulo">Saco Boxeo de pie 165cm con soporte</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_relacionado">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-14.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">22.400 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">11.200 $</p>
+                        <h4 class="titulo">Combo bolsa + soporte + cadenas + relleno EVERLAST boxeo</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_relacionado">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-19.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">1.400 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">700 $</p>
+                        <h4 class="titulo">Cinturón cinto artes marciales</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+            </div>
+
+            
+            
+        </section>
+
+    </main>
+
+    <footer>
+
+        <section>
+            <h3>REDES</h3>
+            <ul>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+            </ul>
+        </section>
+
+        <section class="footerLogo">
+            <img src="../img/logo.png" alt="forja">
+        </section>
+
+        <section>
+            <h3>CONTACTO</h3>
+            <ul>
+                <li><a href="">E-mail</a></li>
+                <li><a href="">Telefono</a></li>
+                <li><a href="">Dirección</a></li>
+            </ul>
+        </section>
 </body>
 </html>
