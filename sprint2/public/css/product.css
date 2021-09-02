@@ -1,9 +1,9 @@
 
 /* señuelo */
 main.product section.carrusel div.carrusel_container img {
-    width: 100%;
-    max-height: 768px;/* para media q */
-    max-width: 1024px;
+    
+    height: 280px;/* para media q */
+    width: 280px;
 }
 
 /* carrusel */
@@ -12,9 +12,10 @@ main.product section.carrusel {
     margin: 15px 0;
 }
 main.product section.carrusel div.carrusel_container { /* listo */
-    width: 80%;
+    width: 280px;
     text-align: center;
-    margin: 0 auto;
+    margin: 30px auto;
+    height: 280px;
 }
 
 main.product section.carrusel div.carrusel_container ul.slider {
@@ -27,6 +28,8 @@ main.product section.carrusel div.carrusel_container ul.slider li {
     opacity: 0;
     width: 100%;
     transition: opacity 1s;
+    max-width: 280px;
+    max-height:  280px;
 }
 
 main.product section.carrusel div.carrusel_container ul.slider li img {
@@ -60,10 +63,128 @@ main.product section.carrusel div.botones_container ul.botones_slide li a{
 }
 /* fin carrusel */
 
+/* detalles de producto */
+
 main.product section h1{
+    margin: 15px 0;
+    text-align: center;
+}
+
+main.product section.detalles{
+    background-color: var(--white);
+    width: 90%;
+    
+    margin: 0 auto;
+    
+    border: solid 1px var(--lightBlue);
+    border-radius: 5px;
+
+    animation: respiracion 2s linear alternate infinite;
+    animation-delay: 2s;
+    padding: 10px;
+}
+
+main.product section.detalles h4{
+    margin: 10px 0;
+}
+
+main.product section.detalles div.detalles{
+    display: flex;
+    flex-direction: column;
+
+}
+
+main.product section.detalles div.detalles button{
+    padding: 10px;
+    width: max-content;
+    color: white;
+    align-self: center;
+    margin: 10px 0;
+
+}
+
+
+main.product section.detalles div.detalles h4{
+    display: inline-block;
+    
+}
+
+
+main.product section.detalles div.detalles input, main.product section.detalles div.detalles select{
+    border-radius: 5px;
+    margin: 10px;
+    border: solid 1px var(--lightBlue);
+    padding: 4px;
+    cursor: pointer;
+    outline-color: #3db7b6;
+}
+
+main.product section.detalles div.detalles div.cantidad input{
+    width: 40px;
+}
+
+/* productos relacionados */
+
+main.product section.relacionados h2{
+    background-color: var(--lightBlue);
     text-align: center;
     color: var(--white);
-    margin: 15px 0;
-    }
+    padding: 5px 0 5px 0;
+    margin: 20px 0 10px 0;
+    text-transform: uppercase;
+}
+
+main.product section.relacionados div.relacionados_contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main.product section.relacionados div.relacionados_contenedor article.producto_relacionado {
+    margin-top: 10px;
+    width: 45%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+main.product section.relacionados div.relacionados_contenedor article.producto_relacionado div.image_container a img {
+    width: 100%;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+main.product section.relacionados div.relacionados_contenedor article.producto_relacionado div.detail_container {
+    position: relative;
+    text-align: center;
+    padding: 0px 10px 10px 10px;
+}
+
+main.product section.relacionados div.relacionados_contenedor article.producto_relacionado div.detail_container p.descuento {
+    position: absolute;
+    top: -35px;
+    left: 10px;
+    color: var(--white);
+    background-color: var(--lightBlue);
+    font-size: 20px;
+}
+
+main.product section.relacionados div.relacionados_contenedor article.producto_relacionado div.detail_container p.descripcion {
+    display: none;
+}
+
+main.product section.relacionados div.relacionados_contenedor article.producto_relacionado div.detail_container p.precio {
+    text-decoration: line-through;
+    color: red;
+    text-align: center;
+}
+
+main.product section.relacionados div.relacionados_contenedor article.producto_relacionado div.detail_container p.precio_des  {
+    color: var(--black);
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+    font-size: 20px;
+    
+}
+
 
 
