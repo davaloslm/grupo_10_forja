@@ -125,6 +125,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: flex-end;
+    border-left: 1px solid #ebebeb;
 }
 
 .cart section.container article.product_info div.detail_product div.monto_container p.precio {
@@ -319,4 +320,82 @@
 /*                                          Tablet                                     */
 @media (min-width: 425px) {
 
+    .cart section.container {
+        animation: respiracion 5s linear alternate infinite;
+        animation-delay: 5s;
+    }
+
+    .cart section.container div.info_cart h2 {
+        padding-right: 125px;
+        font-weight: 400;
+    }
+
+    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity input {
+        width: 50px;
+        height: 30px;
+    }
+
+    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button {
+        width: 25px;
+    }
+
+    .cart section.container article.product_info div.detail_product div.monto_container h5 {
+        font-size: 20px;
+    }
+
+    .cart section.container article.product_info div.detail_product div.monto_container p.precio, .cart section.container article.product_info div.detail_product div.monto_container p.precio_ant, .cart section.container article.product_info div.detail_product div.monto_container p.precio_des, .cart section.monto_final div.total_container div.totales h5, .cart section.monto_final div.total_container div.precio_total h5, .cart section.container article.product_info div.detail_product div.detail_article_cart p.modelo_article, .cart section.container article.product_info div.detail_product div.detail_article_cart h4.tittle_article, .cart section.monto_final div.total_container div.seguro h5 {
+        font-weight: 600;
+        font-size: 20px;
+    }
+
+    .cart section.similares div.similares_contenedor article.producto_ofer, .cart section.similares div.similares_contenedor article.producto_des {
+        width: 30%;
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+    }
+    
+    .cart section.similares a.ver_mas {
+        justify-content: flex-start;
+        margin-left: 20px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .cart section.container div.info_cart h2 {
+        padding-right: 250px;
+    }
+
+    .cart section.container article.product_info div.foto_product a img {
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+    .cart section.container article.product_info div.detail_product div.detail_article_cart h4.tittle_article {
+        padding-top: 30px;
+    }
+}
+
+
+
+
+@keyframes respiracion {
+    0% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0);
+    }
+
+    25% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.25);
+    }
+
+    50% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.50);
+    }
+
+    75% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.75);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+    }
 }
