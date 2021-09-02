@@ -137,9 +137,11 @@
 
             <form>
                 <div class="input-container">
-                    <span>¿Ya tiene una cuenta?</span>
-                    <a href="">Inicie sesión</a>
+                    <div class="cuenta">
+                        <span>¿Ya tiene una cuenta?</span>
+                        <a href="">Inicie sesión</a>
 
+                    </div>
 
                     <div>
                         <label for="nombre">Nombre</label>
@@ -164,12 +166,6 @@
                     </div>
 
                     <div>
-                        <label for="nombre">Nombre</label>
-                        <input type="text" name="nombre" id=nombre
-                            placeholder="Ingresalo tal como figura en el documento">
-                    </div>
-
-                    <div>
                         <label for="password">Contraseña</label>
                         <input type="text" name="password" id=password>
                     </div>
@@ -179,17 +175,18 @@
                         <input type="text" name="password2" id=password2>
                     </div>
 
+                    <div class="check">
+                        <input type="checkbox" name="tyc">
+                        <small>Acepto los <a href="">Términos y Condiciones</a> y autorizo el uso de mis datos de
+                            acuerdo a
+                            la
+                            <a href="">Declaración de Privacidad</a>.</small>
+                    </div>
 
-
-
-
-                    <input type="checkbox" name="tyc">
-                    <small>Acepto los <a href="">Términos y Condiciones</a> y autorizo el uso de mis datos de acuerdo a
-                        la
-                        <a href="">Declaración de Privacidad</a>.</small>
-
-                    <input type="checkbox" name="newsletter">
-                    <small>Recibir ofertas exclusivas y descuentos.</small>
+                    <div class="check">
+                        <input type="checkbox" name="newsletter">
+                        <small>Recibir ofertas exclusivas y descuentos.</small>
+                    </div>
                 </div>
 
                 <div class="captcha">

@@ -1,0 +1,78 @@
+main.register h2{
+    color: var(--white);
+    text-align: center;
+    margin: 20px 0;
+}
+
+main.register section form div.input-container{
+    background-color: var(--white);
+    width: 80%;
+    max-width: 400px;
+    margin: 0 auto;
+    /* text-align: center; */
+    border: solid 1px var(--lightBlue);
+    border-radius: 5px;
+
+    animation: respiracion 2s linear alternate infinite;
+    animation-delay: 2s;
+    padding: 0 10px;
+
+}
+
+main.register section form div.input-container div.cuenta{
+    margin: 10px 0;
+}
+
+main.register section form div.input-container div.cuenta span{
+    display: block;
+    text-align: center;
+}
+
+main.register section form div.input-container div.cuenta a{
+    display: block;
+    text-align: center;
+    color: var(--lightBlue);
+
+}
+
+main.register section form div.input-container div label{
+    display: block;
+}
+
+main.register section form div.input-container div input{
+    width: 100%;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: solid 1px var(--lightBlue);
+    padding: 5px;
+    cursor: pointer;
+    outline-color: #3db7b6;
+
+}
+
+main.register section form div.input-container div.check{
+    margin: 10px 0;
+}
+
+main.register section form div.input-container div.check input{
+    margin: 0;
+    width: auto;
+}
+
+main.register section form div.input-container div.check a{
+    color: var(--lightBlue);
+}
+
+main.register section form button{
+    padding: 10px;
+    color: var(--white);
+    margin: 10px auto;
+    display: block;
+}
+
+
+
+
+
+
+
