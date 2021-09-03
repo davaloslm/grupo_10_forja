@@ -1,19 +1,26 @@
+/* body{
+    background: linear-gradient(0deg, #020202 5.86%, #053742 66.81%);
+} */
 main.login{
     background: linear-gradient(0deg, #020202 5.86%, #053742 66.81%);
-    padding: 40px 0 ;
+    padding: 80px 0 ;
+    overflow-x: hidden;
+    /* height: 60vh; */
+    /* height: 470px; */
+    height: 476px;
 }
 
 main.login section{
     background-color: var(--white);
     width: 80%;
     max-width: 400px;
-    margin: 0 auto;
+    margin: auto ;
     text-align: center;
     border: solid 1px var(--lightBlue);
     border-radius: 5px;
 
-    animation: respiracion 2s linear alternate infinite;
-    animation-delay: 2s;
+    animation: respiracion_login 3s linear alternate infinite;
+    animation-delay: 3s;
 
 }
 
@@ -66,7 +73,7 @@ main.login section button a{
     main.login section h2{
         font-size: 1.8rem;
     }
-    
+
     
 }
 @media(min-width: 768px){
@@ -83,6 +90,8 @@ main.login section button a{
 }
 
 @media(min-width: 1024px){
+    
+    
     main.login section form{
         display: flex;
         flex-direction: column;
@@ -101,5 +110,26 @@ main.login section button a{
 
     main.login section button:hover{
         background-color: #2dbdbd;
+    }
+}
+@keyframes respiracion_login {
+    0% {
+        box-shadow: 0px 0px 10px 10px rgba(42,210,210,0);
+    }
+
+    25% {
+        box-shadow: 0px 0px 10px 5px rgba(42,210,210,0.25);
+    }
+
+    50% {
+        box-shadow: 0px 0px 10px 5px rgba(42,210,210,0.50);
+    }
+
+    75% {
+        box-shadow: 0px 0px 10px 5px rgba(42,210,210,0.75);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px 5px rgba(42,210,210,1);
     }
 }
