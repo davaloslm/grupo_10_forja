@@ -55,6 +55,21 @@
     width: 100%;
 }
 
+.cart section.container article.product_info div.detail_product div.detail_article_cart h4.tittle_article {
+    padding-bottom: 15px;
+}
+
+.cart section.container article.product_info div.foto_product p.modelo_article {
+    width: 100%;
+    padding-left: 10px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.cart section.container article.product_info div.detail_product div.monto_container p.precio, .cart section.container article.product_info div.detail_product div.monto_container p.precio_ant, .cart section.container article.product_info div.detail_product div.monto_container p.precio_des, .cart section.monto_final div.total_container div.totales h5, .cart section.monto_final div.total_container div.precio_total h5, .cart section.container article.product_info div.foto_product p.modelo_article, .cart section.container article.product_info div.detail_product div.detail_article_cart h4.tittle_article, .cart section.monto_final div.total_container div.seguro h5, .cart section.container article.product_info div.detail_product div.detail_article_cart a, .cart section.container article.product_info div.detail_product div.cantidad_container p.stock {
+    font-size: 12px;
+}
+
 .cart section.container article.product_info div.foto_product p.descuento {
     position: absolute;
     top: 0px;
@@ -100,7 +115,8 @@
 .cart section.container article.product_info div.detail_product div.detail_article_cart a {
     color: var(--black);
     font-weight: 700;
-    max-width: 150px
+    max-width: 150px;
+    cursor: pointer;
 }
 
 .cart section.container article.product_info div.detail_product div.cantidad_container {
@@ -186,6 +202,7 @@
 .cart section.monto_final div.total_container div.seguro a {
     color: black;
     font-weight: 700;
+    cursor: pointer;
 }
 
 .cart section.monto_final div.total_container div.seguro h5 {
@@ -266,8 +283,8 @@
 
 .cart section.similares div.similares_contenedor article.producto_des div.detail_container i {
     position: absolute;
-    top: -35px;
-    left: 15px;
+    top: -31px;
+    left: 12px;
     color: var(--lightBlue);
 }
 
@@ -305,7 +322,7 @@
 
 .cart section.similares div.similares_contenedor article.producto_ofer div.detail_container p.descuento {
     position: absolute;
-    top: -35px;
+    top: -36px;
     left: 10px;
     color: var(--white);
     background-color: var(--lightBlue);
@@ -324,12 +341,16 @@
     font-size: 20px;
 }
 
+.cart section.similares p.ver_mas {
+    margin-top: 15px;
+    text-align: center;
+}
+
 .cart section.similares p a.ver_mas {
     color: var(--white);
     font-weight: 400;
     font-size: 1.5rem;
     text-align: start;
-    margin-top: 20px;
 }
 
 /*                                          Tablet                                     */
@@ -362,9 +383,9 @@
         font-size: 20px;
     }
 
-    .cart section.container article.product_info div.detail_product div.monto_container p.precio, .cart section.container article.product_info div.detail_product div.monto_container p.precio_ant, .cart section.container article.product_info div.detail_product div.monto_container p.precio_des, .cart section.monto_final div.total_container div.totales h5, .cart section.monto_final div.total_container div.precio_total h5, .cart section.container article.product_info div.detail_product div.detail_article_cart p.modelo_article, .cart section.container article.product_info div.detail_product div.detail_article_cart h4.tittle_article, .cart section.monto_final div.total_container div.seguro h5 {
+    .cart section.container article.product_info div.detail_product div.monto_container p.precio, .cart section.container article.product_info div.detail_product div.monto_container p.precio_ant, .cart section.container article.product_info div.detail_product div.monto_container p.precio_des, .cart section.monto_final div.total_container div.totales h5, .cart section.monto_final div.total_container div.precio_total h5, .cart section.container article.product_info div.foto_product p.modelo_article, .cart section.container article.product_info div.detail_product div.detail_article_cart h4.tittle_article, .cart section.monto_final div.total_container div.seguro h5, .cart section.container article.product_info div.detail_product div.detail_article_cart a, .cart section.container article.product_info div.detail_product div.cantidad_container p.stock {
         font-weight: 600;
-        font-size: 20px;
+        font-size: 17px;
     }
 
     
@@ -509,7 +530,7 @@
     }
 
     .cart section.similares div.similares_contenedor article.producto_des div.detail_container i {
-        top: -36px;
+        top: -33px;
         left: 15px;
     }
     
@@ -519,7 +540,7 @@
     }
 
     .cart section.similares p.ver_mas {
-        margin-top: 20px;
+        text-align: start;
     }
 
 

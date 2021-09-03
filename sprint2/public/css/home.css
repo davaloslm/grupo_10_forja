@@ -399,7 +399,7 @@
 
 @media (min-width: 1560px) {
 
-    main section.destacados div.destacados_contenedor, .home section.ofertas div.ofertas_contenedor {
+    .home section.destacados div.destacados_contenedor, .home section.ofertas div.ofertas_contenedor {
         grid-template-columns: repeat(6, auto);
     }
 }
@@ -408,7 +408,8 @@
 body {
     /* max-width: 1660px;
     margin: 0 auto; */
-    background: linear-gradient(0deg, #020202 28.86%, rgba(2, 2, 2, 0) 85.81%), linear-gradient(180deg, #053742 49.22%, rgba(5, 55, 66, 0) 100%);
+    background: linear-gradient(180deg, #053742 40%, #000000 60%);
+
 }
 
 
