@@ -43,12 +43,38 @@ header nav div.menu{
     top: 0;
     left: 0;
     box-shadow:  0px 0px 20px rgb(0 0 0);
-    width: 200px; 
+    width: 220px; 
     z-index: 300;
     background: linear-gradient(0deg, #020202 28.86%, rgba(2, 2, 2, 0) 85.81%), linear-gradient(180deg, #053742 49.22%, rgba(5, 55, 66, 0) 100%); 
 
 
 }
+
+header nav div.menu ul.user{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 20px 0;
+}
+
+header nav div.menu ul.user li{
+    color: var(--white);
+    border-right: 2px solid var(--white);
+    padding-right: 8px;
+    
+}
+
+header nav div.menu ul.user li:last-child{
+    border-right: none;
+
+}
+
+header nav div.menu ul.user li a{
+    font-weight: 600;
+    color: var(--white);
+
+}
+
+
 
 
 
@@ -225,6 +251,11 @@ header nav button.cart i{
         width: 100%;
 
    }
+
+   header nav div.menu ul.user{
+    display: none;
+    
+    }
 
    header nav div.menu ul.listaCategorias li.categorias a{
        text-transform: uppercase;
