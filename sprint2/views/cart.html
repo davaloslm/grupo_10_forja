@@ -1,13 +1,363 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="icon" href="../img/logo.png">
+    <title>Carrito</title>
 </head>
 <body>
-    <h1>cart</h1>
-    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo repudiandae neque beatae possimus placeat tempore! Illo cumque recusandae ullam, molestiae consectetur debitis vero a officiis, nam repellat labore provident illum.</p>
+    <header>
+
+
+        <div class="container">
+            <div class="banner">
+                <img src="/img/banner.png" alt="Banner">
+                <a href="/"><img src="/img/logo.png" alt="" class="logo"></a>
+            </div>
+        </div>
+        <nav>
+            <button class="home">
+                <a href="">
+                    <i class="fas fa-home"></i>
+                </a>
+            </button>
+            <input class="burger" name="open-close" type="radio" id="categorias">
+            <label for="categorias">
+                <i class="fas fa-bars"></i>
+            </label>
+            <form action="">
+                <input type="text" name="search" id="search" placeholder="Buscar marcas, productos y más">
+                <button class="search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+            <button class="user">
+                <a href="">Iniciar sesión</a>
+            </button>
+            <button class="user">
+                <a href="">Registrate</a>
+            </button>
+            <button class="cart">
+                <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
+            </button>
+
+
+            <input class="close" type="radio" name="open-close" id="close">
+            <div class="menu">
+                <label for="close"><i class="fas fa-times"></i></label>
+                
+                
+                <ul class="listaCategorias">
+                    <li class="categorias" id="taekwondo">
+                        <a href="#taekwondo">TaeKwon-Do</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="boxeo">
+                        <a href="#boxeo">Boxeo</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="kick-muay">
+                        <a href="#kick-muay">KickBoxing/MuayThai</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="judo">
+                        <a href="#judo">Judo</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="jiujitsu">
+                        <a href="#jiujitsu">Jiu-Jitsu</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>
+
+                    <li class="categorias" id="entrenamiento">
+                        <a href="#entrenamiento">Entrenamiento</a>
+                        <div class="submenu">
+                            <a href="">Todos los productos</a>
+                            <a href="">Sub1</a>
+                            <a href="">Sub2</a>
+                            <a href="">Sub3</a>
+                            <a href="">Sub4</a>
+                        </div>
+                    </li>                    
+
+                    
+
+                </ul>
+
+
+            </div>
+
+        
+
+        </nav>
+
+
+    </header>
+
+    <main class="cart">
+        <h1 class="titulo">Carrito</h1>
+        <section class="container">
+            <div class="info_cart">
+                <h2>Artículo</h2>
+                <h2>Monto</h2>
+            </div>
+            <article class="product_info">
+                <div class="foto_product">
+                    <a href="#" target="blank"><img src="/img/productos/product-1.jpg" alt=""></a>
+                    <a href="#" class="icono"><button><i class="fas fa-trash trash"></button></i></a>
+                    <a href="#" class="eliminar_a"><button class="eliminar">Eliminar</button></a>
+                </div>
+                <div class="detail_product">
+                    <div class="detail_article_cart">
+                        <h4 class="tittle_article">Soga crossfit 50x9mts Yute punta sellada</h4>
+                        <p class="modelo_article"></p>
+                        <a href="#" target="blank">Productos similares</a>
+                    </div>
+                    <div class="cantidad_container">
+                        <div class="box_quantity">
+                            <button>-</button>
+                            <input type="number" class="quantity" min="0">
+                            <button>+</button>
+                        </div>
+                        <p class="stock">5 disponibles</p>
+                    </div>
+                    <div class="monto_container">
+                        <h5>Envío</h5>
+                        <p class="precio">GRATIS</p>
+                        <p class="precio">+ 19.000 $</p>
+                    </div>
+                </div>
+            </article>
+            <article class="product_info">
+                <div class="foto_product">
+                    <a href="#" target="blank"><img src="/img/productos/product-5.jpg" alt=""></a>
+                    <a href="#" class="icono"><button><i class="fas fa-trash trash"></button></i></a>
+                    <a href="#" class="eliminar_a"><button class="eliminar">Eliminar</button></a>
+                </div>
+                <div class="detail_product">
+                    <div class="detail_article_cart">
+                        <h4 class="tittle_article">Bucal Personalizado termo-ajustable</h4>
+                        <p class="modelo_article">Modelo: Vampiro</p>
+                        <a href="#" target="blank">Productos similares</a>
+                    </div>
+                    <div class="cantidad_container">
+                        <div class="box_quantity">
+                            <button>-</button>
+                            <input type="number" class="quantity" min="0">
+                            <button>+</button>
+                        </div>
+                        <p class="stock">10 disponibles</p>
+                    </div>
+                    <div class="monto_container">
+                        <h5>Envío</h5>
+                        <p class="precio">GRATIS</p>
+                        <p class="precio">+ 480 $</p>
+                    </div>
+                </div>
+            </article>
+            <article class="product_info">
+                <div class="foto_product">
+                    <a href="#" target="blank"><img src="/img/productos/product-14.jpg" alt=""></a>
+                    <p class="descuento">- 15%</p>
+                    <a href="#" class="icono"><button><i class="fas fa-trash trash"></button></i></a>
+                    <a href="#" class="eliminar_a"><button class="eliminar">Eliminar</button></a>
+                </div>
+                <div class="detail_product">
+                    <div class="detail_article_cart">
+                        <h4 class="tittle_article">Combo bolsa + soporte + cadenas + relleno EVERLAST boxeo</h4>
+                        <p class="modelo_article">Modelo: Único</p>
+                        <a href="#" target="blank">Productos similares</a>
+                    </div>
+                    <div class="cantidad_container">
+                        <div class="box_quantity">
+                            <button>-</button>
+                            <input type="number" class="quantity" min="0">
+                            <button>+</button>
+                        </div>
+                        <p class="stock">Último disponible</p>
+                    </div>
+                    <div class="monto_container">
+                        <h5>Envío</h5>
+                        <p class="precio">+ 300 $</p>
+                        <p class="precio_ant">11.200 $</p>
+                        <p class="precio_des">+ 9.520 $</p>
+                    </div>
+                </div>
+            </article>
+            <section class="monto_final">
+                <div class="total_container">
+                    <div class="seguro">
+                        <h5>Tus datos se mantendrán bajo estricta confidencialidad</h5>
+                        <p>ForjaWeb usa un sistema de seguridad llamado SSL (Secure Socket Layer), te gustaría saber más sobre nuestras políticas de privacidad? Click abajo</p>
+                        <a href="#">Leer más</a>
+                    </div>
+                    <div class="totales">
+                        <h5>Artículos</h5>
+                        <h5>Envío</h5>
+                        <h5>Total</h5>
+                    </div>
+                    <div class="precio_total">
+                        <h5>29.000 $</h5>
+                        <h5>300 $</h5>
+                        <h5>29.300 $</h5>
+                    </div>
+                </div>
+                <div class="mercado_pago">
+                    <img src="/img/mercadopago.png" alt="">
+                    <div class="boton_container">
+                        <a href="#"><button class="pagar">Finalizar compra</button></a>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="similares">
+            <h2>Productos relacionados</h2>
+            <div class="similares_contenedor">
+                <article class="producto_des">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-10.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <i class="fas fa-truck" id="envio"></i>
+                        <p class="precio">750 $</p>
+                        <h4 class="titulo">Soga cuerda para saltar Athletic acero</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_ofer">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-15.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">1.350 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">2.400 $</p>
+                        <h4 class="titulo">Saco + soporte boxeo para niños inflable</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_ofer">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-16.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">20.000 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">10.000 $</p>
+                        <h4 class="titulo">Soga de Saltar color con rulemanes</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_ofer">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-17.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">26.499 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">13.249 $</p>
+                        <h4 class="titulo">Saco Boxeo de pie 165cm con soporte</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_ofer">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-20.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">12.499 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">6.249 $</p>
+                        <h4 class="titulo">Protector tibial Kick/Muay Quzz</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_des">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-6.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <i class="fas fa-truck" id="envio"></i>
+                        <p class="precio">2.500 $</p>
+                        <h4 class="titulo">Saco de boxeo entrenamiento velocidad</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+            </div>
+            <p class="ver_mas"><a href="#" class="ver_mas">Ver más</a></p>
+        </section>
+    </main>
+    
+    <footer>
+
+
+        <section>
+            <h3>REDES</h3>
+            <ul>
+                <li><a href="">Instagram</a></li>
+                <li><a href="">Facebook</a></li>
+                <li><a href="">Twitter</a></li>
+            </ul>
+        </section>
+
+        <section class="footerLogo">
+            <img src="../img/logo.png" alt="forja">
+        </section>
+
+        <section>
+            <h3>CONTACTO</h3>
+            <ul>
+                <li><a href="">E-mail</a></li>
+                <li><a href="">Telefono</a></li>
+                <li><a href="">Dirección</a></li>
+            </ul>
+        </section>
+
+
+    </footer>
 </body>
 </html>
