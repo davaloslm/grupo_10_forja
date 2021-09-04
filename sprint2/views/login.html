@@ -17,7 +17,7 @@
     <div class="container">
         <div class="banner">
             <img src="/img/banner.png" alt="Banner">
-            <a href=""><img src="/img/logo.png" alt="" class="logo"></a>
+            <a href="/"><img src="/img/logo.png" alt="" class="logo"></a>
         </div>
     </div>
     <nav>
@@ -26,7 +26,8 @@
                 <i class="fas fa-home"></i>
             </a>
         </button>
-        <label>
+        <input class="burger" name="open-close" type="radio" id="categorias">
+        <label for="categorias">
             <i class="fas fa-bars"></i>
         </label>
         <form action="">
@@ -42,8 +43,80 @@
             <a href="">Registrate</a>
         </button>
         <button class="cart">
-            <i class="fas fa-shopping-cart"></i>
+            <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
         </button>
+
+        <input class="close" type="radio" name="open-close" id="close">
+        <div class="menu">
+            <label for="close"><i class="fas fa-times"></i></label>
+            
+            
+            <ul class="listaCategorias">
+                <li class="categorias" id="taekwondo">
+                    <a href="#taekwondo">TaeKwon-Do</a>
+                    <div class="submenu">
+                        <a href="">Todos los productos</a>
+                        <a href="">Sub1</a>
+                        <a href="">Sub2</a>
+                        <a href="">Sub3</a>
+                        <a href="">Sub4</a>
+                    </div>
+                </li>
+
+                <li class="categorias" id="boxeo">
+                    <a href="#boxeo">Boxeo</a>
+                    <div class="submenu">
+                        <a href="">Todos los productos</a>
+                        <a href="">Sub1</a>
+                        <a href="">Sub2</a>
+                        <a href="">Sub3</a>
+                        <a href="">Sub4</a>
+                    </div>
+                </li>
+
+                <li class="categorias" id="kick-muay">
+                    <a href="#kick-muay">KickBoxing/MuayThai</a>
+                    <div class="submenu">
+                        <a href="">Todos los productos</a>
+                        <a href="">Sub1</a>
+                        <a href="">Sub2</a>
+                        <a href="">Sub3</a>
+                        <a href="">Sub4</a>
+                    </div>
+                </li>
+
+                <li class="categorias" id="judo">
+                    <a href="#judo">Judo</a>
+                    <div class="submenu">
+                        <a href="">Todos los productos</a>
+                        <a href="">Sub1</a>
+                        <a href="">Sub2</a>
+                        <a href="">Sub3</a>
+                        <a href="">Sub4</a>
+                    </div>
+                </li>
+                <li class="categorias" id="jiujitsu">
+                    <a href="#jiujitsu">Jiu-Jitsu</a>
+                    <div class="submenu">
+                        <a href="">Todos los productos</a>
+                        <a href="">Sub1</a>
+                        <a href="">Sub2</a>
+                        <a href="">Sub3</a>
+                        <a href="">Sub4</a>
+                    </div>
+                </li>
+                <li class="categorias" id="entrenamiento">
+                    <a href="#entrenamiento">Entrenamiento</a>
+                    <div class="submenu">
+                        <a href="">Todos los productos</a>
+                        <a href="">Sub1</a>
+                        <a href="">Sub2</a>
+                        <a href="">Sub3</a>
+                        <a href="">Sub4</a>
+                    </div>
+                </li>                    
+            </ul>
+        </div>
     </nav>
 </header>
 
@@ -51,14 +124,14 @@
     <main class="login">
         <section>
             <h2>Iniciar Sesión</h2>
-            <samp>¿No tenés una cuenta?</samp><a href="/register.html">¡Creá una cuenta!</a>
+            <samp>¿No tenés una cuenta?</samp><a href="/register">¡Creá una cuenta!</a>
             <form action="">
                 <input type="email" id="email" class="email" placeholder="Escribe tu e-mail">
 
                 <input type="password" id="password" placeholder="Contraseña">
             </form>
             <h5><a href="">¿Olvidaste tu contraseña?</a></h5>
-            <button ><a href="">Iniciar Sesión</a></button>
+            <button ><a href="/home.html">Iniciar Sesión</a></button>
         </section>
     </main>
 <!-- pie de la pagina web -->
