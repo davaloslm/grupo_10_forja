@@ -93,7 +93,7 @@
 }
 
 .cart section.container article.product_info div.foto_product a button i {
-    color: var(--black);
+    color: var(--white);
 }
 
 .cart section.container article.product_info div.foto_product a.eliminar_a button.eliminar, .cart section.container article.product_info div.foto_product a.eliminar_a {
@@ -115,7 +115,6 @@
 .cart section.container article.product_info div.detail_product div.detail_article_cart a {
     color: var(--black);
     font-weight: 700;
-    max-width: 150px;
     cursor: pointer;
 }
 
@@ -238,6 +237,7 @@
     padding: 10px;
     margin-top: 10px;
     margin-right: 10px;
+    color: var(--white);
 }
 
 /*                                     Productos similares                                  */
@@ -388,7 +388,6 @@
         font-size: 17px;
     }
 
-    
     .cart section.monto_final div.mercado_pago {
         justify-content: space-around;
     }
@@ -402,6 +401,8 @@
     }
     
     .cart section.monto_final div.mercado_pago div.boton_container button.pagar {
+        font-size: 17px;
+        font-weight: 600;
         width: 90%;
     }
 
@@ -449,12 +450,15 @@
     }
     
     .cart section.container article.product_info div.foto_product a.eliminar_a button.eliminar {
+        color: var(--white);
         display: block;
         margin-left: 10px;
         padding: 5px;
         border-radius: 0 0 5px 5px;
         width: 93%;
         max-width: 240px;
+        font-size: 17px;
+        font-weight: 600;
     }
 
     .cart section.container article.product_info div.foto_product a.eliminar_a button.eliminar:hover {
