@@ -121,6 +121,38 @@ main.product section.detalles div.detalles input, main.product section.detalles 
 
 main.product section.detalles div.detalles div.cantidad input{
     width: 40px;
+    margin: 0;
+}
+
+main.product section.detalles div.detalles div.cantidad div.box-quantity-container{
+    display: inline-block
+}
+
+main.product section.detalles div.detalles form div.cantidad div div.box-quantity{
+    display: flex;
+    
+}
+
+main.product section.detalles div.detalles form div.cantidad div.box-quantity button{
+    background-color: var(--lightBlue);
+    color: var(--white);
+    width: 15px;
+    border-radius: 5px 0 0 5px;
+    height: 30px;
+    margin: 0;
+}
+
+main.product section.detalles div.detalles form div.cantidad div.box-quantity button:last-child{
+    border-radius: 0 5px 5px 0;
+
+}
+
+main.product section.detalles div.detalles form div.cantidad div.box-quantity input{
+    width: 30px;
+    border-left: none;
+    border-right: none;
+    border: 1px solid var(--lightBlue);
+    border-radius: 0;
 }
 
 /* productos relacionados */
