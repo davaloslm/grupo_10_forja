@@ -472,13 +472,8 @@
         justify-content: space-around;
     }
 
-    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button {
-        display: none;
-    }
-    
-    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity input {
-        border: 1px solid var(--black);
-        border-radius: 10px;
+    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button:hover {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
     }
 
     .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity input:focus {
