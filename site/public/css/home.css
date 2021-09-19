@@ -1,0 +1,477 @@
+.home section.carrusel {
+    display: none;
+}
+/*                                       sección categorías más populares                               */
+.home section.populares h2 {
+    background-color: var(--black);
+    text-align: center;
+    color: var(--white);
+    padding: 5px 0 5px 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.home section.populares div.populares_categorias {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+
+.home section.populares div.populares_categorias article.categorias {
+    margin-top: 10px;
+    width: 45%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
+.home section.populares div.populares_categorias article.categorias h4 {
+    background-color: var(--black);
+    color: white;
+    width: 100%;
+    text-transform: uppercase;
+    border-radius: 5px;
+}
+
+.home section.populares div.populares_categorias article a img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+/*                                   sección productos destacados                        */
+.home section.destacados h2 {
+    background-color: var(--lightBlue);
+    text-align: center;
+    color: var(--white);
+    padding: 5px 0 5px 0;
+    margin: 20px 0 10px 0;
+    text-transform: uppercase;
+}
+
+.home section.destacados div.destacados_contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.home section.destacados div.destacados_contenedor article.producto_des {
+    margin-top: 10px;
+    width: 45%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.home section.destacados div.destacados_contenedor article.producto_des a img {
+    width: 100%;
+}
+
+
+.home section.destacados div.destacados_contenedor article.producto_des div.image_container a img {
+    width: 100%;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.home section.destacados div.destacados_contenedor article.producto_des div.detail_container {
+    position: relative;
+    padding: 0px 10px 10px 10px;
+    text-align: center;
+}
+
+.home section.destacados div.destacados_contenedor article.producto_des div.detail_container i {
+    position: absolute;
+    top: -35px;
+    left: 15px;
+    color: var(--lightBlue);
+}
+
+.home section.destacados div.destacados_contenedor article.producto_des div.detail_container p.precio{
+    color: var(--black);
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+    font-size: 20px;
+}
+
+.home section.destacados div.destacados_contenedor article.producto_des div.detail_container p.descripcion {
+    display: none;
+}
+
+/*                                sección productos en oferta                         */
+
+.home section.ofertas {
+    padding-bottom: 20px;
+}
+
+.home section.ofertas h2 {
+    background-color: var(--lightBlue);
+    text-align: center;
+    color: var(--white);
+    padding: 5px 0 5px 0;
+    margin: 20px 0 10px 0;
+    text-transform: uppercase;
+}
+
+.home section.ofertas div.ofertas_contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.home section.ofertas div.ofertas_contenedor article.producto_ofer {
+    margin-top: 10px;
+    width: 45%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.image_container a img {
+    width: 100%;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container {
+    position: relative;
+    text-align: center;
+    padding: 0px 10px 10px 10px;
+}
+
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
+    position: absolute;
+    top: -35px;
+    left: 10px;
+    color: var(--white);
+    background-color: var(--lightBlue);
+    font-size: 20px;
+}
+
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descripcion {
+    display: none;
+}
+
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.precio {
+    text-decoration: line-through;
+    color: red;
+    text-align: center;
+}
+
+.home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.precio_des  {
+    color: var(--black);
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+    font-size: 20px;
+    
+}
+
+/* goTop y whatsapp */
+.home div.go-top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column-reverse;
+    position: fixed;
+    z-index: 100;
+    bottom: 15%;
+    right: 0;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+
+.home div.go-top a.top {
+    margin-top: 10px;
+    border-radius: 20px;
+    background-color: var(--lightBlue);
+    padding: 3px;
+    font-size: 13px;
+}
+
+.home div.go-top a.top span {
+    margin-left: 5px;
+    margin-right: 5px;
+    color: var(--white);
+}
+
+.home div.go-top a.top i {
+    color: white;
+    margin-right: 4px;
+}
+
+.home div.go-top a.whatsapp {
+    width:30px;
+    height:30px;
+    bottom:20px;
+    right:20px;
+    background-color:#25d366;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:20px;
+    align-self: flex-end;
+}
+
+.home div.go-top a.whatsapp i {
+    margin-top:5px;
+}
+
+/*                                                 Tablet                                      */
+@media (min-width: 425px) {
+
+    /* señuelo */
+    .home section.carrusel div.carrusel_container img {
+        width: 100%;
+        max-height: 768px;
+        max-width: 1024px;
+    }
+    
+    /* carrusel */
+    .home section.carrusel {
+        display: block;
+    }
+    main section.carrusel div.carrusel_container {
+        width: 100%;
+        text-align: center;
+    }
+
+    .home section.carrusel div.carrusel_container ul.slider {
+        position: relative;
+    }
+
+    .home section.carrusel div.carrusel_container ul.slider li {
+        position: absolute;
+        top: 0;
+        opacity: 0;
+        width: 100%;
+        transition: opacity 1s;
+    }
+
+    .home section.carrusel div.carrusel_container ul.slider li img {
+        width: 100%;
+        max-height: 768px;
+        /* max-width: 1024px; */
+        object-fit: cover;
+        animation: respiracion1 5s linear alternate infinite;
+        animation-delay: 5s;
+    }
+
+    .home section.carrusel div.carrusel_container ul.slider li:first-child {
+        opacity: 1;
+    }
+
+    .home section.carrusel div.carrusel_container ul.slider li:target {
+        opacity: 1;
+    }
+
+    .home section.carrusel div.botones_container ul.botones_slide li {
+        display: inline-block;
+    }
+
+    .home section.carrusel div.botones_container ul.botones_slide li a{
+        position: relative;
+        display: inline-block;
+        background-color: var(--black);
+        width: 15px;
+        height: 15px;
+        border-radius: 100%;
+    }
+
+    .home section.destacados div.destacados_contenedor article.producto_des div.detail_container i {
+        top: -35px;
+        left: 15px;
+    }
+
+    .home section.populares div.populares_categorias article a img {
+        animation: respiracion 5s linear alternate infinite;
+        animation-delay: 5s;
+    }
+
+    .home section.destacados div.destacados_contenedor article.producto_des, .home section.ofertas div.ofertas_contenedor article.producto_ofer {
+        width: 30%;
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+    }
+
+    .home section.destacados div.destacados_contenedor article.producto_des div.detail_container p.descripcion, .home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descripcion {
+        display: block;
+    }
+
+
+
+    /* whatsapp & goTop */
+    .home div.go-top a.top {
+        font-size: 20px;
+    }
+    
+
+    .home div.go-top {
+        bottom: 20%;
+        
+    }
+
+    .home div.go-top a.whatsapp i {
+        margin-top:13px;
+    }
+
+    .home div.go-top a.whatsapp {
+        width:60px;
+        height:60px;
+        bottom:40px;
+        right:40px;
+        background-color:#25d366;
+        color:#FFF;
+        border-radius:50px;
+        text-align:center;
+        font-size:30px;
+        align-self: flex-end;
+    }
+}
+
+/*                                                     Laptop                                          */
+@media (min-width: 768px) {
+
+    .home section.carrusel div.carrusel_container {
+        background-image: url("/img/fondo.png");
+        background-repeat: repeat;
+        
+    }
+
+    .home section.carrusel div.botones_container ul.botones_slide li a:hover {
+        background-color: var(--white);
+        transition: all .5s;
+    }
+
+    .home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
+        animation: vibracion .5s linear alternate 2;
+        animation-delay: 40s;
+    }
+    
+
+    .home section.populares div.populares_categorias article.categorias {
+        width: 24%;
+    }
+
+    .home section.populares div.populares_categorias article.categorias:hover {
+        transform: scale(1.2);
+        transition: all .6s;
+    }
+
+    .home section.destacados div.destacados_contenedor article.producto_des, .home section.ofertas div.ofertas_contenedor article.producto_ofer {
+        width: 22%;
+        box-shadow: none;
+        max-width: 250px;
+    }
+    .home section.destacados div.destacados_contenedor article.producto_des:hover, .home section.ofertas div.ofertas_contenedor article.producto_ofer:hover {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+        transition: box-shadow .5s;
+    }
+}
+
+
+@media (min-width: 1137px) {
+
+    .home section.destacados div.destacados_contenedor article.producto_des, .home section.ofertas div.ofertas_contenedor article.producto_ofer {
+        width: 100%;
+    }
+
+    .home section.destacados div.destacados_contenedor, .home section.ofertas div.ofertas_contenedor {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        gap: 10px;
+    }
+
+    .home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container p.descuento {
+        top: -41px;
+        left: 13px;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    .home section.destacados div.destacados_contenedor, .home section.ofertas div.ofertas_contenedor {
+        grid-template-columns: repeat(5, auto);
+    }
+
+    .home div.go-top {
+        bottom: 0;
+    }
+}
+
+@media (min-width: 1560px) {
+
+    .home section.destacados div.destacados_contenedor, .home section.ofertas div.ofertas_contenedor {
+        grid-template-columns: repeat(6, auto);
+    }
+}
+
+
+body {
+    /* max-width: 1660px;
+    margin: 0 auto; */
+    background: linear-gradient(180deg, #053742 40%, #000000 60%);
+
+}
+
+
+/* ///////////////////////////////////////////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////// */
+/*                                 ANIMACIONES                                       */
+
+/*                    animacion categorias populares                          */
+@keyframes respiracion {
+    0% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0);
+    }
+
+    25% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.25);
+    }
+
+    50% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.50);
+    }
+
+    75% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.75);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+    }
+}
+
+/*                animacion carrusel                          */
+
+@keyframes respiracion1 {
+    0% {
+        box-shadow: 0px 5px 20px 0px rgba(42,210,210,0);
+    }
+
+    25% {
+        box-shadow: 0px 5px 20px 0px rgba(42,210,210,0.25);
+    }
+
+    50% {
+        box-shadow: 0px 5px 20px 0px rgba(42,210,210,0.50);
+    }
+
+    75% {
+        box-shadow: 0px 5px 20px 0px rgba(42,210,210,0.75);
+    }
+
+    100% {
+        box-shadow: 0px 5px 20px 0px rgba(42,210,210,1);
+    }
+}
+
+/*               animacion descuento                */
+@keyframes vibracion {
+    
+    5%, 25%, 45%, 65%, 85%  {
+        transform: translateX(-5px);
+    }
+
+    15%, 35%, 55%, 75%, 95% {
+        transform: translateX(5px);
+    }
+}
