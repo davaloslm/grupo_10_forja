@@ -6,8 +6,7 @@ const logger = require('morgan');
 
 const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
-const cartRouter = require('./routes/cartRouter'); // Creo variable de ruta del carrito
-
+const borrar = require("./routes/product"); // no funciona
 const app = express();
 
 // view engine setup
@@ -22,7 +21,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
-app.use('/cart', cartRouter); //Agrego ruta de carrito 
+app.use('/product', borrar); //Agrego ruta de carrito (no funciona)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -1,9 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const { cart } = require("../controllers/usersController")
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
+router.get('/cart',  cart);
 
 module.exports = router;

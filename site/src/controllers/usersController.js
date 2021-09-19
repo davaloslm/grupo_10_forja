@@ -1,7 +1,8 @@
 const controller = {
-    product: (req, res)=> {
-        res.render('product')
+    cart: (req, res)=> {
+        res.render('cart')
     },
+    
 }
 
 module.exports = controller;
