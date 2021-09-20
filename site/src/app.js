@@ -8,6 +8,8 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productRouter = require("./routes/productRouter"); // no funciona
 const categoriasRouter = require("./routes/categoriasRouter");
+const adminRouter = require("./routes/adminRouter");
+
 const app = express();
 
 // view engine setup
@@ -24,6 +26,8 @@ app.use('/', indexRouter);
 app.use('/', usersRouter);
 app.use('/product', productRouter); //Agrego ruta de carrito (no funciona)
 app.use('/categorias', categoriasRouter); //Ruta para las categorías
+app.use('/', adminRouter); //Ruta para las admin
+
 
 
 
