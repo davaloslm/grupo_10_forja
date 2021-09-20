@@ -1,12 +1,12 @@
 const controller = {
     cart: (req, res)=> {
-        res.render('cart')
+        res.render('users/cart')
     },
     register: (req, res)=> {
-        res.render('register')
+        res.render('users/register')
     },
     login: (req, res)=> {
-        res.render('login')
+        res.render('users/login')
     },
 }
 

@@ -1,6 +1,6 @@
 const controller = {
     product: (req, res)=> {
-        res.render('product')
+        res.render('products/product')
     },
 }
 
