@@ -331,7 +331,7 @@
 @media (min-width: 768px) {
 
     .home section.carrusel div.carrusel_container {
-        background-image: url("/img/fondo.png");
+        background-image: url("/img/design/fondo.png");
         background-repeat: repeat;
         
     }
