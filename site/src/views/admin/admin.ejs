@@ -1,14 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <%- include('../partials/head')  %> 
+    <%- include('../partials/head')  %>
+    <!-- <link rel="stylesheet" href="../../../css/admin.css"> -->
     <title>Administrador</title>
 </head>
 <body>
+
     <%- include('../partials/header')  %>
-    <main>
-        <h1>Administrador</h1>
+<!-- config user icon <i class="fas fa-users-cog"></i> -->
+<!-- engranajes icon <i class="fas fa-cogs"></i> -->
+<!-- cajas icon <i class="fas fa-boxes"></i> -->
+<!-- users icon <i class="fas fa-users"></i>></i> -->
+    <main class="admin">
+
+        <h1 class="tittle">Bienvenido<!-- imprimir el nombre del administrador que inició sesión --></h1>
+        <article class="tarjetas">
+            <a href="#adp"><img src="../../../img/design/box_admin.jpg" alt=""></a>
+            <img src="../../../img/design/1-engranaje.png" alt="" class="engranaje1">
+            <img src="../../../img/design/2-engranaje.png" alt="" class="engranaje2">
+            <img src="../../../img/design/3-engranaje.png" alt="" class="engranaje3">
+            <h4>Administrar productos <i class="fas fa-cogs"></i></h4>
+        </article>
+        <article class="tarjetas">
+            <a href="#ldp"><img src="../../../img/design/list_admin.jpg" alt=""></a>
+            <h4>Lista de productos <i class="fas fa-boxes"></i></h4>
+        </article>
+        <article class="tarjetas">
+            <a href="#adu"><img src="../../../img/design/users_admin.jpg" alt=""></a>
+            <img src="" alt="">
+            <h4>Administrar usuarios <i class="fas fa-users-cog"></i></h4>
+        </article>
+        <article class="tarjetas">
+            <a href="#ldu"><img src="../../../img/design/list_admin.jpg" alt=""></a>
+            <h4>Lista de usuarios <i class="fas fa-users"></i></h4>
+        </article>
+        <h2 class="title_container" id="#adp">Administrar productos</h2>
+        <a href="/admin">Crear nuevo producto <i class="fas fa-box"></i></a>
+        <section class="list_productos_container">
+            <div class="subtitulo_container">
+                <h2 id="#ldp">Lista de productos <i class="fas fa-boxes"></i></h2>
+            </div>
+            <div class="buscar_container">
+                <form action="">
+                    <input type="text" name="search" id="search" placeholder="Buscar producto">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#ID</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col">Ver</th>
+                        <th scope="col">Modificar</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Guantes boxeo</td>
+                        <td><a href=""><i class="fas fa-eye"></i></a></td>
+                        <td><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="">Agregar nuevo producto <i class="fas fa-plus-square"></i></a>
+        </section>
+        <h2 class="title_container" id="#adu">Administrar usuarios <i class="fas fa-users-cog"></i></h2>
+        <a href="/admin">Crear nuevo usuario <i class="fas fa-user-plus"></i></a>
+        <section class="list_usuarios_container">
+            <div class="subtitulo_container2">
+                <h2 id="#ldu">Lista de usuarios <i class="fas fa-users"></i></h2>
+            </div>
+            <div class="buscar_container">
+                <form action="">
+                    <input type="text" name="search" id="search" placeholder="Buscar usuario">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#ID</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Admin</th>
+                        <th scope="col">Ver</th>
+                        <th scope="col">Editar</th>
+                        <th scope="col">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>usuario</td>
+                        <td>nombre.usuario</td>
+                        <td>apellido.usuario</td>
+                        <td>Si/No</td>
+                        <td><a href=""><i class="fas fa-eye"></i></a></td>
+                        <td><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td><a href=""><i class="fas fa-trash-alt"></i></a></td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="">Agregar nuevo usuario <i class="fas fa-user-plus"></i></a>
+        </section>
     </main>
+
     <%- include('../partials/footer')  %> 
+
 </body>
 </html>
