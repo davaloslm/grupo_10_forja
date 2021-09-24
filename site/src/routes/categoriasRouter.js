@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { } = require('../controllers/categoriasController.js')
+const { categoria } = require('../controllers/categoriasController.js')
 
-router.get('/boxeo', );
+router.get('/:categoria', categoria );/* ???? */
 
 
 

@@ -326,21 +326,21 @@ main.product section.relacionados div.relacionados_contenedor article.producto_r
     }
 
     main.product section.carrusel div.botones_container ul.botones_slide li.button1 a{
-        background: url(../img/productos/product-9.jpg);
+        /* background: url(../img/productos/product-9.jpg); */
         height: 100px;
         width: 100px;
         background-size: contain;
     }
 
     main.product section.carrusel div.botones_container ul.botones_slide li.button2 a{
-        background: url(../img/productos/product-25.jpg);
+        /* background: url(../img/productos/product-25.jpg); */
         height: 100px;
         width: 100px;
         background-size: contain;
     }
 
     main.product section.carrusel div.botones_container ul.botones_slide li.button3 a{
-        background: url(../img/productos/product-26.jpg);
+        /* background: url(../img/productos/product-26.jpg); */
         height: 100px;
         width: 100px;
         background-size: contain;

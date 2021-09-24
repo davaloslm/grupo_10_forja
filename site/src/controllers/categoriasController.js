@@ -2,7 +2,11 @@ const productos = require("../data/productos.json")
 
 const controller = {
     categoria: (req, res)=> {
-        res.render('categoria', {productos})
+        /* ??? */
+       
+
+
+        res.render('categoria', /* ???? */)
     }
   /*   entrenamiento: (req, res)=> {
         res.render('products/entrenamiento')
