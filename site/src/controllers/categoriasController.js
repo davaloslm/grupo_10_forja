@@ -1,8 +1,10 @@
+const productos = require("../data/productos.json")
+
 const controller = {
-    boxeo: (req, res)=> {
-        res.render('products/boxeo')
-    },
-    entrenamiento: (req, res)=> {
+    categoria: (req, res)=> {
+        res.render('categoria', {productos})
+    }
+  /*   entrenamiento: (req, res)=> {
         res.render('products/entrenamiento')
     },
     jiujitsu: (req, res)=> {
@@ -16,7 +18,7 @@ const controller = {
     },
     taekwondo: (req, res)=> {
         res.render('products/taeKwonDo')
-    }
+    } */
 }
 
 module.exports = controller;

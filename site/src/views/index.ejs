@@ -65,7 +65,22 @@
         <section class="destacados">
             <h2>Productos destacados</h2>
             <div class="destacados_contenedor">
-                <article class="producto_des">
+                <% productosDestacados.forEach(producto=>{%> 
+                    <article class="producto_des">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/<%= producto.imagen[0] %>" alt="<%= producto.nombre %> "></a>
+                    </div>
+                    <div class="detail_container">
+                        <i class="fas fa-truck" id="envio"></i>
+                        <p class="precio">$<%= producto.precio %> </p>
+                        <h4 class="titulo"><%= producto.nombre %> </h4>
+                        <p class="descripcion"><%= producto.descripcion %> </p>
+                    </div>
+                </article>
+                    
+
+                <% }) %> 
+                <!-- <article class="producto_des">
                     <div class="image_container">
                         <a href="#"><img src="/img/productos/product-1.jpg"></a>
                     </div>
@@ -208,27 +223,28 @@
                         <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
                         repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
                     </div>
-                </article>
+                </article> -->
             </div>
         </section>
 
         <section class="ofertas">
             <h2>Ofertas</h2>
             <div class="ofertas_contenedor">
+                <% productosEnOferta.forEach(producto=>{%>
                 <article class="producto_ofer">
                     <div class="image_container">
-                        <a href="#"><img src="/img/productos/product-13.jpg"></a>
+                        <a href="#"><img src="/img/productos/<%= producto.imagen[0] %>"></a>
                     </div>
                     <div class="detail_container">
-                        <p class="precio">4.800 $</p>
-                        <p class="descuento">- 15%</p>
-                        <p class="precio_des">2.400 $</p>
-                        <h4 class="titulo">Manoplas almohadilla entrenamiento wushengreen</h4>
-                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
-                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                        <p class="precio">$<%= producto.precio %> </p>
+                        <p class="descuento"><%= producto.descuento %>%</p>
+                        <p class="precio_des">$<%= parseInt(producto.precio) - parseInt(producto.precio)*(parseInt(producto.descuento)/100)  %></p>
+                        <h4 class="titulo"><%= producto.nombre %></h4>
+                        <p class="descripcion"><%= producto.descripcion %></p>
                     </div>
                 </article>
-                <article class="producto_ofer">
+                <% }) %> 
+                <!-- <article class="producto_ofer">
                     <div class="image_container">
                         <a href="#"><img src="/img/productos/product-14.jpg"></a>
                     </div>
@@ -370,7 +386,7 @@
                         <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
                             repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
                     </div>
-                </article>
+                </article> -->
             </div>
         </section>
 
