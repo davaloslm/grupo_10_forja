@@ -1,5 +1,4 @@
 .admin h1.tittle {
-    color: var(--black);
     margin: 20px 0px 20px 0px;
     text-align: center;
     color: var(--white);
@@ -12,15 +11,24 @@
 }
 
 .admin article.tarjetas {
-    width: 90%;
+    width: 45%;
     position: relative;
     border-radius: 5px;
     background-color: #f5f5f5;
     margin-bottom: 20px;
 }
 
+.admin section.tarjetas_container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
 .admin article.tarjetas img {
     width: 100%;
+    border-radius: 5px;
 }
 
 .admin article.tarjetas img.engranaje1, .admin article.tarjetas img.engranaje2, .admin article.tarjetas img.engranaje3 {
@@ -54,6 +62,7 @@
     color: var(--white);
     background-color: var(--lightBlue);
     padding: 5px;
+    border-radius: 0px 0px 5px 5px;
 }
 
 .admin h2.title_container {
@@ -64,7 +73,18 @@
 }
 
 .admin p.redirect_container {
-    margin: 15px 0px 15px 0px;
+    margin: 15px 0px 15px 20px;
+}
+
+.admin p.redirect_container2 {
+    background-color: var(--white);
+    margin-bottom: 15px;
+    text-align: center;
+    padding: 5px;
+}
+
+.admin p.redirect_container2 a {
+    color: black;
 }
 
 .admin p.redirect_container a.redirect {
@@ -98,6 +118,7 @@
     height: 26px;
     border-radius: 5px 0 0 5px;
     padding-left: 5px;
+    max-width: 300px;
 }
 
 .admin section.list_container form button {
@@ -115,6 +136,8 @@
 .admin table.table {
     background-color: var(--white);
     width: 100%;
+    border: 1px solid #ebebeb;
+    border-bottom: none;
 }
 
 .admin table.table thead tr th {
@@ -122,8 +145,16 @@
     padding: 5px;
 }
 
+.admin table.table tbody tr td, .admin table.table tbody tr th.id {
+    border-bottom: 1px solid #ebebeb;
+}
+
 .admin table.table tbody tr td.iconos, .admin table.table tbody tr th, .admin table.table tbody tr td.adm {
     text-align: center;
+}
+
+.admin table.table tbody tr td.iconos {
+    padding: 5px 0px 5px 0px;
 }
 
 .admin table.table tbody tr td.iconos a i {
@@ -139,5 +170,82 @@
 }
 
 @media (min-width: 425px) {
+
+    .admin section.list_container div.subtitulo_container h2 {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    .admin h1.tittle {
+        text-align: start;
+        margin-left: 20px;
+    }
     
+    .admin p.redirect_container a.redirect:hover {
+        text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+    }
+
+    .admin p.redirect_container2 a.redirect:hover {
+        text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+    }
+
+    .admin article.tarjetas {
+        width: 20%;
+        max-width: 250px;
+        animation: respiracion 5s linear alternate infinite;
+        animation-delay: 5s;
+    }
+
+    .admin article.tarjetas:hover {
+        transform: scale(1.2);
+        transition: all .6s;
+    }
+
+    .admin section.list_container form {
+        justify-content: flex-end;
+        margin-right: 20px;
+    }
+
+    .admin table.table tbody tr td.name, .admin table.table thead tr th.name {
+        display: block;
+        padding: 5px 0px 5px 0px;
+    }
+
+    .admin table.table thead tr th.colm_icon {
+        width: 100px;
+    }
+
+    .admin table.table thead tr th.colm_admin {
+        width: 120px;
+    }
+
+    .admin table.table tbody tr td i:hover{
+        transform: scale(1.5);
+        transition: all .5s;
+    }
+}
+
+
+@keyframes respiracion {
+    0% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0);
+    }
+
+    25% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.25);
+    }
+
+    50% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.50);
+    }
+
+    75% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.75);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+    }
 }
