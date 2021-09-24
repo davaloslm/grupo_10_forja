@@ -230,7 +230,7 @@
     .home section.carrusel {
         display: block;
     }
-    main section.carrusel div.carrusel_container {
+    .home section.carrusel div.carrusel_container {
         width: 100%;
         text-align: center;
     }
