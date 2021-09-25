@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <%- include('../partials/head')  %> 
+    <link rel="stylesheet" href="../../../css/crear.css">
+    <title>Crear Producto</title>
+</head>
+<body>
+
+    <%- include('../partials/header')  %> 
+
+ <main class="crear">
+    <section class="product_container">
+        <h3>Crear nuevo producto <i class="fas fa-box"></i></h3>
+
+        <form class="todo_container" action="">
+
+            
+            <section class="visual_container">
+
+                    <input type="file" required>
+                
+
+                <div class="descuento_envio_container">
+
+                    <div class="envio_container">
+                        <input type="checkbox" id="envio"><label for="envio">Envío</label>
+                    </div>
+
+                    <div class="descuento_container">
+                        <input type="checkbox" id="descuento"><label for="descuento">Descuento</label>
+                        <select name="descuento" id="Descuento">
+                            <option value="" selected hidden>Seleccione %</option>
+                            <option value="5%">5%</option>
+                            <option value="10%">10%</option>
+                            <option value="15%">15%</option>
+                            <option value="20%">20%</option>
+                            <option value="25%">25%</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="info_container">
+                <div class= "selec info_titulo_container">
+                    <p>Ingresá un título</p>
+                    <input type="text" name="titulo" minlength="8" required >
+                </div>
+                <div class= "selec info_des_container">
+                    <p>Ingresá una descripción</p>
+                    <textarea name="descripcion" id="" placeholder="Ingresá una descripción"></textarea>
+                </div>
+                <div class= "selec info_precio_container">
+                    <p>Precio $</p>
+                    <input type="number" name="precio" required>
+                </div>
+                <div class= "selec color_container">
+                    <p>Colores</p>
+                    <input type="text" name="color">
+                </div>
+                <div class= "selec info_categoria_container">
+                    <p>Categoría</p>
+                    <select name="categoria" id="categoria" required>
+                        <option value="" selected hidden>Seleccione Categoría</option>
+                        <option value="boxeo">Boxeo</option>
+                        <option value="taekwondo">TaeKwonDo</option>
+                        <option value="entrenamiento">Entrenamiento</option>
+                        <option value="kickboxing">KickBoxing</option>
+                        <option value="judo">Judo</option>
+                        <option value="jiujitsu">JiuJitsu</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="button_container">
+                <button class="boton" type="submit">Crear</button>
+                <button class="boton" type="reset">Borrar</button>
+            </section>
+
+        </form>
+    </section>
+</main>
+    <%- include('../partials/footer')  %> 
+</body>
+</html> 
