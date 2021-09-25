@@ -1,14 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <%- include('../partials/head')  %> 
+    <%- include('../partials/head')  %>
+    <!-- <link rel="stylesheet" href="../../../css/admin.css"> -->
     <title>Administrador</title>
 </head>
 <body>
+
     <%- include('../partials/header')  %>
-    <main>
-        <h1>Administrador</h1>
+    <main class="admin">
+
+        <h1 class="tittle">Bienvenido<!-- imprimir el nombre del administrador que inició sesión --></h1>
+        <section class="tarjetas_container">
+            <article class="tarjetas">
+                <a href="#adp"><img src="../../../img/design/box_admin.jpg" alt=""></a>
+                <!-- <img src="../../../img/design/1-engranaje.png" alt="" class="engranaje1">
+                <img src="../../../img/design/2-engranaje.png" alt="" class="engranaje2">
+                <img src="../../../img/design/3-engranaje.png" alt="" class="engranaje3"> -->
+                <h4>Administrar productos <i class="fas fa-cogs"></i></h4>
+            </article>
+            <article class="tarjetas">
+                <a href="#ldp"><img src="../../../img/design/list_admin.jpg" alt=""></a>
+                <h4>Lista de productos <i class="fas fa-boxes"></i></h4>
+            </article>
+            <article class="tarjetas">
+                <a href="#adu"><img src="../../../img/design/users_admin.jpg" alt=""></a>
+                <!-- <img src="../../../img/design/1-engranaje.png" alt="" class="engranaje1">
+                <img src="../../../img/design/2-engranaje.png" alt="" class="engranaje2">
+                <img src="../../../img/design/3-engranaje.png" alt="" class="engranaje3"> -->
+                <h4>Administrar usuarios <i class="fas fa-users-cog"></i></h4>
+            </article>
+            <article class="tarjetas">
+                <a href="#ldu"><img src="../../../img/design/list_admin.jpg" alt=""></a>
+                <h4>Lista de usuarios <i class="fas fa-users"></i></h4>
+            </article>
+        </section>
+        <h2 class="title_container" id="adp">Administrar productos <i class="fas fa-cogs"></i></h2>
+        <p class="redirect_container"><a href="/crearProducto" class="redirect">Crear nuevo producto <i class="fas fa-box"></i></a></p>
+        <section class="list_container">
+            <div class="subtitulo_container">
+                <h2 id="ldp">Lista de productos <i class="fas fa-boxes"></i></h2>
+            </div>
+            <form action="">
+                <input type="text" name="search" id="search" placeholder="Buscar producto">
+                <button type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        </section>
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="colm_icon">#ID</th>
+                        <th scope="col">Producto</th>
+                        <th scope="col" class="colm_icon">Ver</th>
+                        <th scope="col" class="colm_icon">Editar</th>
+                        <th scope="col" class="colm_icon">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="id">1</th>
+                        <td>Guantes boxeo</td>
+                        <td class="iconos"><a href=""><i class="fas fa-eye"></i></a></td>
+                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="id">2</th>
+                        <td>Boxeo</td>
+                        <td class="iconos"><a href=""><i class="fas fa-eye"></i></a></td>
+                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="id">3</th>
+                        <td>Guantes</td>
+                        <td class="iconos"><a href=""><i class="fas fa-eye"></i></a></td>
+                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                    </tr>
+                </tbody>
+        </table>
+        <p class="redirect_container2"><a href="" class="redirect">Agregar nuevo producto <i class="fas fa-plus-square"></i></a></p>
+        <h2 class="title_container" id="adu">Administrar usuarios <i class="fas fa-users-cog"></i></h2>
+        <p class="redirect_container"><a href="/admin" class="redirect">Crear nuevo usuario <i class="fas fa-user-plus"></i></a></p>
+        <section class="list_container">
+            <div class="subtitulo_container">
+                <h2 id="ldu">Lista de usuarios <i class="fas fa-users"></i></h2>
+            </div>
+            <form action="">
+                    <input type="text" name="search" id="search" placeholder="Buscar usuario">
+                    <button type="submit">
+                        <i class="fas fa-search"></i>
+                    </button>
+            </form>
+        </section>
+        <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col" class="colm_icon">#ID</th>
+                        <th scope="col">Usuario</th>
+                        <th scope="col" class="name">Nombre & Apellido</th>
+                        <th scope="col" class="colm_admin">Admin</th>
+                        <th scope="col" class="colm_icon">Ver</th>
+                        <th scope="col" class="colm_icon">Editar</th>
+                        <th scope="col" class="colm_icon">Eliminar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row" class="id">1</th>
+                        <td>usuario1</td>
+                        <td class="name">nombre.usuario apellido.usuario</td>
+                        <td class="adm">Si/No</td>
+                        <td class="iconos"><a href=""><i class="fas fa-eye"></i></a></td>
+                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="id">2</th>
+                        <td>usuario2</td>
+                        <td class="name">nombre.usuario apellido.usuario</td>
+                        <td class="adm">Si/No</td>
+                        <td class="iconos"><a href=""><i class="fas fa-eye"></i></a></td>
+                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                    </tr>
+                    <tr>
+                        <th scope="row" class="id">3</th>
+                        <td>usuario3</td>
+                        <td class="name">nombre.usuario apellido.usuario</td>
+                        <td class="adm">Si/No</td>
+                        <td class="iconos"><a href=""><i class="fas fa-eye"></i></a></td>
+                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                    </tr>
+                </tbody>
+        </table>
+        <p class="redirect_container2"><a href="" class="redirect">Agregar nuevo usuario <i class="fas fa-user-plus"></i></a></p>
     </main>
+
     <%- include('../partials/footer')  %> 
+
 </body>
 </html>

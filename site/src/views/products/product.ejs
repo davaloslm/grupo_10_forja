@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <%- include('../partials/head')  %>
-    <title>Producto-0</title>
+    <title><%= producto.nombre %></title>
 </head>
 <body>
     <%- include('../partials/header')  %> 
@@ -12,29 +12,41 @@
 
         <section class="carrusel">
             <div class="carrusel_container">
+                
                 <ul class="slider">
                     <li id="slide-1">
-                        <img src="\img\productos\product-9.jpg" alt="Forja">
+                        <img src="/img/productos/<%= producto.imagen[0] %>" alt="<%= producto.nombre %>">
                     </li>
-                    <li id="slide-2">
-                        <img src="/img/productos/product-25.jpg" alt="Foto">
-                    </li>
-                    <li id="slide-3">
-                        <img src="/img/productos/product-26.jpg" alt="Foto">
-                    </li>
+                    <% if(producto.imagen[1]){ %>
+                        <li id="slide-2">
+                            <img src="/img/productos/<%= producto.imagen[1] %>" alt="<%= producto.nombre %>">
+                        </li> 
+                        <% } %> 
+                    
+                    <% if(producto.imagen[2]){ %>
+                        <li id="slide-3">
+                            <img src="/img/productos/<%= producto.imagen[2] %>" alt="<%= producto.nombre %>">
+                        </li> 
+                        <% } %> 
+                    
                 </ul>
                 <img src="/img/carrusel/señuelo.jpg" alt="Señuelo">
                 <div class="botones_container">
                     <ul class="botones_slide">
                         <li class="button1">
-                            <a href="#slide-1"> </a>
+                            <a href="#slide-1" style="background: url('/img/productos/<%= producto.imagen[0] %>'); background-size: contain;"> </a>
                         </li>
+                        <% if(producto.imagen[1]){ %>
+                        
                         <li class="button2">
-                            <a href="#slide-2"> </a>
+                            <a href="#slide-2" style="background: url('/img/productos/<%= producto.imagen[1] %>'); background-size: contain;"> </a>
                         </li>
+                        <% } %>
+                        <% if(producto.imagen[2]){ %> 
                         <li class="button3">
-                            <a href="#slide-3"> </a>
+                            <a href="#slide-3" style="background: url('/img/productos/<%= producto.imagen[2] %>'); background-size: contain;"> </a>
                         </li>
+                        <% } %> 
                     </ul>
                 </div>
             </div>
@@ -42,28 +54,52 @@
 
         <section class="detalles">
 
-            <h1>Dobok TaeKwon-Do ITF (Adultos)</h1>
+            <h1><%= producto.nombre %></h1>
             <div class="detalles">
-                <h2 class="precio">$4.500</h2>
+                <h2 class="precio">$<%= producto.precio %></h2>
+                <% if(parseInt(producto.descuento)>0){ %> 
+                <h2 ><%= producto.descuento %>% OFF</h2>
+                <h2 >$<%= parseInt(producto.precio) - parseInt(producto.precio)*(parseInt(producto.descuento)/100)  %></h2>
+
+                <% } %>                 
                 
                 <div class="marca">
-                    <h4>Marca:</h4><span>Gran-Marc</span>
+                    <h4>Marca:</h4><span><%= producto.marca %></span>
                 </div>
 
-                <div class="modelo">
+                <!-- <div class="modelo">
                     <h4>Modelo:</h4><span>Gup</span>
-                </div>
+                </div> -->
+                
                 
                 <form action="">
+                    <% if(producto.talle){ %> 
                     <label for="talle"><h4>Talle:</h4></label>
                     <select name="talle" id="talle">
-                        <option value="5">5</option>
-                        <option value="6">6</option>
+                        <% for(i=0; i<producto.talle.length; i++) {%> 
+                        <option value="<%= producto.talle[i] %> "><%= producto.talle[i] %></option>
+                        <% } %>
+                        <!-- <option value="6">6</option>
                         <option value="7">7</option>
                         <option value="8">8</option>
-                        <option value="9">9</option>
+                        <option value="9">9</option> -->
                 
                     </select>
+                    <% } %>
+
+                    <% if(producto.color){ %> 
+                        <label for="color"><h4>Color:</h4></label>
+                        <select name="color" id="color">
+                            <% for(i=0; i<producto.color.length; i++) {%> 
+                            <option value="<%= producto.color[i] %> "><%= producto.color[i] %></option>
+                            <% } %>
+                            <!-- <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option> -->
+                    
+                        </select>
+                        <% } %>
                 
                     <div class="cantidad">
                         <label for="cantidad"><h4>Cantidad:</h4></label>
@@ -78,12 +114,13 @@
                 
                 
                 </form>
+                
                 <button>Añadir al carrito</button>
             </div>
             
             <h4>Descripción:</h4>
 
-            <p class="descripcion">Elaborado con tejido plano ripstop (antidesgarro) de 6 onz de peso. Diseño clásico, corte amplio, pantalón con cintura elastizada con cordón de 3 cm, chaqueta cómoda y resistente, logos oficiales estampados. Ideal para principiantes, soporta continuos lavados y es de fácil planchado. Sujeción con cinta de abrojo. Incluye cinto blanco.</p>                       
+            <p class="descripcion"><%= producto.descripcion %><!-- Elaborado con tejido plano ripstop (antidesgarro) de 6 onz de peso. Diseño clásico, corte amplio, pantalón con cintura elastizada con cordón de 3 cm, chaqueta cómoda y resistente, logos oficiales estampados. Ideal para principiantes, soporta continuos lavados y es de fácil planchado. Sujeción con cinta de abrojo. Incluye cinto blanco. --></p>                       
 
 
         </section>
