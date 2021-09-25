@@ -2,7 +2,7 @@ body main.crear section.product_container{
     text-align: center;
 }
 /* Titulo */
-body main.crear section.product_container h3{
+body main.crear section.product_container h1{
     color: white;
     margin: 10px;
 }
