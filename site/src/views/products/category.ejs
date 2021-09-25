@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('../partials/head')  %> 
+    <title><%= categoriaCorrecta%> </title>
+</head>
+<body>
+    <%- include('../partials/header')  %>
+    <main>
+        <h1>Categoría <%= categoriaCorrecta %> </h1>
+        <div class="ofertas_contenedor">
+            <% productosDeLaCategoria.forEach(producto=>{%>
+            <article class="producto_ofer">
+                <div class="image_container">
+                    <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.imagen[0] %>"></a>
+                </div>
+                <div class="detail_container">
+                    <p class="precio">$<%= producto.precio %> </p>
+                    <% if(producto.descuento>0) {%> 
+                    <p class="descuento"><%= producto.descuento %>%</p>
+                    <p class="precio_des">$<%= parseInt(producto.precio) - parseInt(producto.precio)*(parseInt(producto.descuento)/100)  %></p>
+                    <% } %>
+                    <h4 class="titulo"><%= producto.nombre %></h4>
+                    <p class="descripcion"><%= producto.descripcion %></p>
+                </div>
+            </article>
+            <% }) %> 
+        </div>
+    </main>
+    <%- include('../partials/footer')  %> 
+</body>
+</html>

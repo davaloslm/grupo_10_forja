@@ -1,28 +1,17 @@
 const productos = require("../data/productos.json")
 
 const controller = {
-    categoria: (req, res)=> {
-        /* ??? */
+    category: (req, res)=> {
+        const {categoria} = req.params;
+        const productosDeLaCategoria = productos.filter(producto=>producto.categoria.includes(categoria) === true);
+        const categoriaCorrecta = categoria;
+        res.render("products/category", {productosDeLaCategoria, categoriaCorrecta} );
        
 
 
-        res.render('categoria', /* ???? */)
+        
     }
-  /*   entrenamiento: (req, res)=> {
-        res.render('products/entrenamiento')
-    },
-    jiujitsu: (req, res)=> {
-        res.render('products/jiuJitsu')
-    },
-    judo: (req, res)=> {
-        res.render('products/judo')
-    },
-    kickboxing: (req, res)=> {
-        res.render('products/kickBoxing')
-    },
-    taekwondo: (req, res)=> {
-        res.render('products/taeKwonDo')
-    } */
+  
 }
 
 module.exports = controller;

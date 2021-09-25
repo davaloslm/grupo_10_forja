@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/product', productRouter); //Agrego ruta de carrito (no funciona)
-app.use('/categorias', categoriasRouter); //Ruta para las categorías
+app.use('/categories', categoriasRouter); //Ruta para las categorías
 app.use('/admin', adminRouter); //Ruta para las admin
 
 

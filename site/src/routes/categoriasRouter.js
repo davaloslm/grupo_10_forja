@@ -1,8 +1,8 @@
 const express = require("express");
 const router = express.Router();
-const { categoria } = require('../controllers/categoriasController.js')
+const { category } = require('../controllers/categoriasController.js')
 
-router.get('/:categoria', categoria );/* ???? */
+router.get('/:categoria', category );/* ???? */
 
 
 
