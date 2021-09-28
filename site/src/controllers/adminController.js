@@ -5,7 +5,9 @@ const controller = {
     crearProducto: (req, res)=> {
         res.render('admin/crearProducto')
     },
-    /* adminLogin: ??? */
+    editarProducto: (req, res)=> {
+        res.render('admin/editarProducto')
+    },
 }
 
 module.exports = controller;

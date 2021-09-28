@@ -21,6 +21,11 @@ body main.crear section.product_container form.todo_container{
     animation-delay: 2s;
     padding: 0 10px;
 }
+/* ////estilo a todas las "P" //// */
+main.crear section.product_container form.todo_container p{
+    padding: 10px;
+    /* text-align: left; */
+}
  
 body main.crear section.product_container form section.visual_container{
     display: flex;
@@ -28,19 +33,27 @@ body main.crear section.product_container form section.visual_container{
     align-items: center;
     margin-top: 15px;
 }
+
+/* ///estilo para Enviar//// */
 body main.crear section.product_container form section.visual_container div.descuento_envio_container div.envio_container{
     margin-right: 10px;
 }
+
+/* ///estilo para selector % //// */
 body main.crear section.product_container form section.visual_container div.descuento_envio_container div.descuento_container select{
     margin-left: 10px;
 }
 
 
-/* //////hijo de visual_container///////*/
+/* ///////Estilo a selector de enviar y de Descuento y % ///////*/
 body main.crear section.product_container form section.visual_container div.descuento_envio_container {
+    /* margin: 15px 0;
+    display: flex;
+    align-items: center; */
     margin: 15px 0;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    flex-direction: column;
 }
 
 
@@ -51,11 +64,28 @@ body main.crear section.product_container form section.info_container{
     margin: 20px;
 }
 
+/* ///Estilos a tallas//// */
+
+body main.crear section.product_container form section.info_container div.tallaLetra{
+    display: flex;
+    align-items: center;
+}
+
+body main.crear section.product_container form section.info_container div.tallaNumero{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    /* margin-top: 20px; */
+}
+
+body main.crear section.product_container form section.info_container div.tallaLetra input.m, input.nl{
+    margin-right: 10px;
+}
  /* Selectores  */
 body main.crear section.product_container form section.info_container div.selec{
     margin: 10px 0;
 }
-/* //////////grupo B/////////// */
+/* ////////// estolo a los bordes de input y textArea /////////// */
 body main.crear section.product_container form section.info_container div.selec input, textarea, select{
     border-radius: 5px;
     border: var(--lightBlue) solid 1px;
@@ -64,7 +94,7 @@ body main.crear section.product_container form section.info_container div.selec 
     outline-color: var(--lightBlue);
 }
 
-
+/* ////Estilo a los botones de crear y borrar//// */
 body main.crear section.product_container form section.button_container{
     text-align: center;
     margin: 10px;
@@ -76,6 +106,21 @@ body main.crear section.product_container form section.button_container button.b
 
 }
 
+
+
+/*////////////////////////////// Movil-M///////////////////////////// */
+@media(min-width:375px){
+    body main.crear section.product_container form section.info_container div.tallaNumero{
+        width: 81%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        /* margin-top: 15px; */
+    }
+}
+
+
+
 /*////////////////////////////// Tablet///////////////////////////// */
 
 @media(min-width:768px){
@@ -84,11 +129,23 @@ body main.crear section.product_container form section.button_container button.b
         width: 80%;
         max-width: 440px;
     }
+    body main.crear section.product_container form section.visual_container div.descuento_envio_container {
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+    }
 
     body main.crear section.product_container form section.visual_container div.descuento_envio_container div.envio_container{
         margin-right: 10px;
+        /* /// */
     }
     body main.crear section.product_container form section.visual_container div.descuento_envio_container div.descuento_container select{
         margin-left: 10px;
+    }
+    body main.crear section.product_container form section.info_container div.selec textarea{
+        margin: 0px;
+        width: 257px;
+        height: 87px;
     }
 }

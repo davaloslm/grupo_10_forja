@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <%- include('../partials/head')  %> 
+    <link rel="stylesheet" href="../../../css/crear.css">
+    <title>Editar Producto</title>
+</head>
+<body>
+
+    <%- include('../partials/header')  %> 
+
+ <main class="crear">
+    <section class="product_container">
+        <h1>Editar Producto  <i class="fas fa-box"></i></h1>
+
+        <form class="todo_container" action="">
+
+            <section class="visual_container">
+                <!-- ////Eligir archivo//// -->
+                    <input type="file" required>
+
+                <!-- ////////selector de enviar//////// -->
+                <div class="descuento_envio_container">
+                    <div class="envio_container">
+                        <input type="checkbox" id="envio">
+                        <label for="envio">Envío</label>
+                    </div>
+
+                    <!-- ///////selector de % y Descuento /////// -->
+                    <div class="descuento_container">
+                        <input type="checkbox" id="descuento">
+                        <label for="descuento">Descuento</label>
+                        <select name="descuento" id="Descuento">
+                            <option value="" selected hidden>Seleccione %</option>
+                            <option value="5%">5%</option>
+                            <option value="10%">10%</option>
+                            <option value="15%">15%</option>
+                            <option value="20%">20%</option>
+                            <option value="25%">25%</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="info_container">
+ <!-- /////seccion de talla///// -->
+                <p>Tallas</p>
+                <!-- ////talla en letras//// -->
+                <div class="tallaLetra">
+                    <label for="S">S</label>
+                    <input class="m"id="S" type="checkbox">
+                    <label for="M">M</label>
+                    <input class="m"id="M" type="checkbox">
+                    <label for="L">L</label>
+                    <input class="m"id="L" type="checkbox">
+                    <label for="XL">XL</label>
+                    <input class="m"id="XL" type="checkbox">
+                    <label for="XXL">XXL</label>
+                    <input class="m"id="XXL" type="checkbox">
+                </div>
+                <!-- ///////Talla en Numero/////// -->
+                <p>Talla en Numeros</p>
+                <div class="tallaNumero">
+                    <label for="talla1">1</label>
+                    <input class="nl" type="checkbox" id="talla1">
+                    <label for="talla2">2</label>
+                    <input class="nl" type="checkbox" id="talla2">
+                    <label for="talla3">3</label>
+                    <input class="nl" type="checkbox" id="talla3">
+                    <label for="talla4">4</label>
+                    <input class="nl" type="checkbox" id="talla4">
+                    <label for="talla5">5</label>
+                    <input class="nl" type="checkbox" id="talla5">
+                    <label for="talla6">6</label>
+                    <input class="nl" type="checkbox" id="talla6">
+                    <label for="talla7">7</label>
+                    <input class="nl" type="checkbox" id="talla7">
+                    <label for="talla8">8</label>
+                    <input class="nl" type="checkbox" id="talla8">
+                    <label for="talla9">9</label>
+                    <input class="nl" type="checkbox" id="talla9">
+                </div>
+                <!-- /////titulo de producto///// -->
+                <div class= "selec info_titulo_container">
+                    <p>Ingresá un título</p>
+                    <input type="text" name="titulo" minlength="8" required >
+                </div>
+                <!-- /////Descripcion de Producto///// -->
+                <div class= "selec info_des_container">
+                    <p>Ingresá una descripción</p>
+                    <textarea name="descripcion" id="" placeholder="Ingresá una descripción"></textarea>
+                </div>
+                <!-- /////Precio de producto///// -->
+                <div class= "selec info_precio_container">
+                    <p>Precio $</p>
+                    <input type="number" name="precio" required>
+                </div>
+                <!-- /////Colores de producto///// -->
+                <div class= "selec color_container">
+                    <p>Colores</p>
+                    <input type="text" name="color">
+                </div>
+                <!-- /////categoria de producto///// -->
+                <div class= "selec info_categoria_container">
+                    <p>Categoría</p>
+                    <select name="categoria" id="categoria" required>
+                        <option value="" selected hidden>Seleccione Categoría</option>
+                        <option value="boxeo">Boxeo</option>
+                        <option value="taekwondo">TaeKwonDo</option>
+                        <option value="entrenamiento">Entrenamiento</option>
+                        <option value="kickboxing">KickBoxing</option>
+                        <option value="judo">Judo</option>
+                        <option value="jiujitsu">JiuJitsu</option>
+                    </select>
+                </div>
+            </section>
+<!-- ///botones//// -->
+            <section class="button_container">
+                <button class="boton" type="submit">Crear</button>
+                <button class="boton" type="reset">Borrar</button>
+            </section>
+
+        </form>
+    </section>
+</main>
+    <%- include('../partials/footer')  %> 
+</body>
+</html> 
