@@ -57,9 +57,9 @@
             <h1><%= producto.nombre %></h1>
             <div class="detalles">
                 <h2 class="precio">$<%= producto.precio %></h2>
-                <% if(parseInt(producto.descuento)>0){ %> 
+                <% if(producto.descuento>0){ %> 
                 <h2 ><%= producto.descuento %>% OFF</h2>
-                <h2 >$<%= parseInt(producto.precio) - parseInt(producto.precio)*(parseInt(producto.descuento)/100)  %></h2>
+                <h2 >$<%= producto.precio - producto.precio*producto.descuento/100  %></h2>
 
                 <% } %>                 
                 
