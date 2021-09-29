@@ -363,6 +363,11 @@
         transform: scale(1.05);
         transition: all 500ms;
     }
+
+    .home section.destacados div.destacados_contenedor article.producto_des div.detail_container h4, .home section.ofertas div.ofertas_contenedor article.producto_ofer div.detail_container h4 {
+        font-size: 20px;
+    }
+
 }
 
 
