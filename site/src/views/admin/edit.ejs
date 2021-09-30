@@ -33,11 +33,11 @@
                         <label for="descuento">Descuento</label>
                         <select name="descuento" id="Descuento">
                             <option value="" selected hidden>Seleccione %</option>
-                            <option value="5%">5</option>
-                            <option value="10%">10</option>
-                            <option value="15%">15</option>
-                            <option value="20%">20</option>
-                            <option value="25%">25</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
                         </select>
                     </div>
                 </div>
@@ -50,17 +50,15 @@
                 <!-- ////talla en letras//// -->
                 <div class="tallaLetra">
                     <label for="S">S</label>
-                    <input class="m"id="S" type="checkbox" <%= if(producto.talle.includes("S"){checked
-                    <% })>
-                    >
+                    <input class="m"id="S" type="checkbox" <% if(producto.talle.includes("S") === true ){%>checked<%}%> >                    
                     <label for="M">M</label>
-                    <input class="m"id="M" type="checkbox">
+                    <input class="m"id="M" type="checkbox" <% if(producto.talle.includes("M") === true ){%>checked<%}%>>
                     <label for="L">L</label>
-                    <input class="m"id="L" type="checkbox">
+                    <input class="m"id="L" type="checkbox" <% if(producto.talle.includes("L") === true ){%>checked<%}%>>
                     <label for="XL">XL</label>
-                    <input class="m"id="XL" type="checkbox">
+                    <input class="m"id="XL" type="checkbox" <% if(producto.talle.includes("XL") === true ){%>checked<%}%>>
                     <label for="XXL">XXL</label>
-                    <input class="m"id="XXL" type="checkbox">
+                    <input class="m"id="XXL" type="checkbox" <% if(producto.talle.includes("XXL") === true ){%>checked<%}%>>
                 </div>
                 <!-- ///////Talla en Numero/////// -->
                 <p>Talla en Numeros</p>
