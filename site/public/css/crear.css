@@ -1,6 +1,7 @@
 body main.crear section.product_container{
     text-align: center;
 }
+
 /* Titulo */
 body main.crear section.product_container h1{
     color: white;
@@ -21,6 +22,12 @@ body main.crear section.product_container form.todo_container{
     animation-delay: 2s;
     padding: 0 10px;
 }
+
+.crear section.product_container form.todo_container img {
+    width: 100%;
+    border-radius: 5px;
+}
+
 /* //////////////estilo a todas las "P" ///////////// */
 main.crear section.product_container form.todo_container p{
     padding: 10px;
@@ -159,15 +166,20 @@ body main.crear section.product_container form section.button_container button.b
     /* //////Estilo de categoria///// */
     body main.crear section.product_container form section.info_container div.info_categoria_container{
         height: 100px;
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+        justify-content: space-around;
     }
     body main.crear section.product_container form section.info_container div.info_categoria_container div.Categoria1{
-        position: absolute;
-        left: 250px;
+       /*  position: absolute;
+        left: 250px; */
         text-align: end;
+
     }
     body main.crear section.product_container form section.info_container div.info_categoria_container div.Categoria2{
-        position: absolute;
-        right: 260px;
+        /* position: absolute;
+        right: 260px; */
         text-align: end;
     }
 }
@@ -175,7 +187,7 @@ body main.crear section.product_container form section.button_container button.b
 /* /////////////////////////Portátil-1024/////////////////////////////// */
 @media(min-width:1024px){
     
-    body main.crear section.product_container form section.info_container div.info_categoria_container div.Categoria1{
+    /* body main.crear section.product_container form section.info_container div.info_categoria_container div.Categoria1{
         position: absolute;
         left: 350px;
         text-align: end;
@@ -184,5 +196,5 @@ body main.crear section.product_container form section.button_container button.b
         position: absolute;
         right: 410px;
         text-align: end;
-    }
+    } */
 }

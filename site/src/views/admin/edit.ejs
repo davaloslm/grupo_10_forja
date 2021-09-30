@@ -4,7 +4,7 @@
 <head>
     <%- include('../partials/head')  %> 
     <link rel="stylesheet" href="../../../css/crear.css">
-    <title>Crear Producto</title>
+    <title>Editar producto</title>
 </head>
 <body>
 
@@ -12,13 +12,13 @@
 
  <main class="crear">
     <section class="product_container">
-        <h1>Crear Producto  <i class="fas fa-box"></i></h1>
+        <h1>Estás editando <%= producto.nombre %> <i class="fas fa-box"></i></h1>
 
         <form class="todo_container" action="">
 
             <section class="visual_container">
                 <!-- ////Eligir archivo//// -->
-                    <input type="file" required>
+                    <img src="/img/productos/<%= producto.imagen[0] %>" alt="">
 
                 <!-- ////////selector de enviar//////// -->
                 <div class="descuento_envio_container">
@@ -50,7 +50,9 @@
                 <!-- ////talla en letras//// -->
                 <div class="tallaLetra">
                     <label for="S">S</label>
-                    <input class="m"id="S" type="checkbox">
+                    <input class="m"id="S" type="checkbox" <%= if(producto.talle.includes("S"){checked
+                    <% })>
+                    >
                     <label for="M">M</label>
                     <input class="m"id="M" type="checkbox">
                     <label for="L">L</label>
@@ -85,30 +87,30 @@
                 <!-- /////Nombre de Producto///// -->
                 <div class= "selec info_titulo_container">
                     <p>Nombre de Producto</p>
-                    <input type="text" name="titulo" required >
+                    <input type="text" name="titulo" value="<%= producto.nombre %>"  >
                 </div>
                 <!-- /////Descripcion de Producto///// -->
                 <div class= "selec info_des_container">
                     <p>Ingresá una descripción</p>
-                    <textarea name="descripcion" id="" placeholder="Ingresá una descripción"></textarea>
+                    <textarea name="descripcion" id=""><%= producto.descripcion %></textarea>
                 </div>
                 <!-- /////Precio de producto///// -->
                 <div class= "selec info_precio_container">
                     <p>Precio $</p>
-                    <input type="number" name="precio" required>
+                    <input type="number" name="precio" value="<%= producto.precio %>">
                 </div>
                 <!-- /////Colores de producto///// -->
                 <div class= "selec color_container">
                     <p>Colores</p>
-                    <input type="text" name="color">
+                    <input type="text" name="color" value="<% producto.color %>">
                 </div>
                 <!-- /////categoria de producto///// -->
+                <p>Categoría</p>
                 <div class= "selec info_categoria_container">
-                    <p>Categoría</p>
                     
                     <div class="Categoria1">
                         <div>
-                        <label for="taekwon-Do">Taekwon-Do</label>
+                        <label for="taekwon-Do">TaeKwon-Do</label>
                         <input class="m"id="taekwon-Do" type="checkbox">
                         </div>
 
@@ -130,8 +132,8 @@
 
                     <div class="Categoria2">
                         <div>
-                        <label for="Jupo">Jupo</label>
-                        <input class="m"id="Jupo" type="checkbox">
+                        <label for="Judo">Judo</label>
+                        <input class="m"id="Judo" type="checkbox">
                         </div>
 
                         <div>
