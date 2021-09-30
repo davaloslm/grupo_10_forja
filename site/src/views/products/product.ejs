@@ -73,7 +73,7 @@
                 
                 
                 <form action="">
-                    <% if(producto.talle){ %> 
+                    <% if(producto.talle[0]){ %> 
                     <label for="talle"><h4>Talle:</h4></label>
                     <select name="talle" id="talle">
                         <% for(i=0; i<producto.talle.length; i++) {%> 
@@ -87,7 +87,7 @@
                     </select>
                     <% } %>
 
-                    <% if(producto.color){ %> 
+                    <% if(producto.color[0]){ %> 
                         <label for="color"><h4>Color:</h4></label>
                         <select name="color" id="color">
                             <% for(i=0; i<producto.color.length; i++) {%> 
