@@ -230,7 +230,7 @@
         "color": [],
         "marca": "Forja",
         "imagen": ["18-barra-1.jpg", "18-barra-2.jpg", "18-barra-3.jpg"],
-        "categoria": "EntrenamientoFuncional/Crossfit",
+        "categoria": ["EntrenamientoFuncional/Crossfit"],
         "envioGratis": true
     },
     {
@@ -243,7 +243,7 @@
         "color": [],
         "marca": "Master Box",
         "imagen": ["19-cajonSalto-1.jpg", "19-cajonSaltos-2.jpg"],
-        "categoria": "EntrenamientoFuncional/Crossfit",
+        "categoria": ["EntrenamientoFuncional/Crossfit"],
         "envioGratis": true
     },
     {
@@ -256,7 +256,7 @@
         "color": [],
         "marca": "JC Sports",
         "imagen": ["20-chaleco20kg-1.jpg", "20-chaleco20kgs-2.jpg", "20-chaleco20kgs-3.jpg"],
-        "categoria": "EntrenamientoFuncional/Crossfit",
+        "categoria": ["EntrenamientoFuncional/Crossfit"],
         "envioGratis": true
     },
     {
@@ -269,7 +269,7 @@
         "color": [],
         "marca": "RWW",
         "imagen": ["21-corebag-1.jpg", "21-corebags-2.jpg"],
-        "categoria": "EntrenamientoFuncional/Crossfit",
+        "categoria": ["EntrenamientoFuncional/Crossfit"],
         "envioGratis": true
     },
     {
@@ -282,7 +282,7 @@
         "color": [],
         "marca": "Sonnos",
         "imagen": ["22-mBall-1.jpg"],
-        "categoria": "EntrenamientoFuncional/Crossfit",
+        "categoria": ["EntrenamientoFuncional/Crossfit"],
         "envioGratis": true
     },
     {
@@ -295,7 +295,7 @@
         "color": [],
         "marca": "Ranbak",
         "imagen": ["23-ruedaAb-1.jpg", "23-ruedaAb-2.jpg"],
-        "categoria": "EntrenamientoFuncional/Crossfit",
+        "categoria": ["EntrenamientoFuncional/Crossfit"],
         "envioGratis": false
     },
     {
@@ -308,7 +308,7 @@
         "color": [],
         "marca": "Fitnesas",
         "imagen": ["24-sogaCrossfit-1.jpg", "24-sogaCrossfit-2.jpg", "24-sogaCrossfit-3.jpg"],
-        "categoria": "EntrenamientoFuncional/Crossfit",
+        "categoria": ["EntrenamientoFuncional/Crossfit"],
         "envioGratis": true
     }
 ]
