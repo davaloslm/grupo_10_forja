@@ -21,10 +21,12 @@ body main.crear section.product_container form.todo_container{
     animation-delay: 2s;
     padding: 0 10px;
 }
-/* ////estilo a todas las "P" //// */
+/* //////////////estilo a todas las "P" ///////////// */
 main.crear section.product_container form.todo_container p{
     padding: 10px;
-    /* text-align: left; */
+    font-weight: 600;
+    text-align: left;
+    font-size: 15px;
 }
  
 body main.crear section.product_container form section.visual_container{
@@ -85,6 +87,14 @@ body main.crear section.product_container form section.info_container div.tallaL
 body main.crear section.product_container form section.info_container div.selec{
     margin: 10px 0;
 }
+
+/* //////Estilo de Categoria////// */
+body main.crear section.product_container form section.info_container div.info_categoria_container{
+    text-align: end;
+}
+
+
+
 /* ////////// estolo a los bordes de input y textArea /////////// */
 body main.crear section.product_container form section.info_container div.selec input, textarea, select{
     border-radius: 5px;
@@ -99,10 +109,9 @@ body main.crear section.product_container form section.button_container{
     text-align: center;
     margin: 10px;
 }
-/*//////////// botonos del final/////////// */
-
+/*//////////// Tamaño de botonos/////////// */
 body main.crear section.product_container form section.button_container button.boton{
-    padding: 5px 15px;
+    padding: 8px 15px;
 
 }
 
@@ -138,7 +147,6 @@ body main.crear section.product_container form section.button_container button.b
 
     body main.crear section.product_container form section.visual_container div.descuento_envio_container div.envio_container{
         margin-right: 10px;
-        /* /// */
     }
     body main.crear section.product_container form section.visual_container div.descuento_envio_container div.descuento_container select{
         margin-left: 10px;
@@ -147,5 +155,34 @@ body main.crear section.product_container form section.button_container button.b
         margin: 0px;
         width: 257px;
         height: 87px;
+    }
+    /* //////Estilo de categoria///// */
+    body main.crear section.product_container form section.info_container div.info_categoria_container{
+        height: 100px;
+    }
+    body main.crear section.product_container form section.info_container div.info_categoria_container div.Categoria1{
+        position: absolute;
+        left: 250px;
+        text-align: end;
+    }
+    body main.crear section.product_container form section.info_container div.info_categoria_container div.Categoria2{
+        position: absolute;
+        right: 260px;
+        text-align: end;
+    }
+}
+
+/* /////////////////////////Portátil-1024/////////////////////////////// */
+@media(min-width:1024px){
+    
+    body main.crear section.product_container form section.info_container div.info_categoria_container div.Categoria1{
+        position: absolute;
+        left: 350px;
+        text-align: end;
+    }
+    body main.crear section.product_container form section.info_container div.info_categoria_container div.Categoria2{
+        position: absolute;
+        right: 410px;
+        text-align: end;
     }
 }
