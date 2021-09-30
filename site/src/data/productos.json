@@ -136,7 +136,7 @@
         "precio": 3500,
         "descuento": 0,
         "talle": ["S","M", "L", "XL"],
-        "color": "Negro",
+        "color": ["Negro"],
         "marca": "Metal",
         "imagen": ["11-shortBox-1.jpg"],
         "categoria": ["Boxeo", "KickBoxing/MuayThai"],

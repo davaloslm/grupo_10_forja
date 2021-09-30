@@ -102,7 +102,20 @@
                 <!-- /////Colores de producto///// -->
                 <div class= "selec color_container">
                     <p>Colores</p>
-                    <input type="text" name="color" value="<% producto.color %>">
+                    <input type="text" name="color" value="<%= producto.color[0] %>">
+                    <% if(producto.color[1]){ %>
+                    <input type="text" name="color" value="<%= producto.color[1] %>">
+                    <% } %> 
+                    <% if(producto.color[2]){ %>
+                    <input type="text" name="color" value="<%= producto.color[2] %>">
+                    <% } %> 
+                    <% if(producto.color[3]){ %>
+                    <input type="text" name="color" value="<%= producto.color[3] %>">
+                    <% } %> 
+                    <% if(producto.color[4]){ %>
+                    <input type="text" name="color" value="<%= producto.color[4] %>">
+                    <% } %> 
+                    
                 </div>
                 <!-- /////categoria de producto///// -->
                 <p>Categoría</p>
