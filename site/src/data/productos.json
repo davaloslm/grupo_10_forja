@@ -153,9 +153,7 @@
         "marca": "Metal",
         "imagen": ["12-bucalSimple-1.jpg"],
         "categoria": ["Boxeo", "KickBoxing/MuayThai" , "TaeKwon-Do"],
-        "envioGratis": false,
-        "enOferta": false,
-        "destacado": true
+        "envioGratis": false
     },
     {
         "id": 13,
