@@ -7,5 +7,14 @@
         "password": "12345",
         "image": "rodrigo_image 2021-06-08.jpeg",
         "admin": true
+    },
+    {
+        "id": 9,
+        "name": "vladimir",
+        "lastName": "Morales",
+        "email": "vladimorales27@gmail.com",
+        "password": "135awd",
+        "image": "vladi.jpeg",
+        "admin": true
     }
 ]
