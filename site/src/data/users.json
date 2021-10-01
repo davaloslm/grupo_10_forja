@@ -16,5 +16,15 @@
         "password": "135awd",
         "image": "vladi.jpeg",
         "admin": true
+    },
+    {
+        "id": 9999,
+        "name": "Leonardo",
+        "lastName": "Dávalos",
+        "email": "davaloslm9999@gmail.com",
+        "password": "9999",
+        "image": "",
+        "admin": true
     }
+    
 ]
