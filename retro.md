@@ -20,7 +20,7 @@
 # Retrospectiva 2
 ---
 ## Empezar a hacer:
-- Documenatar dailies.
+- Documentar dailies.
 ---
 ## Hacer más:
 - Poner fecha limite a las tareas.
@@ -31,6 +31,28 @@
 - Reuniones diarias (daily standups).
 - Dividir tareas y establecer dificultades al comienzo del sprint.
 - Empezar a trabajar desde el día del inicio del sprint.
+---
+## Dejar de hacer:
+- 
+---
+## Hacer menos:
+- 
+---
+# Retrospectiva 3
+---
+## Empezar a hacer:
+- 
+---
+## Hacer más:
+- Poner fecha limite a las tareas.
+---
+## Seguir haciendo:
+- Tareas en simultáneo.
+- Tener buena comunicación.
+- Reuniones diarias (daily standups).
+- Dividir tareas y establecer dificultades al comienzo del sprint.
+- Empezar a trabajar desde el día del inicio del sprint.
+- Documentar dailies.
 ---
 ## Dejar de hacer:
 - 
