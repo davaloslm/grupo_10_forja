@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head')  %>
+    <title>Todos nuestros productos</title>
+</head>
+<body>
+    <%- include('../partials/header')  %>
+    <main class="todos">
+        <h1>Todos nuestros productos</h2>
+        <section class="todos">
+            
+            <div class="todos_contenedor">
+                <% productos.forEach(producto=>{%>
+                    <% if(producto.descuento === 0) { %>  
+                    <article class="producto_des">
+                    <div class="image_container">
+                        <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.imagen[0] %>" alt="<%= producto.nombre %> "></a>
+                    </div>
+                    <div class="detail_container">
+                        <i class="fas fa-truck" id="envio"></i>
+                        <p class="precio">$ <%= producto.precio %> </p>
+                        <h4 class="titulo"><%= producto.nombre %> </h4>
+                        <p class="descripcion"><%= producto.descripcion %> </p>
+                    </div>
+                </article>
+                <% }else { %> 
+                    
+                        
+                        <article class="producto_ofer">
+                            <div class="image_container">
+                                <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.imagen[0] %>"></a>
+                            </div>
+                            <div class="detail_container">
+                                <p class="precio">$ <%= producto.precio %> </p>
+                                <p class="descuento"><%= producto.descuento %> %</p>
+                                <p class="precio_des">$ <%= parseInt(producto.precio) - parseInt(producto.precio)*(parseInt(producto.descuento)/100)  %></p>
+                                <h4 class="titulo"><%= producto.nombre %></h4>
+                                <p class="descripcion"><%= producto.descripcion %></p>
+                            </div>
+                        </article>
+                
+
+                <% } %>
+                <% }) %> 
+            </div>
+        </section>
+
+
+    </main>
+    <%- include('../partials/footer')  %>
+    
+</body>
+</html>
