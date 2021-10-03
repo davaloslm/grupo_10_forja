@@ -14,7 +14,7 @@
     <section class="product_container">
         <h1><%= producto.nombre %> <i class="fas fa-box"></i></h1>
 
-        <form class="todo_container" action="">
+        <form class="todo_container" action="/admin/edit/<%= producto.id  %>?_method=PUT" method="POST">
 
             <section class="visual_container">
                 <!-- ////Eligir archivo//// -->
@@ -23,8 +23,8 @@
                 <!-- ////////selector de enviar//////// -->
                 <div class="descuento_envio_container">
                     <div class="envio_container">
-                        <input type="checkbox" id="envio" <% if(producto.envioGratis === true ){%>checked<%}%> > 
-                        <label for="envio">Envío</label>
+                        <input type="checkbox" name="envioGratis" id="envio" <% if(producto.envioGratis === true ){%>checked<%}%> > 
+                        <label for="envioGratis">Envío</label>
                     </div>
 
                     <!-- ///////selector de % y Descuento /////// -->
@@ -50,44 +50,44 @@
                 <!-- ////talla en letras//// -->
                 <div class="tallaLetra">
                     <label for="S">S</label>
-                    <input class="m"id="S" type="checkbox" <% if(producto.talle.includes("S") === true ){%>checked<%}%> >                    
+                    <input class="m" id="S" type="checkbox" name="talle" value="S" <% if(producto.talle.includes("S") === true ){%>checked<%}%> >                    
                     <label for="M">M</label>
-                    <input class="m"id="M" type="checkbox" <% if(producto.talle.includes("M") === true ){%>checked<%}%> >
+                    <input class="m" id="M" type="checkbox" name="talle" value="M" <% if(producto.talle.includes("M") === true ){%>checked<%}%> >
                     <label for="L">L</label>
-                    <input class="m"id="L" type="checkbox" <% if(producto.talle.includes("L") === true ){%>checked<%}%> >
+                    <input class="m" id="L" type="checkbox" name="talle" value="L" <% if(producto.talle.includes("L") === true ){%>checked<%}%> >
                     <label for="XL">XL</label>
-                    <input class="m"id="XL" type="checkbox" <% if(producto.talle.includes("XL") === true ){%>checked<%}%> >
+                    <input class="m" id="XL" type="checkbox" name="talle" value="XL" <% if(producto.talle.includes("XL") === true ){%>checked<%}%> >
                     <label for="XXL">XXL</label>
-                    <input class="m"id="XXL" type="checkbox" <% if(producto.talle.includes("XXL") === true ){%>checked<%}%> >
+                    <input class="m" id="XXL" type="checkbox" name="talle" value="XXL" <% if(producto.talle.includes("XXL") === true ){%>checked<%}%> >
                 </div>
                 <!-- ///////Talla en Numero/////// -->
                 <p>Talla en Numeros</p>
                 <div class="tallaNumero">
                     <label for="talla0">0</label>
-                    <input class="nl" type="checkbox" id="talla0" <% if(producto.talle.includes("0") === true ){%>checked<%}%> >
+                    <input class="nl" id="talla0" type="checkbox" name="talle" value="0"   <% if(producto.talle.includes("0") === true ){%>checked<%}%> >
                     <label for="talla1">1</label>
-                    <input class="nl" type="checkbox" id="talla1" <% if(producto.talle.includes("1") === true ){%>checked<%}%> >
+                    <input class="nl" id="talla1" type="checkbox" name="talle" value="1"   <% if(producto.talle.includes("1") === true ){%>checked<%}%> >
                     <label for="talla2">2</label>
-                    <input class="nl" type="checkbox" id="talla2" <% if(producto.talle.includes("2") === true ){%>checked<%}%> >
+                    <input class="nl" id="talla2" type="checkbox" name="talle" value="2"   <% if(producto.talle.includes("2") === true ){%>checked<%}%> >
                     <label for="talla3">3</label>
-                    <input class="nl" type="checkbox" id="talla3" <% if(producto.talle.includes("3") === true ){%>checked<%}%> >
+                    <input class="nl" id="talla3" type="checkbox" name="talle" value="3"   <% if(producto.talle.includes("3") === true ){%>checked<%}%> >
                     <label for="talla4">4</label>
-                    <input class="nl" type="checkbox" id="talla4" <% if(producto.talle.includes("4") === true ){%>checked<%}%> >
+                    <input class="nl" id="talla4" type="checkbox" name="talle" value="4"   <% if(producto.talle.includes("4") === true ){%>checked<%}%> >
                     <label for="talla5">5</label>
-                    <input class="nl" type="checkbox" id="talla5" <% if(producto.talle.includes("5") === true ){%>checked<%}%> >
+                    <input class="nl" id="talla5" type="checkbox" name="talle" value="5"  <% if(producto.talle.includes("5") === true ){%>checked<%}%> >
                     <label for="talla6">6</label>
-                    <input class="nl" type="checkbox" id="talla6" <% if(producto.talle.includes("6") === true ){%>checked<%}%> >
+                    <input class="nl" id="talla6" type="checkbox" name="talle" value="6"   <% if(producto.talle.includes("6") === true ){%>checked<%}%> >
                     <label for="talla7">7</label>
-                    <input class="nl" type="checkbox" id="talla7" <% if(producto.talle.includes("7") === true ){%>checked<%}%> >
+                    <input class="nl" id="talla7" type="checkbox" name="talle" value="7"   <% if(producto.talle.includes("7") === true ){%>checked<%}%> >
                     <label for="talla8">8</label>
-                    <input class="nl" type="checkbox" id="talla8" <% if(producto.talle.includes("8") === true ){%>checked<%}%> >
+                    <input class="nl" id="talla8" type="checkbox" name="talle" value="8"   <% if(producto.talle.includes("8") === true ){%>checked<%}%> >
                     <label for="talla9">9</label>
-                    <input class="nl" type="checkbox" id="talla9" <% if(producto.talle.includes("9") === true ){%>checked<%}%> >
+                    <input class="nl" id="talla9" type="checkbox" name="talle" value="9"   <% if(producto.talle.includes("9") === true ){%>checked<%}%> >
                 </div>
                 <!-- /////Nombre de Producto///// -->
                 <div class= "selec info_titulo_container">
                     <p>Nombre de Producto</p>
-                    <input type="text" name="titulo" value="<%= producto.nombre %>"  >
+                    <input type="text" name="nombre" value="<%= producto.nombre %>"  >
                 </div>
                 <!-- /////Descripcion de Producto///// -->
                 <div class= "selec info_des_container">
@@ -124,34 +124,34 @@
                     <div class="Categoria1">
                         <div>
                         <label for="taekwon-Do">TaeKwon-Do</label>
-                        <input class="m"id="taekwon-Do" type="checkbox" <% if(producto.categoria.includes("TaeKwon-Do") === true ){%>checked<%}%> >
+                        <input class="m" name="categoria" id="taekwon-Do" type="checkbox" value="TaeKwon-Do" <% if(producto.categoria.includes("TaeKwon-Do") === true ){%>checked<%}%> >
                         </div>
 
                         <div>
                         <label for="Boxeo">Boxeo</label>
-                        <input class="m"id="Boxeo" type="checkbox" <% if(producto.categoria.includes("Boxeo") === true ){%>checked<%}%> >
+                        <input class="m" name="categoria" id="Boxeo" type="checkbox" value="Boxeo" <% if(producto.categoria.includes("Boxeo") === true ){%>checked<%}%> >
                         </div>
 
                         <div>
                         <label for="EntrenamientoFuncional/Crossfit">Funcional/Cross</label>
-                        <input class="m"id="EntrenamientoFuncional/Crossfit" type="checkbox" <% if(producto.categoria.includes("EntrenamientoFuncional/Crossfit") === true ){%>checked<%}%> >
+                        <input class="m" name="categoria" id="EntrenamientoFuncional/Crossfit" type="checkbox" value="Funcional/Cross" <% if(producto.categoria.includes("Funcional/Cross") === true ){%>checked<%}%> >
                         </div>
                     </div>
 
                     <div class="Categoria2">
                         <div>
                         <label for="Judo">Judo</label>
-                        <input class="m"id="Judo" type="checkbox" <% if(producto.categoria.includes("Judo") === true ){%>checked<%}%> >
+                        <input class="m" name="categoria" id="Judo" type="checkbox" value="Judo" <% if(producto.categoria.includes("Judo") === true ){%>checked<%}%> >
                         </div>
 
                         <div>
                         <label for="Jiu-Jitsu">Jiu-Jitsu</label>
-                        <input class="m"id="Jiu-Jitsu" type="checkbox" <% if(producto.categoria.includes("Jiu-Jitsu") === true ){%>checked<%}%> >
+                        <input class="m" name="categoria" id="Jiu-Jitsu" type="checkbox" value="Jiu-Jitsu" <% if(producto.categoria.includes("Jiu-Jitsu") === true ){%>checked<%}%> >
                         </div>
 
                         <div>
                         <label for="KickBoxing/MuayThai">KickBoxing/MuayThai</label>
-                        <input class="m"id="KickBoxing/MuayThai" type="checkbox" <% if(producto.categoria.includes("KickBoxing/MuayThai") === true ){%>checked<%}%> >
+                        <input class="m" name="categoria" id="KickBoxing/MuayThai" type="checkbox" value="KickBoxing/MuayThai" <% if(producto.categoria.includes("KickBoxing/MuayThai") === true ){%>checked<%}%> >
                         </div>
 
 
