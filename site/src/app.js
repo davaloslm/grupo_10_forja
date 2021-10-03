@@ -7,9 +7,10 @@ const methodOverride =  require('method-override');
 
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
-const productRouter = require("./routes/productRouter"); // no funciona
+const detailRouter = require("./routes/detailRouter"); 
 const categoriasRouter = require("./routes/categoriasRouter");
 const adminRouter = require("./routes/adminRouter");
+const productsRouter = require("./routes/productsRouter")
 
 const app = express();
 
@@ -26,7 +27,8 @@ app.use(methodOverride('_method'));
 
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
-app.use('/product', productRouter); //Agrego ruta de carrito (no funciona)
+app.use('/product', detailRouter);
+app.use('/products', productsRouter); //Todos los productos
 app.use('/categories', categoriasRouter); //Ruta para las categorías
 app.use('/admin', adminRouter); //Ruta para las admin
 
