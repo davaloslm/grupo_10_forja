@@ -1,13 +1,18 @@
 const express = require("express");
 const router = express.Router();
-const {admin, crearProducto, vistaEdit, editar} = require('../controllers/adminController')
+const {admin, vistaCrear, vistaEditar, editar, crear} = require('../controllers/adminController')
 
 router.get('/', admin);
-router.get('/create', crearProducto);
+
+///////// creacion de productos //////////
+////Formulario de creacion - vista///////
+router.get('/create', vistaCrear);
+///Crear producto///
+router.post('/', crear );
 
 ///////// Edición de productos //////////
 // Formulario de edición - Vista
-router.get('/edit/:id', vistaEdit);
+router.get('/edit/:id', vistaEditar);
 
 // Editar producto - Guardar
 router.put('/edit/:id', editar )

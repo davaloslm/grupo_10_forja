@@ -8,13 +8,39 @@ const controller = {
         
         res.render('admin/admin', {productos})
     },
-    crearProducto: (req, res)=> {
+
+    //////// Formulario de Creacion ///////////
+    vistaCrear: (req, res)=> {
         res.render('admin/create')
+    },
+
+    crear:(req,res) =>{
+        /* const {nombre, descripcion, precio, descuento, talle, color, categoria, envioGratis} = req.body */
+        const nuevoProducto = 
+        /* req.body; */
+        nuevoProducto.id = productos.length + 1;
+
+        console.log(nuevoProducto);
+
+        nuevoProducto.envioGratis = envioGratis === undefined ? false : true;
+        nuevoProducto.descuento = descuento;
+        nuevoProducto.talle = typeof(talle) === 'string' ? [talle] : talle;
+        nuevoProducto.nombre = nombre;
+        nuevoProducto.descripcion = descripcion;
+        nuevoProducto.precio = precio;
+        nuevoProducto.color = [color];
+        nuevoProducto.categoria = typeof(categoria) === 'string' ? [categoria] : categoria;
+
+        productos.push(nuevoProducto);
+
+        fs.writeFileSync(productosRuta, JSON.stringify(productos, null ,2))
+
+		res.redirect(`/product/${nuevoProducto.id}`)
     },
 
     //////// Formulario de edición ///////////
 
-    vistaEdit: (req, res)=> {
+    vistaEditar: (req, res)=> {
         const {id} = req.params;
         const producto = productos.find(producto=>producto.id === parseInt(id) )
         res.render('admin/edit', {producto})

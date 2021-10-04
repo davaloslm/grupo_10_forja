@@ -14,30 +14,29 @@
     <section class="product_container">
         <h1>Crear Producto  <i class="fas fa-box"></i></h1>
 
-        <form class="todo_container" action="">
+        <form class="todo_container" action="/" method="POST" >
 
             <section class="visual_container">
                 <!-- ////Eligir archivo//// -->
-                    <input type="file" required>
+                    <input type="file" name="imagen">
 
                 <!-- ////////selector de enviar//////// -->
                 <div class="descuento_envio_container">
                     <div class="envio_container">
-                        <input type="checkbox" id="envio">
+                        <input type="checkbox" name="envioGratis" id="envio">
                         <label for="envio">Envío</label>
                     </div>
 
                     <!-- ///////selector de % y Descuento /////// -->
                     <div class="descuento_container">
-                        <input type="checkbox" id="descuento">
                         <label for="descuento">Descuento</label>
                         <select name="descuento" id="Descuento">
                             <option value="" selected hidden>Seleccione %</option>
-                            <option value="5%">5</option>
-                            <option value="10%">10</option>
-                            <option value="15%">15</option>
-                            <option value="20%">20</option>
-                            <option value="25%">25</option>
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
                         </select>
                     </div>
                 </div>
@@ -50,42 +49,47 @@
                 <!-- ////talla en letras//// -->
                 <div class="tallaLetra">
                     <label for="S">S</label>
-                    <input class="m"id="S" type="checkbox">
+                    <input class="m"id="S" type="checkbox" name="talle">
                     <label for="M">M</label>
-                    <input class="m"id="M" type="checkbox">
+                    <input class="m"id="M" type="checkbox" name="talle">
                     <label for="L">L</label>
-                    <input class="m"id="L" type="checkbox">
+                    <input class="m"id="L" type="checkbox" name="talle">
                     <label for="XL">XL</label>
-                    <input class="m"id="XL" type="checkbox">
+                    <input class="m"id="XL" type="checkbox" name="talle">
                     <label for="XXL">XXL</label>
-                    <input class="m"id="XXL" type="checkbox">
+                    <input class="m"id="XXL" type="checkbox" name="talle">
                 </div>
                 <!-- ///////Talla en Numero/////// -->
                 <p>Talla en Numeros</p>
                 <div class="tallaNumero">
+                    <label for="talla0">0</label>
+                    <input class="nl" id="talla0" type="checkbox" name="talle" value="0"
+
                     <label for="talla1">1</label>
-                    <input class="nl" type="checkbox" id="talla1">
+                    <input class="nl" type="checkbox" 
+                    id="talla1"name="talle" value="1">
+
                     <label for="talla2">2</label>
-                    <input class="nl" type="checkbox" id="talla2">
+                    <input class="nl" type="checkbox" id="talla2"name="talle" value="2">
                     <label for="talla3">3</label>
-                    <input class="nl" type="checkbox" id="talla3">
+                    <input class="nl" type="checkbox" id="talla3"name="talle" value="3">
                     <label for="talla4">4</label>
-                    <input class="nl" type="checkbox" id="talla4">
+                    <input class="nl" type="checkbox" id="talla4"name="talle" value="4">
                     <label for="talla5">5</label>
-                    <input class="nl" type="checkbox" id="talla5">
+                    <input class="nl" type="checkbox" id="talla5"name="talle" value="5">
                     <label for="talla6">6</label>
-                    <input class="nl" type="checkbox" id="talla6">
+                    <input class="nl" type="checkbox" id="talla6"name="talle" value="6">
                     <label for="talla7">7</label>
-                    <input class="nl" type="checkbox" id="talla7">
+                    <input class="nl" type="checkbox" id="talla7"name="talle" value="7">
                     <label for="talla8">8</label>
-                    <input class="nl" type="checkbox" id="talla8">
+                    <input class="nl" type="checkbox" id="talla8"name="talle" value="8">
                     <label for="talla9">9</label>
-                    <input class="nl" type="checkbox" id="talla9">
+                    <input class="nl" type="checkbox" id="talla9"name="talle" value="9">
                 </div>
                 <!-- /////Nombre de Producto///// -->
                 <div class= "selec info_titulo_container">
                     <p>Nombre de Producto</p>
-                    <input type="text" name="titulo" required >
+                    <input type="text" name="nombre" >
                 </div>
                 <!-- /////Descripcion de Producto///// -->
                 <div class= "selec info_des_container">
@@ -109,39 +113,35 @@
                     <div class="Categoria1">
                         <div>
                         <label for="taekwon-Do">Taekwon-Do</label>
-                        <input class="m"id="taekwon-Do" type="checkbox">
+                        <input class="m" name="categoria" id="taekwon-Do" type="checkbox" value="TaeKwon-Do">
                         </div>
 
                         <div>
                         <label for="Boxeo">Boxeo</label>
-                        <input class="m"id="Boxeo" type="checkbox">
+                        <input class="m" name="categoria" id="Boxeo" type="checkbox" value="Boxeo">
                         </div>
 
                         <div>
-                        <label for="KickBoxing">KickBoxing</label>
-                        <input class="m"id="KickBoxing" type="checkbox">
+                        <label for="EntrenamientoFuncional/Crossfit">Funcional/Cross<</label>
+                        <input class="m" name="categoria" id="EntrenamientoFuncional/Crossfit" type="checkbox" value="Funcional/Cross">
                         </div>
 
-                        <div>
-                        <label for="Entrenamien">Entrenamiento</label>
-                        <input class="m"id="Entrenamien" type="checkbox">
-                        </div>
                     </div>
 
                     <div class="Categoria2">
                         <div>
                         <label for="Jupo">Jupo</label>
-                        <input class="m"id="Jupo" type="checkbox">
+                        <input class="m" name="categoria" id="Jupo" type="checkbox" value="Judo">
                         </div>
 
                         <div>
                         <label for="Jiu-Jitsu">Jiu-Jitsu</label>
-                        <input class="m"id="Jiu-Jitsu" type="checkbox">
+                        <input class="m"  name="categoria" id="Jiu-Jitsu" type="checkbox" value="Jiu-Jitsu">
                         </div>
 
                         <div>
-                        <label for="MuayThai">MuayThai</label>
-                        <input class="m"id="MuayThai" type="checkbox">
+                        <label for="KickBoxing/MuayThai">KickBoxing/MuayThai</label>
+                        <input class="m" name="categoria" id="KickBoxing/MuayThai" type="checkbox" value="KickBoxing/MuayThai">
                         </div>
 
 
