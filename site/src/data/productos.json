@@ -1,498 +1,513 @@
 [
-    {
-        "id": 1,
-        "nombre": "Bolsa Kwon 1.20m",
-        "descripcion": "Bolsa de cuero sintético. Incluye relleno, cadenas de acero inoxidable y una barra giratoria cromada. Solo en disponible en color negro",
-        "precio": 17000,
-        "descuento": 30,
-        "talle": [],
-        "color": [],
-        "marca": "Kwon",
-        "imagen": [
-            "1-bolsa120m-1.jpeg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "TaeKwon-Do",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": true
-    },
-    {
-        "id": 2,
-        "nombre": "Bolsa Kwon de 1.50m",
-        "descripcion": "Bolsa de cuero sintético. Incluye relleno, cadenas de acero inoxidable y una barra giratoria cromada. Solo en disponible en color negro. Importada.",
-        "precio": 19000,
-        "descuento": 20,
-        "talle": [],
-        "color": [],
-        "marca": "Kwon",
-        "imagen": [
-            "2-bolsa150m-1.jpeg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "TaeKwon-Do",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": true
-    },
-    {
-        "id": 3,
-        "nombre": "Bolsa Kwon de 1.80m ",
-        "descripcion": "Bolsa de cuero sintético. Incluye relleno, cadenaa de acero inoxidable y una barra giratoria cromada. Solo en disponible en color negro.Importada.",
-        "precio": 21000,
-        "descuento": 15,
-        "talle": [],
-        "color": [],
-        "marca": "Kwon",
-        "imagen": [
-            "3-bolsa180m-1.jpeg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "TaeKwon-Do",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": true
-    },
-    {
-        "id": 4,
-        "nombre": "Cadena para bolsa",
-        "descripcion": "Elaborada con cadena de metal soldada de 4 mm de espesor en 4 tramos de 33 cm. Sujetas con una argolla de metal soldada y tres eslabones abiertos que permiten enganchar la bolsa de entrenamiento.",
-        "precio": 2100,
-        "descuento": 0,
-        "talle": [],
-        "color": [],
-        "marca": "Forja",
-        "imagen": [
-            "4-cadena-1.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "TaeKwon-Do",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": true
-    },
-    {
-        "id": 5,
-        "nombre": "Cielo y tierra Everlast",
-        "descripcion": "Bolsa cielo y tierra. Cuero sintético de primera calidad ofrece durabilidad y funcionalidad. Cuerdas elásticas y placas de techo/suelo incluidos.",
-        "precio": 8000,
-        "descuento": 0,
-        "talle": [],
-        "color": [],
-        "marca": "Everlast",
-        "imagen": [
-            "5-cieloTierra-1.jpg",
-            "5-cieloTierra-2.jpg",
-            "5-cieloTierra-3.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 6,
-        "nombre": "Soporte para bolsa",
-        "descripcion": "Soporte de pared construido en caño rectangular de gran espesor para mayor rigidez y ángulo de hierro macizo. Incluye tarugos y tirafondos para su instalación. Medidas:90x60",
-        "precio": 3200,
-        "descuento": 0,
-        "talle": [],
-        "color": [],
-        "marca": "Forja",
-        "imagen": [
-            "6-soporteBolsa-1.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 7,
-        "nombre": "Guantes de Boxeo Everlast 12 oz",
-        "descripcion": "Guantes De Boxeo Everlast Pro Style Training. Thumblock: Mantiene el pulgar en la posición correcta y lo protege de lesiones.Doble costura: Asegura la durabilidad. Tira de ajuste y lazo en la muñeca: Proporciona un ajuste seguro y permite ponerlos y quitarlos rápidamente. Permite el flujo de aire para refrescar las manos. Cordón de agarre en el interior para mayor capacidad de agarre y protección. Tres capas de espuma de alto impacto para una mejor protección",
-        "precio": 7000,
-        "descuento": 0,
-        "talle": [],
-        "color": [],
-        "marca": "Everlast",
-        "imagen": [
-            "7-guantesBox-1.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 8,
-        "nombre": "Guantes de Boxeo Everlast 14 oz",
-        "descripcion": "Guantes De Boxeo Everlast Protex2. Protex2: Panel de Doble Collar para Protección Superior de la Muñeca. Cuero sintetico de primera calidad para una sensación súper suave y de larga duración. Paneles de ventilación de malla EVERCOOL™. Tecnología de espuma de celda cerrada proporciona una protección óptima. Revestimiento que absorbe la humedad EverDri ™. Funda con cierre con recomendaciones incluidas",
-        "precio": 9000,
-        "descuento": 0,
-        "talle": [],
-        "color": [],
-        "marca": "Everlast",
-        "imagen": [
-            "8-guantesBox-1.jpg",
-            "8-guantesBox-2.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 9,
-        "nombre": "Guantes de Boxeo Everlast 16 oz",
-        "descripcion": "Guantes De Boxeo Everlast Pro Style Elite. El revolucionario diseño de una pieza optimiza la colocación del puño y promueve el rango natural de movimiento. Construido con tecnología de espuma de celda cerrada para la protección de las manos y el cierre de agarre para una mayor potencia de ajuste. La palma de malla Evercool ™ aumenta la ventilación. La muñeca en forma de reloj de arena con relleno reforzado Evershield ™ estabiliza la mano y la muñeca, brindando un ajuste de apoyo, cómodo y verdaderamente seguro. Cuero sintético premium.",
-        "precio": 9800,
-        "descuento": 0,
-        "talle": [],
-        "color": [],
-        "marca": "Everlast",
-        "imagen": [
-            "9-guantesBox-1.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 10,
-        "nombre": "Pantalón Short de Boxeo Venum",
-        "descripcion": "Short de Boxeo Venum Elite. 100% Malla de Poliéster en las aperturas laterales para excelente respirabilidad. Cinturón elástico mayor a 58 cm (con espacio para coquilla). Logotipo bordado al frente y en la parte trasera. Logotipo Venum en los cordones.Logotipo Venum en los tramos de malla laterales. Disponible en Blanco y Negro ó Rojo y Negro",
-        "precio": 5500,
-        "descuento": 10,
-        "talle": [
-            "M",
-            "L",
-            "XL"
-        ],
-        "color": [
-            "Blanco",
-            "Rojo"
-        ],
-        "marca": "Venum",
-        "imagen": [
-            "10-shortBox-1.jpg",
-            "10-shortBox-2.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 11,
-        "nombre": "Pantalón Short de Boxeo Metal",
-        "descripcion": "Short de Boxeo Metal Boxe. Fabricado en satén de alta calidad, con un cinturón ancho para un soporte excepcional y un corte corto.",
-        "precio": 3500,
-        "descuento": 0,
-        "talle": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "color": [
-            "Negro"
-        ],
-        "marca": "Metal",
-        "imagen": [
-            "11-shortBox-1.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 12,
-        "nombre": "Protector Bucal Simple",
-        "descripcion": "Protector Bucal Simple Proyec. Fabricados de silicona de primera calidad. Termo moldeables (se amoldan a la forma de cada dentadura). Posee contornos anatómicos para evitar molestias en las encías. Transparente",
-        "precio": 150,
-        "descuento": 0,
-        "talle": [
-            "1",
-            "2"
-        ],
-        "color": [],
-        "marca": "Metal",
-        "imagen": [
-            "12-bucalSimple-1.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai",
-            "TaeKwon-Do"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 13,
-        "nombre": "Protector Bucal Doble",
-        "descripcion": "Protector Bucal Doble Procer. Se utilizan para la protección de la boca y la inmovilización de la articulación temporomandibular en la practica de boxeo, hockey, rugby y artes marciales. Su molde está pensado para que una vez tomada la forma del maxilar superior, la distribución del material sea uniforme y su calce sea confortable al uso intensivo. Talle único. Transparente",
-        "precio": 350,
-        "descuento": 0,
-        "talle": [],
-        "color": [],
-        "marca": "Procer",
-        "imagen": [
-            "13-bucalDoble-1.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai",
-            "TaeKwon-Do"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 14,
-        "nombre": "Cabezal de Boxeo Everlast",
-        "descripcion": "Cabezal de Boxeo Everlast abierto con protector de pómulos. Especialmente diseñado para el entrenamiento y el sparring. Absorbe la transpiración e impide el deslizamiento. Acolchado de espuma de alta calidad. Barbilla abierta para una respiración más fluida. Tira de velcro para una sujeción perfecta",
-        "precio": 7200,
-        "descuento": 10,
-        "talle": [],
-        "color": [],
-        "marca": "Everlast",
-        "imagen": [
-            "14-cascoBox-1.jpg",
-            "14-cascoBox-2.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 15,
-        "nombre": "Inguinal de Boxeo Everlast",
-        "descripcion": "Inguinal de Boxeo Everlast Safemax. La tecnología FOAM C3 está diseñada con una mayor amortiguación, apoyo y dispersión para proteger a la ingle, cadera y los riñones. Cuero de primera calidad que asegura la máxima durabilidad y funcionalidad. Tecnología EVERDRI ™ que absorbe y optimiza su comodidad y repele la excesiva humedad durante el entrenamiento. Disponible con gancho ajustable (HOOP & LOOP) y cierre de lazo trasero de encaje (LACED) para la colocación segura durante el entrenamiento.",
-        "precio": 4800,
-        "descuento": 10,
-        "talle": [
-            "S",
-            "M",
-            "L",
-            "XL"
-        ],
-        "color": [],
-        "marca": "Everlast",
-        "imagen": [
-            "15-inguinalBox-1.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 16,
-        "nombre": "Vendas Elásticas Proyec 4m",
-        "descripcion": "Vendas con abrojo y agarre de dedo pulgar. Aptas para Boxeo, Kick Boxing, Muay Thai, Full Contact, TaeKwon-Do, MMA. Largo: 4 m. Ancho: 5 cm. Super flexibles e Higiénicas. Permite vendar manos, muñeca, nidullos y dedos.Material: Algodon Elastizado",
-        "precio": 600,
-        "descuento": 0,
-        "talle": [],
-        "color": [
-            "Negro",
-            "Rojo",
-            "Azul"
-        ],
-        "marca": "Proyec",
-        "imagen": [
-            "16-vendas-1.jpg",
-            "16-vendas-2.jpg",
-            "16-vendas-3.jpg",
-            "16-vendas-4.jpg"
-        ],
-        "categoria": [
-            "Boxeo",
-            "KickBoxing/MuayThai",
-            "TaeKwon-Do"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 17,
-        "nombre": "Anillas de Madera Gonex",
-        "descripcion": "Las anillas de gimnasia Gonex están hechas de madera de 3,2 cm de grosor, más duraderos y seguros que los anillos de plástico. Mosquetón de instalación rápida: Gonex Quick Carabiner está diseñado para un uso rápido y fácil. No hay necesidad de molestarse con pasos tediosos. El mosquetón de instalación rápida te permite cambiar la longitud de la correa resistente en dos segundos. Correas de doble capa seguras con impresión digital: 1.37 pulgadas x 2.5 m doble de poliéster de alta resistencia están impresas con números arábigos para un ajuste de longitud de la correa sin problemas. No es necesario ajustar la longitud con los ojos. No es necesario ajustar repetidamente. Puedes ajustar ambas correas a la misma altura muy fácil y rápidamente. ",
-        "precio": 6500,
-        "descuento": 10,
-        "talle": [],
-        "color": [],
-        "marca": "Gonex",
-        "imagen": [
-            "17-anillas-1.jpg",
-            "17-anillas-2.jpg",
-            "17-anillas-3.jpg"
-        ],
-        "categoria": [
-            "Funcional/Cross"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 18,
-        "nombre": "Barra de Pared para Dominadas",
-        "descripcion": "Ancho: 120 cm. Alto Anclaje: 50 cm. Profundidad: 56 cm.Grips antideslizantes. Material: Hierro Reforzado pintado. Soporta 150kg. Peso del producto: 5 KG. Es apta para la intemperie. Trae tornillos o fisher de 8mm",
-        "precio": 3200,
-        "descuento": 0,
-        "talle": [],
-        "color": [],
-        "marca": "Forja",
-        "imagen": [
-            "18-barra-1.jpg",
-            "18-barra-2.jpg",
-            "18-barra-3.jpg"
-        ],
-        "categoria": [
-            "Funcional/Cross"
-        ],
-        "envioGratis": true
-    },
-    {
-        "id": 19,
-        "nombre": "Cajón de Salto de Madera",
-        "descripcion": "Cajón de salto con 3 alturas diferentes: 50cm x 60cm x 70cm. La caja tiene agarres laterales para fácil traslado. Realizado en multilaminado de 18 mm de espesor. Esta lijado en todas superficies estampado y teñido. Los tornillos están masillados para un mejor terminación. Todos los bordes lijados con el fin de evitar que sean filosos.",
-        "precio": 6500,
-        "descuento": 10,
-        "talle": [],
-        "color": [],
-        "marca": "Master Box",
-        "imagen": [
-            "19-cajonSalto-1.jpg",
-            "19-cajonSaltos-2.jpg"
-        ],
-        "categoria": [
-            "Funcional/Cross"
-        ],
-        "envioGratis": true
-    },
-    {
-        "id": 20,
-        "nombre": "Chaleco de Sobrecarga 20 Kg",
-        "descripcion": "Chaleco para entrenamiento con sobrecarga. Sistema de ajuste con doble abrojo. Confeccionado en tela cordura importada antidesgarro. Anillas de acero frontales y traceras para adicionar peso o elasticos. Hombros acolchonados para mayor comodidad. Bolsas con peso de polietileno resistente incluidas. Cierre reforzado. Talle único.",
-        "precio": 6400,
-        "descuento": 10,
-        "talle": [],
-        "color": [],
-        "marca": "JC Sports",
-        "imagen": [
-            "20-chaleco20kg-1.jpg",
-            "20-chaleco20kgs-2.jpg",
-            "20-chaleco20kgs-3.jpg"
-        ],
-        "categoria": [
-            "Funcional/Cross"
-        ],
-        "envioGratis": true
-    },
-    {
-        "id": 21,
-        "nombre": "Corebag 20Kg",
-        "descripcion": "Bolso de arena para entrenamiento funcional y crossfit. Corebags reforzados con 6 agarres. ATENCION: Calidad Premium, super reforzados anti desgarro. MEDIDAS: 46cm de largo, 22cm de ancho, 22cm de alto.",
-        "precio": 2500,
-        "descuento": 10,
-        "talle": [],
-        "color": [],
-        "marca": "RWW",
-        "imagen": [
-            "21-corebag-1.jpg",
-            "21-corebags-2.jpg"
-        ],
-        "categoria": [
-            "Funcional/Cross"
-        ],
-        "envioGratis": true
-    },
-    {
-        "id": 22,
-        "nombre": "Medicine Ball 10kg",
-        "descripcion": "Pelota de lona de 35cm de diámetro rellena con trapo compactado y cargas que le permiten dar con el peso indicado. Costuras con hilo de poliéster resistente a las tracciones e impactos. Con cierre reforzado en cara frontal. Apta para su uso intensivo profesional.",
-        "precio": 2400,
-        "descuento": 10,
-        "talle": [],
-        "color": [],
-        "marca": "Sonnos",
-        "imagen": [
-            "22-mBall-1.jpg"
-        ],
-        "categoria": [
-            "Funcional/Cross"
-        ],
-        "envioGratis": true
-    },
-    {
-        "id": 23,
-        "nombre": "Rueda Doble para Abdominales Ranbak",
-        "descripcion": "Ruedas fabricadas en PVC reforzado para altas exigencias. Mangos de goma para mejor sujeción. ",
-        "precio": 750,
-        "descuento": 0,
-        "talle": [],
-        "color": [],
-        "marca": "Ranbak",
-        "imagen": [
-            "23-ruedaAb-1.jpg",
-            "23-ruedaAb-2.jpg"
-        ],
-        "categoria": [
-            "Funcional/Cross"
-        ],
-        "envioGratis": false
-    },
-    {
-        "id": 24,
-        "nombre": "Soga Crossfit 9m x 50mm",
-        "descripcion": "Soga para ondulaciones. Extremos termosellados  plastificados para mejor agarre y evitar quemaduras con el roce. Medidas: 9 mts de largo, 50 mm de diametro. Peso: 12,kg",
-        "precio": 10000,
-        "descuento": 10,
-        "talle": [],
-        "color": [],
-        "marca": "Fitnesas",
-        "imagen": [
-            "24-sogaCrossfit-1.jpg",
-            "24-sogaCrossfit-2.jpg",
-            "24-sogaCrossfit-3.jpg"
-        ],
-        "categoria": [
-            "Funcional/Cross"
-        ],
-        "envioGratis": true
-    },
-    {
-        "id": 25,
-        "nombre": "El ropero de narnia",
-        "descripcion": "lorem lorem lorem",
-        "precio": "22222",
-        "descuento": "",
-        "talle": [
-            "XXL"
-        ],
-        "color": [
-            "Marron"
-        ],
-        "marca": "Acme",
-        "imagen": [],
-        "categoria": [
-            "TaeKwon-Do",
-            "Funcional/Cross"
-        ],
-        "envioGratis": false
-    }
+  {
+    "id": 1,
+    "nombre": "Bolsa Kwon 1.20m",
+    "descripcion": "Bolsa de cuero sintético. Incluye relleno, cadenas de acero inoxidable y una barra giratoria cromada. Solo en disponible en color negro",
+    "precio": 17000,
+    "descuento": 30,
+    "talle": [],
+    "color": [],
+    "marca": "Kwon",
+    "imagen": [
+      "1-bolsa120m-1.jpeg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "TaeKwon-Do",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 2,
+    "nombre": "Bolsa Kwon de 1.50m",
+    "descripcion": "Bolsa de cuero sintético. Incluye relleno, cadenas de acero inoxidable y una barra giratoria cromada. Solo en disponible en color negro. Importada.",
+    "precio": 19000,
+    "descuento": 20,
+    "talle": [],
+    "color": [],
+    "marca": "Kwon",
+    "imagen": [
+      "2-bolsa150m-1.jpeg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "TaeKwon-Do",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 3,
+    "nombre": "Bolsa Kwon de 1.80m ",
+    "descripcion": "Bolsa de cuero sintético. Incluye relleno, cadenaa de acero inoxidable y una barra giratoria cromada. Solo en disponible en color negro.Importada.",
+    "precio": 21000,
+    "descuento": 15,
+    "talle": [],
+    "color": [],
+    "marca": "Kwon",
+    "imagen": [
+      "3-bolsa180m-1.jpeg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "TaeKwon-Do",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 4,
+    "nombre": "Cadena para bolsa",
+    "descripcion": "Elaborada con cadena de metal soldada de 4 mm de espesor en 4 tramos de 33 cm. Sujetas con una argolla de metal soldada y tres eslabones abiertos que permiten enganchar la bolsa de entrenamiento.",
+    "precio": 2100,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Forja",
+    "imagen": [
+      "4-cadena-1.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "TaeKwon-Do",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 5,
+    "nombre": "Cielo y tierra Everlast",
+    "descripcion": "Bolsa cielo y tierra. Cuero sintético de primera calidad ofrece durabilidad y funcionalidad. Cuerdas elásticas y placas de techo/suelo incluidos.",
+    "precio": 8000,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Everlast",
+    "imagen": [
+      "5-cieloTierra-1.jpg",
+      "5-cieloTierra-2.jpg",
+      "5-cieloTierra-3.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 6,
+    "nombre": "Soporte para bolsa",
+    "descripcion": "Soporte de pared construido en caño rectangular de gran espesor para mayor rigidez y ángulo de hierro macizo. Incluye tarugos y tirafondos para su instalación. Medidas:90x60",
+    "precio": 3200,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Forja",
+    "imagen": [
+      "6-soporteBolsa-1.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 7,
+    "nombre": "Guantes de Boxeo Everlast 12 oz",
+    "descripcion": "Guantes De Boxeo Everlast Pro Style Training. Thumblock: Mantiene el pulgar en la posición correcta y lo protege de lesiones.Doble costura: Asegura la durabilidad. Tira de ajuste y lazo en la muñeca: Proporciona un ajuste seguro y permite ponerlos y quitarlos rápidamente. Permite el flujo de aire para refrescar las manos. Cordón de agarre en el interior para mayor capacidad de agarre y protección. Tres capas de espuma de alto impacto para una mejor protección",
+    "precio": 7000,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Everlast",
+    "imagen": [
+      "7-guantesBox-1.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 8,
+    "nombre": "Guantes de Boxeo Everlast 14 oz",
+    "descripcion": "Guantes De Boxeo Everlast Protex2. Protex2: Panel de Doble Collar para Protección Superior de la Muñeca. Cuero sintetico de primera calidad para una sensación súper suave y de larga duración. Paneles de ventilación de malla EVERCOOL™. Tecnología de espuma de celda cerrada proporciona una protección óptima. Revestimiento que absorbe la humedad EverDri ™. Funda con cierre con recomendaciones incluidas",
+    "precio": 9000,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Everlast",
+    "imagen": [
+      "8-guantesBox-1.jpg",
+      "8-guantesBox-2.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 9,
+    "nombre": "Guantes de Boxeo Everlast 16 oz",
+    "descripcion": "Guantes De Boxeo Everlast Pro Style Elite. El revolucionario diseño de una pieza optimiza la colocación del puño y promueve el rango natural de movimiento. Construido con tecnología de espuma de celda cerrada para la protección de las manos y el cierre de agarre para una mayor potencia de ajuste. La palma de malla Evercool ™ aumenta la ventilación. La muñeca en forma de reloj de arena con relleno reforzado Evershield ™ estabiliza la mano y la muñeca, brindando un ajuste de apoyo, cómodo y verdaderamente seguro. Cuero sintético premium.",
+    "precio": 9800,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Everlast",
+    "imagen": [
+      "9-guantesBox-1.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 10,
+    "nombre": "Pantalón Short de Boxeo Venum",
+    "descripcion": "Short de Boxeo Venum Elite. 100% Malla de Poliéster en las aperturas laterales para excelente respirabilidad. Cinturón elástico mayor a 58 cm (con espacio para coquilla). Logotipo bordado al frente y en la parte trasera. Logotipo Venum en los cordones.Logotipo Venum en los tramos de malla laterales. Disponible en Blanco y Negro ó Rojo y Negro",
+    "precio": 5500,
+    "descuento": 10,
+    "talle": [
+      "M",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "Blanco",
+      "Rojo"
+    ],
+    "marca": "Venum",
+    "imagen": [
+      "10-shortBox-1.jpg",
+      "10-shortBox-2.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 11,
+    "nombre": "Pantalón Short de Boxeo Metal",
+    "descripcion": "Short de Boxeo Metal Boxe. Fabricado en satén de alta calidad, con un cinturón ancho para un soporte excepcional y un corte corto.",
+    "precio": 3500,
+    "descuento": 0,
+    "talle": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "color": [
+      "Negro"
+    ],
+    "marca": "Metal",
+    "imagen": [
+      "11-shortBox-1.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 12,
+    "nombre": "Protector Bucal Simple",
+    "descripcion": "Protector Bucal Simple Proyec. Fabricados de silicona de primera calidad. Termo moldeables (se amoldan a la forma de cada dentadura). Posee contornos anatómicos para evitar molestias en las encías. Transparente",
+    "precio": 150,
+    "descuento": 0,
+    "talle": [
+      "1",
+      "2"
+    ],
+    "color": [],
+    "marca": "Metal",
+    "imagen": [
+      "12-bucalSimple-1.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai",
+      "TaeKwon-Do"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 13,
+    "nombre": "Protector Bucal Doble",
+    "descripcion": "Protector Bucal Doble Procer. Se utilizan para la protección de la boca y la inmovilización de la articulación temporomandibular en la practica de boxeo, hockey, rugby y artes marciales. Su molde está pensado para que una vez tomada la forma del maxilar superior, la distribución del material sea uniforme y su calce sea confortable al uso intensivo. Talle único. Transparente",
+    "precio": 350,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Procer",
+    "imagen": [
+      "13-bucalDoble-1.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai",
+      "TaeKwon-Do"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 14,
+    "nombre": "Cabezal de Boxeo Everlast",
+    "descripcion": "Cabezal de Boxeo Everlast abierto con protector de pómulos. Especialmente diseñado para el entrenamiento y el sparring. Absorbe la transpiración e impide el deslizamiento. Acolchado de espuma de alta calidad. Barbilla abierta para una respiración más fluida. Tira de velcro para una sujeción perfecta",
+    "precio": 7200,
+    "descuento": 10,
+    "talle": [],
+    "color": [],
+    "marca": "Everlast",
+    "imagen": [
+      "14-cascoBox-1.jpg",
+      "14-cascoBox-2.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 15,
+    "nombre": "Inguinal de Boxeo Everlast",
+    "descripcion": "Inguinal de Boxeo Everlast Safemax. La tecnología FOAM C3 está diseñada con una mayor amortiguación, apoyo y dispersión para proteger a la ingle, cadera y los riñones. Cuero de primera calidad que asegura la máxima durabilidad y funcionalidad. Tecnología EVERDRI ™ que absorbe y optimiza su comodidad y repele la excesiva humedad durante el entrenamiento. Disponible con gancho ajustable (HOOP & LOOP) y cierre de lazo trasero de encaje (LACED) para la colocación segura durante el entrenamiento.",
+    "precio": 4800,
+    "descuento": 10,
+    "talle": [
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "color": [],
+    "marca": "Everlast",
+    "imagen": [
+      "15-inguinalBox-1.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 16,
+    "nombre": "Vendas Elásticas Proyec 4m",
+    "descripcion": "Vendas con abrojo y agarre de dedo pulgar. Aptas para Boxeo, Kick Boxing, Muay Thai, Full Contact, TaeKwon-Do, MMA. Largo: 4 m. Ancho: 5 cm. Super flexibles e Higiénicas. Permite vendar manos, muñeca, nidullos y dedos.Material: Algodon Elastizado",
+    "precio": 600,
+    "descuento": 0,
+    "talle": [],
+    "color": [
+      "Negro",
+      "Rojo",
+      "Azul"
+    ],
+    "marca": "Proyec",
+    "imagen": [
+      "16-vendas-1.jpg",
+      "16-vendas-2.jpg",
+      "16-vendas-3.jpg",
+      "16-vendas-4.jpg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "KickBoxing/MuayThai",
+      "TaeKwon-Do"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 17,
+    "nombre": "Anillas de Madera Gonex",
+    "descripcion": "Las anillas de gimnasia Gonex están hechas de madera de 3,2 cm de grosor, más duraderos y seguros que los anillos de plástico. Mosquetón de instalación rápida: Gonex Quick Carabiner está diseñado para un uso rápido y fácil. No hay necesidad de molestarse con pasos tediosos. El mosquetón de instalación rápida te permite cambiar la longitud de la correa resistente en dos segundos. Correas de doble capa seguras con impresión digital: 1.37 pulgadas x 2.5 m doble de poliéster de alta resistencia están impresas con números arábigos para un ajuste de longitud de la correa sin problemas. No es necesario ajustar la longitud con los ojos. No es necesario ajustar repetidamente. Puedes ajustar ambas correas a la misma altura muy fácil y rápidamente. ",
+    "precio": 6500,
+    "descuento": 10,
+    "talle": [],
+    "color": [],
+    "marca": "Gonex",
+    "imagen": [
+      "17-anillas-1.jpg",
+      "17-anillas-2.jpg",
+      "17-anillas-3.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 18,
+    "nombre": "Barra de Pared para Dominadas",
+    "descripcion": "Ancho: 120 cm. Alto Anclaje: 50 cm. Profundidad: 56 cm.Grips antideslizantes. Material: Hierro Reforzado pintado. Soporta 150kg. Peso del producto: 5 KG. Es apta para la intemperie. Trae tornillos o fisher de 8mm",
+    "precio": 3200,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Forja",
+    "imagen": [
+      "18-barra-1.jpg",
+      "18-barra-2.jpg",
+      "18-barra-3.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 19,
+    "nombre": "Cajón de Salto de Madera",
+    "descripcion": "Cajón de salto con 3 alturas diferentes: 50cm x 60cm x 70cm. La caja tiene agarres laterales para fácil traslado. Realizado en multilaminado de 18 mm de espesor. Esta lijado en todas superficies estampado y teñido. Los tornillos están masillados para un mejor terminación. Todos los bordes lijados con el fin de evitar que sean filosos.",
+    "precio": 6500,
+    "descuento": 10,
+    "talle": [],
+    "color": [],
+    "marca": "Master Box",
+    "imagen": [
+      "19-cajonSalto-1.jpg",
+      "19-cajonSaltos-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 20,
+    "nombre": "Chaleco de Sobrecarga 20 Kg",
+    "descripcion": "Chaleco para entrenamiento con sobrecarga. Sistema de ajuste con doble abrojo. Confeccionado en tela cordura importada antidesgarro. Anillas de acero frontales y traceras para adicionar peso o elasticos. Hombros acolchonados para mayor comodidad. Bolsas con peso de polietileno resistente incluidas. Cierre reforzado. Talle único.",
+    "precio": 6400,
+    "descuento": 10,
+    "talle": [],
+    "color": [],
+    "marca": "JC Sports",
+    "imagen": [
+      "20-chaleco20kg-1.jpg",
+      "20-chaleco20kgs-2.jpg",
+      "20-chaleco20kgs-3.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 21,
+    "nombre": "Corebag 20Kg",
+    "descripcion": "Bolso de arena para entrenamiento funcional y crossfit. Corebags reforzados con 6 agarres. ATENCION: Calidad Premium, super reforzados anti desgarro. MEDIDAS: 46cm de largo, 22cm de ancho, 22cm de alto.",
+    "precio": 2500,
+    "descuento": 10,
+    "talle": [],
+    "color": [],
+    "marca": "RWW",
+    "imagen": [
+      "21-corebag-1.jpg",
+      "21-corebags-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 22,
+    "nombre": "Medicine Ball 10kg",
+    "descripcion": "Pelota de lona de 35cm de diámetro rellena con trapo compactado y cargas que le permiten dar con el peso indicado. Costuras con hilo de poliéster resistente a las tracciones e impactos. Con cierre reforzado en cara frontal. Apta para su uso intensivo profesional.",
+    "precio": 2400,
+    "descuento": 10,
+    "talle": [],
+    "color": [],
+    "marca": "Sonnos",
+    "imagen": [
+      "22-mBall-1.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 23,
+    "nombre": "Rueda Doble para Abdominales Ranbak",
+    "descripcion": "Ruedas fabricadas en PVC reforzado para altas exigencias. Mangos de goma para mejor sujeción. ",
+    "precio": 750,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Ranbak",
+    "imagen": [
+      "23-ruedaAb-1.jpg",
+      "23-ruedaAb-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 24,
+    "nombre": "Soga Crossfit 9m x 50mm",
+    "descripcion": "Soga para ondulaciones. Extremos termosellados  plastificados para mejor agarre y evitar quemaduras con el roce. Medidas: 9 mts de largo, 50 mm de diametro. Peso: 12,kg",
+    "precio": 10000,
+    "descuento": 10,
+    "talle": [],
+    "color": [],
+    "marca": "Fitnesas",
+    "imagen": [
+      "24-sogaCrossfit-1.jpg",
+      "24-sogaCrossfit-2.jpg",
+      "24-sogaCrossfit-3.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 25,
+    "nombre": "El ropero de narnia",
+    "descripcion": "lorem lorem lorem",
+    "precio": "22222",
+    "descuento": "",
+    "talle": [
+      "XXL"
+    ],
+    "color": [
+      "Marron"
+    ],
+    "marca": "Acme",
+    "imagen": [],
+    "categoria": [
+      "TaeKwon-Do",
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "imagen": "828521.jpg",
+    "envioGratis": "on",
+    "descuento": "5",
+    "talle": [
+      "on",
+      "6"
+    ],
+    "nombre": "Vladimir ramiro morales trujillo",
+    "descripcion": "crear",
+    "precio": "1234",
+    "color": "rojo",
+    "categoria": "Boxeo",
+    "id": 26
+  }
 ]

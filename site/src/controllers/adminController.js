@@ -15,26 +15,24 @@ const controller = {
     },
 
     crear:(req,res) =>{
+ 
         /* const {nombre, descripcion, precio, descuento, talle, color, categoria, envioGratis} = req.body */
-        const nuevoProducto = 
-        /* req.body; */
+        let nuevoProducto = req.body;
+        
         nuevoProducto.id = productos.length + 1;
-
-        console.log(nuevoProducto);
-
-        nuevoProducto.envioGratis = envioGratis === undefined ? false : true;
-        nuevoProducto.descuento = descuento;
-        nuevoProducto.talle = typeof(talle) === 'string' ? [talle] : talle;
-        nuevoProducto.nombre = nombre;
-        nuevoProducto.descripcion = descripcion;
-        nuevoProducto.precio = precio;
-        nuevoProducto.color = [color];
-        nuevoProducto.categoria = typeof(categoria) === 'string' ? [categoria] : categoria;
-
-        productos.push(nuevoProducto);
+        
+        /* nuevoProducto.envioGratis = envioGratis === undefined ? false : true;
+            nuevoProducto.descuento = descuento;
+            nuevoProducto.talle = typeof(talle) === 'string' ? [talle] : talle;
+            nuevoProducto.nombre = nombre;
+            nuevoProducto.descripcion = descripcion;
+            nuevoProducto.precio = precio;
+            nuevoProducto.color = [color];
+            nuevoProducto.categoria = typeof(categoria) === 'string' ? [categoria] : categoria;
+ */
+            productos.push(nuevoProducto);
 
         fs.writeFileSync(productosRuta, JSON.stringify(productos, null ,2))
-
 		res.redirect(`/product/${nuevoProducto.id}`)
     },
 
