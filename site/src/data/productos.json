@@ -509,5 +509,76 @@
     "color": "rojo",
     "categoria": "Boxeo",
     "id": 26
+  },
+  {
+    "imagen": "883187.jpg",
+    "envioGratis": "on",
+    "descuento": "15",
+    "talle": [
+      "L",
+      "XL",
+      "XXL",
+      "6",
+      "7",
+      "8"
+    ],
+    "nombre": "Vladimir ramiro morales trujillo",
+    "descripcion": "vlkjhgfd",
+    "precio": "12443",
+    "color": "rojo",
+    "categoria": [
+      "Boxeo",
+      "Funcional/Cross"
+    ],
+    "id": 27
+  },
+  {
+    "imagen": "",
+    "envioGratis": true,
+    "descuento": "10",
+    "talle": [
+      "L",
+      "XL",
+      "XXL",
+      "6",
+      "7",
+      "8"
+    ],
+    "nombre": "Vladimir ramiro morales trujillo",
+    "descripcion": "vdvsvdsvd",
+    "precio": "22222",
+    "color": [
+      "rojo"
+    ],
+    "categoria": [
+      "Boxeo",
+      "Jiu-Jitsu"
+    ],
+    "id": 28
+  },
+  {
+    "imagen": "",
+    "envioGratis": true,
+    "descuento": 15,
+    "talle": [
+      "L",
+      "XL",
+      "XXL",
+      "6",
+      "7",
+      "8"
+    ],
+    "nombre": "Elena",
+    "descripcion": "dfdsfd123445",
+    "precio": 122334,
+    "color": [
+      "rojo"
+    ],
+    "categoria": [
+      "TaeKwon-Do",
+      "Boxeo",
+      "Funcional/Cross"
+    ],
+    "id": 29
   }
 ]

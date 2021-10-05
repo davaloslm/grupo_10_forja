@@ -16,20 +16,20 @@ const controller = {
 
     crear:(req,res) =>{
  
-        /* const {nombre, descripcion, precio, descuento, talle, color, categoria, envioGratis} = req.body */
+        const {nombre, descripcion, precio, descuento, talle, color, categoria, envioGratis} = req.body
         let nuevoProducto = req.body;
         
         nuevoProducto.id = productos.length + 1;
         
-        /* nuevoProducto.envioGratis = envioGratis === undefined ? false : true;
-            nuevoProducto.descuento = descuento;
+            nuevoProducto.envioGratis = envioGratis === undefined ? false : true;
+            nuevoProducto.descuento = parseInt(descuento);
             nuevoProducto.talle = typeof(talle) === 'string' ? [talle] : talle;
             nuevoProducto.nombre = nombre;
             nuevoProducto.descripcion = descripcion;
-            nuevoProducto.precio = precio;
+            nuevoProducto.precio = parseInt(precio);
             nuevoProducto.color = [color];
             nuevoProducto.categoria = typeof(categoria) === 'string' ? [categoria] : categoria;
- */
+
             productos.push(nuevoProducto);
 
         fs.writeFileSync(productosRuta, JSON.stringify(productos, null ,2))
