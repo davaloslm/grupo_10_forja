@@ -65,7 +65,11 @@
                         <td><%= producto.nombre%> </td>
                         <td class="iconos"><a href=""><i class="fas fa-eye"></i></a></td>
                         <td class="iconos"><a href="edit/<% producto.id %>"><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                        <td class="iconos">
+                            <form action="/admin/edit/<%=producto.id%>?_method=DELETE" method="POST">
+
+                            <button class="delete" id="delete" type="submit"><i class=" trash fas fa-trash-alt"></i></button>
+                        </form></td>
                     </tr>
                     <% }) %> 
                     

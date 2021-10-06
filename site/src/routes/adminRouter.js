@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {admin, vistaCrear, vistaEditar, editar, crear} = require('../controllers/adminController')
+const {admin, vistaCrear, vistaEditar, editar, crear, eliminar} = require('../controllers/adminController')
 
 router.get('/', admin);
 
@@ -15,9 +15,10 @@ router.post('/', crear );
 router.get('/edit/:id', vistaEditar);
 
 // Editar producto - Guardar
-router.put('/edit/:id', editar )
+router.put('/edit/:id', editar );
 
-/* router.put */
+//Eliminar producto//
+router.delete("/edit/:id", eliminar);
 
 
 module.exports = router;
