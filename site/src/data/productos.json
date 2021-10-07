@@ -1,5 +1,18 @@
 [
   {
+    "id": 1,
+    "nombre": "Bolsa Kwon 1.20m",
+    "descripcion": "Bolsa de cuero sintético. Incluye relleno, cadenas de acero inoxidable y una barra giratoria cromada. Solo en disponible en color negro",
+    "precio": 17000,
+    "descuento": 30,
+    "talle": [],
+    "color": [],
+    "marca": "Kwon",
+    "imagen": ["1-bolsa120m-1.jpeg"],
+    "categoria": ["Boxeo", "TaeKwon-Do", "KickBoxing/MuayThai" ],
+    "envioGratis": true
+  },
+  {
     "id": 2,
     "nombre": "Bolsa Kwon de 1.50m",
     "descripcion": "Bolsa de cuero sintético. Incluye relleno, cadenas de acero inoxidable y una barra giratoria cromada. Solo en disponible en color negro. Importada.",
@@ -8,9 +21,7 @@
     "talle": [],
     "color": [],
     "marca": "Kwon",
-    "imagen": [
-      "2-bolsa150m-1.jpeg"
-    ],
+    "imagen": ["2-bolsa150m-1.jpeg"],
     "categoria": [
       "Boxeo",
       "TaeKwon-Do",
