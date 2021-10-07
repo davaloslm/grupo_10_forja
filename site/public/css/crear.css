@@ -119,7 +119,10 @@ body main.crear section.product_container form section.button_container{
 /*//////////// Tamaño de botonos/////////// */
 body main.crear section.product_container form section.button_container button.boton{
     padding: 8px 15px;
-
+    background-color: var(--lightBlue);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
 }
 
 

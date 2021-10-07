@@ -90,6 +90,8 @@
     width: 95%;
     background-color: var(--lightBlue);
     border-radius: 0 0 5px 5px;
+    border: none;
+    cursor: pointer;
 }
 
 .cart section.container article.product_info div.foto_product a button i {
@@ -98,6 +100,7 @@
 
 .cart section.container article.product_info div.foto_product a.eliminar_a button.eliminar, .cart section.container article.product_info div.foto_product a.eliminar_a {
     display: none;
+    cursor: pointer;
 }
 
 .cart section.container article.product_info div.detail_product {
@@ -142,6 +145,8 @@
     color: var(--white);
     width: 15px;
     border-radius: 5px 0 0 5px;
+    border: none;
+    cursor: pointer;
 }
 
 .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button:last-child {
@@ -238,6 +243,10 @@
     margin-top: 10px;
     margin-right: 10px;
     color: var(--white);
+    background-color: var(--lightBlue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /*                                     Productos similares                                  */
@@ -459,6 +468,8 @@
         max-width: 240px;
         font-size: 17px;
         font-weight: 600;
+        background-color: var(--lightBlue);
+        border: none;
     }
 
     .cart section.container article.product_info div.foto_product a.eliminar_a button.eliminar:hover {
