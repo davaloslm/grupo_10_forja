@@ -60,3 +60,26 @@
 ## Hacer menos:
 - 
 ---
+# Retrospectiva 4
+---
+## Empezar a hacer:
+- 
+---
+## Hacer más:
+- 
+---
+## Seguir haciendo:
+- Tareas en simultáneo.
+- Tener buena comunicación.
+- Reuniones diarias (daily standups).
+- Dividir tareas y establecer dificultades al comienzo del sprint.
+- Empezar a trabajar desde el día del inicio del sprint.
+- Documentar dailies.
+- Poner fecha limite a las tareas.
+---
+## Dejar de hacer:
+- 
+---
+## Hacer menos:
+- 
+---
