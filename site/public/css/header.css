@@ -154,10 +154,11 @@ header nav form input{
 }
 
 header nav form button{
-    height: 26px;
+    height: 27px;
     border-radius: 0 5px 5px 0;
     display: flex;
-    
+    background-color: var(--lightBlue);
+    border: none;
 }
 
 header nav form button.search i{
@@ -174,6 +175,12 @@ header nav button.cart i{
     background-color: var(--lightBlue);
     color: var(--white);
     padding: 5px;
+    border-radius: 5px; 
+}
+
+header nav button.cart {
+    background-color: var(--lightBlue);
+    border: none;
     border-radius: 5px;
 }
 
@@ -188,8 +195,17 @@ header nav button.cart i{
     header nav label {
         display: none;
     }
+
+    header nav form button.search {
+        height: 30px;
+    }
+
     header nav button.home{
         display: flex;
+        background-color: var(--lightBlue);
+        border: none;
+        border-radius: 5px;
+        align-items: center;
     }
 
     header nav button.home i{
@@ -209,6 +225,8 @@ header nav button.cart i{
         padding: 5px;
         border-radius: 5px;
         align-self: center;
+        background-color: var(--lightBlue);
+        border: none;
     }
 
     header nav button a{

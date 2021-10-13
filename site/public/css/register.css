@@ -68,6 +68,10 @@ main.register section form button{
     color: var(--white);
     margin: 10px auto;
     display: block;
+    background-color: var(--lightBlue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 @media (min-width: 768px){
