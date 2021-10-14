@@ -1,5 +1,24 @@
 [
   {
+    "id": 1,
+    "nombre": "Bolsa Kwon 1.20m",
+    "descripcion": "Bolsa de cuero sintético. Incluye relleno, cadenas de acero inoxidable y una barra giratoria cromada. Solo en disponible en color negro",
+    "precio": 17000,
+    "descuento": 30,
+    "talle": [],
+    "color": [],
+    "marca": "Kwon",
+    "imagen": [
+      "1-bolsa120m-1.jpeg"
+    ],
+    "categoria": [
+      "Boxeo",
+      "TaeKwon-Do",
+      "KickBoxing/MuayThai"
+    ],
+    "envioGratis": true
+  },
+  {
     "id": 2,
     "nombre": "Bolsa Kwon de 1.50m",
     "descripcion": "Bolsa de cuero sintético. Incluye relleno, cadenas de acero inoxidable y una barra giratoria cromada. Solo en disponible en color negro. Importada.",
@@ -455,5 +474,31 @@
       "Funcional/Cross"
     ],
     "envioGratis": true
+  },
+  {
+    "imagen": "escanor.jpg",
+    "envioGratis": true,
+    "descuento": "",
+    "talle": [
+      "L",
+      "XL",
+      "XXL",
+      "5",
+      "6",
+      "7",
+      "8"
+    ],
+    "nombre": "Escanor",
+    "descripcion": "El pecado del orgullo león escanor.",
+    "precio": "999999999",
+    "color": [
+      "color Sol"
+    ],
+    "categoria": [
+      "TaeKwon-Do",
+      "Jiu-Jitsu",
+      "KickBoxing/MuayThai"
+    ],
+    "id": 25
   }
 ]

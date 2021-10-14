@@ -124,6 +124,8 @@
 .admin section.list_container form button {
     height: 26px;
     border-radius: 0 5px 5px 0;
+    background-color: var(--lightBlue);
+    border: none;
 }
 
 .admin section.list_container form button i {
@@ -163,6 +165,14 @@
 
 .admin table.table tbody tr td.iconos a i.trash {
     color: crimson;
+}
+
+.admin table.table tbody tr td.iconos form button.delete {
+    color: crimson;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
 }
 
 .admin table.table tbody tr td.name, .admin table.table tbody tr td.surname, .admin table.table thead tr th.name, .admin table.table thead tr th.surname {

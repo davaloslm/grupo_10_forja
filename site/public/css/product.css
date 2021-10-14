@@ -100,7 +100,10 @@ main.product section.detalles div.detalles button{
     color: white;
     align-self: center;
     margin: 10px 0;
-
+    background-color: var(--lightBlue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 
@@ -140,11 +143,12 @@ main.product section.detalles div.detalles form div.cantidad div.box-quantity bu
     border-radius: 5px 0 0 5px;
     height: 30px;
     margin: 0;
+    border: none;
+    cursor: pointer;
 }
 
 main.product section.detalles div.detalles form div.cantidad div.box-quantity button:last-child{
     border-radius: 0 5px 5px 0;
-
 }
 
 main.product section.detalles div.detalles form div.cantidad div.box-quantity input{
