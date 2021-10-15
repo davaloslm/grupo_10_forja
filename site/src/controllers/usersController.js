@@ -1,10 +1,38 @@
-const usuarios = require('../data/users.json')
+let usuarios = require('../data/users.json');
+const fs = require('fs');
+const path = require('path');
+const usuariosRuta = path.join(__dirname, '../data/users.json');
+
 const controller = {
     cart: (req, res)=> {
         res.render('users/cart')
     },
-    register: (req, res)=> {
+    vistaRegistro: (req, res)=> {
         res.render('users/register')
+    },
+    registro: (req, res)=> {
+        const {nombre, apellido, email, fechaDeNac, contraseña, contraseña2, terminos, ofertas} = req.body;
+        let nuevoUsuario = req.body;
+
+        nuevoUsuario.id = usuarios.length + 1;
+
+        nuevoUsuario.nombre = nombre;
+        nuevoUsuario.apellido = apellido;
+        nuevoUsuario.email = email;
+        nuevoUsuario.fechaDeNac = fechaDeNac;
+        nuevoUsuario.contraseña = contraseña;
+        nuevoUsuario.contraseña2 = contraseña2;
+        nuevoUsuario.imagen = req.file ? req.file.filename : 'default-user.jpg';
+        nuevoUsuario.terminos = terminos;
+        nuevoUsuario.ofertas = ofertas === undefined ? false : true;
+
+
+        usuarios.push(nuevoUsuario);
+
+        fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null, 2))
+
+        res.redirect(`/user/userProfile/${nuevoUsuario.id}`)
+
     },
     login: (req, res)=> {
         res.render('users/login')

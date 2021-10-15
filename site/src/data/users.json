@@ -1,30 +1,65 @@
 [
-    {
-        "id": 8,
-        "name": "Rodrigo",
-        "lastName": "Garayalde",
-        "email": "gabii.borges@gmail.com",
-        "password": "12345",
-        "image": "rodrigo-profile.png",
-        "admin": true
-    },
-    {
-        "id": 9,
-        "name": "vladimir",
-        "lastName": "Morales",
-        "email": "vladimorales27@gmail.com",
-        "password": "135awd",
-        "image": "vladi.jpeg",
-        "admin": true
-    },
-    {
-        "id": 9999,
-        "name": "Leonardo",
-        "lastName": "Dávalos",
-        "email": "davaloslm9999@gmail.com",
-        "password": "9999",
-        "image": "",
-        "admin": true
-    }
-    
+  {
+    "id": 8,
+    "nombre": "Rodrigo",
+    "apellido": "Garayalde",
+    "email": "gabii.borges@gmail.com",
+    "fechaDeNac": "28-07-1998",
+    "contraseña": "12345",
+    "contraseña2": "12345",
+    "imagen": "rodrigo-profile.png",
+    "terminos": 1,
+    "ofertas": false,
+    "admin": 1
+  },
+  {
+    "id": 9,
+    "nombre": "vladimir",
+    "apellido": "Morales",
+    "email": "vladimorales27@gmail.com",
+    "fechaDeNac": "28-07-1998",
+    "contraseña": "135awd",
+    "contraseña2": "135awd",
+    "imagen": "vladi.jpeg",
+    "terminos": 1,
+    "ofertas": false,
+    "admin": 1
+  },
+  {
+    "id": 9999,
+    "nombre": "Leonardo",
+    "apellido": "Dávalos",
+    "email": "davaloslm9999@gmail.com",
+    "fechaDeNac": "28-07-1998",
+    "contraseña": "9999",
+    "contraseña2": "9999",
+    "imagen": "",
+    "terminos": 1,
+    "ofertas": false,
+    "admin": 1
+  },
+  {
+    "nombre": "Cosme",
+    "apellido": "Fulanito",
+    "email": "root@hotmail.com",
+    "fechaDeNac": "1999-04-02",
+    "contraseña": "123456789",
+    "contraseña2": "123456789",
+    "terminos": "1",
+    "id": 4,
+    "imagen": "default-user.jpg",
+    "ofertas": false
+  },
+  {
+    "nombre": "Max",
+    "apellido": "Payne",
+    "email": "root@hotmail.com",
+    "fechaDeNac": "1985-08-22",
+    "contraseña": "12345678",
+    "contraseña2": "12345678",
+    "terminos": "1",
+    "id": 7,
+    "imagen": "img-1634270096263.jpg",
+    "ofertas": false
+  }
 ]
