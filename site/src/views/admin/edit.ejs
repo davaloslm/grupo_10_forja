@@ -8,21 +8,32 @@
         </title>
 </head>
 
-<body>
+<body class="editar">
 
     <%- include('../partials/header') %>
 
-        <main class="crear">
+        <main class="edit">
             <section class="product_container">
                 <h1>
-                    <%= producto.nombre %> <i class="fas fa-box"></i>
+                    Editar Producto
                 </h1>
 
                 <form class="todo_container" action="/admin/edit/<%= producto.id  %>?_method=PUT" method="POST">
 
                     <section class="visual_container">
-                        <!-- ////Eligir archivo//// -->
+                        <!-- ////imagen de archivo//// -->
                         <img src="/img/productos/<%= producto.imagen[0] %>" alt="">
+
+                        <!-- /////titulo de producto//// -->
+                        <h2>
+                            <%= producto.nombre %> <i class="fas fa-box"></i>
+                        </h2>
+
+                        <!-- /////Descripcion de Producto///// -->
+                        <div class="selec info_des_container">
+                            <p>Ingresá una descripción</p>
+                            <textarea name="descripcion" id=""><%= producto.descripcion %></textarea>
+                        </div>
 
                         <!-- ////////selector de enviar//////// -->
                         <div class="descuento_envio_container">
@@ -115,11 +126,7 @@
                             <p>Nombre de Producto</p>
                             <input type="text" name="nombre" value="<%= producto.nombre %>">
                         </div>
-                        <!-- /////Descripcion de Producto///// -->
-                        <div class="selec info_des_container">
-                            <p>Ingresá una descripción</p>
-                            <textarea name="descripcion" id=""><%= producto.descripcion %></textarea>
-                        </div>
+                        
                         <!-- /////Precio de producto///// -->
                         <div class="selec info_precio_container">
                             <p>Precio $</p>

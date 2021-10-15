@@ -73,9 +73,9 @@ const controller = {
             productos = productos.filter(e=>e.id !== parseInt(req.params.id))
 
 
-        fs.writeFileSync(productosRuta, JSON.stringify(productos, null ,2))
+         fs.writeFileSync(productosRuta, JSON.stringify(productos, null ,2))
 
-		res.redirect("/admin")
+		 res.redirect("/admin")
 
         }
 }
