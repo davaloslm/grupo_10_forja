@@ -15,6 +15,7 @@
 
     <section class="profile-section user-dashboard page-wrapper">
         <div class="container">
+          <h4>Detalles de perfil</h4>
           <div class="row">
             <div class="col-md-12">
                 <!-- <ul class="list-inline dashboard-menu text-center">
@@ -25,14 +26,16 @@
               
               <div class="dashboard-wrapper dashboard-user-profile">
                 <div class="media">
-                  <h2 class="media-heading">Bienvenido <%= usuario.nombre %></h2>
-                  <div class="pull-left text-center" href="#!">
-                    <img class="media-object user-img" src="/img/users/default-user.jpg" alt="Imagen de perfil">
-                    <a href="" class="btn btn-transparent mt-20">Change Image</a>
+                  <!-- <h2 class="media-heading">Bienvenido <%= usuario.nombre %></h2> -->
+                  <div class=" image-container pull-left text-center" href="#!">
+                    <img class="media-object user-img" src="/img/users/<%= usuario.imagen %>" alt="Imagen de perfil">
+                    <form action="">
+                      <button class="img-button" type="submit">Cambiar imagen</button>
+                    </form>
                   </div>
                   <div class="media-body">
                     <ul class="user-profile-list">
-                      <li><span>Nombre completo:</span> <%= usuario.nombre %> <%= usuario.apellido %></li>
+                      <li><span>Nombre completo:</span><%= usuario.nombre %> <%= usuario.apellido %></li>
                       <li><span>Email:</span> <%= usuario.email %></li>
                       <li><span>Teléfono:</span> +880123123</li>
                       <li><span>Fecha de nacimiento:</span> <%= usuario.fechaDeNac %></li>
@@ -166,7 +169,15 @@
                         
                         
                         <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                        <td class="iconos">
+                          <form action="" method="POST">
+                            <button  type="submit">
+                              <i class=" trash fas fa-trash-alt">
+
+                              </i>
+                            </button>
+                          </form>
+                        </td>
                          
                         
                       </tr>
@@ -176,7 +187,15 @@
                         
                         
                         <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                        <td class="iconos">
+                          <form action="" method="POST">
+                            <button  type="submit">
+                              <i class=" trash fas fa-trash-alt">
+
+                              </i>
+                            </button>
+                          </form>
+                        </td>
                          
                         
                       </tr>
@@ -186,7 +205,15 @@
                         
                         
                         <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                        <td class="iconos">
+                          <form action="" method="POST">
+                            <button  type="submit">
+                              <i class=" trash fas fa-trash-alt">
+
+                              </i>
+                            </button>
+                          </form>
+                        </td>
                          
                         
                       </tr>
