@@ -15,10 +15,10 @@
         <section>
             <h2>Iniciar Sesión</h2>
             <samp>¿No tenés una cuenta?</samp><a href="/user/register">¡Creá una cuenta!</a>
-            <form action="">
-                <input type="email" id="email" class="email" placeholder="Escribe tu e-mail">
+            <form action="/user/login" method="POST">
+                <input type="email" name="email" id="email" class="email" placeholder="Escribe tu e-mail">
 
-                <input type="password" id="password" placeholder="Contraseña">
+                <input type="password" name="contraseña" id="password" placeholder="Contraseña">
             </form>
             <h5><a href="">¿Olvidaste tu contraseña?</a></h5>
             <button ><a href="/home.html">Iniciar Sesión</a></button>

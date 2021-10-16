@@ -36,8 +36,20 @@ const controller = {
         res.redirect(`/user/userProfile/${nuevoUsuario.id}`)
 
     },
-    login: (req, res)=> {
+    vistaLogin: (req, res)=> {
         res.render('users/login')
+    },
+    login:(req, res)=>{
+        const {email, contraseña} = req.body;
+        if (email === usuarios.find(usuario => usuario.email === email) && bcrypt.compareSync(contraseña, usuarios.find(usuario => usuario.contraseña === contraseña) )) {
+            
+
+            
+            
+        }else{
+
+        }
+
     },
     userProfile: (req, res)=> {
         const {id} = req.params;
