@@ -41,13 +41,19 @@ const controller = {
     },
     login:(req, res)=>{
         const {email, contraseña} = req.body;
-        if (email === usuarios.find(usuario => usuario.email === email) && bcrypt.compareSync(contraseña, usuarios.find(usuario => usuario.contraseña === contraseña) )) {
+
+        const usuarioALoguear = usuarios.filter(usuario => usuario.email === email);
+
+        if ( bcrypt.compareSync(contraseña, usuarios.find(usuario => usuario.contraseña === contraseña) )) {
             
+            req.session.usuarioLogueado = usuarioALoguear;
 
             
             
         }else{
 
+            //render de login con errores
+            
         }
 
     },
