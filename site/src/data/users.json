@@ -1,14 +1,14 @@
 [
   {
-    "id": 8,
+    "id": 1,
     "nombre": "Rodrigo",
-    "apellido": "Garayalde",
-    "email": "gabii.borges@gmail.com",
-    "fechaDeNac": "28-07-1998",
-    "contraseña": "12345",
-    "contraseña2": "12345",
-    "imagen": "rodrigo-profile.png",
+    "apellido": "Garayalde Borges",
+    "email": "gabii.borges1998@gmail.com",
+    "fechaDeNac": "1998-07-28",
+    "contraseña": "$2a$12$AoF2f58pdq.0M/PeVJJbPeZxnHgpVcc2jH4BefF7cwQEwrFPuVXKC",
+    "contraseña2": "$2a$12$E9yMOAZ1GYMJGeYWrqm1YOvhBqJlJKfqjfFPu3wK.6UQrfykKN0rK",
     "terminos": 1,
+    "imagen": "rodrigo-profile.png",
     "ofertas": false,
     "admin": 1
   },
