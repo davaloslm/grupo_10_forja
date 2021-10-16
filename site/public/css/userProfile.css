@@ -1,0 +1,20 @@
+main.profile h1{
+    color: var(--white);
+    font-size: 28px;
+    font-weight: 600;
+    margin: 30px 0;
+    text-align: center;
+
+}
+
+main.profile section.profile-section{
+    background-color: var(--white);
+    width: 80%;
+    /* max-width: 400px; */
+    margin: 30px auto;
+    text-align: center;
+    border: solid 1px var(--lightBlue);
+    border-radius: 5px;
+    animation: respiracion_login 3s linear alternate infinite;
+    animation-delay: 3s;
+}

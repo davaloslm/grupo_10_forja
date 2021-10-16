@@ -8,32 +8,34 @@
 <body>
     <%- include('../partials/header')  %> 
     <!-- ///////////////// -->
-<main>
+<main class="profile">
     <!-- Detalles del perfil -->
 
-    <section class="user-dashboard page-wrapper">
+    <h1>Mi cuenta</h1>
+
+    <section class="profile-section user-dashboard page-wrapper">
         <div class="container">
           <div class="row">
             <div class="col-md-12">
-                <ul class="list-inline dashboard-menu text-center">
+                <!-- <ul class="list-inline dashboard-menu text-center">
                     <li><a href="">Mis compras/a></li>
                     <li><a href="">Mis direcciones</a></li>
                     <li><a href="">Detalles de mi perfil</a></li>
-                </ul>
+                </ul> -->
               
               <div class="dashboard-wrapper dashboard-user-profile">
                 <div class="media">
+                  <h2 class="media-heading">Bienvenido <%= usuario.nombre %></h2>
                   <div class="pull-left text-center" href="#!">
-                    <img class="media-object user-img" src="images/avater.jpg" alt="Image">
-                    <a href="#x" class="btn btn-transparent mt-20">Change Image</a>
+                    <img class="media-object user-img" src="/img/users/default-user.jpg" alt="Imagen de perfil">
+                    <a href="" class="btn btn-transparent mt-20">Change Image</a>
                   </div>
                   <div class="media-body">
                     <ul class="user-profile-list">
-                      <li><span>Full Name:</span>Johanna Doe</li>
-                      <li><span>Country:</span>USA</li>
-                      <li><span>Email:</span>mail@gmail.com</li>
-                      <li><span>Phone:</span>+880123123</li>
-                      <li><span>Date of Birth:</span>Dec , 22 ,1991</li>
+                      <li><span>Nombre completo:</span> <%= usuario.nombre %> <%= usuario.apellido %></li>
+                      <li><span>Email:</span> <%= usuario.email %></li>
+                      <li><span>Teléfono:</span> +880123123</li>
+                      <li><span>Fecha de nacimiento:</span> <%= usuario.fechaDeNac %></li>
                     </ul>
                   </div>
                 </div>
@@ -43,7 +45,7 @@
         </div>
       </section>
     <!-- perfil -->
-    <section class="user-dashboard page-wrapper">
+    <!-- <section class="user-dashboard page-wrapper">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -52,7 +54,7 @@
                         <div class="media">
                             
                             <div class="media-body">
-                                <h2 class="media-heading">Bienvenido <%= usuario.name %></h2>
+                                
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, iure, est. Sit mollitia est maxime! Eos
                                     cupiditate tempore, tempora omnis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, nihil. </p>
                             </div>
@@ -63,11 +65,11 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- compras -->
 
-    <section class="user-dashboard page-wrapper">
+    <section class=" profile-section user-dashboard page-wrapper">
         <div class="container">
             <h4>Mis compras</h4>
             <div class="row">
@@ -138,7 +140,7 @@
 
     <!-- Direcciones -->
 
-    <section class="user-dashboard page-wrapper">
+    <section class="profile-section user-dashboard page-wrapper">
         <div class="container">
             <h4>Mis Direcciones</h4>
           <div class="row">
@@ -150,45 +152,43 @@
                     <thead>
                       <tr>
                         
-                        <th>Address</th>
+                        <th>Dirección</th>
                         
                         
-                        <th></th>
+                        <th>Editar</th>
+                        <th>Eliminar</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr>
                        
-                        <td>9/4 C Babor Road, Mohammad Pur, Dhaka</td>
+                        <td>Calle Falsa 123</td>
                         
-                        <td>
-                          <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default"><i class="tf-pencil2" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-default"><i class="tf-ion-close" aria-hidden="true"></i></button>
-                          </div>
-                        </td>
+                        
+                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                         
+                        
                       </tr>
                       <tr>
-                        
-                        <td>9/4 C Babor Road, Mohammad Pur, Dhaka</td>
                        
-                        <td>
-                          <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default"><i class="tf-pencil2" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-default"><i class="tf-ion-close" aria-hidden="true"></i></button>
-                          </div>
-                        </td>
+                        <td>Calle Falsa 123</td>
+                        
+                        
+                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                         
+                        
                       </tr>
                       <tr>
+                       
+                        <td>Calle Falsa 123</td>
                         
-                        <td>9/4 C Babor Road, Mohammad Pur, Dhaka</td>
                         
-                        <td>
-                          <div class="btn-group" role="group">
-                            <button type="button" class="btn btn-default"><i class="tf-pencil2" aria-hidden="true"></i></button>
-                            <button type="button" class="btn btn-default"><i class="tf-ion-close" aria-hidden="true"></i></button>
-                          </div>
-                        </td>
+                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
+                         
+                        
                       </tr>
                     </tbody>
                   </table>
