@@ -26,9 +26,26 @@ footer section img{
     
 }
 
-footer section ul li a, footer section h3{
-    color: var(--white);
+footer section ul{
+    display: flex;
+    margin-bottom: 0;
+    padding-left: 0;
+    flex-direction: column;
 }
+
+footer section ul li a{
+    color: var(--white);
+    
+}
+
+footer section h3{
+    color: var(--white);
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 0;
+
+}
+
 
 @media(min-width: 425px){
 
@@ -90,6 +107,9 @@ footer section ul li a, footer section h3{
 
     footer section ul{
         display: flex;
+        margin-bottom: 0;
+        padding-left: 0;
+        flex-direction: row;
     }
 
     footer section ul li{

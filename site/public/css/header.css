@@ -1,3 +1,21 @@
+/* ///////////Conflictos con bootstrap */
+header input{
+    height: 30px;
+    font-size: 13px;
+}
+
+header button{
+    font-size: 13px;
+    height: 26px;
+    height: 30px;
+}
+
+header a:hover{
+    color: var(--white)
+}
+
+/* ///////////Conflictos con bootstrap */
+
 header div.banner{
     position: relative;
     width: 100%;
@@ -130,7 +148,7 @@ header nav input.close:checked ~ div.menu{
 header nav label i.fa-bars{
     background-color: var(--lightBlue);
     color: var(--white);
-    padding: 5px;
+    padding: 7px;
     border-radius: 5px;
     
 
@@ -154,7 +172,7 @@ header nav form input{
 }
 
 header nav form button{
-    height: 27px;
+    height: 30px;
     border-radius: 0 5px 5px 0;
     display: flex;
     background-color: var(--lightBlue);
@@ -301,7 +319,7 @@ header nav button.cart {
         margin: 0 auto;
     }
 
-    header .container {
+    header .header-container {
         background-image: url(/img/design/fondo.png);
         background-repeat: repeat;
     }
