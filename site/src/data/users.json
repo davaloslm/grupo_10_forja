@@ -61,5 +61,17 @@
     "id": 7,
     "imagen": "img-1634270096263.jpg",
     "ofertas": false
+  },
+  {
+    "nombre": "Vladi",
+    "apellido": "Morales",
+    "email": "vladimorales62@gmail.com",
+    "fechaDeNac": "2000-08-27",
+    "contraseña": "$2a$12$YIAm4wZjKMGL6Dk5tHCz4eCkpg9tM7hZL.4kJBsaqUEWooVuA8bqW",
+    "contraseña2": "$2a$12$dvPy6DEBJJ/FENeGM2gIM.qtoseTslA7wLq6zWagKUI.tC/A0XnOe",
+    "terminos": "1",
+    "ofertas": true,
+    "id": 6,
+    "imagen": "default-user.jpg"
   }
 ]
