@@ -1,12 +1,16 @@
 const path = require('path');
 const fs = require('fs');
 let productos = require("../data/productos.json");
+let usuarios = require("../data/users.json");
 const productosRuta = path.join(__dirname, '../data/productos.json');
 
 const controller = {
     admin: (req, res)=> {
         
-        res.render('admin/admin', {productos})
+        res.render('admin/admin', {
+            productos,
+            usuarios
+        })
     },
 
     //////// Formulario de Creacion ///////////

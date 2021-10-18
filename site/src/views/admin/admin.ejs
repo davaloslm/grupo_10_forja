@@ -100,39 +100,20 @@
                         <th scope="col">Usuario</th>
                         <th scope="col" class="name">Nombre & Apellido</th>
                         <th scope="col" class="colm_admin">Admin</th>
-                        <th scope="col" class="colm_icon">Ver</th>
-                        <th scope="col" class="colm_icon">Editar</th>
                         <th scope="col" class="colm_icon">Eliminar</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row" class="id">1</th>
-                        <td>usuario1</td>
-                        <td class="name">nombre.usuario apellido.usuario</td>
-                        <td class="adm">Si/No</td>
-                        <td class="iconos"><a href=""><i class="fas fa-eye"></i></a></td>
-                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="id">2</th>
-                        <td>usuario2</td>
-                        <td class="name">nombre.usuario apellido.usuario</td>
-                        <td class="adm">Si/No</td>
-                        <td class="iconos"><a href=""><i class="fas fa-eye"></i></a></td>
-                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
-                    </tr>
-                    <tr>
-                        <th scope="row" class="id">3</th>
-                        <td>usuario3</td>
-                        <td class="name">nombre.usuario apellido.usuario</td>
-                        <td class="adm">Si/No</td>
-                        <td class="iconos"><a href=""><i class="fas fa-eye"></i></a></td>
-                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos"><a href=""><i class=" trash fas fa-trash-alt"></i></a></td>
-                    </tr>
+                    <% usuarios.forEach(usuario => { %>
+                        <!-- /* admin pendiente */ -->
+                        <tr>
+                            <th scope="row" class="id"><%= usuario.id %></th>
+                            <td>user<%= usuario.id%></td>
+                            <td class="name"><%= usuario.nombre %> <%= usuario.apellido %></td>
+                            <td class="adm">Si/No</td>
+                            <td class="iconos"><a href="#"><i class=" trash fas fa-trash-alt"></i></a></td>
+                        </tr>
+                    <% }); %> 
                 </tbody>
         </table>
         <p class="redirect_container2"><a href="user/register" class="redirect">Agregar nuevo usuario <i class="fas fa-user-plus"></i></a></p>
