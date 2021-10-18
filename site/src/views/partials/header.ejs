@@ -21,12 +21,22 @@
                 <i class="fas fa-search"></i>
             </button>
         </form>
-        <button class="user">
-            <a href="/user/login">Iniciar sesión</a>
-        </button>
-        <button class="user">
-            <a href="/user/register">Registrate</a>
-        </button>
+        <% if (locals.usuarioLogueado) { %>
+            <div>
+                <img src="/img/users/<%= locals.usuarioLogueado.imagen  %>" alt="Imagen de perfil"> 
+            </div>
+            
+            
+        <% }else { %>
+            <button class="user">
+                <a href="/user/login">Iniciar sesión</a>
+            </button>
+            
+            <button class="user">
+                <a href="/user/register">Registrate</a>
+            </button>
+
+            <% } %>
         <button class="cart">
             <a href="/user/cart"><i class="fas fa-shopping-cart"></i></a>
         </button>

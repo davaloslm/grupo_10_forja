@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const usuariosRuta = path.join(__dirname, '../data/users.json');
 const bcrypt = require('bcryptjs');
+const { index } = require("../controllers/indexController");
 
 const controller = {
     cart: (req, res)=> {
@@ -49,6 +50,13 @@ const controller = {
         if ( bcrypt.compareSync(contraseña, usuarioALoguear.contraseña )) {
             
             req.session.usuarioLogueado = usuarioALoguear;
+
+            
+
+
+            
+            //recordarme
+            //cookies
 
 
             res.redirect("/");
