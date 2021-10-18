@@ -42,16 +42,23 @@ const controller = {
     login:(req, res)=>{
         const {email, contraseña} = req.body;
 
-        const usuarioALoguear = usuarios.filter(usuario => usuario.email === email);
+        const usuarioALoguear = usuarios.find(usuario => usuario.email === email);
 
-        if ( bcrypt.compareSync(contraseña, usuarios.find(usuario => usuario.contraseña === contraseña) )) {
+        
+
+        if ( bcrypt.compareSync(contraseña, usuarioALoguear.contraseña )) {
             
             req.session.usuarioLogueado = usuarioALoguear;
+
+
+            res.redirect("/");
 
             
             
         }else{
 
+
+            res.redirect("login");
             //render de login con errores
             
         }
