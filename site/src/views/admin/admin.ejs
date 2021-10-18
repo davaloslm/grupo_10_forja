@@ -86,6 +86,9 @@
             <div class="subtitulo_container">
                 <h2 id="ldu">Lista de usuarios <i class="fas fa-users"></i></h2>
             </div>
+            <form action="" class="ban_container">
+                <button type="submit" class="eliminar_usuarios">Eliminar Baneados</button>
+            </form>
             <form action="">
                     <input type="text" name="search" id="search" placeholder="Buscar usuario">
                     <button type="submit">
@@ -100,7 +103,8 @@
                         <th scope="col">Usuario</th>
                         <th scope="col" class="name">Nombre & Apellido</th>
                         <th scope="col" class="colm_admin">Admin</th>
-                        <th scope="col" class="colm_icon">Eliminar</th>
+                        <th scope="col" class="colm_admin">Mensaje</th>
+                        <th scope="col" class="colm_icon">Ban</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -110,8 +114,27 @@
                             <th scope="row" class="id"><%= usuario.id %></th>
                             <td>user<%= usuario.id%></td>
                             <td class="name"><%= usuario.nombre %> <%= usuario.apellido %></td>
-                            <td class="adm">Si/No</td>
-                            <td class="iconos"><a href="#"><i class=" trash fas fa-trash-alt"></i></a></td>
+                            <td class="adm"><%= usuario.admin%></td>
+                            <% if (usuario.admin === 0) { %>
+                            <td class="iconos"><i class=" carta fas fa-envelope"></i></td>
+                            <% } else { %>
+                            <td class="iconos"> - </td>
+                            <% } %>
+                            <% if (usuario.ban === undefined) { %>
+                            <td class="iconos"> - </td>
+                            <% } else if(usuario.ban === 0) { %>
+                            <td class="iconos">
+                                <form action="">
+                                    <button class="ban" type="submit"><i class=" noban fas fa-ban"></i></button>
+                                </form>
+                            </td>
+                            <% } else if(usuario.ban === 1) { %>
+                                <td class="iconos">
+                                    <form action="">
+                                        <button class="ban" type="submit"><i class=" ban fas fa-ban"></i></button>
+                                    </form>
+                                </td>
+                            <% } %> 
                         </tr>
                     <% }); %> 
                 </tbody>
