@@ -33,7 +33,7 @@
     "fechaDeNac": "28-07-1998",
     "contraseña": "9999",
     "contraseña2": "9999",
-    "imagen": "",
+    "imagen": "default-user.jpg",
     "terminos": 1,
     "ofertas": false,
     "admin": 1
