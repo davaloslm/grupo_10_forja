@@ -57,16 +57,13 @@ const controller = {
 
 
             
-            //recordarme
-            //cookies
-
+            if (req.body.recordarme !== undefined){
+                res.cookie('recordarUsuario', usuarioLogiado.email,{maxAge: 60*1000*60*24})
+            }
 
             res.redirect("/");
 
-            
-            
         }else{
-
 
             res.redirect("login");
             //render de login con errores

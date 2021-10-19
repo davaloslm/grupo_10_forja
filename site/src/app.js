@@ -1,3 +1,4 @@
+/* ///////////Modulos y Middlewares//////////////////// */
 const createError = require('http-errors');
 const express = require('express');
 const path = require('path');
@@ -6,7 +7,9 @@ const logger = require('morgan');
 const methodOverride =  require('method-override');
 const session = require('express-session');
 const localsUser = require("./middlewares/localsUser");
+const cookieRecordarme = require('./middlewares/cookieRecordarme');
 
+/* /////////////////Archivos de rutas////////////////////// */
 const indexRouter = require('./routes/indexRouter');
 const usersRouter = require('./routes/usersRouter');
 const detailRouter = require("./routes/detailRouter"); 
@@ -28,8 +31,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 app.use(methodOverride('_method'));
 app.use(session( {secret: "secret"}));
 app.use(localsUser);
-/* app.use(recordarme);
- */
+app.use(cookieRecordarme);
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/product', detailRouter);
