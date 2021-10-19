@@ -32,6 +32,8 @@ app.use(methodOverride('_method'));
 app.use(session( {secret: "secret"}));
 app.use(localsUser);
 app.use(cookieRecordarme);
+
+/* ///////Archivos de rutas////////// */
 app.use('/', indexRouter);
 app.use('/user', usersRouter);
 app.use('/product', detailRouter);
