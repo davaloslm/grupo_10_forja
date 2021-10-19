@@ -3,6 +3,7 @@ const fs = require('fs');
 let productos = require("../data/productos.json");
 let usuarios = require("../data/users.json");
 const productosRuta = path.join(__dirname, '../data/productos.json');
+const usuariosRuta = path.join(__dirname, '../data/users.json');
 
 const controller = {
     admin: (req, res)=> {
@@ -81,6 +82,16 @@ const controller = {
 
 		 res.redirect("/admin")
 
+        },
+
+        /////// administración de usuarios ///////
+
+        usuarioBaneado: (req, res) => {
+            
+        },
+
+        eliminarBaneados: (req, res) => {
+            
         }
 }
 

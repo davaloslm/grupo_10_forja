@@ -137,6 +137,16 @@
     width: 50%;
 }
 
+.admin section.list_container form.ban_container {
+    justify-content: space-around;
+}
+
+.admin section.list_container form.ban_container button.eliminar_usuarios {
+    border-radius: 5px;
+    padding: 3px;
+    font-size: 12px;
+}
+
 .admin section.list_container form input {
     border: solid 1px var(--lightBlue);
     width: 80%;
@@ -188,8 +198,19 @@
     color: var(--lightBlue);
 }
 
-.admin table.table tbody tr td.iconos a i.trash {
+.admin table.table tbody tr td.iconos a i.trash, .admin table.table tbody tr td.iconos form button.ban i.ban {
     color: crimson;
+}
+
+.admin table.table tbody tr td.iconos a i.trash, .admin table.table tbody tr td.iconos form button.ban {
+    border: none;
+    cursor: pointer;
+
+}
+
+.admin table.table tbody tr td.iconos form button.ban i.noban, .admin table.table tbody tr td.iconos i.carta {
+    color: var(--lightBlue);
+    cursor: pointer;
 }
 
 .admin table.table tbody tr td.iconos form button.delete {
@@ -245,6 +266,12 @@
 
     .admin section.list_container div.subtitulo_container h2 {
         padding: 10px;
+    }
+
+    .admin section.list_container form.ban_container button.eliminar_usuarios {
+        border-radius: 5px;
+        padding: 5px;
+        font-size: 15px;
     }
 
     .admin section.tarjetas_container article.tarjetas div.cogs_container {

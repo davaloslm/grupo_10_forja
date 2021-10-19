@@ -1,6 +1,19 @@
 [
   {
     "id": 1,
+    "nombre": "Forja",
+    "apellido": "GDM",
+    "email": "webforja_oficial@hotmail.com",
+    "fechaDeNac": "1954-12-12",
+    "contraseña": "$2a$12$6tinjM50f.A8uUmAD.y.Zub4EZpuzz02ueQzBa7MtjPynu2IJIMcG",
+    "contraseña2": "$2a$12$0QEGIZZL0s45W7TI1A7jfOSl3dcBbA0W66HJ.3uYrJllwovj/Cn8W",
+    "terminos": "1",
+    "imagen": "img-1634589372328.png",
+    "ofertas": false,
+    "admin": 1
+  },
+  {
+    "id": 2,
     "nombre": "Rodrigo",
     "apellido": "Garayalde Borges",
     "email": "gabii.borges1998@gmail.com",
@@ -46,9 +59,11 @@
     "contraseña": "123456789",
     "contraseña2": "123456789",
     "terminos": "1",
-    "id": 4,
+    "id": 5,
     "imagen": "default-user.jpg",
-    "ofertas": false
+    "ofertas": false,
+    "ban": 1,
+    "admin": 0
   },
   {
     "nombre": "Max",
@@ -58,9 +73,11 @@
     "contraseña": "12345678",
     "contraseña2": "12345678",
     "terminos": "1",
-    "id": 7,
+    "id": 6,
     "imagen": "img-1634270096263.jpg",
-    "ofertas": false
+    "ofertas": false,
+    "ban": 0,
+    "admin": 0
   },
   {
     "nombre": "Vladi",
@@ -71,7 +88,23 @@
     "contraseña2": "$2a$12$dvPy6DEBJJ/FENeGM2gIM.qtoseTslA7wLq6zWagKUI.tC/A0XnOe",
     "terminos": "1",
     "ofertas": true,
-    "id": 6,
-    "imagen": "default-user.jpg"
+    "id": 7,
+    "imagen": "default-user.jpg",
+    "ban": 0,
+    "admin": 0
+  },
+  {
+    "nombre": "Mengano",
+    "apellido": "Menganez",
+    "email": "menganito@gmail.com",
+    "fechaDeNac": "1900-10-22",
+    "contraseña": "$2a$12$sCnRScUlE2TofkSwcDuP9uAwFjdD66ua78AvZzCxtGxUUSuKKdymy",
+    "contraseña2": "$2a$12$JZNDl8wKWitVNeQycyNWduRRiCS/jq5QmhTf/SsL2rshAFGpXg1Jq",
+    "terminos": "1",
+    "id": 8,
+    "imagen": "default-user.jpg",
+    "ofertas": false,
+    "ban": 1,
+    "admin": 0
   }
 ]

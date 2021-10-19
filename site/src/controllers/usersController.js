@@ -28,6 +28,8 @@ const controller = {
         nuevoUsuario.imagen = req.file ? req.file.filename : 'default-user.jpg';
         nuevoUsuario.terminos = terminos;
         nuevoUsuario.ofertas = ofertas === undefined ? false : true;
+        nuevoUsuario.ban = 0;
+        nuevoUsuario.admin = 0;
 
 
         usuarios.push(nuevoUsuario);

@@ -20,5 +20,6 @@ router.put('/edit/:id', editar );
 //Eliminar producto//
 router.delete("/edit/:id", eliminar);
 
+//////// Administración de usuarios /////////
 
 module.exports = router;
