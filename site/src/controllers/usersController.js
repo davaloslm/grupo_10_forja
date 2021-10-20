@@ -3,14 +3,19 @@ const fs = require('fs');
 const path = require('path');
 const usuariosRuta = path.join(__dirname, '../data/users.json');
 const bcrypt = require('bcryptjs');
-const { index } = require("../controllers/indexController");
 
 const controller = {
+    acceso: (req, res)=> {
+        res.render('acceso')
+    },
     cart: (req, res)=> {
         res.render('users/cart')
     },
     vistaRegistro: (req, res)=> {
         res.render('users/register')
+    },
+    vistaLogin: (req, res)=> {
+        res.render('users/login')
     },
     registro: (req, res)=> {
         const {nombre, apellido, email, fechaDeNac, contraseña, contraseña2, terminos, ofertas} = req.body;
@@ -38,9 +43,6 @@ const controller = {
 
         res.redirect(`/user/userProfile/${nuevoUsuario.id}`)
 
-    },
-    vistaLogin: (req, res)=> {
-        res.render('users/login')
     },
     login:(req, res)=>{
         const {email, contraseña} = req.body;
@@ -75,6 +77,9 @@ const controller = {
         const {id} = req.params;
         const usuario = usuarios.find(usuario=>usuario.id === parseInt(id) )
         res.render('users/userProfile', {usuario} )
+    },
+    cerrarSesion: (req, res) => {
+        req.session.destroy()
     }
 }
 

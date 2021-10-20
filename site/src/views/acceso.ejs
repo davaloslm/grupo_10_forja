@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <%- include('./partials/head')  %>
+    <title>Acceso denegado</title>
+</head>
+<body>
+    <%- include('./partials/header')  %> 
+    <main class="acceso">
+        <h1>Notamos que estas logeado con el usuario <%= res.locals.usuarioLogueado  %> </h1>
+        <p>Ir al home</p>
+        <a href="/">Home</a>
+        <!-- <a href="/">Perfil</a>
+        <br>
+        <br>
+        <a href="/">Cerrar sesión</a>
+        <br>
+        <br> -->
+    </main>
+    <%- include('./partials/footer')  %> 
+</body>
+</html>
