@@ -80,7 +80,10 @@ const controller = {
         res.render('users/userProfile', {usuario} )
     },
     cerrarSesion: (req, res) => {
+        res.clearCookie('recordarUsuario')
         req.session.destroy()
+
+        res.redirect('/')
     }
 }
 

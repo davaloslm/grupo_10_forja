@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multerUser = require('../middlewares/multerUser');
-const { cart, vistaRegistro, vistaLogin, login, userProfile, registro } = require("../controllers/usersController");
+const { cart, vistaRegistro, vistaLogin, login, userProfile, registro, cerrarSesion } = require("../controllers/usersController");
 const invitado = require('../middlewares/invitado');
 
 
@@ -15,6 +15,7 @@ router.post('/register', multerUser.single('imagen'), registro); //Registro de u
 
 
 router.get('/userProfile/:id',  userProfile);
+router.get('/cerrarSesion', cerrarSesion)
 
 router.get('/cart',  cart);
 

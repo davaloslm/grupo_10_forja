@@ -24,7 +24,8 @@
         <% if (locals.usuarioLogueado) { %>
             <!-- //////////////////////////////////////////////// SACAR WIDTH  /////////////////////////////////////////-->
             <div>
-                <img src="/img/users/<%= locals.usuarioLogueado.imagen  %>" alt="Imagen de perfil" style="width: 60px;"> 
+                <img src="/img/users/<%= locals.usuarioLogueado.imagen  %>" alt="Imagen de perfil" style="width: 60px;">
+                <p><a href="/user/cerrarSesion">Cerrar sesión</a></p>
             </div>
             
             
