@@ -5,9 +5,6 @@ const usuariosRuta = path.join(__dirname, '../data/users.json');
 const bcrypt = require('bcryptjs');
 
 const controller = {
-    acceso: (req, res)=> {
-        res.render('acceso')
-    },
     cart: (req, res)=> {
         res.render('users/cart')
     },

@@ -53,20 +53,6 @@
     "admin": 1
   },
   {
-    "nombre": "Cosme",
-    "apellido": "Fulanito",
-    "email": "root@hotmail.com",
-    "fechaDeNac": "1999-04-02",
-    "contraseña": "123456789",
-    "contraseña2": "123456789",
-    "terminos": "1",
-    "id": 5,
-    "imagen": "default-user.jpg",
-    "ofertas": false,
-    "ban": 1,
-    "admin": 0
-  },
-  {
     "nombre": "Max",
     "apellido": "Payne",
     "email": "root@hotmail.com",
@@ -74,7 +60,7 @@
     "contraseña": "12345678",
     "contraseña2": "12345678",
     "terminos": "1",
-    "id": 6,
+    "id": 5,
     "imagen": "img-1634270096263.jpg",
     "ofertas": false,
     "ban": 0,
@@ -89,23 +75,9 @@
     "contraseña2": "$2a$12$dvPy6DEBJJ/FENeGM2gIM.qtoseTslA7wLq6zWagKUI.tC/A0XnOe",
     "terminos": "1",
     "ofertas": true,
-    "id": 7,
+    "id": 6,
     "imagen": "default-user.jpg",
     "ban": 0,
-    "admin": 0
-  },
-  {
-    "nombre": "Mengano",
-    "apellido": "Menganez",
-    "email": "menganito@gmail.com",
-    "fechaDeNac": "1900-10-22",
-    "contraseña": "$2a$12$sCnRScUlE2TofkSwcDuP9uAwFjdD66ua78AvZzCxtGxUUSuKKdymy",
-    "contraseña2": "$2a$12$JZNDl8wKWitVNeQycyNWduRRiCS/jq5QmhTf/SsL2rshAFGpXg1Jq",
-    "terminos": "1",
-    "id": 8,
-    "imagen": "default-user.jpg",
-    "ofertas": false,
-    "ban": 1,
     "admin": 0
   }
 ]
