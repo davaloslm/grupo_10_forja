@@ -15,18 +15,21 @@ const controller = {
         res.render('users/register')
     },
     vistaLogin: (req, res)=> {
-        res.render('users/login')
+        /* Tuve que definir las 2 variables y ponerles algún valor, sino me tira error cuando quiero ingresar al login sin haber pasado por registro anteriormente */
+        let msgRegistroExitoso = "Vacio";
+        let email = "Vacio"
+        res.render('users/login', {msgRegistroExitoso, email})
     },
     registro: (req, res)=> {
         const {nombre, apellido, email, fechaDeNac, contraseña, contraseña2, terminos, ofertas} = req.body;
         let nuevoUsuario = req.body;
-
 
         nuevoUsuario.id = usuarios.length + 1;
 
         nuevoUsuario.nombre = nombre;
         nuevoUsuario.apellido = apellido;
         nuevoUsuario.email = email;
+        nuevoUsuario.nombreUsuario = (nombre + apellido + (usuarios.length + 1));
         nuevoUsuario.fechaDeNac = fechaDeNac;
         nuevoUsuario.contraseña = bcrypt.hashSync(contraseña, 12);
         nuevoUsuario.contraseña2 = bcrypt.hashSync(contraseña2, 12);
@@ -40,8 +43,9 @@ const controller = {
         usuarios.push(nuevoUsuario);
 
         fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null, 2))
-
-        res.redirect(`/user/userProfile/${nuevoUsuario.id}`)
+        /* Si se logea exitosamente se renderiza la vista login, se le envía un mensaje de registro exitoso y el email, para después ponerlo como valor en el imput y que solo tenga que ingresar la contraseña*/
+        let msgRegistroExitoso = "Exito";
+        res.render('users/login', {msgRegistroExitoso, email} )
 
     },
     login:(req, res)=>{

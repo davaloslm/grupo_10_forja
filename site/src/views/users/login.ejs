@@ -12,11 +12,21 @@
 
     <!-- contenido de la pagina web -->
     <main class="login">
+        <% if (msgRegistroExitoso !== "Vacio") { %>
+        <p class="registro_exitoso">Todo listo, ahora iniciá sesión con tu nuevo usuario y comenzá a comprar!</p>
+        <% }%>
         <section>
             <h2>Iniciar Sesión</h2>
-            <samp>¿No tenés una cuenta?</samp><a href="/user/register">¡Creá una cuenta!</a>
+            <% if (email === "Vacio") { %>
+                <samp>¿No tenés una cuenta?</samp><a href="/user/register">¡Creá una cuenta!</a>
+                
+            <% } else { %>
+                <p>Ingresá solo tu contraseña</p>
+                <% } %> 
             <form action="/user/login" method="POST">
-                <input type="email" name="email" id="email" class="email" placeholder="Escribe tu e-mail">
+                <input type="email" name="email" id="email" class="email" placeholder="Escribe tu e-mail" <% if (email !== "Vacio") { %>
+                value="<%= email %>"
+                <% } %> >
 
                 <input type="password" name="contraseña" id="password" placeholder="Contraseña">
             
@@ -27,7 +37,7 @@
 
             <button type="submit" >Iniciar Sesión</button>
             </form>
-        </section>
+        </section> 
     </main>
 <!-- pie de la pagina web -->
 

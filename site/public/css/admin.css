@@ -221,8 +221,8 @@
     cursor: pointer;
 }
 
-.admin table.table tbody tr td.name, .admin table.table tbody tr td.surname, .admin table.table thead tr th.name, .admin table.table thead tr th.surname {
-    display: none;
+.admin table.table tbody tr td.nick {
+    font-size: 13px;
 }
 
 @media (min-width: 360px) {
@@ -278,6 +278,10 @@
         width: 185px;
         top: -170px;
         left: 8px;
+    }
+
+    .admin table.table tbody tr td.nick {
+        font-size: 16px;
     }
 
     .admin section.tarjetas_container article.tarjetas div.cogs_container img.engranaje1 {

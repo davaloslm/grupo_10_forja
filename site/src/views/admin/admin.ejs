@@ -101,7 +101,6 @@
                     <tr>
                         <th scope="col" class="colm_icon">#ID</th>
                         <th scope="col">Usuario</th>
-                        <th scope="col" class="name">Nombre & Apellido</th>
                         <th scope="col" class="colm_admin">Admin</th>
                         <th scope="col" class="colm_admin">Mensaje</th>
                         <th scope="col" class="colm_icon">Ban</th>
@@ -112,8 +111,11 @@
                         <!-- /* admin pendiente */ -->
                         <tr>
                             <th scope="row" class="id"><%= usuario.id %></th>
-                            <td>user<%= usuario.id%></td>
-                            <td class="name"><%= usuario.nombre %> <%= usuario.apellido %></td>
+                            <% if (!usuario.nombreUsuario) { %>
+                                <td class="nick">BetaTester<%= usuario.id  %></td>
+                            <% } else { %>
+                                <td class="nick"><%= usuario.nombreUsuario%></td>
+                            <% } %> 
                             <td class="adm"><%= usuario.admin%></td>
                             <% if (usuario.admin === 0) { %>
                             <td class="iconos"><i class=" carta fas fa-envelope"></i></td>
