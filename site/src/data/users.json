@@ -51,48 +51,5 @@
     "terminos": 1,
     "ofertas": false,
     "admin": 1
-  },
-  {
-    "nombre": "Max",
-    "apellido": "Payne",
-    "email": "root@hotmail.com",
-    "fechaDeNac": "1985-08-22",
-    "contraseña": "12345678",
-    "contraseña2": "12345678",
-    "terminos": "1",
-    "id": 5,
-    "imagen": "img-1634270096263.jpg",
-    "ofertas": false,
-    "ban": 0,
-    "admin": 0
-  },
-  {
-    "nombre": "Vladi",
-    "apellido": "Morales",
-    "email": "vladimorales62@gmail.com",
-    "fechaDeNac": "2000-08-27",
-    "contraseña": "$2a$12$YIAm4wZjKMGL6Dk5tHCz4eCkpg9tM7hZL.4kJBsaqUEWooVuA8bqW",
-    "contraseña2": "$2a$12$dvPy6DEBJJ/FENeGM2gIM.qtoseTslA7wLq6zWagKUI.tC/A0XnOe",
-    "terminos": "1",
-    "ofertas": true,
-    "id": 6,
-    "imagen": "default-user.jpg",
-    "ban": 0,
-    "admin": 0
-  },
-  {
-    "nombre": "123456789",
-    "apellido": "123456789",
-    "email": "123456789@123.com",
-    "fechaDeNac": "1997-09-30",
-    "contraseña": "$2a$12$bHAIAPRnCztTVeg192h7quYLyB88f6xpq5uq.ch6Tk/xHPiWiVEWa",
-    "contraseña2": "$2a$12$RsFBSOfq3ur5tSfyc0A/xet2oRn2cp0E7JyRoOPduDf65WYHdqONS",
-    "terminos": "1",
-    "id": 7,
-    "nombreUsuario": "1234567891234567897",
-    "imagen": "img-1635131005720.pdf",
-    "ofertas": false,
-    "ban": 0,
-    "admin": 0
   }
 ]

@@ -13,10 +13,7 @@ const controller = {
         res.render('users/register')
     },
     vistaLogin: (req, res)=> {
-        /* Tuve que definir las 2 variables y ponerles algún valor, sino me tira error cuando quiero ingresar al login sin haber pasado por registro anteriormente */
-        let msgRegistroExitoso = "Vacio";
-        let email = "Vacio"
-        res.render('users/login', {msgRegistroExitoso, email})
+        res.render('users/login')
     },
     registro: (req, res)=> {
         const errors = validationResult(req);
@@ -46,7 +43,7 @@ const controller = {
 
         fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null, 2))
         
-        res.render('users/login', { email} )
+        res.render('users/login', { email })
 
         }else{
             res.render('users/register', {errors: errors.mapped(), old: req.body} )

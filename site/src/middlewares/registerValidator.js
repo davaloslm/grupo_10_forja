@@ -36,18 +36,19 @@ check('contraseña2')
     }),
 check('imagen')
     .custom((value, {req})=>{
-        if(value){
-            let extensionesValidas = [".jpg", ".jpeg", ".png", ".gif"];
+        let extensionesValidas = [".jpg", ".jpeg", ".png", ".gif"];
+
+        if(req.file == undefined){
+            return true
+        } else {
             let imagen = req.file;
             let imagenExtension = path.extname(imagen.originalname);
-            if(extensionesValidas.includes(imagenExtension) === false ){
-                throw new Error("Las extensiones permitidas son " + extensionesValidas.join(", "))
-            } 
 
-           
+                if(extensionesValidas.includes(imagenExtension) === false ){
+                    throw new Error("Las extensiones permitidas son " + extensionesValidas.join(", "))
+                }
         } return true
     }),
-    /* .equals() */
 check('terminos')
     .notEmpty().withMessage('Debes aceptar los términos y condiciones')
 
