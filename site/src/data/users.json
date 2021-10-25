@@ -79,5 +79,20 @@
     "imagen": "default-user.jpg",
     "ban": 0,
     "admin": 0
+  },
+  {
+    "nombre": "123456789",
+    "apellido": "123456789",
+    "email": "123456789@123.com",
+    "fechaDeNac": "1997-09-30",
+    "contraseña": "$2a$12$bHAIAPRnCztTVeg192h7quYLyB88f6xpq5uq.ch6Tk/xHPiWiVEWa",
+    "contraseña2": "$2a$12$RsFBSOfq3ur5tSfyc0A/xet2oRn2cp0E7JyRoOPduDf65WYHdqONS",
+    "terminos": "1",
+    "id": 7,
+    "nombreUsuario": "1234567891234567897",
+    "imagen": "img-1635131005720.pdf",
+    "ofertas": false,
+    "ban": 0,
+    "admin": 0
   }
 ]
