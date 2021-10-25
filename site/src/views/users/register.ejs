@@ -28,47 +28,74 @@
 
                     <div>
                         <label for="nombre">Nombre</label>
-                        <input type="text" id=nombre
-                            placeholder="Ingresalo tal como figura en el documento" name="nombre" required>
+                        <input type="text" id="nombre"   placeholder="Ingresalo tal como figura en el documento" name="nombre" required value=<%= locals.old && old.nombre ? old.nombre : null %>>
+                        <% if (locals.errors && errors.nombre) { %>
+                            <small class="errors"><%= errors.nombre.msg %> </small>
+                         
+                        <% } %>
                     </div>
 
                     <div>
                         <label for="apellido">Apellido</label>
-                        <input type="text" id=apellido
-                            placeholder="Ingresalo tal como figura en el documento" name="apellido" required >
+                        <input type="text" id="apellido"  placeholder="Ingresalo tal como figura en el documento" name="apellido" required value=<%= locals.old && old.apellido ? old.apellido : null %> >
+                        <% if (locals.errors && errors.apellido) { %>
+                            <small class="errors"><%= errors.apellido.msg %> </small>
+                             
+                        <% } %>
                     </div>
 
                     <div>
                         <label for="email">E-mail</label>
-                        <input type="email" id=email placeholder="Asegurate de tener acceso a este e-mail" name="email" required>
+                        <input type="email" id="email"  placeholder="Asegurate de tener acceso a este e-mail" name="email" required value=<%= locals.old && old.email ? old.email : null %>>
+                        <% if (locals.errors && errors.email) { %>
+                            <small class="errors"><%= errors.email.msg %> </small>
+                         
+                        <% } %>
                     </div>
 
                     <div>
                         <label for="fechaDeNac">Fecha de nacimiento</label>
-                        <input type="date" id=fechaDeNac placeholder="DD/MM/YY" name="fechaDeNac" required max="2003-03-09" >
+                        <input type="date" id="fechaDeNac"  placeholder="DD/MM/YY" name="fechaDeNac" required max="2003-03-09" value=<%= locals.old && old.fechaDeNac ? old.fechaDeNac : null %>>
+                        <% if (locals.errors && errors.fechaDeNac) { %>
+                            <small class="errors"><%= errors.fechaDeNac.msg %> </small>
+                         
+                        <% } %>
                     </div>
 
                     <div>
                         <label for="contraseña">Contraseña</label>
-                        <input type="password" id=contraseña name="contraseña" required minlength="8">
+                        <input type="password" id="contraseña" name="contraseña" required minlength="8">
+                        <% if (locals.errors && errors.contraseña) { %>
+                            <small class="errors"><%= errors.contraseña.msg %> </small>
+                         
+                        <% } %>
                     </div>
 
                     <div>
                         <label for="contraseña2">Confirma tu contraseña</label>
-                        <input type="password" id=contraseña2 name="contraseña2" required minlength="8">
+                        <input type="password" id="contraseña2" name="contraseña2" required minlength="8">
+                        <% if (locals.errors && errors.contraseña2) { %>
+                            <small class="errors"><%= errors.contraseña2.msg %> </small>
+                         
+                        <% } %>
                     </div>
 
                     <div>
                         <label for="imagen">Imagen de perfil</label>
                         <input type="file" id="imagen" accept="image/*" name="imagen">
+                        <% if (locals.errors && errors.imagen) { %>
+                            <small class="errors"><%= errors.imagen.msg %> </small>
+                         
+                        <% } %>
                     </div>
 
                     <div class="check">
-                        <input type="checkbox" name="terminos" value="1" required>
-                        <small>Acepto los <a href="">Términos y Condiciones</a> y autorizo el uso de mis datos de
-                            acuerdo a
-                            la
-                            <a href="">Declaración de Privacidad</a>.</small>
+                        <input type="checkbox" name="terminos" value="1" <%= locals.old && old.terminos ? "checked" : null %> required>
+                        <small>Acepto los <a href="">Términos y Condiciones</a> y autorizo el uso de mis datos de acuerdo a la <a href="">Declaración de Privacidad</a>.</small>
+                        <% if (locals.errors && errors.terminos) { %>
+                            <small class="errors"><%= errors.terminos.msg %> </small>
+                         
+                        <% } %>
                     </div>
 
                     <div class="check">

@@ -74,6 +74,10 @@ main.register section form button{
     cursor: pointer;
 }
 
+main.register small.errors{
+    color: crimson;
+}
+
 @media (min-width: 768px){
     main.register section form div.input-container{
         max-width: 600px;

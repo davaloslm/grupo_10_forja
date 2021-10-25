@@ -3,6 +3,7 @@ const fs = require('fs');
 const path = require('path');
 const usuariosRuta = path.join(__dirname, '../data/users.json');
 const bcrypt = require('bcryptjs');
+const { validationResult } = require('express-validator');
 
 const controller = {
     cart: (req, res)=> {
@@ -18,6 +19,10 @@ const controller = {
         res.render('users/login', {msgRegistroExitoso, email})
     },
     registro: (req, res)=> {
+        const errors = validationResult(req);
+
+        if(errors.isEmpty()){
+            
         const {nombre, apellido, email, fechaDeNac, contraseña, contraseña2, terminos, ofertas} = req.body;
         let nuevoUsuario = req.body;
 
@@ -40,9 +45,13 @@ const controller = {
         usuarios.push(nuevoUsuario);
 
         fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null, 2))
-        /* Si se logea exitosamente se renderiza la vista login, se le envía un mensaje de registro exitoso y el email, para después ponerlo como valor en el imput y que solo tenga que ingresar la contraseña*/
-        let msgRegistroExitoso = "Exito";
-        res.render('users/login', {msgRegistroExitoso, email} )
+        
+        res.render('users/login', { email} )
+
+        }else{
+            res.render('users/register', {errors: errors.mapped(), old: req.body} )
+        }
+
 
     },
     login:(req, res)=>{
