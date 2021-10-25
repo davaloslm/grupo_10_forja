@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const {admin, vistaCrear, vistaEditar, editar, crear, eliminar} = require('../controllers/adminController')
+const {admin, vistaCrear, vistaEditar, editar, crear, eliminar, eliminarUsuarios} = require('../controllers/adminController')
 const adminPass = require('../middlewares/adminPass')
 
 router.get('/', adminPass, admin);

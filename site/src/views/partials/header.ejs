@@ -6,11 +6,20 @@
         </div>
     </div>
     <nav>
+        <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin === 1) { %>
         <button class="home">
             <a href="/">
                 <i class="fas fa-home"></i>
             </a>
         </button>
+        <p><a href="/admin">Administrador</a></p>
+        <% } else { %>
+        <button class="home">
+            <a href="/">
+                <i class="fas fa-home"></i>
+            </a>
+        </button>
+        <% } %> 
         <input class="burger" name="open-close" type="radio" id="categorias">
         <label for="categorias">
             <i class="fas fa-bars"></i>

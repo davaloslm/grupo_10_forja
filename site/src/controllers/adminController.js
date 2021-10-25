@@ -86,12 +86,11 @@ const controller = {
 
         /////// administración de usuarios ///////
 
-        usuarioBaneado: (req, res) => {
-            
-        },
-
-        eliminarBaneados: (req, res) => {
-            
+        eliminarUsuarios: (req, res) => {
+            usuarios = usuarios.filter( e => e.ban !== 1)
+            fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null, 2))
+            let mensaje = 'Exito'
+            res.render('admin/admin', {mensaje, productos, usuarios})
         }
 }
 
