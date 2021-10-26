@@ -92,5 +92,5 @@ const controller = {
         res.redirect('/')
     }
 }
-
+// se puede poner .trim() al registro para que no vengan espacios en blanco
 module.exports = controller;

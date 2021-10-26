@@ -3,7 +3,7 @@ let usuario = req.session.usuarioLogueado
     if (typeof usuario != "undefined" && usuario.admin == 1) {
         next()
     } else {
-        res.redirect("/acceso")
+        res.redirect("/")
     }
     
 }
