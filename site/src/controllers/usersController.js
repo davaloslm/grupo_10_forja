@@ -1,4 +1,4 @@
-let usuarios = require('../data/users.json');
+var usuarios = require('../data/users.json');
 const fs = require('fs');
 const path = require('path');
 const usuariosRuta = path.join(__dirname, '../data/users.json');
@@ -16,9 +16,9 @@ const controller = {
         res.render('users/login')
     },
     registro: (req, res)=> {
-        const errors = validationResult(req);
+        const registerErrors = validationResult(req);
 
-        if(errors.isEmpty()){
+        if(registerErrors.isEmpty()){
             
         const {nombre, apellido, email, fechaDeNac, contraseña, contraseña2, terminos, ofertas} = req.body;
         let nuevoUsuario = req.body;
@@ -46,37 +46,36 @@ const controller = {
         res.render('users/login', { email })
 
         }else{
-            res.render('users/register', {errors: errors.mapped(), old: req.body} )
+            res.render('users/register', {errors: registerErrors.mapped(), old: req.body} )
         }
 
 
     },
     login:(req, res)=>{
-        const {email, contraseña} = req.body;
-
-        const usuarioALoguear = usuarios.find(usuario => usuario.email === email);
-
+        const loginErrors = validationResult(req);
         
 
-        if ( bcrypt.compareSync(contraseña, usuarioALoguear.contraseña )) {
-            
-            req.session.usuarioLogueado = usuarioALoguear;
+        if (loginErrors.isEmpty()) {
+                
+            const {email, contraseña} = req.body;
 
-            
+            const usuarioALoguear = usuarios.find(usuario => usuario.email === email);
 
-
+            if ( bcrypt.compareSync(contraseña, usuarioALoguear.contraseña )) {
             
-            if (req.body.recordarme !== undefined){
-                res.cookie('recordarUsuario', req.session.usuarioLogueado.email,{maxAge: 60*1000*60*24})
+                req.session.usuarioLogueado = usuarioALoguear;
+
+                if (req.body.recordarme !== undefined){
+                     res.cookie('recordarUsuario', req.session.usuarioLogueado.email,{maxAge: 60*1000*60*24})
+                }
+
             }
-
             res.redirect("/");
-
+      
         }else{
 
-            res.redirect("login");
-            //render de login con errores
-            
+            res.render("users/login", {errors: loginErrors.mapped(), old: req.body});
+            //render de login con errores      
         }
 
     },

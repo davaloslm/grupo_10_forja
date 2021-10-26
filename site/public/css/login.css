@@ -77,6 +77,11 @@ main.login section button a{
     color: var(--white);
 }
 
+main.login small.errors{
+    display: block;
+    color: crimson;
+}
+
 @media(min-width: 425px){
 
     main.login section h2{

@@ -4,12 +4,13 @@ const multerUser = require('../middlewares/multerUser');
 const { cart, vistaRegistro, vistaLogin, login, userProfile, registro, cerrarSesion } = require("../controllers/usersController");
 const invitado = require('../middlewares/invitado');
 const registerValidator = require('../middlewares/registerValidator');
+const loginValidator = require ('../middlewares/loginValidator');
 
 
 /* GET users listing. */
 
 router.get('/login', invitado, vistaLogin);
-router.post('/login',  login);
+router.post('/login', loginValidator, login);
 
 router.get('/register', invitado, vistaRegistro);
 router.post('/register',  multerUser.single('imagen'), registerValidator, registro); //Registro de usuarios / foto de perfil

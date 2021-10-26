@@ -27,8 +27,17 @@
                 <input type="email" name="email" id="email" class="email" placeholder="Escribe tu e-mail" <% if (locals.email != undefined) { %>
                 value="<%= email %>"
                 <% } %> >
+                <% if (locals.errors && errors.email) { %>
+                    <small class="errors"><%= errors.email.msg %> </small>
+                 
+                <% } %>
 
-                <input type="password" name="contraseña" id="password" placeholder="Contraseña">
+                <input type="password" name="contraseña" id="password" placeholder="Contraseña" >
+                <% if (locals.errors && errors.contraseña) { %>
+                    <small class="errors"><%= errors.contraseña.msg %> </small>
+                 
+                <% } %>
+
             
             <h5><a href="">¿Olvidaste tu contraseña?</a></h5>
 

@@ -25,10 +25,10 @@ check('fechaDeNac')
     .isDate().withMessage('El formato fecha debe ser válido'),
 check('contraseña')
     .notEmpty().withMessage('El campo contraseña es obligatorio').bail()
-    .isLength({min: 6, max: 12}).withMessage('Tu contraseña debe tener un mínimo de 6 caracteres y un máximo de 12'),
+    .isLength({min: 8, max: 20}).withMessage('Tu contraseña debe tener un mínimo de 8 caracteres y un máximo de 20'),
 check('contraseña2')
     .notEmpty().withMessage('El campo contraseña es obligatorio').bail()
-    .isLength({min: 6, max: 12}).withMessage('Tu contraseña debe tener un mínimo de 6 caracteres y un máximo de 12').bail()
+    .isLength({min: 8, max: 20}).withMessage('Tu contraseña debe tener un mínimo de 8 caracteres y un máximo de 20').bail()
     .custom(( value, {req})=>{
         if(req.body.contraseña !== value){
             throw new Error("Las contraseñas ingresadas no coinciden")

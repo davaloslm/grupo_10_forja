@@ -75,6 +75,7 @@ main.register section form button{
 }
 
 main.register small.errors{
+    display: block;
     color: crimson;
 }
 
