@@ -69,12 +69,12 @@ const controller = {
                      res.cookie('recordarUsuario', req.session.usuarioLogueado.email,{maxAge: 60*1000*60*24})
                 }
 
-            }
             res.redirect("/");
-      
+            } res.render("users/login", {errorContraseña: "La contraseña es incorrecta", oldData: req.body });
+    
         }else{
 
-            res.render("users/login", {errors: loginErrors.mapped(), old: req.body});
+            res.render("users/login", {errors: loginErrors.mapped(), oldData: req.body });
             //render de login con errores      
         }
 

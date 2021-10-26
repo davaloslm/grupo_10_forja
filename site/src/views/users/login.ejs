@@ -24,18 +24,28 @@
                 <p>Ingresá solo tu contraseña</p>
                 <% } %> 
             <form action="/user/login" method="POST">
-                <input type="email" name="email" id="email" class="email" placeholder="Escribe tu e-mail" <% if (locals.email != undefined) { %>
+
+                <input type="email" name="email" id="email" class="email" placeholder="Escribe tu e-mail" 
+                <% if (locals.email != undefined) { %>
                 value="<%= email %>"
-                <% } %> >
+                <% } %>
+
+                <% if (locals.oldData && locals.oldData.email) { %>
+                value="<%= locals.oldData.email %>"
+                <% } %> 
+                >
                 <% if (locals.errors && errors.email) { %>
                     <small class="errors"><%= errors.email.msg %> </small>
-                 
                 <% } %>
 
                 <input type="password" name="contraseña" id="password" placeholder="Contraseña" >
                 <% if (locals.errors && errors.contraseña) { %>
                     <small class="errors"><%= errors.contraseña.msg %> </small>
-                 
+
+                <% } %>
+                <% if (locals.errorContraseña) { %>
+                    <small class="errors"><%= errorContraseña %> </small>
+
                 <% } %>
 
             
