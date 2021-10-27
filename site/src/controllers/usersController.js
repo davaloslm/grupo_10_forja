@@ -82,7 +82,7 @@ const controller = {
         }
 
     },
-    userProfile: (req, res)=> {
+    vistaUserProfile: (req, res)=> {
         const {id} = req.params;
         const usuario = usuarios.find(usuario=>usuario.id === parseInt(id) )
         res.render('users/userProfile', {usuario} )
@@ -92,6 +92,15 @@ const controller = {
         req.session.destroy()
 
         res.redirect('/')
+    },
+    editUserProfile: (req, res)=>{
+        let usuarioAEditar = req.session.usuarioLogueado;
+        let {nombre, apellido, email, telefono} = req.body;
+        //incompleto//
+
+
+
+        res.redirect("/")
     }
 }
 // se puede poner .trim() al registro para que no vengan espacios en blanco
