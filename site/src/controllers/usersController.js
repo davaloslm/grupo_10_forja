@@ -70,7 +70,10 @@ const controller = {
                 }
 
             res.redirect("/");
-            } res.render("users/login", {errorContraseña: "La contraseña es incorrecta", oldData: req.body });
+            
+            } else{
+                res.render("users/login", {errorContraseña: "La contraseña es incorrecta", oldData: req.body });                
+            } 
     
         }else{
 
