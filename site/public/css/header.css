@@ -22,7 +22,7 @@ header div.banner{
     display: flex;
     max-width: 1024px;
 }
-header img {
+header div.header-container div.banner img.banner_dragon {
     width: 100%;
     display: flex;
 }
@@ -43,9 +43,15 @@ header nav{
     background-color: var(--blue);
     padding: 10px 0;
     border: 1px solid var(--lightBlue);
-
 }
 
+header nav button.admin_desktop_link {
+    display: none;
+}
+
+header nav div.user_desktoplinks {
+    display: none;
+}
 /* ///////////////////////////////menu///////////////////////// */
 
 header nav input.burger{
@@ -64,8 +70,40 @@ header nav div.menu{
     width: 220px; 
     z-index: 300;
     background: linear-gradient(0deg, #020202 28.86%, rgba(2, 2, 2, 0) 85.81%), linear-gradient(180deg, #053742 49.22%, rgba(5, 55, 66, 0) 100%); 
+}
 
+header nav div.menu ul.user_profile_mobile {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--white);
+}
 
+header nav div.menu ul.user_profile_mobile div.burger_userlinks {
+    display: flex;
+    flex-direction: column;
+}
+
+header nav div.menu ul.user_profile_mobile div.burger_userlinks li.burger_userlink_profile a, header nav div.menu ul.user_profile_mobile div.burger_userlinks li.burger_userlink_admin a, header nav div.menu ul.user_profile_mobile div.burger_userlinks li.burger_userlink_logout a {
+    color: var(--white);
+}
+
+header nav div.menu ul.user_profile_mobile div.burger_userlinks li.burger_userlink_profile {
+    margin-bottom: 10px;
+}
+
+header nav div.menu ul.user_profile_mobile div.burger_userlinks li.burger_userlink_admin {
+    margin-bottom: 10px;
+}
+
+header nav div.menu ul.user_profile_mobile img.avatar_usermobile {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
 header nav div.menu ul.user{
@@ -150,10 +188,6 @@ header nav label i.fa-bars{
     color: var(--white);
     padding: 7px;
     border-radius: 5px;
-    
-
-
-    
 }
 header .home, .user{
     display: none;
@@ -208,6 +242,14 @@ header nav button.cart {
 
     header nav{
         padding: 10px 0 0 0 ;
+    }
+
+    header nav button.admin_desktop_link {
+        display: block;
+    }
+    
+    header nav div.user_desktoplinks {
+        display: block;
     }
 
     header nav label {
@@ -288,9 +330,8 @@ header nav button.cart {
 
    }
 
-   header nav div.menu ul.user{
+   header nav div.menu ul.user, header nav div.menu ul.user_profile_mobile {
     display: none;
-    
     }
 
    header nav div.menu ul.listaCategorias li.categorias a{
