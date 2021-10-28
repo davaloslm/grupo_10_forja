@@ -70,7 +70,10 @@ const controller = {
                 }
 
             res.redirect("/");
-            } res.render("users/login", {errorContraseña: "La contraseña es incorrecta", oldData: req.body });
+            
+            } else{
+                res.render("users/login", {errorContraseña: "La contraseña es incorrecta", oldData: req.body });                
+            } 
     
         }else{
 
@@ -79,7 +82,7 @@ const controller = {
         }
 
     },
-    userProfile: (req, res)=> {
+    vistaUserProfile: (req, res)=> {
         const {id} = req.params;
         const usuario = usuarios.find(usuario=>usuario.id === parseInt(id) )
         res.render('users/userProfile', {usuario} )
@@ -89,6 +92,15 @@ const controller = {
         req.session.destroy()
 
         res.redirect('/')
+    },
+    editUserProfile: (req, res)=>{
+        let usuarioAEditar = req.session.usuarioLogueado;
+        let {nombre, apellido, email, telefono} = req.body;
+        //incompleto//
+
+
+
+        res.redirect("/")
     }
 }
 // se puede poner .trim() al registro para que no vengan espacios en blanco
