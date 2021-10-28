@@ -95,8 +95,8 @@ const controller = {
     },
     editUserProfile: (req, res)=>{
 
-        const {id} = req.params;
-        let usuario = usuarios.find(usuario=>usuario.id === parseInt(id) )
+        /* const {id} = req.params;
+        let usuario = usuarios.find(usuario=>usuario.id === parseInt(id) ) */
 
         const userProfileErrors = validationResult(req);
 
@@ -114,13 +114,13 @@ const controller = {
 
             fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null ,2));
 
-            ////////////a veces funciona a veces no XD ////////////////
-            res.render("users/userProfile", {usuario});
+            
+            res.render("users/userProfile", {usuario: usuarioAEditar});
 
         }else{
             
 
-            res.render("users/userProfile", {usuario:usuario, errors: userProfileErrors.mapped()});
+            res.render("users/userProfile", {usuario:req.session.usuarioLogueado, errors: userProfileErrors.mapped()});
 
         }
     },

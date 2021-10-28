@@ -53,8 +53,8 @@
     "admin": 1
   },
   {
-    "nombre": "ssssssssssss",
-    "apellido": "aaaaaaaaaa",
+    "nombre": "test2",
+    "apellido": "test2",
     "email": "asd@asd.com",
     "fechaDeNac": "1998-01-09",
     "contraseña": "$2a$12$VXbQ2KOuPKYgH1uJFk6bXOFr8Cu6ic0k.nUPcJOiMfJMzRKeyqXJi",
@@ -66,6 +66,6 @@
     "ofertas": false,
     "ban": 0,
     "admin": 0,
-    "telefono": 5555555555
+    "telefono": 44444444444444450
   }
 ]
