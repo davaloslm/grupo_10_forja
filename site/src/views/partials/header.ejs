@@ -6,32 +6,33 @@
         </div>
     </div>
     <nav>
-        <button class="home">
-            <a href="/">
-                <i class="fas fa-home"></i>
-            </a>
-        </button>
-        <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin === 1) { %>
-        <button class="admin_desktop_link">
-            <a href="/admin">
-                <i class="fas fa-user-lock"></i>
-            </a>
-        </button>
-        <% } %>
-        <input class="burger" name="open-close" type="radio" id="categorias">
-        <label for="categorias">
-            <i class="fas fa-bars"></i>
-        </label>
-        <form action="">
-            <input  type="text" name="search" id="search" placeholder="Buscar marcas, productos y más">
-            <button class="search">
-                <i class="fas fa-search"></i>
+            <button class="home">
+                <a href="/">
+                    <i class="fas fa-home"></i>
+                </a>
             </button>
-        </form>
+            <input class="burger" name="open-close" type="radio" id="categorias">
+            <label for="categorias">
+                <i class="fas fa-bars"></i>
+            </label>
+            <form action="">
+                <input  type="text" name="search" id="search" placeholder="Buscar marcas, productos y más">
+                <button class="search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin === 1) { %>
+            <li class="admin_desktop_link">
+                <a href="/admin">
+                    Admin <i class="fas fa-user-lock"></i>
+                </a>
+            </li>
+        <% } %>
         <% if (locals.usuarioLogueado) { %>
         <div class="user_desktoplinks">
             <img class="avatar_userdesktop" src="/img/users/<%= locals.usuarioLogueado.imagen  %>" alt="Imagen de perfil">
-            <p><a href="/user/cerrarSesion">Cerrar sesión</a></p>
+            <li class="desktop_userlink_profile"><a href="/user/userProfile/<%= usuarioLogueado.id %> "><%= usuarioLogueado.nombre %> <i class=" iconuser fas fa-user"></i></a></li>
+            <li class="desktop_userlink_logout"><a href="/user/cerrarSesion">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a></li>
         </div>
         <% }else { %>
             <button class="user">
@@ -46,7 +47,6 @@
         <button class="cart">
             <a href="/user/cart"><i class="fas fa-shopping-cart"></i></a>
         </button>
-
 
         <input class="close" type="radio" name="open-close" id="close">
         <div class="menu">

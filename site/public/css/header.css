@@ -32,7 +32,6 @@ header .logo {
     width: 17%;
     top: 1%;
     left: 41.5%;
-
 }
 
 header nav{
@@ -45,7 +44,7 @@ header nav{
     border: 1px solid var(--lightBlue);
 }
 
-header nav button.admin_desktop_link {
+header nav li.admin_desktop_link {
     display: none;
 }
 
@@ -242,18 +241,53 @@ header nav button.cart {
 
     header nav{
         padding: 10px 0 0 0 ;
+        align-items: center;
     }
 
-    header nav button.admin_desktop_link {
+    header nav form input{
+        width: 100%;
+        max-width: 350px;
+    }
+
+    header nav li.admin_desktop_link {
         display: block;
+        color: var(--white);
+    }
+
+    header nav li.admin_desktop_link a {
+        color: var(--white);
+    }
+
+    header nav div.user_desktoplinks a {
+        color: var(--white);
+    }
+
+    header nav div.user_desktoplinks li.desktop_userlink_profile {
+        margin-left: 5px;
+    }
+
+    header nav div.user_desktoplinks li.desktop_userlink_logout {
+        margin-left: 25px;
     }
     
     header nav div.user_desktoplinks {
-        display: block;
+        display: flex;
+        align-items: center;
+    }
+
+    header nav div.user_desktoplinks img.avatar_userdesktop {
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 
     header nav label {
         display: none;
+    }
+
+    header nav form {
+        width: 40%;
     }
 
     header nav form button.search {
@@ -363,6 +397,40 @@ header nav button.cart {
     header .header-container {
         background-image: url(/img/design/fondo.png);
         background-repeat: repeat;
+    }
+
+    header nav form {
+        width: 45%;
+    }
+
+    header nav form input{
+        width: 100%;
+        max-width: 500px;
+    }
+
+    header nav div.user_desktoplinks li.desktop_userlink_logout {
+        margin-left: 50px;
+    }
+
+    header nav form {
+        justify-content: flex-start;
+        
+    }
+}
+
+@media (min-width: 1300px) {
+
+    header nav form {
+        margin-right: 200px;
+        
+    }
+}
+
+@media (min-width: 1500px) {
+
+    header nav li.admin_desktop_link {
+        margin-left: 50px;
+        
     }
 }
 
