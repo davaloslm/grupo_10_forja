@@ -114,7 +114,7 @@ const controller = {
 
             fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null ,2));
 
-            
+            /* res.redirect("/user/userProfile/" + usuarioAEditar.id) */
             res.render("users/userProfile", {usuario: usuarioAEditar});
 
         }else{
@@ -124,25 +124,41 @@ const controller = {
 
         }
     },
+    vistaCambiarContraseña: (req, res)=>{
+
+        res.render("users/password")
+    },
     cambiarContraseña: (req, res)=>{
 
         //falta vista de cambiar contraseña//
 
         const cambiarContraseñaErrors = validationResult(req);
 
-        if(bcrypt.compareSync(contraseña, usuarioAEditar.contraseña ) === true){
+        if(cambiarContraseñaErrors.isEmpty()){
 
+            let { contraseña, contraseña2} = req.body;
+
+            let usuarioAEditar = req.session.usuarioLogueado;
+
+            
             usuarioAEditar.contraseña = bcrypt.hashSync(contraseña2);
             usuarioAEditar.contraseña2 = bcrypt.hashSync(contraseña2);
 
-
+            fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null ,2));
+            
+            //cerrar sesion o redirigir?//
+            /* res.redirect("/user/userProfile/" + usuarioAEditar.id) */
+            res.render("users/password");
+    
         }else{
-
-            res.render("users/userProfile", {errors: cambiarContraseñaErrors.mapped()});
-
-        }
-
+    
+            res.render("users/password", {errors: cambiarContraseñaErrors.mapped()});
+    
+            }
     }
+
+    
+    
 }
 // se puede poner .trim() al registro para que no vengan espacios en blanco
 module.exports = controller;
