@@ -78,7 +78,7 @@ const controller = {
         }else{
 
             res.render("users/login", {errors: loginErrors.mapped(), oldData: req.body });
-            //render de login con errores      
+                
         }
 
     },
@@ -94,13 +94,54 @@ const controller = {
         res.redirect('/')
     },
     editUserProfile: (req, res)=>{
-        let usuarioAEditar = req.session.usuarioLogueado;
-        let {nombre, apellido, email, telefono} = req.body;
-        //incompleto//
+
+        const {id} = req.params;
+        let usuario = usuarios.find(usuario=>usuario.id === parseInt(id) )
+
+        const userProfileErrors = validationResult(req);
+
+        if(userProfileErrors.isEmpty()){
+            
+            let usuarioAEditar = req.session.usuarioLogueado;
+
+            let {nombre, apellido, email, telefono, contraseña , contraseña2} = req.body;
+
+            usuarioAEditar.nombre = nombre;
+            usuarioAEditar.apellido = apellido;
+            usuarioAEditar.email = email;        
+            usuarioAEditar.telefono = parseInt(telefono);
+            /* usuarioAEditar.contraseña = bcrypt.hashSync(contraseña); */
+
+            fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null ,2));
+
+            ////////////a veces funciona a veces no XD ////////////////
+            res.render("users/userProfile", {usuario});
+
+        }else{
+            
+
+            res.render("users/userProfile", {usuario:usuario, errors: userProfileErrors.mapped()});
+
+        }
+    },
+    cambiarContraseña: (req, res)=>{
+
+        //falta vista de cambiar contraseña//
+
+        const cambiarContraseñaErrors = validationResult(req);
+
+        if(bcrypt.compareSync(contraseña, usuarioAEditar.contraseña ) === true){
+
+            usuarioAEditar.contraseña = bcrypt.hashSync(contraseña2);
+            usuarioAEditar.contraseña2 = bcrypt.hashSync(contraseña2);
 
 
+        }else{
 
-        res.redirect("/")
+            res.render("users/userProfile", {errors: cambiarContraseñaErrors.mapped()});
+
+        }
+
     }
 }
 // se puede poner .trim() al registro para que no vengan espacios en blanco

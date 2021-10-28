@@ -26,7 +26,7 @@
               
               <div class="dashboard-wrapper dashboard-user-profile">
                 <div class="media">
-                  <!-- <h2 class="media-heading">Bienvenido <%= usuario.nombre %></h2> -->
+                  
                   <div class=" image-container pull-left text-center" href="#!">
                     <img class="media-object user-img" src="/img/users/<%= usuario.imagen %>" alt="Imagen de perfil">
                     <form action="">
@@ -37,37 +37,57 @@
                     <ul class="user-profile-list">
                       <li><span>Nombre completo:</span><%= usuario.nombre %> <%= usuario.apellido %> <form action="" method="POST"></form></li>
                       <li><span>Email:</span> <%= usuario.email %></li>
-                      <li><span>Teléfono:</span> +880123123</li>
+                      <li><span>Teléfono:</span> <%= usuario.telefono ? usuario.telefono : null %></li>
                       <li><span>Fecha de nacimiento:</span> <%= usuario.fechaDeNac %></li>
                     </ul>
                   </div>
                   <div class="edit-profile">
                     <button class="edit-button">Editar perfil</button>
 
-                    <form action="/user/userProfile/:id?_method=PUT" method="POST">
+                    <form action="/user/userProfile/<%= usuario.id %>?_method=PUT" method="POST">
                         <span>Nombre: </span>
                         <input type="text" name="nombre" class="edit-form" value="<%= usuario.nombre %>">
+                        <% if (locals.errors && errors.nombre) { %>
+                          <small class="errors"><%= errors.nombre.msg %> </small>
+                       
+                        <% } %>
 
                         <span>Apellido: </span>
                         <input type="text" name="apellido" class="edit-form" value="<%= usuario.apellido %>">
+                        <% if (locals.errors && errors.apellido) { %>
+                          <small class="errors"><%= errors.apellido.msg %> </small>
+                       
+                        <% } %>
 
                         <span>Email: </span>
                         <input type="email" name="email" class="edit-form" value="<%= usuario.email %>">
+                        <% if (locals.errors && errors.email) { %>
+                          <small class="errors"><%= errors.email.msg %> </small>
+                       
+                        <% } %>
                         
                         <span>Teléfono: </span>
-                        <input type="number" name="telefono" class="edit-form" value="<%= usuario.email %>">
+                        <input type="number" name="telefono" class="edit-form" value="<%= usuario.telefono ? usuario.telefono : null %> ">
+                        <% if (locals.errors && errors.telefono) { %>
+                          <small class="errors"><%= errors.telefono.msg %> </small>
+                       
+                        <% } %>
 
-                        <span>Contraseña actual: </span>
+                        <!-- <span>Contraseña actual: </span>
                         <input type="password" name="contraseña" class="edit-form">
 
                         <span>Nueva contraseña: </span>
-                        <input type="password" name="contraseña2" class="edit-form">
+                        <input type="password" name="contraseña2" class="edit-form"> -->
                         
                         <button class="edit-button" type="submit">Guardar cambios</button>
                         
                         <button class="cancel-button">Cancelar</button>
 
                     </form>
+
+                    <a href="">Cambiar contraseña</a>
+
+
                   </div>
 
                 </div>

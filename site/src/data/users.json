@@ -45,11 +45,27 @@
     "apellido": "Dávalos",
     "email": "davaloslm9999@gmail.com",
     "fechaDeNac": "28-07-1998",
-    "contraseña": "9999",
-    "contraseña2": "9999",
+    "contraseña": "99999999",
+    "contraseña2": "99999999",
     "imagen": "default-user.jpg",
     "terminos": 1,
     "ofertas": false,
     "admin": 1
+  },
+  {
+    "nombre": "ssssssssssss",
+    "apellido": "aaaaaaaaaa",
+    "email": "asd@asd.com",
+    "fechaDeNac": "1998-01-09",
+    "contraseña": "$2a$12$VXbQ2KOuPKYgH1uJFk6bXOFr8Cu6ic0k.nUPcJOiMfJMzRKeyqXJi",
+    "contraseña2": "$2a$12$AmFpJBHl9jcFXDxsQvkXFeidYItH9DcNkA.d1Y.IntVkyJ5629bs2",
+    "terminos": "1",
+    "id": 5,
+    "nombreUsuario": "asdasdasdasd5",
+    "imagen": "default-user.jpg",
+    "ofertas": false,
+    "ban": 0,
+    "admin": 0,
+    "telefono": 5555555555
   }
 ]
