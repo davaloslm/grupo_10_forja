@@ -1,43 +1,39 @@
 <header>
     <div class="header-container">
         <div class="banner">
-            <img src="/img/design/banner.png" alt="Banner">
+            <img class="banner_dragon" src="/img/design/banner.png" alt="Banner">
             <a href="/"><img src="/img/design/logo.png" alt="" class="logo"></a>
         </div>
     </div>
     <nav>
-        <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin === 1) { %>
-        <button class="home">
-            <a href="/">
-                <i class="fas fa-home"></i>
-            </a>
-        </button>
-        <p><a href="/admin">Administrador</a></p>
-        <% } else { %>
-        <button class="home">
-            <a href="/">
-                <i class="fas fa-home"></i>
-            </a>
-        </button>
-        <% } %> 
-        <input class="burger" name="open-close" type="radio" id="categorias">
-        <label for="categorias">
-            <i class="fas fa-bars"></i>
-        </label>
-        <form action="">
-            <input  type="text" name="search" id="search" placeholder="Buscar marcas, productos y más">
-            <button class="search">
-                <i class="fas fa-search"></i>
+            <button class="home">
+                <a href="/">
+                    <i class="fas fa-home"></i>
+                </a>
             </button>
-        </form>
+            <input class="burger" name="open-close" type="radio" id="categorias">
+            <label for="categorias">
+                <i class="fas fa-bars"></i>
+            </label>
+            <form action="">
+                <input  type="text" name="search" id="search" placeholder="Buscar marcas, productos y más">
+                <button class="search">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+        <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin === 1) { %>
+            <li class="admin_desktop_link">
+                <a href="/admin">
+                    Admin <i class="fas fa-user-lock"></i>
+                </a>
+            </li>
+        <% } %>
         <% if (locals.usuarioLogueado) { %>
-            <!-- //////////////////////////////////////////////// SACAR WIDTH  /////////////////////////////////////////-->
-            <div>
-                <img src="/img/users/<%= locals.usuarioLogueado.imagen  %>" alt="Imagen de perfil" style="width: 60px;">
-                <p><a href="/user/cerrarSesion">Cerrar sesión</a></p>
-            </div>
-            
-            
+        <div class="user_desktoplinks">
+            <img class="avatar_userdesktop" src="/img/users/<%= locals.usuarioLogueado.imagen  %>" alt="Imagen de perfil">
+            <li class="desktop_userlink_profile"><a href="/user/userProfile/<%= usuarioLogueado.id %> "><%= usuarioLogueado.nombre %> <i class=" iconuser fas fa-user"></i></a></li>
+            <li class="desktop_userlink_logout"><a href="/user/cerrarSesion">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a></li>
+        </div>
         <% }else { %>
             <button class="user">
                 <a href="/user/login">Iniciar sesión</a>
@@ -52,17 +48,27 @@
             <a href="/user/cart"><i class="fas fa-shopping-cart"></i></a>
         </button>
 
-
         <input class="close" type="radio" name="open-close" id="close">
         <div class="menu">
             <label for="close"><i class="fas fa-times"></i></label>
-
-            <ul class="user">
-                <li><a href="/user/login">Iniciar sesión</a></li>
-                <li><a href="/user/register">Registrarse</a></li>
-            </ul>
-
-
+            <% if (!locals.usuarioLogueado) { %>
+                <ul class="user">
+                    <li><a href="/user/login">Iniciar sesión</a></li>
+                    <li><a href="/user/register">Registrarse</a></li>
+                </ul>
+            <% } %>
+            <% if (locals.usuarioLogueado) { %>
+                <ul class="user_profile_mobile">
+                    <img class="avatar_usermobile" src="/img/users/<%= locals.usuarioLogueado.imagen  %>" alt="Imagen de perfil">
+                    <div class="burger_userlinks">
+                        <li class="burger_userlink_profile"><a href="/user/userProfile/<%= usuarioLogueado.id %> "><%= usuarioLogueado.nombre %> <i class=" iconuser fas fa-user"></i></a></li>
+                        <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin === 1) { %>
+                        <li class="burger_userlink_admin"><a href="/admin">Admin <i class="fas fa-user-lock"></i></a></li>
+                            <% } %>
+                        <li class="burger_userlink_logout"><a href="/user/cerrarSesion">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a></li>
+                    </div>
+                </ul>
+            <% } %>
             <ul class="listaCategorias">
                 <li class="categorias" id="taekwondo">
                     <a href="#taekwondo">TaeKwon-Do</a>
