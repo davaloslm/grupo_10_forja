@@ -53,12 +53,12 @@
     "admin": 1
   },
   {
-    "nombre": "test0",
-    "apellido": "test0",
+    "nombre": "321321321",
+    "apellido": "123321321",
     "email": "asd@asd.com",
     "fechaDeNac": "1998-01-09",
-    "contraseña": "$2a$10$rKcur5snDUTQyVY0lUGS4OTvLx932aqgL5knBKV9Dx1qoYkc8VE9u",
-    "contraseña2": "$2a$10$RP47cWnID0Jltv1n3SmuKOmznwOJQNe7o/mhk7oFR4XhheZxpXeSS",
+    "contraseña": "$2a$10$w0FUxzg.rN/XeJ6ABbsIHOf4o77so1pR1DJnxLTG.zQFDaEtjgUm6",
+    "contraseña2": "$2a$10$aZIb1D/xyjfVQ5Tit0qdpOx5m3XS7dJ1GzOYLenOa6y/i/l3FJsOO",
     "terminos": "1",
     "id": 5,
     "nombreUsuario": "asdasdasdasd5",
@@ -66,6 +66,6 @@
     "ofertas": false,
     "ban": 0,
     "admin": 1,
-    "telefono": 999999999
+    "telefono": 321321321321
   }
 ]

@@ -102,7 +102,7 @@ const controller = {
 
         if(userProfileErrors.isEmpty()){
             
-            let usuario = req.session.usuarioLogueado;
+            /* let usuario = req.session.usuarioLogueado; */
 
             let {nombre, apellido, email, telefono} = req.body;
 
