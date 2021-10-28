@@ -500,5 +500,42 @@
       "KickBoxing/MuayThai"
     ],
     "id": 25
+  },
+  {
+    "imagen": "",
+    "descuento": null,
+    "nombre": "test",
+    "descripcion": "asdasd",
+    "precio": 555555555,
+    "color": [
+      ""
+    ],
+    "categoria": [
+      "TaeKwon-Do",
+      "Boxeo"
+    ],
+    "id": 26,
+    "envioGratis": false
+  },
+  {
+    "imagen": "",
+    "descuento": "",
+    "talle": [
+      "L",
+      "XL",
+      "4"
+    ],
+    "nombre": "test",
+    "descripcion": "asdasd",
+    "precio": "666666666666",
+    "color": [
+      ""
+    ],
+    "categoria": [
+      "TaeKwon-Do",
+      "Boxeo"
+    ],
+    "id": 27,
+    "envioGratis": false
   }
 ]

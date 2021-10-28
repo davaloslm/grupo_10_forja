@@ -95,27 +95,28 @@ const controller = {
     },
     editUserProfile: (req, res)=>{
 
-        /* const {id} = req.params;
-        let usuario = usuarios.find(usuario=>usuario.id === parseInt(id) ) */
+        const {id} = req.params;
+        let usuario = usuarios.find(usuario=>usuario.id === parseInt(id) )
 
         const userProfileErrors = validationResult(req);
 
         if(userProfileErrors.isEmpty()){
             
-            let usuarioAEditar = req.session.usuarioLogueado;
+            let usuario = req.session.usuarioLogueado;
 
-            let {nombre, apellido, email, telefono, contraseña , contraseña2} = req.body;
+            let {nombre, apellido, email, telefono} = req.body;
 
-            usuarioAEditar.nombre = nombre;
-            usuarioAEditar.apellido = apellido;
-            usuarioAEditar.email = email;        
-            usuarioAEditar.telefono = parseInt(telefono);
+            usuario.nombre = nombre;
+            usuario.apellido = apellido;
+            usuario.email = email;        
+            usuario.telefono = parseInt(telefono);
             /* usuarioAEditar.contraseña = bcrypt.hashSync(contraseña); */
+            
 
             fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null ,2));
 
-            /* res.redirect("/user/userProfile/" + usuarioAEditar.id) */
-            res.render("users/userProfile", {usuario: usuarioAEditar});
+            res.redirect("/user/userProfile/" + usuario.id) //si funciona//
+            /* res.render("users/userProfile", {usuario}); */ //no funciona/
 
         }else{
             
@@ -138,7 +139,7 @@ const controller = {
 
             let { contraseña, contraseña2} = req.body;
 
-            let usuarioAEditar = req.session.usuarioLogueado;
+            let usuarioAEditar = usuarios.find(e=>e.id === req.session.usuarioLogueado.id);
 
             
             usuarioAEditar.contraseña = bcrypt.hashSync(contraseña2);
@@ -147,8 +148,8 @@ const controller = {
             fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null ,2));
             
             //cerrar sesion o redirigir?//
-            /* res.redirect("/user/userProfile/" + usuarioAEditar.id) */
-            res.render("users/password");
+            res.redirect("/user/userProfile/" + usuarioAEditar.id)
+            /* res.render("users/password"); */
     
         }else{
     
