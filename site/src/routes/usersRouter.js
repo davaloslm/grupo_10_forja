@@ -1,11 +1,12 @@
 const express = require('express');
 const router = express.Router();
 const multerUser = require('../middlewares/multerUser');
-const { cart, vistaRegistro, vistaLogin, login, registro, cerrarSesion, vistaUserProfile, editUserProfile } = require("../controllers/usersController");
+const { cart, vistaRegistro, vistaLogin, login, registro, cerrarSesion, vistaUserProfile, editUserProfile, vistaCambiarContraseña, cambiarContraseña } = require("../controllers/usersController");
 const invitado = require('../middlewares/invitado');
 const registerValidator = require('../middlewares/registerValidator');
 const loginValidator = require ('../middlewares/loginValidator');
 const userProfileValidator = require ('../middlewares/userProfileValidator');
+const passwordValidator = require ('../middlewares/passwordValidator');
 
 
 /* GET users listing. */
@@ -23,5 +24,8 @@ router.put('/userProfile/:id', userProfileValidator, editUserProfile);
 router.get('/cerrarSesion', cerrarSesion)
 
 router.get('/cart',  cart);
+
+router.get('/password',  vistaCambiarContraseña);
+router.put('/password', passwordValidator, cambiarContraseña);
 
 module.exports = router;

@@ -102,27 +102,32 @@ const controller = {
 
         if(userProfileErrors.isEmpty()){
             
-            let usuarioAEditar = req.session.usuarioLogueado;
+            /* let usuario = req.session.usuarioLogueado; */
 
-            let {nombre, apellido, email, telefono, contraseña , contraseña2} = req.body;
+            let {nombre, apellido, email, telefono} = req.body;
 
-            usuarioAEditar.nombre = nombre;
-            usuarioAEditar.apellido = apellido;
-            usuarioAEditar.email = email;        
-            usuarioAEditar.telefono = parseInt(telefono);
+            usuario.nombre = nombre;
+            usuario.apellido = apellido;
+            usuario.email = email;        
+            usuario.telefono = parseInt(telefono);
             /* usuarioAEditar.contraseña = bcrypt.hashSync(contraseña); */
+            
 
             fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null ,2));
 
-            ////////////a veces funciona a veces no XD ////////////////
-            res.render("users/userProfile", {usuario});
+            res.redirect("/user/userProfile/" + usuario.id) //si funciona//
+            /* res.render("users/userProfile", {usuario}); */ //no funciona/
 
         }else{
             
 
-            res.render("users/userProfile", {usuario:usuario, errors: userProfileErrors.mapped()});
+            res.render("users/userProfile", {usuario:req.session.usuarioLogueado, errors: userProfileErrors.mapped()});
 
         }
+    },
+    vistaCambiarContraseña: (req, res)=>{
+
+        res.render("users/password")
     },
     cambiarContraseña: (req, res)=>{
 
@@ -130,19 +135,31 @@ const controller = {
 
         const cambiarContraseñaErrors = validationResult(req);
 
-        if(bcrypt.compareSync(contraseña, usuarioAEditar.contraseña ) === true){
+        if(cambiarContraseñaErrors.isEmpty()){
 
+            let { contraseña, contraseña2} = req.body;
+
+            let usuarioAEditar = usuarios.find(e=>e.id === req.session.usuarioLogueado.id);
+
+            
             usuarioAEditar.contraseña = bcrypt.hashSync(contraseña2);
             usuarioAEditar.contraseña2 = bcrypt.hashSync(contraseña2);
 
-
+            fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null ,2));
+            
+            //cerrar sesion o redirigir?//
+            res.redirect("/user/userProfile/" + usuarioAEditar.id)
+            /* res.render("users/password"); */
+    
         }else{
-
-            res.render("users/userProfile", {errors: cambiarContraseñaErrors.mapped()});
-
-        }
-
+    
+            res.render("users/password", {errors: cambiarContraseñaErrors.mapped()});
+    
+            }
     }
+
+    
+    
 }
 // se puede poner .trim() al registro para que no vengan espacios en blanco
 module.exports = controller;
