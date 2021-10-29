@@ -1,7 +1,8 @@
 const express = require("express");
 const router = express.Router();
 const {admin, vistaCrear, vistaEditar, editar, crear, eliminar, eliminarUsuarios} = require('../controllers/adminController')
-const adminPass = require('../middlewares/adminPass')
+const adminPass = require('../middlewares/adminPass');
+const multerProduct = require('../middlewares/multerProduct');
 
 router.get('/', adminPass, admin);
 
@@ -9,7 +10,7 @@ router.get('/', adminPass, admin);
 ////Formulario de creacion - vista///////
 router.get('/create', adminPass, vistaCrear);
 ///Crear producto///
-router.post('/', crear );
+router.post('/', multerProduct.array('imagenes'), crear);
 
 ///////// Edición de productos //////////
 // Formulario de edición - Vista

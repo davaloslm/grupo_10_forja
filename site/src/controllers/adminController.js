@@ -23,7 +23,12 @@ const controller = {
  
         const {nombre, descripcion, precio, descuento, talle, color, categoria, envioGratis} = req.body
         let nuevoProducto = req.body;
-        
+
+        let imagenes = []
+        req.files.forEach(image => {
+            imagenes.push(image.filename)
+        });
+
         nuevoProducto.id = productos.length + 1;
         
             nuevoProducto.envioGratis = envioGratis === undefined ? false : true;
@@ -34,6 +39,7 @@ const controller = {
             nuevoProducto.precio = parseInt(precio);
             nuevoProducto.color = [color];
             nuevoProducto.categoria = typeof(categoria) === 'string' ? [categoria] : categoria;
+            nuevoProducto.imagen = imagenes;
 
             productos.push(nuevoProducto);
 

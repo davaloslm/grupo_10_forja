@@ -14,12 +14,11 @@
     <section class="product_container">
         <h1>Crear Producto  <i class="fas fa-box"></i></h1>
 
-        <form class="todo_container" action="/admin" method="POST" >
+        <form class="todo_container" action="/admin" method="POST" enctype="multipart/form-data">
 
             <section class="visual_container">
                 <!-- ////Eligir archivo//// -->
-                    <input type="file" name="imagen">
-
+                    <input type="file" accept="image/*" name="imagenes" multiple>
                 <!-- ////////selector de enviar//////// -->
                 <div class="descuento_envio_container">
                     <div class="envio_container">
