@@ -4,6 +4,7 @@ let productos = require("../data/productos.json");
 let usuarios = require("../data/users.json");
 const productosRuta = path.join(__dirname, '../data/productos.json');
 const usuariosRuta = path.join(__dirname, '../data/users.json');
+const { validationResult } = require('express-validator');
 
 const controller = {
     admin: (req, res)=> {
@@ -20,31 +21,46 @@ const controller = {
     },
 
     crear:(req,res) =>{
- 
-        const {nombre, descripcion, precio, descuento, talle, color, categoria, envioGratis} = req.body
-        let nuevoProducto = req.body;
 
-        let imagenes = []
-        req.files.forEach(image => {
-            imagenes.push(image.filename)
-        });
-
-        nuevoProducto.id = productos.length + 1;
+        const newProductErrors = validationResult(req);
         
-            nuevoProducto.envioGratis = envioGratis === undefined ? false : true;
-            nuevoProducto.descuento = parseInt(descuento);
-            nuevoProducto.talle = typeof(talle) === 'string' ? [talle] : talle;
-            nuevoProducto.nombre = nombre;
-            nuevoProducto.descripcion = descripcion;
-            nuevoProducto.precio = parseInt(precio);
-            nuevoProducto.color = [color];
-            nuevoProducto.categoria = typeof(categoria) === 'string' ? [categoria] : categoria;
-            nuevoProducto.imagen = imagenes;
+        if(req.fileValidationError) {
+            let img = {
+                param: "imagenes",
+                msg: req.fileValidationError
+            }
+            newProductErrors.errors.push(img)
+        }
 
-            productos.push(nuevoProducto);
+        if(newProductErrors.isEmpty()) {
 
-        fs.writeFileSync(productosRuta, JSON.stringify(productos, null ,2))
-		res.redirect(`/product/${nuevoProducto.id}`)
+            const {nombre, descripcion, precio, descuento, talle, color, categoria, envioGratis} = req.body
+            let nuevoProducto = req.body;
+            
+            let imagenes = []
+            req.files.forEach(image => {
+                imagenes.push(image.filename)
+            });
+    
+            nuevoProducto.id = productos.length + 1;
+            
+                nuevoProducto.envioGratis = envioGratis === undefined ? false : true;
+                nuevoProducto.descuento = parseInt(descuento);
+                nuevoProducto.talle = typeof(talle) === 'string' ? [talle] : talle;
+                nuevoProducto.nombre = nombre;
+                nuevoProducto.descripcion = descripcion;
+                nuevoProducto.precio = parseInt(precio);
+                nuevoProducto.color = [color];
+                nuevoProducto.categoria = typeof(categoria) === 'string' ? [categoria] : categoria;
+                nuevoProducto.imagen = imagenes;
+    
+                productos.push(nuevoProducto);
+    
+            fs.writeFileSync(productosRuta, JSON.stringify(productos, null ,2))
+            res.redirect(`/product/${nuevoProducto.id}`)
+        } else {
+            res.render('admin/create', { errors: newProductErrors.mapped(), oldData: req.body })
+        }
     },
 
     //////// Formulario de edición ///////////
