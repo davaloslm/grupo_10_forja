@@ -251,10 +251,12 @@
                     <% } %>
                 </div>
                 <!-- /////Colores de producto///// -->
+<!-- ////////////////////////////////////////  FALTA MOSTRAR MAS CAMPOS DE COLORES EN CASO DE QUE SE NECESITEN //////////////////////////////////// -->
                 <div class= "selec color_container">
                     <p>Colores</p>
-                    <input type="text" name="color">
+                    <input type="text" name="color" value=<%= locals.oldData && oldData.color ? oldData.color : null %> >
                 </div>
+<!-- ////////////////////////////////////////  FALTA MOSTRAR MAS CAMPOS DE COLORES EN CASO DE QUE SE NECESITEN //////////////////////////////////// -->
                 <!-- /////categoria de producto///// -->
                 <div class= "selec info_categoria_container">
                     <p>Categoría</p>

@@ -488,16 +488,14 @@
       "7",
       "8"
     ],
-    "nombre": "Escanor",
+    "nombre": "El león Escanor",
     "descripcion": "El pecado del orgullo león escanor.",
-    "precio": "999999999",
+    "precio": "999999999999",
     "color": [
       "color Sol"
     ],
     "categoria": [
-      "TaeKwon-Do",
-      "Jiu-Jitsu",
-      "KickBoxing/MuayThai"
+      "TaeKwon-Do"
     ],
     "id": 25
   }

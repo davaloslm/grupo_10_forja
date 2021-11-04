@@ -1,3 +1,7 @@
+.edit small.errors {
+    color: crimson;
+}
+
 body.editar main.edit section.product_container{
     text-align: center;
 }
