@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <%- include('./partials/head')  %>
+        <title>404 - FORJA</title>
+    </head>
+<body class="c404">
+    <main class="main404">
+        <div class="message_container">
+            <h1><%= message %></h1>
+            <h2><%= error.status %></h2>
+            <pre><%= error.stack %></pre>
+        </div>
+        <section class="bounce_container">
+            <span>4</span>
+            <span>0</span>
+            <span>4</span>
+        </section>
+        <section class="logo_container">
+            <button><a href="javascript: history.go(-1)">Volver</a></button>
+            <img src="../../img/design/logo.png" alt="Logo Forja">
+        </section>
+    </main>
+</body>
+</html>
