@@ -1,3 +1,7 @@
+.create small.errors {
+    color: crimson;
+}
+
 body.crear main.create section.product_container{
     text-align: center;
 }

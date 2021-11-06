@@ -51,6 +51,15 @@ header nav li.admin_desktop_link {
 header nav div.user_desktoplinks {
     display: none;
 }
+
+header nav li.admin_desktop_link a {
+    color: var(--white);
+}
+
+header nav div.user_desktoplinks a {
+    color: var(--white);
+}
+
 /* ///////////////////////////////menu///////////////////////// */
 
 header nav input.burger{
@@ -251,15 +260,19 @@ header nav button.cart {
 
     header nav li.admin_desktop_link {
         display: block;
-        color: var(--white);
+        
     }
 
-    header nav li.admin_desktop_link a {
-        color: var(--white);
+    header nav li.admin_desktop_link:hover {
+        text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
     }
 
-    header nav div.user_desktoplinks a {
-        color: var(--white);
+    header nav div.user_desktoplinks li.desktop_userlink_profile a:hover {
+        text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+    }
+
+    header nav div.user_desktoplinks li.desktop_userlink_logout a:hover {
+        text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
     }
 
     header nav div.user_desktoplinks li.desktop_userlink_profile {

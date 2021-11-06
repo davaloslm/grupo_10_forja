@@ -33,6 +33,10 @@
                         <div class="selec info_des_container">
                             <p>Ingresá una descripción</p>
                             <textarea name="descripcion" id=""><%= producto.descripcion %></textarea>
+                            <% if (locals.errors && errors.descripcion) { %>
+                                <small class="errors"><%= errors.descripcion.msg %></small>
+                            
+                            <% } %>
                         </div>
 
                         <!-- ////////selector de enviar//////// -->
@@ -125,12 +129,20 @@
                         <div class="selec info_titulo_container">
                             <p>Nombre de Producto</p>
                             <input type="text" name="nombre" value="<%= producto.nombre %>">
+                            <% if (locals.errors && errors.nombre) { %>
+                                <small class="errors"><%= errors.nombre.msg %></small>
+                            
+                            <% } %>
                         </div>
                         
                         <!-- /////Precio de producto///// -->
                         <div class="selec info_precio_container">
                             <p>Precio $</p>
                             <input type="number" name="precio" value="<%= producto.precio %>">
+                            <% if (locals.errors && errors.precio) { %>
+                                <small class="errors"><%= errors.precio.msg %></small>
+                            
+                            <% } %>
                         </div>
                         <!-- /////Colores de producto///// -->
                         <div class="selec color_container">
@@ -198,7 +210,10 @@
 
 
                             </div>
-
+                        <% if (locals.errors && errors.categoria) { %>
+                            <small class="errors"><%= errors.categoria.msg %></small>
+                        
+                        <% } %>
                         </div>
 
                     </section>
