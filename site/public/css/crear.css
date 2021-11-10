@@ -45,6 +45,16 @@ body.crear main.create section.product_container form section.visual_container{
     margin-top: 15px;
 }
 
+/* ////////////////////Elegir Archivo////////////////////////// */
+body.crear main.create section.product_container form section.visual_container div.container_img{
+    padding: 8px 15px;
+    background-color: var(--lightBlue);
+    color: white;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
 /* ////////////titulo de producto//////////////////// */
 
 body.crear main.create section.product_container form.todo_container section.visual_container h2{
@@ -127,15 +137,16 @@ body.crear main.create section.product_container form section.info_container div
     outline-color: var(--lightBlue);
 }
 
-/* ////Estilo a los botones de crear y borrar//// */
+/* //////////////////////Tamaño de botonosr///////////////// */
 body.crear main.create section.product_container form section.button_container{
     text-align: center;
     margin: 10px;
 }
-/*//////////// Tamaño de botonos/////////// */
+/*/////////////Estilo a los botones de crear y borrar/////////// */
 body.crear main.create section.product_container form section.button_container button.boton{
     padding: 8px 15px;
-    background-color: var(--lightBlue);
+    background-color:#2ad2d2;
+    color: white;
     border-radius: 5px;
     border: none;
     cursor: pointer;

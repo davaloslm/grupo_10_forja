@@ -67,5 +67,20 @@
     "ban": 0,
     "admin": 1,
     "telefono": 321321321321
+  },
+  {
+    "nombre": "Vladi",
+    "apellido": "Morales",
+    "email": "vladi@gmail.com",
+    "fechaDeNac": "2003-03-09",
+    "contraseña": "$2a$12$JpuZ/MJAJrJtsnar5RvG/.t0iiFoosMsLYeT75phLnaKiT9Ya0NUG",
+    "contraseña2": "$2a$12$jxslA80wqMvhDwCKJq2kUualonmObYKru11WL76KKnxKh18FHsnoK",
+    "terminos": "1",
+    "ofertas": true,
+    "id": 6,
+    "nombreUsuario": "VladiMorales6",
+    "imagen": "default-user.jpg",
+    "ban": 0,
+    "admin": 1
   }
 ]
