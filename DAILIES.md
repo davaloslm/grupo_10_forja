@@ -151,7 +151,7 @@
   - Ninguno.
 
  - **Tareas a realizar:**
-  - Crear vista de perfil de usuario.
+   - Crear vista de perfil de usuario.
 
 ## Reunión 14/10/2021
 - **Tareas realizadas:**
@@ -282,6 +282,7 @@ Tareas a realizar:
 - **Tareas realizadas:**
   - Tareas extras: Validaciones de perfil de usuario.
   - Tareas extras: Cambio de contraseña.
+
 - **Inconvenientes:**
   - Ninguno.
 
@@ -296,4 +297,4 @@ Tareas a realizar:
   - Ninguno.
 
 - **Tareas a realizar:**
- - Ninguna.
+  - Ninguna.
