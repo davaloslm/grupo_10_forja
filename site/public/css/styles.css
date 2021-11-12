@@ -4,7 +4,6 @@
 @import url("./home.css");
 @import url("./admin.css");
 @import url("./login.css");
-@import url("./acceso.css");
 @import url("./product.css");
 @import url("./register.css");
 @import url("./general.css");
@@ -14,3 +13,4 @@
 @import url("./products.css");
 @import url("./userProfile.css");
 @import url("./password.css");
+@import url("./404.css");

@@ -1,0 +1,111 @@
+body.c404 {
+    background-image: url(/img/design/fondo.png);
+}
+
+.main404 div.message_container h1 {
+    margin-top: 50px;
+    text-align: center;
+    font-size: 80px;
+    text-shadow: 1px 2px 4px #2AD2D2;
+}
+
+.main404 div.message_container h2, .main404 div.message_container pre {
+    display: none;
+}
+
+.main404 section.bounce_container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 150px auto auto;
+}
+
+.main404 section.bounce_container span {
+    margin: 0 25px 0 25px;
+    font-size: 100px;
+    font-family: fantasy;
+    animation-timing-function: ease-out;
+    animation: bounce 1s infinite alternate;
+    text-shadow: 1px 2px 8px #2AD2D2;
+}
+
+.main404 section.bounce_container span:nth-child(1) {
+    animation-delay: 200ms;
+}
+.main404 section.bounce_container span:nth-child(2) {
+    animation-delay: 400ms;
+}
+.main404 section.bounce_container span:nth-child(3) {
+    animation-delay: 600ms;
+}
+
+.main404 section.logo_container {
+    margin-top: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.main404 section.logo_container button {
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background-color: var(--lightBlue);
+}
+
+.main404 section.logo_container button a {
+    color: var(--black);
+    font-size: 16px;
+}
+
+.main404 section.logo_container img {
+    width: 50%;
+    -webkit-box-reflect: below 5px linear-gradient(transparent 50%, white);
+    animation: coin 6s infinite alternate;
+}
+
+@media (min-width: 425px) {
+
+
+}
+
+
+/* ANIMACIONES */
+
+@keyframes bounce {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-145px);
+    }
+}
+
+@keyframes breath {
+    from {
+        text-shadow: 1px 2px 8px #2ad2d200;
+    }
+
+    to {
+        text-shadow: 1px 2px 8px #2AD2D2;
+    }
+}
+
+@keyframes coin {
+    0%{ -webkit-transform: rotate3d(0, 0, 0, 0deg);
+        transform: rotate3d(0, 0, 0, 0deg);
+    }
+    25%{-webkit-transform: rotate3d(0, 1, 0, 90deg);
+        transform: rotate3d(0, 1, 0, 90deg);
+    }
+    50%{-webkit-transform: rotate3d(0, 1, 0, 180deg);
+        transform: rotate3d(0, 1, 0, 180deg);
+    }
+    75%{-webkit-transform: rotate3d(0, 1, 0, 270deg);
+        transform: rotate3d(0, 1, 0, 270deg);
+    }
+    100%{-webkit-transform: rotate3d(0, 1, 0, 360deg);
+        transform: rotate3d(0, 1, 0, 360deg);
+    }
+}
