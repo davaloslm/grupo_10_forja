@@ -91,3 +91,6 @@ module.exports = (sequelize, DataTypes) => {
 
     return Usuario;
 };
+
+
+/* carrito cantidad allow null false */

@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Pago';
+    let alias = 'MedioDePago';
     
     let cols = {
         id: {
@@ -19,16 +19,16 @@ module.exports = (sequelize, DataTypes) => {
         timestamps: false
     };
 
-    const Pago = sequelize.define(alias, cols, config);
+    const MedioDePago = sequelize.define(alias, cols, config);
 
-    Pago.associate = (models) => {
-        Pago.hasMany(models.Venta, {
+    MedioDePago.associate = (models) => {
+        MedioDePago.hasMany(models.Venta, {
             as: 'ventas',
-            foreignKey: 'medio_de_pago'
+            foreignKey: 'medio_de_pago_id'
         })
     }
 
 
 
-    return Pago;
+    return MedioDePago;
 };
