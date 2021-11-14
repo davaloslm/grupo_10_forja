@@ -30,7 +30,7 @@ module.exports = (sequelize, DataTypes) => {
         },
         departamento: {
             type: DataTypes.STRING(100),
-            allowNull: false,
+            allowNull: true,
         }
 
     };
