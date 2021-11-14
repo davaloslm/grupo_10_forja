@@ -38,10 +38,6 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BOOLEAN,
             allowNull: true,
         },
-        direccion_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
         telefono: {
             type: DataTypes.INTEGER,
             allowNull: true,
@@ -91,6 +87,3 @@ module.exports = (sequelize, DataTypes) => {
 
     return Usuario;
 };
-
-
-/* carrito cantidad allow null false */

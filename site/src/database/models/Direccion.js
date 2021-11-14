@@ -8,25 +8,29 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
+        usuario_id: {
+            type: DataTypes.INTEGER,
+            allowNull: false
+        },
         calle: {
             type: DataTypes.STRING(100),
-            allowNull: true,
+            allowNull: false,
         },
         numero: {
             type: DataTypes.INTEGER,
-            allowNull: true,
+            allowNull: false,
         },
         localidad: {
             type: DataTypes.STRING(100),
-            allowNull: true
+            allowNull: false
         },
         provincia: {
             type: DataTypes.STRING(100),
-            allowNull: true,
+            allowNull: false,
         },
         codigo_postal: {
             type: DataTypes.INTEGER,
-            allowNull: true
+            allowNull: false
         },
         departamento: {
             type: DataTypes.STRING(100),
