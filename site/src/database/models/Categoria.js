@@ -15,7 +15,7 @@ module.exports = (sequelize, DataTypes) => {
     } 
     let config = {
         tableName: 'categorias',
-        timestamps: true
+        timestamps: false
     }
 
     const Categoria = sequelize.define(alias, cols, config);
@@ -30,5 +30,5 @@ module.exports = (sequelize, DataTypes) => {
 
 
 
-    return Producto
+    return Categoria
 }
