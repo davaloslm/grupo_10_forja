@@ -49,37 +49,37 @@ module.exports = (sequelize, DataTypes) => {
     const Producto = sequelize.define(alias, cols, config);
 
     Producto.associate = (models) => {
-        Producto.belongsToMany(models.Carrito, {
+        Producto.hasMany(models.Carrito, {
             as: 'carritos',
             foreignKey: 'producto_id'
         })
      
-        Producto.belongsToMany(models.Imagen, {
+        Producto.hasMany(models.Imagen, {
             as: 'imagenes',
             foreignKey: 'producto_id'
         })
     
-        Producto.belongsToMany(models.Venta, {
+        Producto.hasMany(models.Venta, {
             as: 'ventas',
             foreignKey: 'producto_id'
         })
 
-        Producto.belongsToMany(models.Color, {
+        Producto.hasMany(models.Color, {
             as: 'colores',
             foreignKey: 'producto_id'
         })
 
-        Producto.belongsToMany(models.TalleNum, {
+        Producto.hasMany(models.TalleNum, {
             as: 'tallesNum',
             foreignKey: 'producto_id'
         })
 
-        Producto.belongsToMany(models.TalleLetra, {
+        Producto.hasMany(models.TalleLetra, {
             as: 'tallesLetra',
             foreignKey: 'producto_id'
         })
 
-        Producto.hasMany(models.Categoria, {
+        Producto.belongsToMany(models.Categoria, {
             as: 'categorias',
             foreignKey: 'categoria_id'
         })
