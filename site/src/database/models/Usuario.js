@@ -60,10 +60,31 @@ module.exports = (sequelize, DataTypes) => {
     const Usuario = sequelize.define(alias, cols, config);
 
     Usuario.associate = (models) => {
-        Usuario.belongsTo(models.Direccion, {
+        Usuario.hasMany(models.Direccion, {
             as: 'direcciones',
-            foreignKey: 'direccion_id'
+            foreignKey: 'usuario_id'
         })
+
+        Usuario.hasMany(models.Orden, {
+            as: 'ordenes',
+            foreignKey: 'usuario_id'
+        })
+
+        Usuario.hasMany(models.Venta, {
+            as: 'ventas',
+            foreignKey: 'usuario_id'
+        })
+
+        Usuario.hasMany(models.Factura, {
+            as: 'facturas',
+            foreignKey: 'usuario_id'
+        })
+
+        Usuario.hasMany(models.Carrito, {
+            as: 'carritos',
+            foreignKey: 'usuario_id'
+        })
+
     }
 
 

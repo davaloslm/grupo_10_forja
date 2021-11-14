@@ -22,10 +22,9 @@ module.exports = (sequelize, DataTypes) => {
     const Pago = sequelize.define(alias, cols, config);
 
     Pago.associate = (models) => {
-        Pago.hasMany(models.Ventas, {
-            as: 'usuarios',
-            foreignKey: 'id',
-            otherKey: 'medio_de_pago'
+        Pago.hasMany(models.Venta, {
+            as: 'ventas',
+            foreignKey: 'medio_de_pago'
         })
     }
 

@@ -27,15 +27,13 @@ module.exports = (sequelize, DataTypes) => {
 
     Orden.associate = (models) => {
         Orden.belongsToMany(models.Usuario, {
-            as: 'ordenes',
-            foreignKey: 'usuario_id',
-            otherKey: 'id'
+            as: 'usuarios',
+            foreignKey: 'usuario_id'
         })
 
         Orden.hasMany(models.Carrito, {
             as: 'carritos',
-            foreignKey: 'id',
-            otherKey: 'orden_id'
+            foreignKey: 'orden_id'
         })
     }
 

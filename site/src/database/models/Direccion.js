@@ -42,10 +42,9 @@ module.exports = (sequelize, DataTypes) => {
     const Direccion = sequelize.define(alias, cols, config);
 
     Direccion.associate = (models) => {
-        Direccion.hasMany(models.Usuario, {
+        Direccion.belongsToMany(models.Usuario, {
             as: 'usuarios',
-            foreignKey: 'usuario_id',
-            otherKey: 'direccion_id'
+            foreignKey: 'usuario_id'
         })
     }
 
