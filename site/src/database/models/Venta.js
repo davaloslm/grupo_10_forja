@@ -34,25 +34,25 @@ module.exports = (sequelize, DataTypes) => {
         
     }
     let config = {
-        tableName: 'Ventas',
+        tableName: 'ventas',
         timestamps: true
     }
     const Venta = sequelize.define(alias, cols, config);
 
     Venta.associate = (models) => {
-        Venta.belongsToMany(models.Producto, {
+        Venta.belongsTo(models.Producto, {
             as: 'productos',
             foreignKey: 'producto_id'
         })
-        Venta.belongsToMany(models.Usuario, {
+        Venta.belongsTo(models.Usuario, {
             as: 'usuarios',
             foreignKey: 'usuario_id'
         })
-        Venta.belongsToMany(models.MedioDePago, {
+        Venta.belongsTo(models.MedioDePago, {
             as: 'medioDePago',
             foreignKey: 'medio_de_pago_id'
         })
-        Venta.belongsToMany(models.Factura, {
+        Venta.belongsTo(models.Factura, {
             as: 'facturas',
             foreignKey: 'factura_id'
         })
