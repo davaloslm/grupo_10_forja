@@ -26,14 +26,16 @@ module.exports = (sequelize, DataTypes) => {
     const Orden = sequelize.define(alias, cols, config);
 
     Orden.associate = (models) => {
-        Orden.belongsToMany(models.Usuario, {
+        Orden.belongsTo(models.Usuario, {
             as: 'usuarios',
             foreignKey: 'usuario_id'
         })
 
-        Orden.hasMany(models.Carrito, {
-            as: 'carritos',
-            foreignKey: 'orden_id'
+        Orden.belongsToMany(models.Producto, {
+            as: 'productos',
+            through: 'carritos',
+            foreignKey: 'orden_id',
+            otherKey: 'producto_id'
         })
     }
 
