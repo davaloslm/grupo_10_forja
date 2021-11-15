@@ -45,8 +45,8 @@ module.exports = (sequelize, DataTypes) => {
         Direccion.belongsToMany(models.Usuario, {
             as: 'usuarios',
             through: "usuario_direccion",
-            foreignKey: 'usuario_id',
-            otherKey: 'direccion_id'
+            foreignKey: 'direccion_id',
+            otherKey: 'usuario_id'
         })
     }
 
