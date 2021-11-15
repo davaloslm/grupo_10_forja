@@ -33,17 +33,17 @@ module.exports = (sequelize, DataTypes) => {
     const Carrito = sequelize.define(alias, cols, config);
 
     Carrito.associate = (models) => {
-        Carrito.belongsToMany(models.Usuario, {
+        Carrito.belongsTo(models.Usuario, {
             as: 'usuarios',
             foreignKey: 'usuario_id'
         })
      
-        Carrito.belongsToMany(models.Producto, {
+        Carrito.belongsTo(models.Producto, {
             as: 'productos',
             foreignKey: 'producto_id'
         })
     
-        Carrito.belongsToMany(models.Orden, {
+        Carrito.belongsTo(models.Orden, {
             as: 'ordenes',
             foreignKey: 'orden_id'
         })
