@@ -11,10 +11,6 @@ module.exports = (sequelize, DataTypes) => {
         nombre: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        producto_id:{
-            type: DataTypes.INTEGER,
-            allowNull: false,
         }
     } 
     let config = {
@@ -27,7 +23,9 @@ module.exports = (sequelize, DataTypes) => {
     Color.associate = (models) => {
         Color.belongsToMany(models.Producto, {
             as: 'productos',
-            foreignKey: 'producto_id'
+            through: 'producto_color',
+            foreignKey: 'producto_id',
+            otherKey: 'color_id'
         })
 
     }

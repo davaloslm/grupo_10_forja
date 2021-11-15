@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Imagen"
+    let alias = "ProductoColor"
     
     let cols = {
         id: {
@@ -8,31 +8,34 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        nombre: {
-            type: DataTypes.STRING,
+        producto_id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
         },
-        producto_id:{
+        color_id: {
             type: DataTypes.INTEGER,
             allowNull: false,
         }
     } 
     let config = {
-        tableName: 'imagenes',
+        tableName: 'producto_color',
         timestamps: false
     }
 
-    const Imagen = sequelize.define(alias, cols, config);
+    const ProductoColor = sequelize.define(alias, cols, config);
 
-    Imagen.associate = (models) => {
-        Imagen.belongsTo(models.Producto, {
+    ProductoColor.associate = (models) => {
+        ProductoColor.belongsTo(models.Producto, {
             as: 'productos',
             foreignKey: 'producto_id'
         })
 
+        ProductoColor.belongsTo(models.Color, {
+            as: 'colores',
+            foreignKey: 'color_id'
+        })
+     
     }
 
-
-
-    return Imagen
+    return ProductoColor
 }
