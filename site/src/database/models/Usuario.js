@@ -34,7 +34,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.DATE,
             allowNull: false,
         },
-        suscripcion_forja: {
+        subscripcion_forja: {
             type: DataTypes.BOOLEAN,
             allowNull: true,
         },
@@ -56,9 +56,11 @@ module.exports = (sequelize, DataTypes) => {
     const Usuario = sequelize.define(alias, cols, config);
 
     Usuario.associate = (models) => {
-        Usuario.hasMany(models.Direccion, {
+        Usuario.belongsToMany(models.Direccion, {
             as: 'direcciones',
-            foreignKey: 'usuario_id'
+            through: 'usuario_direccion',
+            foreignKey: 'usuario_id',
+            otherKey: 'direccion_id'
         })
 
         Usuario.hasMany(models.Orden, {
@@ -66,9 +68,11 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'usuario_id'
         })
 
-        Usuario.hasMany(models.Venta, {
-            as: 'ventas',
-            foreignKey: 'usuario_id'
+        Usuario.belongsToMany(models.Producto, {
+            as: 'productos',
+            through: 'ventas',
+            foreignKey: 'usuario_id',
+            otherKey: 'producto_id'
         })
 
         Usuario.hasMany(models.Factura, {
@@ -76,9 +80,11 @@ module.exports = (sequelize, DataTypes) => {
             foreignKey: 'usuario_id'
         })
 
-        Usuario.hasMany(models.Carrito, {
-            as: 'carritos',
-            foreignKey: 'usuario_id'
+        Usuario.belongsToMany(models.Producto, {
+            as: 'productos',
+            through: 'carritos',
+            foreignKey: 'usuario_id',
+            otherKey: 'producto_id'
         })
 
     }
