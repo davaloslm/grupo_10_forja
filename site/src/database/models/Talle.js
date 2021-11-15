@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "TalleLetra"
+    let alias = "Talle"
     let cols = {
         id:{
             type: DataTypes.INTEGER,
@@ -10,23 +10,21 @@ module.exports = (sequelize, DataTypes) => {
         nombre:{
             type: DataTypes.STRING(3),
             allowNull: false,
-        },
-        producto_id:{
-            type: DataTypes.INTEGER,
-            allowNull: false,
         }
     }
     let config = {
-        tableName: 'talleLetra',
+        tableName: 'talles',
         timestamps: false
     }
-    const TalleLetra = sequelize.define(alias, cols, config);
+    const Talle = sequelize.define(alias, cols, config);
 
-    TalleLetra.associate = (models) => {
-        TalleLetra.belongsToMany(models.Producto, {
+    Talle.associate = (models) => {
+        Talle.belongsToMany(models.Producto, {
             as: 'productos',
-            foreignKey: 'producto_id'
+            through: 'producto_talle',
+            foreignKey: 'talle_id',
+            otherKey: 'producto_id'
         })
     }
-    return TalleLetra
+    return Talle
 }
