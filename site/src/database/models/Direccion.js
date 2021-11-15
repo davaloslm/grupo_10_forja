@@ -8,10 +8,6 @@ module.exports = (sequelize, DataTypes) => {
             allowNull: false,
             autoIncrement: true
         },
-        usuario_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
         calle: {
             type: DataTypes.STRING(100),
             allowNull: false,
@@ -48,7 +44,9 @@ module.exports = (sequelize, DataTypes) => {
     Direccion.associate = (models) => {
         Direccion.belongsToMany(models.Usuario, {
             as: 'usuarios',
-            foreignKey: 'usuario_id'
+            through: "usuario_direccion",
+            foreignKey: 'usuario_id',
+            otherKey: 'direccion_id'
         })
     }
 
