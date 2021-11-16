@@ -69,7 +69,7 @@ module.exports = (sequelize, DataTypes) => {
         })
 
         Usuario.belongsToMany(models.Producto, {
-            as: 'usuariosProductos',
+            as: 'usuariosVentasProductos',
             through: 'ventas',
             foreignKey: 'usuario_id',
             otherKey: 'producto_id'
@@ -81,7 +81,7 @@ module.exports = (sequelize, DataTypes) => {
         })
 
         Usuario.belongsToMany(models.Producto, {
-            as: 'usuariosProductos',
+            as: 'usuariosCarritosProductos',
             through: 'carritos',
             foreignKey: 'usuario_id',
             otherKey: 'producto_id'
