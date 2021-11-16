@@ -23,7 +23,7 @@ module.exports = (sequelize, DataTypes) => {
 
     MedioDePago.associate = (models) => {
         MedioDePago.hasMany(models.Venta, {
-            as: 'ventas',
+            as: 'mediosDePagosVentas',
             foreignKey: 'medio_de_pago_id'
         })
     }

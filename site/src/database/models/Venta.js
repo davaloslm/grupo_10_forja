@@ -41,19 +41,19 @@ module.exports = (sequelize, DataTypes) => {
 
     Venta.associate = (models) => {
         Venta.belongsTo(models.Producto, {
-            as: 'productos',
+            as: 'ventasProductos',
             foreignKey: 'producto_id'
         })
         Venta.belongsTo(models.Usuario, {
-            as: 'usuarios',
+            as: 'ventasUsuarios',
             foreignKey: 'usuario_id'
         })
         Venta.belongsTo(models.MedioDePago, {
-            as: 'medioDePago',
+            as: 'ventasMediosDePago',
             foreignKey: 'medio_de_pago_id'
         })
         Venta.belongsTo(models.Factura, {
-            as: 'facturas',
+            as: 'ventasFacturas',
             foreignKey: 'factura_id'
         })
         

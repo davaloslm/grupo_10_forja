@@ -30,13 +30,13 @@ module.exports = (sequelize, DataTypes) => {
 
     Factura.associate = (models) =>{
         Factura.belongsTo(models.Usuario, {
-            as:"usuarios",
+            as:"facturasUsuarios",
             foreignKey: "usuario_id"
 
         })
 
         Factura.hasMany(models.Venta, {
-            as:"ventas",
+            as:"facturasVentas",
             foreignKey: "factura_id"
 
         })

@@ -43,7 +43,7 @@ module.exports = (sequelize, DataTypes) => {
 
     Direccion.associate = (models) => {
         Direccion.belongsToMany(models.Usuario, {
-            as: 'usuarios',
+            as: 'direccionesUsuarios',
             through: "usuario_direccion",
             foreignKey: 'direccion_id',
             otherKey: 'usuario_id'

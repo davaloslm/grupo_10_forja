@@ -50,40 +50,40 @@ module.exports = (sequelize, DataTypes) => {
 
     Producto.associate = (models) => {
         Producto.belongsToMany(models.Usuario, {
-            as: 'usuarios',
+            as: 'productosUsuarios',
             through: 'carritos',
             foreignKey: 'producto_id',
             otherKey: 'usuario_id'
         })
      
         Producto.hasMany(models.Imagen, {
-            as: 'imagenes',
+            as: 'productosImagenes',
             foreignKey: 'producto_id'
         })
     
         Producto.belongsToMany(models.Usuario, {
-            as: 'usuarios',
+            as: 'productosVentasUsuarios',
             through: 'ventas',
             foreignKey: 'producto_id',
             otherKey: 'usuario_id'
         })
 
         Producto.belongsToMany(models.Color, {
-            as: 'colores',
+            as: 'productosColores',
             through: 'producto_color',
             foreignKey: 'producto_id',
             otherKey: 'color_id'
         })
 
         Producto.belongsToMany(models.Talle, {
-            as: 'talles',
+            as: 'productosTalles',
             through: 'producto_talle',
             foreignKey: 'producto_id',
             otherKey: 'talle_id'
         })
 
         Producto.belongsToMany(models.Categoria, {
-            as: 'categorias',
+            as: 'productosCategorias',
             through: 'producto_categoria',
             foreignKey: 'producto_id',
             otherKey: 'categoria_id'

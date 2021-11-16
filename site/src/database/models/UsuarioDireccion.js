@@ -26,12 +26,12 @@ module.exports = (sequelize, DataTypes) => {
 
     UsuarioDireccion.associate = (models) => {
         UsuarioDireccion.belongsTo(models.Usuario, {
-            as: 'usuarios',
+            as: 'usuarioDireccionUsuarios',
             foreignKey: 'usuario_id'
         })
 
         UsuarioDireccion.belongsTo(models.Direccion, {
-            as: 'direcciones',
+            as: 'usuarioDireccionDirecciones',
             foreignKey: 'direccion_id'
         })
      

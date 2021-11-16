@@ -34,17 +34,17 @@ module.exports = (sequelize, DataTypes) => {
 
     Carrito.associate = (models) => {
         Carrito.belongsTo(models.Usuario, {
-            as: 'usuarios',
+            as: 'carritosUsuarios',
             foreignKey: 'usuario_id'
         })
      
         Carrito.belongsTo(models.Producto, {
-            as: 'productos',
+            as: 'carritosProductos',
             foreignKey: 'producto_id'
         })
     
         Carrito.belongsTo(models.Orden, {
-            as: 'ordenes',
+            as: 'carritosOrdenes',
             foreignKey: 'orden_id'
         })
 
