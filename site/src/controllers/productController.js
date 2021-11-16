@@ -1,16 +1,38 @@
-const productos = require("../data/productos.json");
+/* const productos = require("../data/productos.json"); */
+const db = require('../database/models');
+const { Op } = require('sequelize');
 
 const controller = {
-    //detalle
-    detail: (req, res)=> {
-        const {id} = req.params;
-        const producto = productos.find(producto=>producto.id === parseInt(id) )
-        res.render("products/detail", {producto} )
-    },
     //todos los productos
-    list: (req, res)=>{
-        res.render("products/products", {productos})
+    list: async (req, res)=>{
+        try {
+            const productos = await db.Producto.findAll()
+            res.render("products/products", {productos})
+                
+        
+        } catch (error) {
+            res.send('Error al requerir productos de la base de datos')
+            console.log('Error al requerir productos de la base de datos', error);
+        }
+        
+    },
+
+    //detalle
+    detail: async (req, res) => {
+        try {
+            const producto = await db.Producto.findByPk(req.params.id)
+            if(producto !== null) {
+                res.render("products/detail", {producto} )
+            } else {
+                res.send('El producto no existe')
+            }
+            
+        } catch (error) {
+            res.send('Error al requerir producto de la base de datos')
+            console.log('Error al requerir producto de la base de datos.', error);
+        }
     }
+    
 
 
 }
