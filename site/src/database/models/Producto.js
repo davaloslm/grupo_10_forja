@@ -12,40 +12,40 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     Producto.belongsToMany(models.Usuario, {
-        as: 'usuarios',
+        as: 'productoCarritoUsuarios',
         through: 'carritos',
         foreignKey: 'producto_id',
         otherKey: 'usuario_id'
     })
 
     Producto.hasMany(models.Imagen, {
-        as: 'imagenes',
+        as: 'productoImagenes',
         foreignKey: 'producto_id'
     })
 
     Producto.belongsToMany(models.Usuario, {
-        as: 'usuarios',
+        as: 'productoVentasUsuarios',
         through: 'ventas',
         foreignKey: 'producto_id',
         otherKey: 'usuario_id'
     })
 
     Producto.belongsToMany(models.Color, {
-        as: 'colores',
+        as: 'productoColores',
         through: 'producto_color',
         foreignKey: 'producto_id',
         otherKey: 'color_id'
     })
 
     Producto.belongsToMany(models.Talle, {
-        as: 'talles',
+        as: 'productoTalles',
         through: 'producto_talle',
         foreignKey: 'producto_id',
         otherKey: 'talle_id'
     })
 
     Producto.belongsToMany(models.Categoria, {
-        as: 'categorias',
+        as: 'productoCategorias',
         through: 'producto_categoria',
         foreignKey: 'producto_id',
         otherKey: 'categoria_id'

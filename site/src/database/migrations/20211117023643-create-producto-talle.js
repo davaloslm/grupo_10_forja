@@ -9,18 +9,24 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       productoId: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        references:{
+          model:{
+            tableName:'Productos'
+          },
+          key:'id'
+        }
       },
       talleId: {
-        type: Sequelize.INTEGER
-      },
-      createdAt: {
+        type: Sequelize.INTEGER,
         allowNull: false,
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        allowNull: false,
-        type: Sequelize.DATE
+        references:{
+          model:{
+            tableName:'Talles'
+          },
+          key:'id'
+        }
       }
     });
   },

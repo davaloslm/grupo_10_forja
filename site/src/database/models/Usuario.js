@@ -12,31 +12,31 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
     Usuario.belongsToMany(models.Direccion, {
-        as: 'direcciones',
+        as: 'usuarioDirecciones',
         through: 'usuario_direccion',
         foreignKey: 'usuario_id',
         otherKey: 'direccion_id'
     })
 
     Usuario.hasMany(models.Orden, {
-        as: 'ordenes',
+        as: 'usuarioOrdenes',
         foreignKey: 'usuario_id'
     })
 
     Usuario.belongsToMany(models.Producto, {
-        as: 'productos',
+        as: 'usuarioVentasProductos',
         through: 'ventas',
         foreignKey: 'usuario_id',
         otherKey: 'producto_id'
     })
 
     Usuario.hasMany(models.Factura, {
-        as: 'facturas',
+        as: 'usuarioFacturas',
         foreignKey: 'usuario_id'
     })
 
     Usuario.belongsToMany(models.Producto, {
-        as: 'productos',
+        as: 'usuarioCarritosProductos',
         through: 'carritos',
         foreignKey: 'usuario_id',
         otherKey: 'producto_id'

@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
         Direccion.belongsToMany(models.Usuario, {
-            as: 'usuarios',
+            as: 'direccionUsuarios',
             through: "usuario_direccion",
             foreignKey: 'direccion_id',
             otherKey: 'usuario_id'
