@@ -1,45 +1,35 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Orden';
-    
-    let cols = {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-        },
-        status: {
-            type: DataTypes.STRING(50),
-            allowNull: true,
-        },
-        usuario_id: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-        }
+  class Orden extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    Orden.belongsTo(models.Usuario, {
+        as: 'usuarios',
+        foreignKey: 'usuario_id'
+    })
 
-    };
-    let config = {
-        tableName: 'ordenes',
-        timestamps: true
-    };
-
-    const Orden = sequelize.define(alias, cols, config);
-
-    Orden.associate = (models) => {
-        Orden.belongsTo(models.Usuario, {
-            as: 'usuarios',
-            foreignKey: 'usuario_id'
-        })
-
-        Orden.belongsToMany(models.Producto, {
-            as: 'productos',
-            through: 'carritos',
-            foreignKey: 'orden_id',
-            otherKey: 'producto_id'
-        })
+    Orden.belongsToMany(models.Producto, {
+        as: 'productos',
+        through: 'carritos',
+        foreignKey: 'orden_id',
+        otherKey: 'producto_id'
+    })
     }
-
-
-
-    return Orden;
+  };
+  Orden.init({
+    status: DataTypes.STRING,
+    usuarioId: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'Orden',
+  });
+  return Orden;
 };
