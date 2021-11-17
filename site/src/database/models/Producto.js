@@ -1,96 +1,68 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Producto"
-    
-    let cols = {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-        },
-        nombre: {
-            type: DataTypes.STRING(75),
-            allowNull: false,
-        },
-        descripcion: {
-            type: DataTypes.STRING,
-            allowNull: false,
-        },
-        precio: {
-            type: DataTypes.DECIMAL,
-            allowNull: false,
-        },
-        descuento: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-        },
-        envio: {
-            type: DataTypes.BOOLEAN,
-            allowNull: true,
-        },
-        marca: {
-            type: DataTypes.STRING(50),
-            allowNull: false,
-        },
-        categoria_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,            
-        },
-        stock: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        }
+  class Producto extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    Producto.belongsToMany(models.Usuario, {
+        as: 'usuarios',
+        through: 'carritos',
+        foreignKey: 'producto_id',
+        otherKey: 'usuario_id'
+    })
 
-    } 
-    let config = {
-        tableName: 'productos',
-        timestamps: true
+    Producto.hasMany(models.Imagen, {
+        as: 'imagenes',
+        foreignKey: 'producto_id'
+    })
+
+    Producto.belongsToMany(models.Usuario, {
+        as: 'usuarios',
+        through: 'ventas',
+        foreignKey: 'producto_id',
+        otherKey: 'usuario_id'
+    })
+
+    Producto.belongsToMany(models.Color, {
+        as: 'colores',
+        through: 'producto_color',
+        foreignKey: 'producto_id',
+        otherKey: 'color_id'
+    })
+
+    Producto.belongsToMany(models.Talle, {
+        as: 'talles',
+        through: 'producto_talle',
+        foreignKey: 'producto_id',
+        otherKey: 'talle_id'
+    })
+
+    Producto.belongsToMany(models.Categoria, {
+        as: 'categorias',
+        through: 'producto_categoria',
+        foreignKey: 'producto_id',
+        otherKey: 'categoria_id'
+    })
     }
-    const Producto = sequelize.define(alias, cols, config);
-
-    Producto.associate = (models) => {
-        Producto.belongsToMany(models.Usuario, {
-            as: 'usuarios',
-            through: 'carritos',
-            foreignKey: 'producto_id',
-            otherKey: 'usuario_id'
-        })
-     
-        Producto.hasMany(models.Imagen, {
-            as: 'imagenes',
-            foreignKey: 'producto_id'
-        })
-    
-        Producto.belongsToMany(models.Usuario, {
-            as: 'usuarios',
-            through: 'ventas',
-            foreignKey: 'producto_id',
-            otherKey: 'usuario_id'
-        })
-
-        Producto.belongsToMany(models.Color, {
-            as: 'colores',
-            through: 'producto_color',
-            foreignKey: 'producto_id',
-            otherKey: 'color_id'
-        })
-
-        Producto.belongsToMany(models.Talle, {
-            as: 'talles',
-            through: 'producto_talle',
-            foreignKey: 'producto_id',
-            otherKey: 'talle_id'
-        })
-
-        Producto.belongsToMany(models.Categoria, {
-            as: 'categorias',
-            through: 'producto_categoria',
-            foreignKey: 'producto_id',
-            otherKey: 'categoria_id'
-        })
-    }
-
-
-
-    return Producto
-}
+  };
+  Producto.init({
+    nombre: DataTypes.STRING,
+    descripcion: DataTypes.STRING,
+    precio: DataTypes.INTEGER,
+    descuento: DataTypes.INTEGER,
+    envio: DataTypes.BOOLEAN,
+    marca: DataTypes.STRING,
+    stock: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'Producto',
+  });
+  return Producto;
+};
