@@ -1,56 +1,34 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Direccion';
-    
-    let cols = {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-        },
-        calle: {
-            type: DataTypes.STRING(100),
-            allowNull: false,
-        },
-        numero: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        localidad: {
-            type: DataTypes.STRING(100),
-            allowNull: false
-        },
-        provincia: {
-            type: DataTypes.STRING(100),
-            allowNull: false,
-        },
-        codigo_postal: {
-            type: DataTypes.INTEGER,
-            allowNull: false
-        },
-        departamento: {
-            type: DataTypes.STRING(100),
-            allowNull: true,
-        }
-
-    };
-    let config = {
-        tableName: 'direcciones',
-        timestamps: false
-    };
-
-    const Direccion = sequelize.define(alias, cols, config);
-
-    Direccion.associate = (models) => {
+  class Direccion extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
         Direccion.belongsToMany(models.Usuario, {
-            as: 'usuarios',
+            as: 'direccionUsuarios',
             through: "usuario_direccion",
             foreignKey: 'direccion_id',
             otherKey: 'usuario_id'
-        })
+    })
     }
-
-
-
-    return Direccion;
+  };
+  Direccion.init({
+    calle: DataTypes.STRING,
+    numero: DataTypes.INTEGER,
+    localidad: DataTypes.STRING,
+    provincia: DataTypes.STRING,
+    codigoPostal: DataTypes.INTEGER,
+    departamento: DataTypes.STRING
+  }, {
+    sequelize,
+    modelName: 'Direccion',
+  });
+  return Direccion;
 };

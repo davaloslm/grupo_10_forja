@@ -1,56 +1,40 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Carrito"
-    
-    let cols = {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-        },
-        usuario_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        producto_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        cantidad: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        orden_id: {
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        }
-    } 
-    let config = {
-        tableName: 'carritos',
-        timestamps: true
+  class Carrito extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    Carrito.belongsTo(models.Usuario, {
+        as: 'carritoUsuarios',
+        foreignKey: 'usuario_id'
+    })
+
+    Carrito.belongsTo(models.Producto, {
+        as: 'carritoProductos',
+        foreignKey: 'producto_id'
+    })
+
+    Carrito.belongsTo(models.Orden, {
+        as: 'carritoOrdenes',
+        foreignKey: 'orden_id'
+    })
     }
-
-    const Carrito = sequelize.define(alias, cols, config);
-
-    Carrito.associate = (models) => {
-        Carrito.belongsTo(models.Usuario, {
-            as: 'usuarios',
-            foreignKey: 'usuario_id'
-        })
-     
-        Carrito.belongsTo(models.Producto, {
-            as: 'productos',
-            foreignKey: 'producto_id'
-        })
-    
-        Carrito.belongsTo(models.Orden, {
-            as: 'ordenes',
-            foreignKey: 'orden_id'
-        })
-
-    }
-
-
-
-    return Carrito
-}
+  };
+  Carrito.init({
+    usuarioId: DataTypes.INTEGER,
+    productoId: DataTypes.INTEGER,
+    cantidad: DataTypes.INTEGER,
+    ordenId: DataTypes.INTEGER
+  }, {
+    sequelize,
+    modelName: 'Carrito',
+  });
+  return Carrito;
+};

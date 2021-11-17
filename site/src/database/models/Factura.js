@@ -1,46 +1,36 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    let alias = "Factura"
+  class Factura extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    Factura.belongsTo(models.Usuario, {
+        as:"facturaUsuarios",
+        foreignKey: "usuario_id"
 
-    let cols = {
-        id:{
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-        },
-        fecha:{
-            type: DataTypes.DATE,
-            allowNull: false,
-        },
-        usuario_id:{
-            type: DataTypes.INTEGER,
-            allowNull: false,
-        },
-        total:{
-            type: DataTypes.DECIMAL,
-            allowNull:false,
-        }
-        
+    })
+
+    Factura.hasMany(models.Venta, {
+        as:"facturaVentas",
+        foreignKey: "factura_id"
+
+    })
     }
-    let config = {
-        tableName: 'Factura',
-        timestamps: true
-    }
-    const Factura = sequelize.define(alias, cols, config);
-
-    Factura.associate = (models) =>{
-        Factura.belongsTo(models.Usuario, {
-            as:"usuarios",
-            foreignKey: "usuario_id"
-
-        })
-
-        Factura.hasMany(models.Venta, {
-            as:"ventas",
-            foreignKey: "factura_id"
-
-        })
-    }
-
-    return Factura
-}
+  };
+  Factura.init({
+    fecha: DataTypes.DATE,
+    usuarioId: DataTypes.INTEGER,
+    total: DataTypes.DECIMAL
+  }, {
+    sequelize,
+    modelName: 'Factura',
+  });
+  return Factura;
+};
