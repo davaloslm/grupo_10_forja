@@ -1,95 +1,61 @@
+'use strict';
+const {
+  Model
+} = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-    let alias = 'Usuario';
-    
-    let cols = {
-        id: {
-            type: DataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false,
-            autoIncrement: true
-        },
-        nombre: {
-            type: DataTypes.STRING(50),
-            allowNull: false,
-        },
-        apellido: {
-            type: DataTypes.STRING(50),
-            allowNull: false,
-        },
-        email: {
-            type: DataTypes.STRING(75),
-            allowNull: false,
-            unique: true
-        },
-        contraseña: {
-            type: DataTypes.STRING(100),
-            allowNull: false,
-        },
-        userName: {
-            type: DataTypes.STRING(50),
-            allowNull: false,
-            unique: true
-        },
-        fecha_de_nacimiento: {
-            type: DataTypes.DATE,
-            allowNull: false,
-        },
-        subscripcion_forja: {
-            type: DataTypes.BOOLEAN,
-            allowNull: true,
-        },
-        telefono: {
-            type: DataTypes.INTEGER,
-            allowNull: true,
-        },
-        imagen: {
-            type: DataTypes.STRING,
-            allowNull: true,
-        }
+  class Usuario extends Model {
+    /**
+     * Helper method for defining associations.
+     * This method is not a part of Sequelize lifecycle.
+     * The `models/index` file will call this method automatically.
+     */
+    static associate(models) {
+      // define association here
+    Usuario.belongsToMany(models.Direccion, {
+        as: 'direcciones',
+        through: 'usuario_direccion',
+        foreignKey: 'usuario_id',
+        otherKey: 'direccion_id'
+    })
 
-    };
-    let config = {
-        tableName: 'usuarios',
-        timestamps: true
-    };
+    Usuario.hasMany(models.Orden, {
+        as: 'ordenes',
+        foreignKey: 'usuario_id'
+    })
 
-    const Usuario = sequelize.define(alias, cols, config);
+    Usuario.belongsToMany(models.Producto, {
+        as: 'productos',
+        through: 'ventas',
+        foreignKey: 'usuario_id',
+        otherKey: 'producto_id'
+    })
 
-    Usuario.associate = (models) => {
-        Usuario.belongsToMany(models.Direccion, {
-            as: 'direcciones',
-            through: 'usuario_direccion',
-            foreignKey: 'usuario_id',
-            otherKey: 'direccion_id'
-        })
+    Usuario.hasMany(models.Factura, {
+        as: 'facturas',
+        foreignKey: 'usuario_id'
+    })
 
-        Usuario.hasMany(models.Orden, {
-            as: 'ordenes',
-            foreignKey: 'usuario_id'
-        })
-
-        Usuario.belongsToMany(models.Producto, {
-            as: 'productos',
-            through: 'ventas',
-            foreignKey: 'usuario_id',
-            otherKey: 'producto_id'
-        })
-
-        Usuario.hasMany(models.Factura, {
-            as: 'facturas',
-            foreignKey: 'usuario_id'
-        })
-
-        Usuario.belongsToMany(models.Producto, {
-            as: 'productos',
-            through: 'carritos',
-            foreignKey: 'usuario_id',
-            otherKey: 'producto_id'
-        })
-
+    Usuario.belongsToMany(models.Producto, {
+        as: 'productos',
+        through: 'carritos',
+        foreignKey: 'usuario_id',
+        otherKey: 'producto_id'
+    })
     }
-
-
-
-    return Usuario;
+  };
+  Usuario.init({
+    nombre: DataTypes.STRING,
+    apellido: DataTypes.STRING,
+    email: DataTypes.STRING,
+    contraseña: DataTypes.STRING,
+    userName: DataTypes.STRING,
+    fechaDeNacimiento: DataTypes.DATE,
+    subscripcionForja: DataTypes.INTEGER,
+    telefono: DataTypes.STRING,
+    imagen: DataTypes.STRING
+  }, {
+    sequelize,
+    modelName: 'Usuario',
+  });
+  return Usuario;
 };
