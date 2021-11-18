@@ -38,6 +38,10 @@ module.exports = {
         type: Sequelize.BOOLEAN,
         allowNull: true
       },
+      admin: {
+        type: Sequelize.BOOLEAN,
+        allowNull: false
+      },
       telefono: {
         type: Sequelize.STRING,
         allowNull: true
