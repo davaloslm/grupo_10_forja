@@ -10,8 +10,9 @@
     "contraseña2": "$2a$12$0QEGIZZL0s45W7TI1A7jfOSl3dcBbA0W66HJ.3uYrJllwovj/Cn8W",
     "terminos": "1",
     "imagen": "img-1634589372328.png",
-    "ofertas": false,
-    "admin": 1
+    "ofertas": 0,
+    "admin": 1,
+    "telefono": 321321321321
   },
   {
     "id": 2,
@@ -23,34 +24,9 @@
     "contraseña2": "$2a$12$E9yMOAZ1GYMJGeYWrqm1YOvhBqJlJKfqjfFPu3wK.6UQrfykKN0rK",
     "terminos": 1,
     "imagen": "rodrigo-profile.png",
-    "ofertas": false,
-    "admin": 1
-  },
-  {
-    "id": 9,
-    "nombre": "vladimir",
-    "apellido": "Morales",
-    "email": "vladimorales27@gmail.com",
-    "fechaDeNac": "28-07-1998",
-    "contraseña": "135awd",
-    "contraseña2": "135awd",
-    "imagen": "vladi.jpeg",
-    "terminos": 1,
-    "ofertas": false,
-    "admin": 1
-  },
-  {
-    "id": 9999,
-    "nombre": "Leonardo",
-    "apellido": "Dávalos",
-    "email": "davaloslm9999@gmail.com",
-    "fechaDeNac": "28-07-1998",
-    "contraseña": "99999999",
-    "contraseña2": "99999999",
-    "imagen": "default-user.jpg",
-    "terminos": 1,
-    "ofertas": false,
-    "admin": 1
+    "ofertas": 0,
+    "admin": 1,
+    "telefono": 321321321321
   },
   {
     "nombre": "321321321",
@@ -63,7 +39,7 @@
     "id": 5,
     "nombreUsuario": "asdasdasdasd5",
     "imagen": "default-user.jpg",
-    "ofertas": false,
+    "ofertas": 0,
     "ban": 0,
     "admin": 1,
     "telefono": 321321321321
@@ -76,11 +52,12 @@
     "contraseña": "$2a$12$JpuZ/MJAJrJtsnar5RvG/.t0iiFoosMsLYeT75phLnaKiT9Ya0NUG",
     "contraseña2": "$2a$12$jxslA80wqMvhDwCKJq2kUualonmObYKru11WL76KKnxKh18FHsnoK",
     "terminos": "1",
-    "ofertas": true,
+    "ofertas": 1,
     "id": 6,
     "nombreUsuario": "VladiMorales6",
     "imagen": "default-user.jpg",
     "ban": 0,
-    "admin": 1
+    "admin": 1,
+    "telefono": 321321321321
   }
 ]
