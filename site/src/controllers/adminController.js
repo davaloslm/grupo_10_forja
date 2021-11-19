@@ -5,6 +5,7 @@ let usuarios = require("../data/users.json");
 const productosRuta = path.join(__dirname, '../data/productos.json');
 const usuariosRuta = path.join(__dirname, '../data/users.json');
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
 
 const controller = {
     admin: (req, res)=> {
@@ -57,6 +58,24 @@ const controller = {
                 productos.push(nuevoProducto);
     
             fs.writeFileSync(productosRuta, JSON.stringify(productos, null ,2))
+            
+
+            /* db.Producto.create({
+                nombre: nombre,
+                descripcion: descripcion,
+                precio: parseFloat(precio),
+                descuento: parseInt(descuento),
+                envio: envioGratis === undefined ? 0 : 1,
+                marca: marca,
+                stock: parseInt(stock)
+            })
+            .then(producto =>{
+                res.redirect("/product/" + producto.id)
+            })
+            .catch(error =>{
+                res.???
+            }) */
+
             res.redirect(`/product/${nuevoProducto.id}`)
         } else {
             res.render('admin/create', { errors: newProductErrors.mapped(), oldData: req.body })
@@ -69,7 +88,24 @@ const controller = {
         const {id} = req.params;
         const producto = productos.find(producto=>producto.id === parseInt(id) )
         res.render('admin/edit', {producto})
-    },
+    }
+    
+    /* db.Producto.findByPk(req.params.id)
+    .then(producto=>{
+        if (producto) {
+            res.render("admin/edit", {producto})
+            
+        } else {
+            res.send("No existe producto con ese ID.")
+            
+        }
+        
+    })
+    .catch( error =>{
+        res.???
+    }) */
+    
+    ,
     
     /////// Editar producto - Guardar ////////
 
@@ -99,7 +135,34 @@ const controller = {
             res.render('admin/edit', { errors: editProductErrors.mapped(), producto: productoEditado })
         }
 
-		},
+		}
+        
+        /* db.Producto.update({
+
+            nombre: nombre,
+            descripcion: descripcion,
+            precio: parseFloat(precio),
+            descuento: parseInt(descuento),
+            envio: envioGratis === undefined ? 0 : 1,
+            marca: marca,
+            stock: parseInt(stock)
+
+        },{
+            where: {id: req.params.id}
+        })
+        .then( result=>{
+            if (result[0] === 1) {
+
+                res.redirect(`/product/${+req.params.id}`)
+
+            } else {
+                res.redirect(`/product/${+req.params.id}`)
+                
+            }
+        })
+        .catch(error =>{
+            res.???
+        }) */,
 
         /////// Borrar producto ////////
 
@@ -112,7 +175,17 @@ const controller = {
 
 		 res.redirect("/admin")
 
-        },
+        }
+
+        /* db.Producto.destroy({
+            where: {id : req.params.id}
+        })
+        .then( result =>{
+            res.redirect("/admin")
+        }))
+        .catch(error=>{
+            res.???
+        }) */,
 
         /////// administración de usuarios ///////
 
