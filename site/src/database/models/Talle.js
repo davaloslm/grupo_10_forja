@@ -20,7 +20,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Talle.init({
-    name: DataTypes.STRING
+    nombre: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'Talle',

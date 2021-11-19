@@ -10,14 +10,16 @@ let usuarios = usuariosJson.map(usuarioJson =>{
     contraseña: usuarioJson.contraseña,
     userName: usuarioJson.nombreUsuario,
     fechaDeNacimiento: usuarioJson.fechaDeNac,
-    susbscripcionForja: usuarioJson.ofertas,
+    subscripcionForja: usuarioJson.ofertas,
     admin: usuarioJson.admin,
     telefono: usuarioJson.telefono,
     imagen: usuarioJson.imagen,
     createdAt: new Date,
-    updateAt: new Date,
+    updatedAt: new Date,
     
   }
+
+  return usuario
 })
 
 

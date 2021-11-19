@@ -474,29 +474,5 @@
       "Funcional/Cross"
     ],
     "envioGratis": true
-  },
-  {
-    "imagen": "escanor.jpg",
-    "envioGratis": true,
-    "descuento": "",
-    "talle": [
-      "L",
-      "XL",
-      "XXL",
-      "5",
-      "6",
-      "7",
-      "8"
-    ],
-    "nombre": "El león Escanor",
-    "descripcion": "El pecado del orgullo león escanor.",
-    "precio": "999999999999",
-    "color": [
-      "color Sol"
-    ],
-    "categoria": [
-      "TaeKwon-Do"
-    ],
-    "id": 25
   }
 ]

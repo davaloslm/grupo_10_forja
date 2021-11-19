@@ -1,8 +1,7 @@
 'use strict';
 const faker = require('faker');
 
-const faker = require('faker');
-const usuarios = require('./src/data/users.json')
+const usuarios = require('../../data/users.json')
 
 let direcciones = []
 for (let i = 0; i < usuarios.length; i++) {

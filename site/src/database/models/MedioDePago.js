@@ -18,7 +18,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   MedioDePago.init({
-    name: DataTypes.STRING
+    nombre: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'MedioDePago',
