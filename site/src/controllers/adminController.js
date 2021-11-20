@@ -80,13 +80,13 @@ const controller = {
                         return item
                     })
 
-                    db.Imagen.bulkCreate(images)
+                    var promesaImagenes = db.Imagen.bulkCreate(images)
                         .then( () => console.log('Imágenes guardadas satisfactoriamente'))
                         .catch(error=> console.log(error))
                     }
                 //Categoría//
                 if(typeof(categoria) === 'string'){
-                db.ProductoCategoria.create(
+                    var promesaCategoria = db.ProductoCategoria.create(
                     {
                         productoId: producto.id,
                         categoriaId: parseInt(req.body.categoria)
@@ -95,7 +95,7 @@ const controller = {
                     .catch(error=> console.log(error))
                 }else{
                     categoria.forEach(e=>{
-                        db.ProductoCategoria.create(
+                        var promesaCategoria = db.ProductoCategoria.create(
                             {
                                 productoId: producto.id,
                                 categoriaId: e
@@ -108,7 +108,7 @@ const controller = {
 
                 //Talle//
                 if(typeof(talle) === 'string'){
-                    db.ProductoTalle.create(
+                    var promesaTalle = db.ProductoTalle.create(
                         {
                             productoId: producto.id,
                             talleId: parseInt(req.body.talle)
@@ -117,7 +117,7 @@ const controller = {
                         .catch(error=> console.log(error))
                     }else{
                         talle.forEach(e=>{
-                            db.ProductoTalle.create(
+                            var promesaTalle = db.ProductoTalle.create(
                                 {
                                     productoId: producto.id,
                                     talleId: e
@@ -129,7 +129,7 @@ const controller = {
                     }
                 //Color//
                 if(typeof(color) === 'string'){
-                    db.ProductoColor.create(
+                    var promesaColor = db.ProductoColor.create(
                         {
                             productoId: producto.id,
                             colorId: parseInt(req.body.color)
@@ -138,7 +138,7 @@ const controller = {
                         .catch(error=> console.log(error))
                     }else{
                         color.forEach(e=>{
-                            db.ProductoColor.create(
+                            var promesaColor = db.ProductoColor.create(
                                 {
                                     productoId: producto.id,
                                     colorId: e
@@ -150,14 +150,15 @@ const controller = {
                     }
                     //Falta actualizar ejs: input de colores debe ser checkbox//
 
-                res.redirect("/product/" + producto.id)
+                    Promise.all([promesaImagenes, promesaCategoria, promesaTalle, promesaColor])
+                    .then( () => res.redirect("/product/" + producto.id))
             })
+            
             .catch(error =>{
                 res.send("No se pudo crear el producto")
             })
 
-            res.redirect(`/product/${nuevoProducto.id}`)
-
+            
         } else {
             res.render('admin/create', { errors: newProductErrors.mapped(), oldData: req.body })
         }
