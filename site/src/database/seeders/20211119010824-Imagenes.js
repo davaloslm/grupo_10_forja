@@ -1,15 +1,14 @@
 'use strict';
-const productos = require('../../data/productos.json');
+const imagenes = require('../../data/imagenes.json');
 
-let imagenesArray = productos.map(product => {
-  let imagen = {
-    nombre: product.imagen,
-    productoId: product.id
+let imagenesArray = imagenes.map(imagen => {
+  let imagenes = {
+    nombre: imagen.nombre,
+    productoId: imagen.producto_id
   }
-  return imagen
+  return imagenes
 })
 
-/* preguntar a javi o a cris */
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
