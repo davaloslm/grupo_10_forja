@@ -38,7 +38,7 @@ body.crear main.create section.product_container form.todo_container img {
 body.crear main.create section.product_container form.todo_container p{
     padding: 10px;
     font-weight: 600;
-    text-align: left;
+    /* text-align: left; */
     font-size: 15px;
 }
  
@@ -154,6 +154,66 @@ body.crear main.create section.product_container form section.button_container b
     border-radius: 5px;
     border: none;
     cursor: pointer;
+}
+
+.crear main.create section.info_container div.color_container input#inputColores {
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.crear main.create section.info_container div.color_container input.color0 {
+    box-shadow: 0px 0px 2px 5px red
+}
+.crear main.create section.info_container div.color_container input.color1 {
+    box-shadow: 0px 0px 2px 5px white
+}
+.crear main.create section.info_container div.color_container input.color2 {
+    box-shadow: 0px 0px 2px 5px darkmagenta
+}
+.crear main.create section.info_container div.color_container input.color3 {
+    box-shadow: 0px 0px 2px 5px hotpink
+}
+.crear main.create section.info_container div.color_container input.color4 {
+    box-shadow: 0px 0px 2px 5px blue
+}
+.crear main.create section.info_container div.color_container input.color5 {
+    box-shadow: 0px 0px 2px 5px yellow
+}
+.crear main.create section.info_container div.color_container input.color6 {
+    box-shadow: 0px 0px 2px 5px black
+}
+.crear main.create section.info_container div.color_container input.color7 {
+    box-shadow: 0px 0px 2px 5px lawngreen
+}
+.crear main.create section.info_container div.color_container input.color8 {
+    box-shadow: 0px 0px 2px 5px darkgreen
+}
+.crear main.create section.info_container div.color_container input.color9 {
+    box-shadow: 0px 0px 2px 5px deepskyblue
+}
+.crear main.create section.info_container div.color_container input.color10 {
+    box-shadow: 0px 0px 2px 5px orange
+}
+.crear main.create section.info_container div.color_container input.color11 {
+    box-shadow: 0px 0px 2px 5px gray
+}
+.crear main.create section.info_container div.color_container input.color12 {
+    box-shadow: 0px 0px 2px 5px magenta
+}
+.crear main.create section.info_container div.color_container input.color13 {
+    box-shadow: 0px 0px 2px 5px darkred
+}
+.crear main.create section.info_container div.color_container input.color14 {
+    box-shadow: 0px 0px 2px 5px saddlebrown
+}
+.crear main.create section.info_container div.color_container input.color15 {
+    box-shadow: 0px 0px 2px 5px gold
+}
+.crear main.create section.info_container div.color_container input.color16 {
+    box-shadow: 0px 0px 2px 5px moccasin
+}
+.crear main.create section.info_container div.color_container input.color17 {
+    box-shadow: 0px 0px 2px 5px slategrey
 }
 
 
