@@ -20,7 +20,8 @@ module.exports = {
             tableName:'Productos'
           },
           key:'id'
-        }
+        },
+        onDelete: 'cascade'
       }
     });
   },
