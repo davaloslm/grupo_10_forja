@@ -693,5 +693,225 @@
       "Funcional/Cross"
     ],
     "envioGratis": false
+  },
+  {
+    "id": 37,
+    "nombre": "Pesa Rusa Plastico Crossfit",
+    "descripcion": "Pesas rusas confeccionada en plástico, rellena de cal, cemento y arena. 2kg - 14kg. Utilización: Kettlebells (también llamadas pesas rusas) son una gran herramienta de entrenamiento funcional. El entrenamiento con Kettlebells tiende a la integración del músculo y no al aislamiento muscular.",
+    "precio": 4900,
+    "descuento": 0,
+    "talle": [],
+    "color": ["Verde", "Violeta", "Amarillo", "Beige", "Rojo", "Azul", "Naranja", "Negro", "Gris"],
+    "marca": "GYM-MAN",
+    "imagen": [
+      "37-pesaRusaPlastico-1.jpg",
+      "37-pesaRusaPlastico-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 38,
+    "nombre": "Mancuernas Cromadas (PAR) + 20kg Discos",
+    "descripcion": "-2 mancuernas cromadas macizas (2,2 kgs aprox cada mancuerna) -Incluye roscas metálicas -20 kg discos de fundición EN TOTAL (8 discos de 2,5 kg o 4 discos de 5kg)",
+    "precio": 9400,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "GYM-MAN",
+    "imagen": [
+      "38-mancuernaHierroRosca-1.jpg",
+      "38-mancuernaHierroRosca-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 39,
+    "nombre": "Mancuernas Plastico y Antideslizantes (PAR)",
+    "descripcion": "Muy antideslizante y manejable. Atractiva y manejable también adecuada para entrenamiento de Cross Training. Lavable y duradero, revestimiento de plástico y fácil de limpiar. Los pesos se pueden distinguir fácilmente gracias a los diversos colores. Incluye: 1 par de mancuernas de gimnasia con el peso que desees y MODELO A ELECCIÓN. ACORDAR PRECIO SEGUN KG 0,5; 0,75; 1,0; 1,5; 2; 2,5; 3; 4; 5; 6; 8 y 10 kg",
+    "precio": 1500,
+    "descuento": 0,
+    "talle": [],
+    "color": ["Rosa", "Amarillo", "Blanco", "Dorado", "Violeta", "Verde Claro", "Plateado", "Rojo", "Azul", "Verde Oscuro", "Gris", "Negro", "Marrón"],
+    "marca": "C.P.Sports",
+    "imagen": [
+      "39-mancuernaPlastico-1.jpg",
+      "39-mancuernaPlastico-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 40,
+    "nombre": "Discos De Fundicion Para Gym Mancuernas Y Barras",
+    "descripcion": "PRECIO X KILOGRAMO HACEMOS ENVIOS CONSULTA COSTO Y todo lo que necesitas para entrenar en tu casa mancuernas barras bancos etc. Somos solanas cars Podes comprar la cantidad de kilos que necesitas cada unidad es 1 kilo Y pagarlo con tarjeta en cuotas",
+    "precio": 300,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Solanas",
+    "imagen": [
+      "40-discosGym-1.jpg",
+      "40-discosGym-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 41,
+    "nombre": "Cinto Faixa Artes Marciales Jiu-Jitsu-Judo",
+    "descripcion": "Somos Fabricantes, consúltanos sobre talles y o colores. CONSULTAR POR TALLES Y COLORES FAIXA CINTO para BJJ Jiu Jitsu 4cm de Ancho Relleno Reforzado 100% Algodon Etiqueta Bordada para mejor calidad. Cantidad de costuras: 8",
+    "precio": 1900,
+    "descuento": 0,
+    "talle": [],
+    "color": ["Blanco", "Negro", "Marrón", "Violeta", "Azul"],
+    "marca": "Umma",
+    "imagen": [
+      "41-cintoFaixaJJ8Cost-1.jpg",
+      "41-cintoFaixaJJ8Cost-2.jpg"
+    ],
+    "categoria": [
+      "Jiu-Jitsu",
+      "Judo"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 42,
+    "nombre": "Kimono Classic Adulto-Niño Jiu-Jitsu",
+    "descripcion": "Talle Equivalencia. Infantiles: M0 - 1.00 a 1.10 de altura; M1 - 1.10 a 1.20 de altura; M2 - 1.20 a 1.30 de altura; M3 - 1.30 a 1.40 de altura. Adultos: A0 - de 1.50 a 1.60 y hasta 60kg; A1 - de 1.60 a 1.70 y hasta 75kg; A2 - de 1.70 a 1.80 y hasta 85kg; A3 - de 1.80 a 1.90 y hasta 90kg; A4 - de 1.90 a 2.00 y hasta 60kg; A5 - de 1.90 a 2.00 y más de 120kg.",
+    "precio": 14800,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "M3", "A0", "A1", "A2", "A3", "A4", "A5"],
+    "color": ["Blanco", "Negro", "Azul"],
+    "marca": "SHIAI",
+    "imagen": [
+      "42-kimonoJJClassic-1.jpg",
+      "42-kimonoJJClassic-2.jpg",
+      "42-kimonoJJClassic-3.jpg"
+    ],
+    "categoria": [
+      "Jiu-Jitsu"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 43,
+    "nombre": "Kimono Hania Adulto-Niño Jiu-Jitsu",
+    "descripcion": "Talle Equivalencia. Infantiles: M0 - 1.00 a 1.10 de altura; M1 - 1.10 a 1.20 de altura; M2 - 1.20 a 1.30 de altura; M3 - 1.30 a 1.40 de altura. Adultos: A0 - de 1.50 a 1.60 y hasta 60kg; A1 - de 1.60 a 1.70 y hasta 75kg; A2 - de 1.70 a 1.80 y hasta 85kg; A3 - de 1.80 a 1.90 y hasta 90kg; A4 - de 1.90 a 2.00 y hasta 60kg; A5 - de 1.90 a 2.00 y más de 120kg.",
+    "precio": 15800,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "M3", "A0", "A1", "A2", "A3", "A4", "A5"],
+    "color": ["Azul", "Negro", "Blanco"],
+    "marca": "SHIAI",
+    "imagen": [
+      "43-kimonoJJHania-1.jpg",
+      "43-kimonoJJHania-2.jpg",
+      "43-kimonoJJHania-3.jpg"
+    ],
+    "categoria": [
+      "Jiu-Jitsu"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 44,
+    "nombre": "Kimono Ultra-Light Adulto-Niño Jiu-Jitsu",
+    "descripcion": "Talle Equivalencia. Infantiles: M0 - 1.00 a 1.10 de altura; M1 - 1.10 a 1.20 de altura; M2 - 1.20 a 1.30 de altura; M3 - 1.30 a 1.40 de altura. Adultos: A0 - de 1.50 a 1.60 y hasta 60kg; A1 - de 1.60 a 1.70 y hasta 75kg; A2 - de 1.70 a 1.80 y hasta 85kg; A3 - de 1.80 a 1.90 y hasta 90kg; A4 - de 1.90 a 2.00 y hasta 60kg; A5 - de 1.90 a 2.00 y más de 120kg.",
+    "precio": 10200,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "M3", "A0", "A1", "A2", "A3", "A4", "A5"],
+    "color": ["Azul", "Blanco"],
+    "marca": "SHIAI",
+    "imagen": [
+      "44-kimonoJJUltraLight-1.jpg",
+      "44-kimonoJJUltraLight-2.jpg"
+    ],
+    "categoria": [
+      "Jiu-Jitsu"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 45,
+    "nombre": "Cinto Faixa Artes Marciales Judo-Jiu-Jitsu",
+    "descripcion": "Somos Fabricantes, consúltanos sobre talles y o colores. CONSULTAR POR TALLES Y COLORES FAIXA CINTO para Judo 5cm de Ancho Relleno Reforzado 100% Algodon Etiqueta Bordada para mejor calidad. Cantidad de costuras: 10",
+    "precio": 2000,
+    "descuento": 0,
+    "talle": [],
+    "color": ["Blanco", "Amarillo", "Naranja", "Verde Oscuro", "Azul", "Marrón", "Negro", "Celeste"],
+    "marca": "SHIAI",
+    "imagen": [
+      "45-cintoFaixaJJ10Cost-1.jpg",
+      "45-cintoFaixaJJ10Cost-2.jpg"
+    ],
+    "categoria": [
+      "Jiu-Jitsu",
+      "Judo"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 46,
+    "nombre": "Judo Gi Tramado Liviano Artes Marciales Judo",
+    "descripcion": "Talle Equivalencia. M0 - 1.00 a 1.10m de altura; M1 - 1.10 a 1.20m de altura; M2 - 1.20 a 1.30m de altura; 1 - 1.35 a 1.45m de altura; 2 - de 1.50 a 1.55m; 3 - de 1.60 a 1.65m; 4 - de 1.70 a 1.75m; 5 - de 1.175 a 1.80m; 6 - de 1.80 a 1.85m; 7 - más de 1.90m.",
+    "precio": 5800,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "1", "2", "3", "4", "5", "6", "7"],
+    "color": ["Blanco", "Azul"],
+    "marca": "SHIAI",
+    "imagen": [
+      "46-judoGiLiviano-1.jpg",
+      "46-judoGiLiviano-2.jpg"
+    ],
+    "categoria": [
+      "Judo"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 47,
+    "nombre": "Judo Gi Tramado Mediano Artes Marciales Judo",
+    "descripcion": "Talle Equivalencia. M0 - 1.00 a 1.10m de altura; M1 - 1.10 a 1.20m de altura; M2 - 1.20 a 1.30m de altura; 1 - 1.35 a 1.45m de altura; 2 - de 1.50 a 1.55m; 3 - de 1.60 a 1.65m; 4 - de 1.70 a 1.75m; 5 - de 1.175 a 1.80m; 6 - de 1.80 a 1.85m; 7 - más de 1.90m.",
+    "precio": 14000,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "1", "2", "3", "4", "5", "6", "7"],
+    "color": ["Blanco", "Azul"],
+    "marca": "SHIAI",
+    "imagen": [
+      "47-judoGiMediano-1.jpg",
+      "47-judoGiMediano-2.jpg"
+    ],
+    "categoria": [
+      "Judo"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 48,
+    "nombre": "Judo Gi Tramado Pesado Artes Marciales Judo",
+    "descripcion": "Talle Equivalencia. M0 - 1.00 a 1.10m de altura; M1 - 1.10 a 1.20m de altura; M2 - 1.20 a 1.30m de altura; 1 - 1.35 a 1.45m de altura; 2 - de 1.50 a 1.55m; 3 - de 1.60 a 1.65m; 4 - de 1.70 a 1.75m; 5 - de 1.175 a 1.80m; 6 - de 1.80 a 1.85m; 7 - más de 1.90m.",
+    "precio": 20000,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "1", "2", "3", "4", "5", "6", "7"],
+    "color": ["Blanco", "Azul"],
+    "marca": "SHIAI",
+    "imagen": [
+      "48-judoGiPesado-1.jpg",
+      "48-judoGiPesado-2.jpg"
+    ],
+    "categoria": [
+      "Judo"
+    ],
+    "envioGratis": true
   }
 ]
