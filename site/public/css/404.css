@@ -2,11 +2,9 @@ body.c404 {
     background-image: url(/img/design/fondo.png);
 }
 
-.main404 div.message_container h1 {
-    margin-top: 50px;
-    text-align: center;
-    font-size: 80px;
-    text-shadow: 1px 2px 4px #2AD2D2;
+.main404 div.message_container {
+    display: none;
+    margin-top: 110px;
 }
 
 .main404 div.message_container h2, .main404 div.message_container pre {
@@ -66,9 +64,42 @@ body.c404 {
 
 @media (min-width: 425px) {
 
+    .main404 section.logo_container img {
+        max-width: 215px;
+        max-height: 250px;
+    }
 
 }
 
+@media (min-width: 768px) {
+
+    .main404 div.message_container {
+        display: block;
+        background-color: #f9f9f9;
+        width: 100%;
+        overflow: scroll;
+        margin-top: 130px;
+        padding: 10px;
+    }
+
+    .main404 div.message_container h1 {
+        margin-top: 20px;
+    }
+
+    .main404 div.message_container h2, .main404 div.message_container pre, .main404 div.message_container h1 {
+        display: block;
+        
+    }
+
+    .main404 div.message_container h2, .main404 div.message_container pre {
+        margin-top: 20px;
+    }
+
+    .main404 section.logo_container {
+        margin: 80px auto auto;
+        max-width: 700px;
+    }
+}
 
 /* ANIMACIONES */
 
