@@ -474,5 +474,444 @@
       "Funcional/Cross"
     ],
     "envioGratis": true
+  },
+  {
+    "id": 25,
+    "nombre": "Peg Board Escalada Crossfit",
+    "descripcion": "El Peg Board es un equipo de entrenamiento premium para escaladores y atletas ávidos que les permitirá crear su propia configuración desde prácticamente cualquier lugar para permitirles entrenar en su tiempo libre. Los Peg Board se logran utilizando componentes de madera de alta calidad y, por lo tanto, son capaces de soportar hasta 130kg de peso. Esto los hace perfectos para colgar, escalar e incluso sostener ejercicios, y son pálidos como para colocarlos prácticamente en cualquier lugar del hogar, la oficina o el gimnasio. El Peg Board es perfecto para el entrenamiento de la parte superior del cuerpo y el agarre, y cuenta con una serie de agujeros para permitir a los usuarios personalizar cómo lo usan para crear una configuración variada cada vez que comienzan a entrenar.",
+    "precio": 9400,
+    "descuento": 10,
+    "talle": [],
+    "color": [],
+    "marca": "Yes4all",
+    "imagen": [
+      "25-pegBoard-1.jpg",
+      "25-pegBoard-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 26,
+    "nombre": "Peso para Tobillo Ajustable 1kg-3kg",
+    "descripcion": "Las pesas de tobillo Xn8 están hechas únicamente de material de nailon Oxford de alta calidad y son algunas de las más resistentes de la industria del fitness. -Con un gran agarre y un diseño estéticamente agradable, las pesas de tobillo Xn8 permanecen firmemente unidas al tobillo y se pueden usar para una amplia gama de ejercicios que incluyen, entre otros, levantamientos muertos, sentadillas y estocadas. Se vende por par. La correa es ajustable, pero no el peso. CADA TAMAÑO SUPERIOR A 1 kg TIENE CINTURONES DOBLES. -Adecuado para la construcción de músculos, la quema de grasa y el más alto nivel de flexibilidad y fuerza central. Las pesas de tobillo Xn8 son una ayuda perfecta para el estado físico general o el entrenamiento más específico en clases de aeróbic y yoga. Agrega intensidad a cualquier entrenamiento, ayudando a fortalecer los bíceps, tríceps, caderas, muslos y pantorrillas mientras corres. -Elija entre pares de 1 kg, 2 kg y 3 kg en diferentes colores.",
+    "precio": 2600,
+    "descuento": 5,
+    "talle": ["1", "2", "3"],
+    "color": ["Negro", "Azul", "Gris", "Naranja", "Violeta", "Rosa", "Rojo", "Celeste"],
+    "marca": "Xn8Sports",
+    "imagen": [
+      "26-tobillerasXn8-1.jpg",
+      "26-tobillerasXn8-2.jpg",
+      "26-tobillerasXn8-3.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 27,
+    "nombre": "Kit X5 Super Bandas Crossfit Calistenia Gym Dominadas Pack",
+    "descripcion": "Set Bandas de Resistencia. Son un elemento clave de entrenamiento para muchas disciplinas y deportes. Son una excelente ayuda para quienes quieren entrenar en casa o para quienes quieren variar sus rutinas. Tonifican brazos, espalda, piernas, glúteos, pecho, núcleo, ABS y aumentan la flexibilidad de tu cuerpo. Composición del Kit: 1 banda Amarilla 0,64 cm de espesor, 1 banda Naranja 1,9 cm de espesor, 1 banda Violeta 2,2 cm de espesor, 1 banda Verde 3,2 cm de espesor y 1 banda Azul 4,2 cm de espesor. Todas las bandas tienen 2,08m de largo y 0,45cm de ancho. Lo que varía en cada banda es el espesor. Sobre este artículo: Bandas de latex de distintas resistencias/intensidades. Ideal para calistenia, crossfit y entrenamiento funcional. Dominadas, asistidas, elongación, trabajos de fuerza, resistencia y potencia. Las bandas elásticas también muestran su excelente rendimiento en terapia física, pérdida de peso, rehabilitación de lesiones, entrenamiento de velocidad y mucho más.",
+    "precio": 6000,
+    "descuento": 10,
+    "talle": [],
+    "color": ["Amarillo", "Naranja", "Violeta", "Verde", "Azul"],
+    "marca": "Quuz",
+    "imagen": [
+      "27-bandaDomElastica-1.jpg",
+      "27-bandaDomElastica-2.jpg",
+      "27-bandaDomElastica-3.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 28,
+    "nombre": "Bandas Elastica Plana Tipo Tiraband Yoga/Fitness",
+    "descripcion": "El tiraband es la herramienta de fitness más sencilla, práctica y útil que se ha inventado. Es una pieza de látex de una longitud aproximada de dos metros y los distintos colores de la banda diferencian las distintas resistencias que ofrecen. Inicialmente utilizado por deportistas de competición, fue pasando a los fisioterapeutas y un poco más tarde llego a los gimnasios. Sus ventajas sobre muchos de los productos, destaca por su portabilidad, progresividad, limpieza, peso y costo. Hasta gimnasias como el pilates se han sumado a esta forma de entender y practicar deporte. No existe especialidad deportiva donde estos elásticos no han encontrado su sitio. Su fácil manejo y lo complicado que resultad hacerse daño mientras se utilizan, han hecho que sea la mejor forma de iniciarse en el mundo de la musculacóon o de la gimnasia para la salud. Venta por unidad. Peso: 70 g; Medida 1,5 Mts Largo x 14,9 cm Ancho.",
+    "precio": 1100,
+    "descuento": 15,
+    "talle": [],
+    "color": ["Amarillo", "Rojo", "Negro", "Verde", "Azul"],
+    "marca": "Quuz",
+    "imagen": [
+      "28-tirabandFitness-1.jpg",
+      "28-tirabandFitness-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 29,
+    "nombre": "Banda Elastica Larga Redonda Con Manija",
+    "descripcion": "1 Banda larga de 1 mts con manija, intensidad intermedia, color rojo, marca SOL FITNESS.",
+    "precio": 2000,
+    "descuento": 5,
+    "talle": [],
+    "color": ["Rojo"],
+    "marca": "SolFitness",
+    "imagen": [
+      "29-bandaRedondaManija-1.jpg",
+      "29-bandaRedondaManija-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 30,
+    "nombre": "Aro En Pvc Caño Redondo 80 Cm",
+    "descripcion": "Aro en pvc caño redondo 80 cm gimnasia rítmica, colores vivos fáciles de localizar.",
+    "precio": 700,
+    "descuento": 5,
+    "talle": [],
+    "color": ["Verde", "Rosa", "Bordó", "Naranja", "Amarillo", "Azul", "Celeste"],
+    "marca": "Loska",
+    "imagen": [
+      "30-arosRedondosPvc-1.jpg",
+      "30-arosRedondosPvc-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 31,
+    "nombre": "Aros Planos Coordinacion X 10 Unidades Flexibles Velocidad",
+    "descripcion": "AROS PLANOS DE COORDINACION -SET 10 UNIDADES. Aros plásticos planos. 30 cm de diámetro interno x 35 cm de diámetro externo. Ideal para trabajos de velocidad, coordinación, pliometría, agilidad, potencia, reacción.",
+    "precio": 1500,
+    "descuento": 5,
+    "talle": [],
+    "color": ["Verde", "Azul", "Violeta", "Rojo", "Naranja", "Rosa", "Amarillo"],
+    "marca": "FullFitness",
+    "imagen": [
+      "31-aroPlanoVelocidad-1.jpg",
+      "31-aroPlanoVelocidad-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 32,
+    "nombre": "Kit 12 Conos Entrenamiento Running Gimnasio Futbol",
+    "descripcion": "12 conos entrenamiento 18.5cm NARANJAS. Ideal para todas las prácticas deportivas. Para trabajos de velocidad, coordinación, pliometría, agilidad, potencia, reacción. Material PVC flexible e irrompible.",
+    "precio": 1500,
+    "descuento": 10,
+    "talle": [],
+    "color": [],
+    "marca": "FullFitness",
+    "imagen": [
+      "32-conoVelocidad-1.jpg",
+      "32-conoVelocidad-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 33,
+    "nombre": "Kit 12 Conos Tipo Tortuga Entrenamiento Running Gimnasio Futbol",
+    "descripcion": "12 conos entrenamiento DRB, las medidas son: 20 cm de diámetro. 4 cm de altura. Ideal para todas las prácticas deportivas. Para trabajos de velocidad, coordinación, pliometría, agilidad, potencia, reacción. Material PVC flexible e irrompible.",
+    "precio": 1300,
+    "descuento": 10,
+    "talle": [],
+    "color": ["Verde Claro", "Naranja", "Amarillo", "Verde Oscuro", "Azul", "Blanco", "Rojo"],
+    "marca": "FullFitness",
+    "imagen": [
+      "33-conosTortugaVelocidad-1.jpg",
+      "33-conosTortugaVelocidad-2.jpg",
+      "33-conosTortugaVelocidad-3.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 34,
+    "nombre": "Escalera Coordinacion Entrenamiento Entrenamiento Running Gimnasio Futbol",
+    "descripcion": "La mejor escalera para ejercicios de FORJA!! VER CALIFICACION Escalones RIGIDOS REGULABLES ancho 40 cm ESCALERA DE COORDINACIÓN Y ENTRENAMIENTO CON 10 ESCALONES DE PVC RÍGIDO y REGULABLES, 12 PELDAÑOS. IDEAL PARA COLEGIOS, PROFESORES DE FUTBOL, VARIOS DEPORTES PLEGABLE PARA SU TRASLADO. Especial para trabajos de velocidad, coordinación, pliometría, agilidad, potencia, reacción.",
+    "precio": 1000,
+    "descuento": 5,
+    "talle": [],
+    "color": [],
+    "marca": "FullFitness",
+    "imagen": [
+      "34-escaleraRunningVelocidad-1.jpg",
+      "34-escaleraRunningVelocidad-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 35,
+    "nombre": "Set De Valla X2 Regulable Completo",
+    "descripcion": "Set de valla regulable ideal para coordinación de saltos, agilidad, reacción. Producto: 3 Bastones, 2 Uniones, 2 Bases. Altura x largo 1m x 100 cm, REGULABLE.",
+    "precio": 900,
+    "descuento": 5,
+    "talle": [],
+    "color": [],
+    "marca": "FullFitness",
+    "imagen": [
+      "35-vallaRegulable-1.jpg",
+      "35-vallaRegulable-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 36,
+    "nombre": "Pesa Rusa Fundicion Crossfit Hierro Macizo C",
+    "descripcion": "Pesa Rusa KETTLEBELL DE FUNDICION 2kg - 24kg. ESPECIFICACIONES: -Pesas Rusas, Kettlebell de Fundicion 100% Nacional de Primera Calidad -Excelentes Terminaciones -Sin Rebaba, Ni Poros (NO LASTIMA LA MANO)",
+    "precio": 6900,
+    "descuento": 20,
+    "talle": [],
+    "color": [],
+    "marca": "GYM-MAN",
+    "imagen": [
+      "36-pesaRusaFundicion-1.jpg",
+      "36-pesaRusaFundicion-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": false
+  },
+  {
+    "id": 37,
+    "nombre": "Pesa Rusa Plastico Crossfit",
+    "descripcion": "Pesas rusas confeccionada en plástico, rellena de cal, cemento y arena. 2kg - 14kg. Utilización: Kettlebells (también llamadas pesas rusas) son una gran herramienta de entrenamiento funcional. El entrenamiento con Kettlebells tiende a la integración del músculo y no al aislamiento muscular.",
+    "precio": 4900,
+    "descuento": 0,
+    "talle": [],
+    "color": ["Verde", "Violeta", "Amarillo", "Beige", "Rojo", "Azul", "Naranja", "Negro", "Gris"],
+    "marca": "GYM-MAN",
+    "imagen": [
+      "37-pesaRusaPlastico-1.jpg",
+      "37-pesaRusaPlastico-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 38,
+    "nombre": "Mancuernas Cromadas (PAR) + 20kg Discos",
+    "descripcion": "-2 mancuernas cromadas macizas (2,2 kgs aprox cada mancuerna) -Incluye roscas metálicas -20 kg discos de fundición EN TOTAL (8 discos de 2,5 kg o 4 discos de 5kg)",
+    "precio": 9400,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "GYM-MAN",
+    "imagen": [
+      "38-mancuernaHierroRosca-1.jpg",
+      "38-mancuernaHierroRosca-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 39,
+    "nombre": "Mancuernas Plastico y Antideslizantes (PAR)",
+    "descripcion": "Muy antideslizante y manejable. Atractiva y manejable también adecuada para entrenamiento de Cross Training. Lavable y duradero, revestimiento de plástico y fácil de limpiar. Los pesos se pueden distinguir fácilmente gracias a los diversos colores. Incluye: 1 par de mancuernas de gimnasia con el peso que desees y MODELO A ELECCIÓN. ACORDAR PRECIO SEGUN KG 0,5; 0,75; 1,0; 1,5; 2; 2,5; 3; 4; 5; 6; 8 y 10 kg",
+    "precio": 1500,
+    "descuento": 0,
+    "talle": [],
+    "color": ["Rosa", "Amarillo", "Blanco", "Dorado", "Violeta", "Verde Claro", "Plateado", "Rojo", "Azul", "Verde Oscuro", "Gris", "Negro", "Marrón"],
+    "marca": "C.P.Sports",
+    "imagen": [
+      "39-mancuernaPlastico-1.jpg",
+      "39-mancuernaPlastico-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 40,
+    "nombre": "Discos De Fundicion Para Gym Mancuernas Y Barras",
+    "descripcion": "PRECIO X KILOGRAMO HACEMOS ENVIOS CONSULTA COSTO Y todo lo que necesitas para entrenar en tu casa mancuernas barras bancos etc. Somos solanas cars Podes comprar la cantidad de kilos que necesitas cada unidad es 1 kilo Y pagarlo con tarjeta en cuotas",
+    "precio": 300,
+    "descuento": 0,
+    "talle": [],
+    "color": [],
+    "marca": "Solanas",
+    "imagen": [
+      "40-discosGym-1.jpg",
+      "40-discosGym-2.jpg"
+    ],
+    "categoria": [
+      "Funcional/Cross"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 41,
+    "nombre": "Cinto Faixa Artes Marciales Jiu-Jitsu-Judo",
+    "descripcion": "Somos Fabricantes, consúltanos sobre talles y o colores. CONSULTAR POR TALLES Y COLORES FAIXA CINTO para BJJ Jiu Jitsu 4cm de Ancho Relleno Reforzado 100% Algodon Etiqueta Bordada para mejor calidad. Cantidad de costuras: 8",
+    "precio": 1900,
+    "descuento": 0,
+    "talle": [],
+    "color": ["Blanco", "Negro", "Marrón", "Violeta", "Azul"],
+    "marca": "Umma",
+    "imagen": [
+      "41-cintoFaixaJJ8Cost-1.jpg",
+      "41-cintoFaixaJJ8Cost-2.jpg"
+    ],
+    "categoria": [
+      "Jiu-Jitsu",
+      "Judo"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 42,
+    "nombre": "Kimono Classic Adulto-Niño Jiu-Jitsu",
+    "descripcion": "Talle Equivalencia. Infantiles: M0 - 1.00 a 1.10 de altura; M1 - 1.10 a 1.20 de altura; M2 - 1.20 a 1.30 de altura; M3 - 1.30 a 1.40 de altura. Adultos: A0 - de 1.50 a 1.60 y hasta 60kg; A1 - de 1.60 a 1.70 y hasta 75kg; A2 - de 1.70 a 1.80 y hasta 85kg; A3 - de 1.80 a 1.90 y hasta 90kg; A4 - de 1.90 a 2.00 y hasta 60kg; A5 - de 1.90 a 2.00 y más de 120kg.",
+    "precio": 14800,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "M3", "A0", "A1", "A2", "A3", "A4", "A5"],
+    "color": ["Blanco", "Negro", "Azul"],
+    "marca": "SHIAI",
+    "imagen": [
+      "42-kimonoJJClassic-1.jpg",
+      "42-kimonoJJClassic-2.jpg",
+      "42-kimonoJJClassic-3.jpg"
+    ],
+    "categoria": [
+      "Jiu-Jitsu"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 43,
+    "nombre": "Kimono Hania Adulto-Niño Jiu-Jitsu",
+    "descripcion": "Talle Equivalencia. Infantiles: M0 - 1.00 a 1.10 de altura; M1 - 1.10 a 1.20 de altura; M2 - 1.20 a 1.30 de altura; M3 - 1.30 a 1.40 de altura. Adultos: A0 - de 1.50 a 1.60 y hasta 60kg; A1 - de 1.60 a 1.70 y hasta 75kg; A2 - de 1.70 a 1.80 y hasta 85kg; A3 - de 1.80 a 1.90 y hasta 90kg; A4 - de 1.90 a 2.00 y hasta 60kg; A5 - de 1.90 a 2.00 y más de 120kg.",
+    "precio": 15800,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "M3", "A0", "A1", "A2", "A3", "A4", "A5"],
+    "color": ["Azul", "Negro", "Blanco"],
+    "marca": "SHIAI",
+    "imagen": [
+      "43-kimonoJJHania-1.jpg",
+      "43-kimonoJJHania-2.jpg",
+      "43-kimonoJJHania-3.jpg"
+    ],
+    "categoria": [
+      "Jiu-Jitsu"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 44,
+    "nombre": "Kimono Ultra-Light Adulto-Niño Jiu-Jitsu",
+    "descripcion": "Talle Equivalencia. Infantiles: M0 - 1.00 a 1.10 de altura; M1 - 1.10 a 1.20 de altura; M2 - 1.20 a 1.30 de altura; M3 - 1.30 a 1.40 de altura. Adultos: A0 - de 1.50 a 1.60 y hasta 60kg; A1 - de 1.60 a 1.70 y hasta 75kg; A2 - de 1.70 a 1.80 y hasta 85kg; A3 - de 1.80 a 1.90 y hasta 90kg; A4 - de 1.90 a 2.00 y hasta 60kg; A5 - de 1.90 a 2.00 y más de 120kg.",
+    "precio": 10200,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "M3", "A0", "A1", "A2", "A3", "A4", "A5"],
+    "color": ["Azul", "Blanco"],
+    "marca": "SHIAI",
+    "imagen": [
+      "44-kimonoJJUltraLight-1.jpg",
+      "44-kimonoJJUltraLight-2.jpg"
+    ],
+    "categoria": [
+      "Jiu-Jitsu"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 45,
+    "nombre": "Cinto Faixa Artes Marciales Judo-Jiu-Jitsu",
+    "descripcion": "Somos Fabricantes, consúltanos sobre talles y o colores. CONSULTAR POR TALLES Y COLORES FAIXA CINTO para Judo 5cm de Ancho Relleno Reforzado 100% Algodon Etiqueta Bordada para mejor calidad. Cantidad de costuras: 10",
+    "precio": 2000,
+    "descuento": 0,
+    "talle": [],
+    "color": ["Blanco", "Amarillo", "Naranja", "Verde Oscuro", "Azul", "Marrón", "Negro", "Celeste"],
+    "marca": "SHIAI",
+    "imagen": [
+      "45-cintoFaixaJJ10Cost-1.jpg",
+      "45-cintoFaixaJJ10Cost-2.jpg"
+    ],
+    "categoria": [
+      "Jiu-Jitsu",
+      "Judo"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 46,
+    "nombre": "Judo Gi Tramado Liviano Artes Marciales Judo",
+    "descripcion": "Talle Equivalencia. M0 - 1.00 a 1.10m de altura; M1 - 1.10 a 1.20m de altura; M2 - 1.20 a 1.30m de altura; 1 - 1.35 a 1.45m de altura; 2 - de 1.50 a 1.55m; 3 - de 1.60 a 1.65m; 4 - de 1.70 a 1.75m; 5 - de 1.175 a 1.80m; 6 - de 1.80 a 1.85m; 7 - más de 1.90m.",
+    "precio": 5800,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "1", "2", "3", "4", "5", "6", "7"],
+    "color": ["Blanco", "Azul"],
+    "marca": "SHIAI",
+    "imagen": [
+      "46-judoGiLiviano-1.jpg",
+      "46-judoGiLiviano-2.jpg"
+    ],
+    "categoria": [
+      "Judo"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 47,
+    "nombre": "Judo Gi Tramado Mediano Artes Marciales Judo",
+    "descripcion": "Talle Equivalencia. M0 - 1.00 a 1.10m de altura; M1 - 1.10 a 1.20m de altura; M2 - 1.20 a 1.30m de altura; 1 - 1.35 a 1.45m de altura; 2 - de 1.50 a 1.55m; 3 - de 1.60 a 1.65m; 4 - de 1.70 a 1.75m; 5 - de 1.175 a 1.80m; 6 - de 1.80 a 1.85m; 7 - más de 1.90m.",
+    "precio": 14000,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "1", "2", "3", "4", "5", "6", "7"],
+    "color": ["Blanco", "Azul"],
+    "marca": "SHIAI",
+    "imagen": [
+      "47-judoGiMediano-1.jpg",
+      "47-judoGiMediano-2.jpg"
+    ],
+    "categoria": [
+      "Judo"
+    ],
+    "envioGratis": true
+  },
+  {
+    "id": 48,
+    "nombre": "Judo Gi Tramado Pesado Artes Marciales Judo",
+    "descripcion": "Talle Equivalencia. M0 - 1.00 a 1.10m de altura; M1 - 1.10 a 1.20m de altura; M2 - 1.20 a 1.30m de altura; 1 - 1.35 a 1.45m de altura; 2 - de 1.50 a 1.55m; 3 - de 1.60 a 1.65m; 4 - de 1.70 a 1.75m; 5 - de 1.175 a 1.80m; 6 - de 1.80 a 1.85m; 7 - más de 1.90m.",
+    "precio": 20000,
+    "descuento": 0,
+    "talle": ["M0", "M1", "M2", "1", "2", "3", "4", "5", "6", "7"],
+    "color": ["Blanco", "Azul"],
+    "marca": "SHIAI",
+    "imagen": [
+      "48-judoGiPesado-1.jpg",
+      "48-judoGiPesado-2.jpg"
+    ],
+    "categoria": [
+      "Judo"
+    ],
+    "envioGratis": true
   }
 ]
