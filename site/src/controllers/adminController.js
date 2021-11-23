@@ -8,13 +8,24 @@ const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
 const controller = {
-    admin: (req, res)=> {
+    admin: (req,res)=>{
+        let promesaProductos = db.Producto.findAll();
+        let promesaUsuarios = db.Usuario.findAll();
+
+        Promise.all([promesaProductos, promesaUsuarios])
+            .then(([productos, usuarios])=>{
+                res.render('admin/admin', {productos, usuarios})
+            })
+    }
+         /* (req, res)=> {
         
         res.render('admin/admin', {
             productos,
             usuarios
         })
-    },
+    } */
+
+    ,
 
     //////// Formulario de Creacion ///////////
     vistaCrear: (req, res)=> {
