@@ -170,5 +170,221 @@
     {
         "producto_id": 24,
         "nombre": "24-sogaCrossfit-3.jpg"
+    },
+    {
+        "producto_id": 25,
+        "nombre": "25-pegBoard-1.jpg"
+    },
+    {
+        "producto_id": 25,
+        "nombre": "25-pegBoard-2.jpg"
+    },
+    {
+        "producto_id": 26,
+        "nombre": "26-tobillerasXn8-1.jpg"
+    },
+    {
+        "producto_id": 26,
+        "nombre": "26-tobillerasXn8-2.jpg"
+    },
+    {
+        "producto_id": 26,
+        "nombre": "26-tobillerasXn8-3.jpg"
+    },
+    {
+        "producto_id": 27,
+        "nombre": "27-bandaDomElastica-1.jpg"
+    },
+    {
+        "producto_id": 27,
+        "nombre": "27-bandaDomElastica-2.jpg"
+    },
+    {
+        "producto_id": 27,
+        "nombre": "27-bandaDomElastica-3.jpg"
+    },
+    {
+        "producto_id": 28,
+        "nombre": "28-tirabandFitness-1.jpg"
+    },
+    {
+        "producto_id": 28,
+        "nombre": "28-tirabandFitness-2.jpg"
+    },
+    {
+        "producto_id": 29,
+        "nombre": "29-bandaRedondaManija-1.jpg"
+    },
+    {
+        "producto_id": 29,
+        "nombre": "29-bandaRedondaManija-2.jpg"
+    },
+    {
+        "producto_id": 30,
+        "nombre": "30-arosRedondosPvc-1.jpg"
+    },
+    {
+        "producto_id": 30,
+        "nombre": "30-arosRedondosPvc-2.jpg"
+    },
+    {
+        "producto_id": 31,
+        "nombre": "31-aroPlanoVelocidad-1.jpg"
+    },
+    {
+        "producto_id": 31,
+        "nombre": "31-aroPlanoVelocidad-2.jpg"
+    },
+    {
+        "producto_id": 32,
+        "nombre": "32-conoVelocidad-1.jpg"
+    },
+    {
+        "producto_id": 32,
+        "nombre": "32-conoVelocidad-2.jpg"
+    },
+    {
+        "producto_id": 33,
+        "nombre": "33-conosTortugaVelocidad-1.jpg"
+    },
+    {
+        "producto_id": 33,
+        "nombre": "33-conosTortugaVelocidad-2.jpg"
+    },
+    {
+        "producto_id": 33,
+        "nombre": "33-conosTortugaVelocidad-3.jpg"
+    },
+    {
+        "producto_id": 34,
+        "nombre": "34-escaleraRunningVelocidad-1.jpg"
+    },
+    {
+        "producto_id": 34,
+        "nombre": "34-escaleraRunningVelocidad-2.jpg"
+    },
+    {
+        "producto_id": 35,
+        "nombre": "35-vallaRegulable-1.jpg"
+    },
+    {
+        "producto_id": 35,
+        "nombre": "35-vallaRegulable-2.jpg"
+    },
+    {
+        "producto_id": 36,
+        "nombre": "36-pesaRusaFundicion-1.jpg"
+    },
+    {
+        "producto_id": 36,
+        "nombre": "36-pesaRusaFundicion-2.jpg"
+    },
+    {
+        "producto_id": 37,
+        "nombre": "37-pesaRusaPlastico-1.jpg"
+    },
+    {
+        "producto_id": 37,
+        "nombre": "37-pesaRusaPlastico-2.jpg"
+    },
+    {
+        "producto_id": 38,
+        "nombre": "38-mancuernaHierroRosca-1.jpg"
+    },
+    {
+        "producto_id": 38,
+        "nombre": "38-mancuernaHierroRosca-2.jpg"
+    },
+    {
+        "producto_id": 39,
+        "nombre": "39-mancuernaPlastico-1.jpg"
+    },
+    {
+        "producto_id": 39,
+        "nombre": "39-mancuernaPlastico-2.jpg"
+    },
+    {
+        "producto_id": 40,
+        "nombre": "40-discosGym-1.jpg"
+    },
+    {
+        "producto_id": 40,
+        "nombre": "40-discosGym-2.jpg"
+    },
+    {
+        "producto_id": 41,
+        "nombre": "41-cintoFaixaJJ8Cost-1.jpg"
+    },
+    {
+        "producto_id": 41,
+        "nombre": "41-cintoFaixaJJ8Cost-2.jpg"
+    },
+    {
+        "producto_id": 42,
+        "nombre": "42-kimonoJJClassic-1.jpg"
+    },
+    {
+        "producto_id": 42,
+        "nombre": "42-kimonoJJClassic-2.jpg"
+    },
+    {
+        "producto_id": 42,
+        "nombre": "42-kimonoJJClassic-3.jpg"
+    },
+    {
+        "producto_id": 43,
+        "nombre": "43-kimonoJJHania-1.jpg"
+    },
+    {
+        "producto_id": 43,
+        "nombre": "43-kimonoJJHania-2.jpg"
+    },
+    {
+        "producto_id": 43,
+        "nombre": "43-kimonoJJHania-3.jpg"
+    },
+    {
+        "producto_id": 44,
+        "nombre": "44-kimonoJJUltraLight-1.jpg"
+    },
+    {
+        "producto_id": 44,
+        "nombre": "44-kimonoJJUltraLight-2.jpg"
+    },
+    {
+        "producto_id": 45,
+        "nombre": "45-cintoFaixaJJ10Cost-1.jpg"
+    },
+    {
+        "producto_id": 45,
+        "nombre": "45-cintoFaixaJJ10Cost-2.jpg"
+    },
+    {
+        "producto_id": 45,
+        "nombre": "45-cintoFaixaJJ10Cost-3.jpg"
+    },
+    {
+        "producto_id": 46,
+        "nombre": "46-judoGiLiviano-1.jpg"
+    },
+    {
+        "producto_id": 46,
+        "nombre": "46-judoGiLiviano-2.jpg"
+    },
+    {
+        "producto_id": 47,
+        "nombre": "47-judoGiMediano-1.jpg"
+    },
+    {
+        "producto_id": 47,
+        "nombre": "47-judoGiMediano-2.jpg"
+    },
+    {
+        "producto_id": 48,
+        "nombre": "48-judoGiPesado-1.jpg"
+    },
+    {
+        "producto_id": 48,
+        "nombre": "48-judoGiPesado-2.jpg"
     }
 ]
