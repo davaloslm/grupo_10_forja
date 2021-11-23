@@ -46,7 +46,7 @@ const controller = {
 
         if(newProductErrors.isEmpty()) {
 
-            const {imagenes, nombre, descripcion, precio, descuento, talle, color, categoria, envioGratis} = req.body
+            const {imagenes, nombre, marca,  descripcion, precio, stock, descuento, talle, color, categoria, envioGratis} = req.body
             /* let nuevoProducto = req.body;
             
             let imagenes = []
@@ -167,6 +167,7 @@ const controller = {
             
             .catch(error =>{
                 res.send("No se pudo crear el producto")
+                console.log(error);
             })
 
             
@@ -178,27 +179,25 @@ const controller = {
     //////// Formulario de edición ///////////
 
     vistaEditar: (req, res)=> {
-        const {id} = req.params;
-        const producto = productos.find(producto=>producto.id === parseInt(id) )
-        res.render('admin/edit', {producto})
-    }
-    
-    /* db.Producto.findByPk(req.params.id)
-    .then(producto=>{
-        if (producto) {
-            res.render("admin/edit", {producto})
-            
-        } else {
-            res.send("No existe producto con ese ID.")
-            
-        }
-        
-    })
-    .catch( error =>{
-        res.???
-    }) */
-    
-    ,
+
+        let promesaProductos = db.Producto.findByPk({
+            where: {id: parseInt(req.params.id)}
+        });
+
+        let promesaImagenes = db.Imagen.findAll({
+            where: {productoId: parseInt(req.params.id)}
+        });
+
+        let promesaTalles = db.Talle.findAll();
+        let promesaColores = db.Color.findAll();
+        let promesaCategorias = db.Categoria.findAll();
+
+        Promise.all([promesaProductos, promesaImagenes, promesaTalles, promesaColores, promesaCategorias])
+            .then(([productos, imagenes, talles, colores, categorias])=>{
+                res.render('admin/admin', {productos, imagenes, talles, colores, categorias})
+            })
+
+    },
     
     /////// Editar producto - Guardar ////////
 
