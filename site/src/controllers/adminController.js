@@ -180,8 +180,19 @@ const controller = {
 
     vistaEditar: (req, res)=> {
 
-        let promesaProductos = db.Producto.findByPk({
-            where: {id: parseInt(req.params.id)}
+        let promesaProductos = db.Producto.findOne({
+            where: {id: parseInt(req.params.id)},
+            include: [
+                {
+                    association: "productoTalles",
+                },
+                {
+                    association: "productoColores",
+                },
+                {
+                    association: "productoCategorias",
+                },
+            ],
         });
 
         let promesaImagenes = db.Imagen.findAll({
@@ -193,10 +204,11 @@ const controller = {
         let promesaCategorias = db.Categoria.findAll();
 
         Promise.all([promesaProductos, promesaImagenes, promesaTalles, promesaColores, promesaCategorias])
-            .then(([productos, imagenes, talles, colores, categorias])=>{
-                res.render('admin/admin', {productos, imagenes, talles, colores, categorias})
+            .then(([producto, imagenes, talles, colores, categorias])=>{
+                res.render('admin/admin', {producto, imagenes, talles, colores, categorias})
+                
             })
-
+            .catch(error => console.log(error))
     },
     
     /////// Editar producto - Guardar ////////
