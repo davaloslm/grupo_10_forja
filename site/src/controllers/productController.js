@@ -6,8 +6,11 @@ const controller = {
     //todos los productos
     list: async (req, res)=>{
         try {
-            const productos = await db.Producto.findAll()
+            const productos = await db.Producto.findAll({
+                include: [{association: "productoImagen"}]
+            })
             res.render("products/products", {productos})
+            console.log(productos)
                 
         
         } catch (error) {
@@ -20,7 +23,13 @@ const controller = {
     //detalle
     detail: async (req, res) => {
         try {
-            const producto = await db.Producto.findByPk(req.params.id)
+            const producto = await db.Producto.findByPk(req.params.id, {
+                include: [
+                    {association: "productoImagen"},
+                    {association: "productoTalle"},
+                    {association: "productoColor"}]
+            })
+            console.log(producto.productoImagen[0].nombre);
             if(producto !== null) {
                 res.render("products/detail", {producto} )
             } else {
