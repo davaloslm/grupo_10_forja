@@ -1,9 +1,9 @@
 const path = require('path');
 const fs = require('fs');
-/* let productos = require("../data/productos.json");
+let productos = require("../data/productos.json");
 let usuarios = require("../data/users.json");
 const productosRuta = path.join(__dirname, '../data/productos.json');
-const usuariosRuta = path.join(__dirname, '../data/users.json'); */
+const usuariosRuta = path.join(__dirname, '../data/users.json');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
@@ -15,10 +15,6 @@ const controller = {
         Promise.all([promesaProductos, promesaUsuarios])
             .then(([productos, usuarios])=>{
                 res.render('admin/admin', {productos, usuarios})
-            })
-            .catch(error=>{
-                res.send("No se pudo acceder a los productos")
-                console.log(error);
             })
     }
          /* (req, res)=> {
