@@ -15,7 +15,7 @@
                     <% if(producto.descuento === 0) { %>  
                     <article class="producto_des">
                     <div class="image_container">
-                        <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.imagen[0] %>" alt="<%= producto.nombre %> "></a>
+                        <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.productoImagen[0] %>" alt="<%= producto.nombre %> "></a>
                     </div>
                     <div class="detail_container">
                         <i class="fas fa-truck" id="envio"></i>
@@ -29,7 +29,7 @@
                         
                         <article class="producto_ofer">
                             <div class="image_container">
-                                <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.imagen[0] %>"></a>
+                                <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.productoImagen[0] %>"></a>
                             </div>
                             <div class="detail_container">
                                 <p class="precio">$ <%= producto.precio %> </p>
