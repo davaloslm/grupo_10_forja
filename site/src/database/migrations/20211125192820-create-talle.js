@@ -9,10 +9,12 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       nombre: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING,
+        allowNull: false,
       },
       productoId: {
         type: Sequelize.INTEGER,
+        allowNull: false,
         references: {
           model: {
             tableName: "Productos"
