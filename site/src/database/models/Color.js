@@ -13,9 +13,9 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
         Color.belongsToMany(models.Producto, {
             as: 'colorProductos',
-            through: 'producto_color',
-            foreignKey: 'producto_id',
-            otherKey: 'color_id'
+            through: 'productocolores',
+            foreignKey: 'productoId',
+            otherKey: 'colorId'
     })
     }
   };
@@ -24,6 +24,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Color',
+    tableName: 'colores',
+    timestamps: false
   });
   return Color;
 };

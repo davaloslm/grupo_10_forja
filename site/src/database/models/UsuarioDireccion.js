@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     UsuarioDireccion.belongsTo(models.Usuario, {
         as: 'usuarioDireccionUsuarios',
-        foreignKey: 'usuario_id'
+        foreignKey: 'usuarioId'
     })
 
     UsuarioDireccion.belongsTo(models.Direccion, {
         as: 'usuarioDireccionDirecciones',
-        foreignKey: 'direccion_id'
+        foreignKey: 'direccionId'
     })
     }
   };
@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'UsuarioDireccion',
+    timestamps: false
   });
   return UsuarioDireccion;
 };

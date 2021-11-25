@@ -13,19 +13,19 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     Venta.belongsTo(models.Producto, {
         as: 'ventaProductos',
-        foreignKey: 'producto_id'
+        foreignKey: 'productoId'
     })
     Venta.belongsTo(models.Usuario, {
         as: 'ventaUsuarios',
-        foreignKey: 'usuario_id'
+        foreignKey: 'usuarioId'
     })
     Venta.belongsTo(models.MedioDePago, {
         as: 'ventaMedioDePago',
-        foreignKey: 'medio_de_pago_id'
+        foreignKey: 'medioDePagoId'
     })
     Venta.belongsTo(models.Factura, {
         as: 'ventaFacturas',
-        foreignKey: 'factura_id'
+        foreignKey: 'facturaId'
     })
     }
   };

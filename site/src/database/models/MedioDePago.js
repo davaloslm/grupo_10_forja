@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
         MedioDePago.hasMany(models.Venta, {
             as: 'medioDePagoVentas',
-            foreignKey: 'medio_de_pago_id'
+            foreignKey: 'medioDePagoId'
     })
     }
   };
@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'MedioDePago',
+    timestamps: false
   });
   return MedioDePago;
 };

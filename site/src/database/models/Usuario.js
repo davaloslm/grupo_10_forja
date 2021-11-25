@@ -13,33 +13,33 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     Usuario.belongsToMany(models.Direccion, {
         as: 'usuarioDirecciones',
-        through: 'usuario_direccion',
-        foreignKey: 'usuario_id',
-        otherKey: 'direccion_id'
+        through: 'usuariodirecciones',
+        foreignKey: 'usuarioId',
+        otherKey: 'direccionId'
     })
 
     Usuario.hasMany(models.Orden, {
         as: 'usuarioOrdenes',
-        foreignKey: 'usuario_id'
+        foreignKey: 'usuarioId'
     })
 
     Usuario.belongsToMany(models.Producto, {
         as: 'usuarioVentasProductos',
         through: 'ventas',
-        foreignKey: 'usuario_id',
-        otherKey: 'producto_id'
+        foreignKey: 'usuarioId',
+        otherKey: 'productoId'
     })
 
     Usuario.hasMany(models.Factura, {
         as: 'usuarioFacturas',
-        foreignKey: 'usuario_id'
+        foreignKey: 'usuarioId'
     })
 
     Usuario.belongsToMany(models.Producto, {
         as: 'usuarioCarritosProductos',
         through: 'carritos',
-        foreignKey: 'usuario_id',
-        otherKey: 'producto_id'
+        foreignKey: 'usuarioId',
+        otherKey: 'productoId'
     })
     }
   };

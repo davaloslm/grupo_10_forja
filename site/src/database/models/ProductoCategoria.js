@@ -13,12 +13,12 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     ProductoCategoria.belongsTo(models.Producto, {
         as: 'productoCategoriaProductos',
-        foreignKey: 'producto_id'
+        foreignKey: 'productoId'
     })
 
     ProductoCategoria.belongsTo(models.Categoria, {
         as: 'productoCategoriaCategorias',
-        foreignKey: 'categoria_id'
+        foreignKey: 'categoriaId'
     })
     }
   };
@@ -28,6 +28,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'ProductoCategoria',
+    timestamps: false
   });
   return ProductoCategoria;
 };

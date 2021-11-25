@@ -13,9 +13,9 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
         Direccion.belongsToMany(models.Usuario, {
             as: 'direccionUsuarios',
-            through: "usuario_direccion",
-            foreignKey: 'direccion_id',
-            otherKey: 'usuario_id'
+            through: "usuariodirecciones",
+            foreignKey: 'direccionId',
+            otherKey: 'usuarioId'
     })
     }
   };
@@ -29,6 +29,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Direccion',
+    timestamps: false
   });
   return Direccion;
 };

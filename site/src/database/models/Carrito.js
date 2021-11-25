@@ -13,17 +13,17 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     Carrito.belongsTo(models.Usuario, {
         as: 'carritoUsuarios',
-        foreignKey: 'usuario_id'
+        foreignKey: 'usuarioId'
     })
 
     Carrito.belongsTo(models.Producto, {
         as: 'carritoProductos',
-        foreignKey: 'producto_id'
+        foreignKey: 'productoId'
     })
 
     Carrito.belongsTo(models.Orden, {
         as: 'carritoOrdenes',
-        foreignKey: 'orden_id'
+        foreignKey: 'ordenId'
     })
     }
   };

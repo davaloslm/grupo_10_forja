@@ -13,9 +13,9 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
         Talle.belongsToMany(models.Producto, {
             as: 'talleProductoTalleProductos',
-            through: 'producto_talle',
-            foreignKey: 'talle_id',
-            otherKey: 'producto_id'
+            through: 'productotalles',
+            foreignKey: 'talleId',
+            otherKey: 'productoId'
         })
     }
   };
@@ -24,6 +24,7 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Talle',
+    timestamps: false
   });
   return Talle;
 };

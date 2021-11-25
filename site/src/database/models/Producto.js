@@ -14,41 +14,41 @@ module.exports = (sequelize, DataTypes) => {
     Producto.belongsToMany(models.Usuario, {
         as: 'productoCarritoUsuarios',
         through: 'carritos',
-        foreignKey: 'producto_id',
-        otherKey: 'usuario_id'
+        foreignKey: 'productoId',
+        otherKey: 'usuarioId'
     })
 
     Producto.hasMany(models.Imagen, {
         as: 'productoImagenes',
-        foreignKey: 'producto_id'
+        foreignKey: 'productoId'
     })
 
     Producto.belongsToMany(models.Usuario, {
         as: 'productoVentasUsuarios',
         through: 'ventas',
-        foreignKey: 'producto_id',
-        otherKey: 'usuario_id'
+        foreignKey: 'productoId',
+        otherKey: 'usuarioId'
     })
 
     Producto.belongsToMany(models.Color, {
         as: 'productoColores',
-        through: 'producto_color',
-        foreignKey: 'producto_id',
-        otherKey: 'color_id'
+        through: 'productocolores',
+        foreignKey: 'productoId',
+        otherKey: 'colorId'
     })
 
     Producto.belongsToMany(models.Talle, {
         as: 'productoTalles',
-        through: 'producto_talle',
-        foreignKey: 'producto_id',
-        otherKey: 'talle_id'
+        through: 'productoTalles',
+        foreignKey: 'productoId',
+        otherKey: 'talleId'
     })
 
     Producto.belongsToMany(models.Categoria, {
         as: 'productoCategorias',
-        through: 'producto_categoria',
-        foreignKey: 'producto_id',
-        otherKey: 'categoria_id'
+        through: 'productocategorias',
+        foreignKey: 'productoId',
+        otherKey: 'categoriaId'
     })
     }
   };

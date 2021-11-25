@@ -13,13 +13,13 @@ module.exports = (sequelize, DataTypes) => {
       // define association here
     Factura.belongsTo(models.Usuario, {
         as:"facturaUsuarios",
-        foreignKey: "usuario_id"
+        foreignKey: "usuarioId"
 
     })
 
     Factura.hasMany(models.Venta, {
         as:"facturaVentas",
-        foreignKey: "factura_id"
+        foreignKey: "facturaId"
 
     })
     }
