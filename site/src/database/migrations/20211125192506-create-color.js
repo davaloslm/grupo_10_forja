@@ -12,13 +12,14 @@ module.exports = {
         type: Sequelize.STRING
       },
       productoId: {
-        type: Sequelize.INTEGER
-      },
-      createAt: {
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        type: Sequelize.DATE
+        type: Sequelize.INTEGER,
+        references: {
+          model: {
+            tableName: "Productos"
+          },
+          key: "id"
+        },
+        onDelete: "cascade"
       },
       createdAt: {
         allowNull: false,

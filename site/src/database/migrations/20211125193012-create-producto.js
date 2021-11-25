@@ -12,7 +12,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       descripcion: {
-        type: Sequelize.STRING
+        type: Sequelize.STRING(1000)
       },
       precio: {
         type: Sequelize.DECIMAL
@@ -21,19 +21,13 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       envio: {
-        type: Sequelize.INTEGER
+        type: Sequelize.BOOLEAN
       },
       marca: {
         type: Sequelize.STRING
       },
       stock: {
         type: Sequelize.INTEGER
-      },
-      createAt: {
-        type: Sequelize.DATE
-      },
-      updatedAt: {
-        type: Sequelize.DATE
       },
       createdAt: {
         allowNull: false,
