@@ -12,22 +12,22 @@ module.exports = (sequelize, DataTypes) => {
     static associate(models) {
       // define association here
       Producto.hasMany(models.Imagen, {
-        as: "productoImagen",
+        as: "imagen",
         foreignKey: "productoId"
       })
 
       Producto.hasMany(models.Categoria, {
-        as: "productoCategoria",
+        as: "categoria",
         foreignKey: "productoId"
       })
 
       Producto.hasMany(models.Color, {
-        as: "productoColor",
+        as: "color",
         foreignKey: "productoId"
       })
 
       Producto.hasMany(models.Talle, {
-        as: "productoTalle",
+        as: "talle",
         foreignKey: "productoId"
       })
     }
@@ -40,8 +40,8 @@ module.exports = (sequelize, DataTypes) => {
     envio: DataTypes.INTEGER,
     marca: DataTypes.STRING,
     stock: DataTypes.INTEGER,
-    createAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE
+    /* createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE */
   }, {
     sequelize,
     modelName: 'Producto',

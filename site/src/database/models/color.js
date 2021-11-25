@@ -20,8 +20,8 @@ module.exports = (sequelize, DataTypes) => {
   Color.init({
     nombre: DataTypes.STRING,
     productoId: DataTypes.INTEGER,
-    createAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE
+    /* createdAt: DataTypes.DATE,
+    updatedAt: DataTypes.DATE */
   }, {
     sequelize,
     modelName: 'Color',
