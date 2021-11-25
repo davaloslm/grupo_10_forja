@@ -40,8 +40,6 @@ module.exports = (sequelize, DataTypes) => {
     envio: DataTypes.INTEGER,
     marca: DataTypes.STRING,
     stock: DataTypes.INTEGER,
-    /* createdAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE */
   }, {
     sequelize,
     modelName: 'Producto',

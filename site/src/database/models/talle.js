@@ -20,8 +20,6 @@ module.exports = (sequelize, DataTypes) => {
   Talle.init({
     nombre: DataTypes.STRING,
     productoId: DataTypes.INTEGER,
-    /* createdAt: DataTypes.DATE,
-    updatedAt: DataTypes.DATE */
   }, {
     sequelize,
     modelName: 'Talle',
