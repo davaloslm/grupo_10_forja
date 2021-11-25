@@ -4,7 +4,9 @@ const imagenes = require('../../data/imagenes.json');
 let imagenesArray = imagenes.map(imagen => {
   let imagenes = {
     nombre: imagen.nombre,
-    productoId: imagen.producto_id
+    productoId: imagen.producto_id,
+    createdAt: new Date,
+    updatedAt: new Date
   }
   return imagenes
 })

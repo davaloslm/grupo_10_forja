@@ -21,7 +21,9 @@ for (let i = 0; i < usuarios.length; i++) {
         departamento: faker.datatype.number({
         'min': 10,
         'max': 50
-    })
+    }),
+        createdAt: new Date,
+        updatedAt: new Date
     }
 
 direcciones.push(direccion)

@@ -4,7 +4,9 @@ const categoriasJson = require('../../data/categorias.json');
 
 let categorias = categoriasJson.map(categoriaJson => {
   let categoria = {
-    nombre: categoriaJson.nombre
+    nombre: categoriaJson.nombre,
+    createdAt: new Date,
+    updatedAt: new Date
   }
   return categoria
 })

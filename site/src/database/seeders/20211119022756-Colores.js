@@ -5,6 +5,8 @@ const colores = []
 arrayColores.forEach(e => {
   let color = {
     nombre: e,
+    createdAt: new Date,
+    updatedAt: new Date
   }
   colores.push(color)
 });

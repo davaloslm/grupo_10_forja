@@ -6,7 +6,9 @@ const arrayTalles = ['M0', 'M1', 'M2', 'M3', 'A0', 'A1', 'A2', 'A3', 'A4', 'A5',
 const talles = []
 arrayTalles.forEach(e => {
   let talle = {
-    nombre:e
+    nombre:e,
+    createdAt: new Date,
+    updatedAt: new Date
   }
   talles.push(talle)
 });
