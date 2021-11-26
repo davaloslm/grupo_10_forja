@@ -5,18 +5,20 @@ const { Op } = require('sequelize');
 const controller = {
     //todos los productos
     list: async (req, res)=>{
-        try {
-            const productos = await db.Producto.findAll({
-                include: [{association: "productoImagen"}]
-            })
-            res.render("products/products", {productos})
-            console.log(productos)
+
+        let promesaProductos = db.Producto.findAll();
+        let promesaImagenes = db.Imagen.findAll();
+
+        Promise.all([promesaProductos, promesaImagenes])
+            .then(([productos, imagenes])=>{
                 
+                res.render('products/products', {productos, imagenes})
+            })
+            .catch(error=>{
+                res.send("Error al requerir productos de la base de datos")
+                console.log(error);
+            })
         
-        } catch (error) {
-            res.send('Error al requerir productos de la base de datos')
-            console.log('Error al requerir productos de la base de datos', error);
-        }
         
     },
 
@@ -25,11 +27,11 @@ const controller = {
         try {
             const producto = await db.Producto.findByPk(req.params.id, {
                 include: [
-                    {association: "productoImagen"},
-                    {association: "productoTalle"},
-                    {association: "productoColor"}]
+                    {association: "imagen"},
+                    {association: "talle"},
+                    {association: "color"}]
             })
-            console.log(producto.productoImagen[0].nombre);
+            /* console.log(producto.productoImagen[0].nombre); */
             if(producto !== null) {
                 res.render("products/detail", {producto} )
             } else {
