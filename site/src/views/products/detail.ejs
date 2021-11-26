@@ -16,17 +16,17 @@
                     
                     <ul class="slider">
                         <li id="slide-1">
-                            <img src="/img/productos/<%= producto.imagen[0] %>" alt="<%= producto.nombre %>">
+                            <img src="/img/productos/<%= producto.productoImagen[0].nombre %>" alt="<%= producto.nombre %>">
                         </li>
-                        <% if(producto.imagen[1]){ %>
+                        <% if(producto.productoImagen[1]){ %>
                             <li id="slide-2">
-                                <img src="/img/productos/<%= producto.imagen[1] %>" alt="<%= producto.nombre %>">
+                                <img src="/img/productos/<%= producto.productoImagen[1].nombre %>" alt="<%= producto.nombre %>">
                             </li> 
                             <% } %> 
                         
-                        <% if(producto.imagen[2]){ %>
+                        <% if(producto.productoImagen[2]){ %>
                             <li id="slide-3">
-                                <img src="/img/productos/<%= producto.imagen[2] %>" alt="<%= producto.nombre %>">
+                                <img src="/img/productos/<%= producto.productoImagen[2].nombre %>" alt="<%= producto.nombre %>">
                             </li> 
                             <% } %> 
                         
@@ -35,17 +35,17 @@
                     <div class="botones_container">
                         <ul class="botones_slide">
                             <li class="button1">
-                                <a href="#slide-1" style="background: url('/img/productos/<%= producto.imagen[0] %>'); background-size: contain;"> </a>
+                                <a href="#slide-1" style="background: url('/img/productos/<%= producto.productoImagen[0].nombre %>'); background-size: contain;"> </a>
                             </li>
-                            <% if(producto.imagen[1]){ %>
+                            <% if(producto.productoImagen[1]){ %>
                             
                             <li class="button2">
-                                <a href="#slide-2" style="background: url('/img/productos/<%= producto.imagen[1] %>'); background-size: contain;"> </a>
+                                <a href="#slide-2" style="background: url('/img/productos/<%= producto.productoImagen[1].nombre %>'); background-size: contain;"> </a>
                             </li>
                             <% } %>
-                            <% if(producto.imagen[2]){ %> 
+                            <% if(producto.productoImagen[2]){ %> 
                             <li class="button3">
-                                <a href="#slide-3" style="background: url('/img/productos/<%= producto.imagen[2] %>'); background-size: contain;"> </a>
+                                <a href="#slide-3" style="background: url('/img/productos/<%= producto.productoImagen[2].nombre %>'); background-size: contain;"> </a>
                             </li>
                             <% } %> 
                         </ul>
@@ -74,11 +74,11 @@
                     
                     
                     <form action="">
-                        <% if(producto.talle[0]){ %> 
+                        <% if(producto.productoTalle[0]){ %> 
                         <label for="talle"><h4>Talle:</h4></label>
                         <select name="talle" id="talle">
-                            <% for(i=0; i<producto.talle.length; i++) {%> 
-                            <option value="<%= producto.talle[i] %> "><%= producto.talle[i] %></option>
+                            <% for(i=0; i<producto.productoTalle.length; i++) {%> 
+                            <option value="<%= producto.productoTalle[i] %> "><%= producto.productoTalle[i] %></option>
                             <% } %>
                             <!-- <option value="6">6</option>
                             <option value="7">7</option>
@@ -88,11 +88,11 @@
                         </select>
                         <% } %>
             
-                        <% if(producto.color[0]){ %> 
+                        <% if(producto.productoColor[0]){ %> 
                             <label for="color"><h4>Color:</h4></label>
                             <select name="color" id="color">
-                                <% for(i=0; i<producto.color.length; i++) {%> 
-                                <option value="<%= producto.color[i] %> "><%= producto.color[i] %></option>
+                                <% for(i=0; i<producto.productoColor.length; i++) {%> 
+                                <option value="<%= producto.productoColor[i].nombre %> "><%= producto.productoColor[i].nombre %></option>
                                 <% } %>
                                 <!-- <option value="6">6</option>
                                 <option value="7">7</option>

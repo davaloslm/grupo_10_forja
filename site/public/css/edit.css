@@ -163,6 +163,66 @@ body.editar main.edit section.delete_container form button{
     cursor: pointer;
 }
 
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input#inputColores {
+    margin-right: 20px;
+    margin-bottom: 15px;
+}
+
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color0 {
+    box-shadow: 0px 0px 2px 5px red
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color1 {
+    box-shadow: 0px 0px 2px 5px white
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color2 {
+    box-shadow: 0px 0px 2px 5px darkmagenta
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color3 {
+    box-shadow: 0px 0px 2px 5px hotpink
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color4 {
+    box-shadow: 0px 0px 2px 5px blue
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color5 {
+    box-shadow: 0px 0px 2px 5px yellow
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color6 {
+    box-shadow: 0px 0px 2px 5px black
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color7 {
+    box-shadow: 0px 0px 2px 5px lawngreen
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color8 {
+    box-shadow: 0px 0px 2px 5px darkgreen
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color9 {
+    box-shadow: 0px 0px 2px 5px deepskyblue
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color10 {
+    box-shadow: 0px 0px 2px 5px orange
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color11 {
+    box-shadow: 0px 0px 2px 5px gray
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color12 {
+    box-shadow: 0px 0px 2px 5px magenta
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color13 {
+    box-shadow: 0px 0px 2px 5px darkred
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color14 {
+    box-shadow: 0px 0px 2px 5px saddlebrown
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color15 {
+    box-shadow: 0px 0px 2px 5px gold
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color16 {
+    box-shadow: 0px 0px 2px 5px moccasin
+}
+.editar main.edit section.product_container form.todo_container section.info_container div.selec input.color17 {
+    box-shadow: 0px 0px 2px 5px slategrey
+}
+
 
 
 /*////////////////////////////// Movil-M///////////////////////////// */

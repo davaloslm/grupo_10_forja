@@ -232,6 +232,15 @@
                     
                     <% } %>
                 </div>
+                <!-- /////Marca de Producto///// -->
+                <div class= "selec info_titulo_container">
+                    <p>Marca</p>
+                    <input type="text" name="marca" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.marca ? oldData.marca : null %> >
+                    <% if (locals.errors && errors.marca) { %>
+                        <small class="errors"><%= errors.marca.msg %></small>
+                    
+                    <% } %>
+                </div>
                 <!-- /////Descripcion de Producto///// -->
                 <div class= "selec info_des_container">
                     <p>Ingresá una descripción</p>
@@ -250,12 +259,21 @@
                     
                     <% } %>
                 </div>
+                <!-- /////Stock de producto///// -->
+                <div class= "selec info_precio_container">
+                    <p>Stock</p>
+                    <input type="number" name="stock" placeholder="Ingresá un stock" value=<%= locals.oldData && oldData.stock ? oldData.stock : null %> required >
+                    <% if (locals.errors && errors.stock) { %>
+                        <small class="errors"><%= errors.stock.msg %></small>
+                    
+                    <% } %>
+                </div>
                 <!-- /////Colores de producto///// -->
                 <div class= "color_container">
                     <p>Colores</p>
                     <% let arrayColores = ['Rojo','Blanco','Violeta','Rosado','Azul','Amarillo', 'Negro', 'Verde claro', 'Verde oscuro', 'Celeste', 'Naranja', 'Gris', 'Fucsia', 'Bordó', 'Marrón', 'Dorado', 'Beige', 'Plateado'] %>
                     <% for (let i = 0; i < arrayColores.length; i++) { %>
-                        <input id="inputColores" class="color<%= i %>" type="checkbox" name="<%= arrayColores[i] %>" value="<%= i %>">
+                        <input id="inputColores" class="color<%= i %>" type="checkbox" name="color" value="<%= i %>">
                     <% } %>
                 </div>
                 <!-- /////categoria de producto///// -->
