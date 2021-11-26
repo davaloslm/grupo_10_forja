@@ -12,55 +12,26 @@
             
             <div class="todos_contenedor">
                 <% productos.forEach(producto=>{%>
-                    
-                    
-                    <% if(producto.descuento === 0) { %> 
+               
+                <% for (let i = 0; i < imagenes.length ; i++){ %> 
+                <% if (producto.id == imagenes[i].productoId) { %>
                     
                     <article class="producto_des">
-                    <div class="image_container">
-                        <% for (let i = 0; i < imagenes.length ; i++){ %> 
-                            <% if (producto.id == imagenes[i].productoId) { %>
 
-                                <a href="/product/<%= producto.id %>"> <img src="/img/productos/<%= imagenes[i].nombre %>" alt="<%= producto.nombre %> "></a>
-                             
-                            <% break } %>
-                        <% } %> 
+                    <div class="image_container">
+                        <a href="/product/<%= producto.id %>"> <img src="/img/productos/<%= imagenes[i].nombre %>" alt="<%= producto.nombre %> "></a>
                     </div>
+
                     <div class="detail_container">
                         <i class="fas fa-truck" id="envio"></i>
                         <p class="precio">$ <%= producto.precio %> </p>
                         <h4 class="titulo"><%= producto.nombre %> </h4>
                         <p class="descripcion"><%= producto.descripcion %> </p>
                     </div>
-                </article>
-                
-                <% }else { %> 
-                    
-                        
-                        <article class="producto_ofer">
-                            <div class="image_container">
-                                <% for (let i = 0; i < imagenes.length ; i++){ %> 
-                                    <% if (producto.id == imagenes[i].productoId) { %>
-        
-                                        <a href="/product/<%= producto.id %>"> <img src="/img/productos/<%= imagenes[i].nombre %>" alt="<%= producto.nombre %> "></a>
-                                     
-                                    <% break } %>
-                                <% } %> 
 
-                                
-
-                            </div>
-                            <div class="detail_container">
-                                <p class="precio">$ <%= producto.precio %> </p>
-                                <p class="descuento"><%= producto.descuento %> %</p>
-                                <p class="precio_des">$ <%= parseInt(producto.precio) - parseInt(producto.precio)*(parseInt(producto.descuento)/100)  %></p>
-                                <h4 class="titulo"><%= producto.nombre %></h4>
-                                <p class="descripcion"><%= producto.descripcion %></p>
-                            </div>
-                        </article>
-                     
-
-                <% } %>
+                    </article>
+                <% break } %>
+                <% } %> 
                 
                 <% }) %> 
             </div>
