@@ -12,10 +12,19 @@
             
             <div class="todos_contenedor">
                 <% productos.forEach(producto=>{%>
-                    <% if(producto.descuento === 0) { %>  
+                    
+                    
+                    <% if(producto.descuento === 0) { %> 
+                    
                     <article class="producto_des">
                     <div class="image_container">
-                        <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.productoImagen[0] %>" alt="<%= producto.nombre %> "></a>
+                        <% for (let i = 0; i < imagenes.length ; i++){ %> 
+                            <% if (producto.id == imagenes[i].productoId) { %>
+
+                                <a href="/product/<%= producto.id %>"> <img src="/img/productos/<%= imagenes[i].nombre %>" alt="<%= producto.nombre %> "></a>
+                             
+                            <% break } %>
+                        <% } %> 
                     </div>
                     <div class="detail_container">
                         <i class="fas fa-truck" id="envio"></i>
@@ -24,12 +33,22 @@
                         <p class="descripcion"><%= producto.descripcion %> </p>
                     </div>
                 </article>
+                
                 <% }else { %> 
                     
                         
                         <article class="producto_ofer">
                             <div class="image_container">
-                                <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.productoImagen[0] %>"></a>
+                                <% for (let i = 0; i < imagenes.length ; i++){ %> 
+                                    <% if (producto.id == imagenes[i].productoId) { %>
+        
+                                        <a href="/product/<%= producto.id %>"> <img src="/img/productos/<%= imagenes[i].nombre %>" alt="<%= producto.nombre %> "></a>
+                                     
+                                    <% break } %>
+                                <% } %> 
+
+                                
+
                             </div>
                             <div class="detail_container">
                                 <p class="precio">$ <%= producto.precio %> </p>
@@ -39,9 +58,10 @@
                                 <p class="descripcion"><%= producto.descripcion %></p>
                             </div>
                         </article>
-                
+                     
 
                 <% } %>
+                
                 <% }) %> 
             </div>
         </section>
