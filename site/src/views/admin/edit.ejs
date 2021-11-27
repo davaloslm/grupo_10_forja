@@ -22,7 +22,7 @@
 
                     <section class="visual_container">
                         <!-- ////imagen de archivo//// -->
-                        <img src="/img/productos/<%= imagenes.nombre %>" alt="">
+                        <img src="/img/productos/<%= imagen[0].nombre %>" alt="">
 
                         <!-- /////titulo de producto//// -->
                         <h2>
@@ -42,7 +42,7 @@
                         <!-- ////////selector de enviar//////// -->
                         <div class="descuento_envio_container">
                             <div class="envio_container">
-                                <input type="checkbox" name="envioGratis" id="envio" <% if(producto.envioGratis===1
+                                <input type="checkbox" name="envioGratis" id="envio" <% if(producto.envio ===1
                                     ){%>checked<%}%> >
                                     <label for="envioGratis">Envío</label>
                             </div>
@@ -72,8 +72,8 @@
                         <div class= "tallaLetra">
                             <p>Tallas</p>
                             /* hacer switch aquí */
-                            <% for (let i = 0; i < talles.length; i++) { %>
-                                <label for="talle<%= i %>"><%= talles[i]%></label>
+                            <% for (let i = 0; i < talle.length; i++) { %>
+                                <label for="talle<%= i %>"><%= talle[i]%></label>
                                 <input id="inputTalles" class="talle<%= i %>" type="checkbox" name="talle" value="<%= i %>"  
                                 <% if(producto.productoTalles.productoId === producto.id) { %>
                                     checked

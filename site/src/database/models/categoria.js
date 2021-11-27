@@ -22,6 +22,7 @@ module.exports = (sequelize, DataTypes) => {
     productoId: DataTypes.INTEGER,
   }, {
     sequelize,
+    tableName:'categorias',
     modelName: 'Categoria',
   });
   return Categoria;

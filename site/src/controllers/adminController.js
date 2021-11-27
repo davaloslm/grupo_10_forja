@@ -203,22 +203,26 @@ const controller = {
 
     vistaEditar: (req, res)=> {
 
+        
         let promesaProductos = db.Producto.findOne({
             where: {id: parseInt(req.params.id)},
             include: [
                 {
-                    association: "productoTalles",
+                    association: "talle",
                 },
                 {
-                    association: "productoColores",
+                    association: "color",
                 },
                 {
-                    association: "productoCategorias",
+                    association: "categoria",
                 },
+                {
+                    association: "imagen",
+                }
             ],
-        });
+        })
 
-        let promesaImagenes = db.Imagen.findAll({
+        /* let promesaImagenes = db.Imagen.findAll({
             where: {productoId: parseInt(req.params.id)}
         });
 
@@ -226,12 +230,15 @@ const controller = {
         let promesaColores = db.Color.findAll();
         let promesaCategorias = db.Categoria.findAll();
 
-        Promise.all([promesaProductos, promesaImagenes, promesaTalles, promesaColores, promesaCategorias])
-            .then(([producto, imagenes, talles, colores, categorias])=>{
-                res.render('admin/admin', {producto, imagenes, talles, colores, categorias})
+        Promise.all([promesaProductos, promesaImagenes, promesaTalles, promesaColores, promesaCategorias]) */
+            .then((producto)=>{
+                res.render('admin/edit', {producto})
                 
             })
-            .catch(error => console.log(error))
+            .catch(error => {
+                console.log(error)
+                res.send("No se pudo obtener el producto de la base de datos")
+            })
     },
     
     /////// Editar producto - Guardar ////////
