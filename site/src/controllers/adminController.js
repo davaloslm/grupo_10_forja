@@ -6,7 +6,7 @@ const productosRuta = path.join(__dirname, '../data/productos.json');
 const usuariosRuta = path.join(__dirname, '../data/users.json'); */
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
-const { INSERT } = require('sequelize/types/lib/query-types');
+/* const { INSERT } = require('sequelize/types/lib/query-types'); */
 
 const controller = {
     admin: (req,res)=>{
@@ -52,30 +52,7 @@ const controller = {
         if(newProductErrors.isEmpty()) {
 
             const {imagenes, nombre, marca,  descripcion, precio, stock, descuento, talle, color, categoria, envioGratis} = req.body
-            /* let nuevoProducto = req.body;
             
-            let imagenes = []
-            req.files.forEach(image => {
-                imagenes.push(image.filename)
-            });
-    
-            nuevoProducto.id = productos.length + 1;
-            
-                nuevoProducto.envioGratis = envioGratis === undefined ? false : true;
-                nuevoProducto.descuento = parseInt(descuento);
-                nuevoProducto.talle = typeof(talle) === 'string' ? [talle] : talle;
-                nuevoProducto.nombre = nombre;
-                nuevoProducto.descripcion = descripcion;
-                nuevoProducto.precio = parseInt(precio);
-                nuevoProducto.color = [color];
-                nuevoProducto.categoria = typeof(categoria) === 'string' ? [categoria] : categoria;
-                nuevoProducto.imagen = imagenes;
-    
-                productos.push(nuevoProducto);
-    
-            fs.writeFileSync(productosRuta, JSON.stringify(productos, null ,2)) */
-            
-
             db.Producto.create({
                 nombre: nombre,
                 descripcion: descripcion,
@@ -139,7 +116,9 @@ const controller = {
                         })
                         .then( () => console.log('Talle guardado satisfactoriamente'))
                         .catch(error=> console.log(error))
-                    }else{
+                    } else if(talle === undefined) {
+                        console.log("El producto no tiene talle")
+                    } else {
                         let tallesACrear = [];
                         talle.forEach(e => {
                             let item ={
@@ -150,9 +129,9 @@ const controller = {
                             tallesACrear.push(item)
                             
                         });
-                            promesaTalle = db.Talle.bulkCreate(tallesACrear)
-                            .then( () => console.log('Talles guardados satisfactoriamente'))
-                            .catch(error=> console.log(error))
+                        promesaTalle = db.Talle.bulkCreate(tallesACrear)
+                        .then( () => console.log('Talles guardados satisfactoriamente'))
+                        .catch(error=> console.log(error))
                         
                     }
                 //Color//
@@ -166,7 +145,9 @@ const controller = {
                         )
                         .then( () => console.log('Color guardado satisfactoriamente'))
                         .catch(error=> console.log(error))
-                    }else{
+                    } else if(color === undefined) {
+                        console.log("El producto no tiene color")
+                    } else{
                         let coloresACrear = [];
                         color.forEach(e => {
                             let item ={
@@ -180,15 +161,11 @@ const controller = {
                             promesaColor = db.Color.bulkCreate(coloresACrear)
                             .then( () => console.log('Colores guardados satisfactoriamente'))
                             .catch(error=> console.log(error))
-                      
-                    
-                    //Falta actualizar ejs: input de colores debe ser checkbox//
 
                 }
                 Promise.all([promesaImagenes, promesaCategoria, promesaTalle, promesaColor])
                 .then( () => res.redirect("/product/" + producto.id))
-            })
-            
+            }) 
             .catch(error =>{
                 res.send("No se pudo crear el producto")
                 console.log(error);
@@ -248,7 +225,7 @@ const controller = {
         
         const editProductErrors = validationResult(req);
         
-        let productoEditado = productos.find(producto => producto.id === parseInt(req.params.id));
+        let producto = db.Producto.findByPk(req.params.id);
 
         if(editProductErrors.isEmpty()){
 
@@ -446,7 +423,7 @@ const controller = {
                 }
 
                 Promise.all([promesaImagenes, promesaCategoria, promesaTalle, promesaColor])
-                    .then( () => res.redirect("/product/" + producto.id))
+                    .then( (producto) => res.render("products/detail", {producto}))
             })
             .catch(error =>{
                 res.send("No se pudo editar el producto")
@@ -470,7 +447,7 @@ const controller = {
             
         
         } else {
-            res.render('admin/edit', { errors: editProductErrors.mapped(), producto: productoEditado, oldData: req.body })
+            res.render('admin/edit', { errors: editProductErrors.mapped(), producto, oldData: req.body })
         }
 
 	},
