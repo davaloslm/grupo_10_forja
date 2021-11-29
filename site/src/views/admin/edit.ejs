@@ -22,7 +22,7 @@
 
                     <section class="visual_container">
                         <!-- ////imagen de archivo//// -->
-                        <img src="/img/productos/<%= imagen[0].nombre %>" alt="">
+                        <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="">
 
                         <!-- /////titulo de producto//// -->
                         <h2>
@@ -71,15 +71,231 @@
                         <p>Tallas</p>
                         <div class= "tallaLetra">
                             <p>Tallas</p>
-                            /* hacer switch aquí */
-                            <% for (let i = 0; i < talle.length; i++) { %>
-                                <label for="talle<%= i %>"><%= talle[i]%></label>
-                                <input id="inputTalles" class="talle<%= i %>" type="checkbox" name="talle" value="<%= i %>"  
-                                <% if(producto.productoTalles.productoId === producto.id) { %>
+                            <label for="M0">M0</label>
+                            <input class="talles"id="M0" type="checkbox" name="talle" value="M0"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'M0') { %>
                                     checked
                                 <% } %>
-                                >
+                                
                             <% } %>
+                            >
+                            <label for="M1">M1</label>
+                            <input class="talles"id="M1" type="checkbox" name="talle" value="M1"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'M1') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="M2">M2</label>
+                            <input class="talles"id="M2" type="checkbox" name="talle" value="M2"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'M2') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="M3">M3</label>
+                            <input class="talles"id="M3" type="checkbox" name="talle" value="M3"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'M3') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="A0">A0</label>
+                            <input class="talles"id="A0" type="checkbox" name="talle" value="A0"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'A0') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="A1">A1</label>
+                            <input class="talles"id="A1" type="checkbox" name="talle" value="A1"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'A1') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="A2">A2</label>
+                            <input class="talles"id="A2" type="checkbox" name="talle" value="A2"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'A2') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="A3">A3</label>
+                            <input class="talles"id="A3" type="checkbox" name="talle" value="A3"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'A3') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="A4">A4</label>
+                            <input class="talles"id="A4" type="checkbox" name="talle" value="A4"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'A4') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="A5">A5</label>
+                            <input class="talles"id="A5" type="checkbox" name="talle" value="A5"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'A5') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="0">0</label>
+                            <input class="talles"id="0" type="checkbox" name="talle" value="0"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === '0') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="1">1</label>
+                            <input class="talles"id="1" type="checkbox" name="talle" value="1"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === '1') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="2">2</label>
+                            <input class="talles"id="2" type="checkbox" name="talle" value="2"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === '2') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="3">3</label>
+                            <input class="talles"id="3" type="checkbox" name="talle" value="3"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === '3') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="4">4</label>
+                            <input class="talles"id="4" type="checkbox" name="talle" value="4"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === '4') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="5">5</label>
+                            <input class="talles"id="5" type="checkbox" name="talle" value="5"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === '5') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="6">6</label>
+                            <input class="talles"id="6" type="checkbox" name="talle" value="6"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === '6') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="7">7</label>
+                            <input class="talles"id="7" type="checkbox" name="talle" value="7"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === '7') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="8">8</label>
+                            <input class="talles"id="8" type="checkbox" name="talle" value="8"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === '8') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="9">9</label>
+                            <input class="talles"id="9" type="checkbox" name="talle" value="9"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === '9') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="S">S</label>
+                            <input class="talles"id="S" type="checkbox" name="talle" value="S"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'S') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="L">L</label>
+                            <input class="talles"id="L" type="checkbox" name="talle" value="L"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'L') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="M">M</label>
+                            <input class="talles"id="M" type="checkbox" name="talle" value="M"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'M') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="XL">XL</label>
+                            <input class="talles"id="XL" type="checkbox" name="talle" value="XL"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'XL') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="XXL">XXL</label>
+                            <input class="talles"id="XXL" type="checkbox" name="talle" value="XXL"
+                            <% for (let i = 0; i < producto.talle.length; i++) { %>
+                                <% if (producto.talle[i].nombre === 'XXL') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
                         </div>
                         <!-- /////Nombre de Producto///// -->
                         <div class="selec info_titulo_container">
@@ -103,26 +319,209 @@
                         <!-- /////Colores de producto///// -->
                         <div class="selec color_container">
                             <p>Colores</p>
-                            <% for (let i = 0; i < colores.length; i++) { %>
-                                <input id="inputColores" class="color<%= i %>" type="checkbox" name="talle" value="<%= i %>"  
-                                <% if(producto.productoColores.productoId === producto.id) { %>
+                            <input class="color0"id="inputColores" type="checkbox" name="color" value="Rojo"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Rojo') { %>
                                     checked
                                 <% } %>
-                                >
+                                
                             <% } %>
+                            >
+                            <input class="color1"id="inputColores" type="checkbox" name="color" value="Blanco"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Blanco') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color2"id="inputColores" type="checkbox" name="color" value="Violeta"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Violeta') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color3"id="inputColores" type="checkbox" name="color" value="Rosado"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Rosado') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color4"id="inputColores" type="checkbox" name="color" value="Azul"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Azul') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color5"id="inputColores" type="checkbox" name="color" value="Amarillo"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Amarillo') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color6"id="inputColores" type="checkbox" name="color" value="Negro"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Negro') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color7"id="inputColores" type="checkbox" name="color" value="Verde claro"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Verde claro') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color8"id="inputColores" type="checkbox" name="color" value="Verde oscuro"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Verde oscuro') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color9"id="inputColores" type="checkbox" name="color" value="Celeste"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Celeste') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color10"id="inputColores" type="checkbox" name="color" value="Naranja"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Naranja') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color11"id="inputColores" type="checkbox" name="color" value="Gris"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Gris') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color12"id="inputColores" type="checkbox" name="color" value="Fucsia"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Fucsia') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color13"id="inputColores" type="checkbox" name="color" value="Bordó"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Bordó') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color14"id="inputColores" type="checkbox" name="color" value="Marrón"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Marrón') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color15"id="inputColores" type="checkbox" name="color" value="Dorado"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Dorado') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color16"id="inputColores" type="checkbox" name="color" value="Beige"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Beige') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <input class="color17"id="inputColores" type="checkbox" name="color" value="Plateado"
+                            <% for (let i = 0; i < producto.color.length; i++) { %>
+                                <% if (producto.color[i].nombre === 'Plateado') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
 
                         </div>
                         <!-- /////categoria de producto///// -->
                         <p>Categoría</p>
                         <div class="selec info_categoria_container">
-                            <% for (let i = 0; i < categorias.length; i++) { %>
-                                <label for="categoria<%= i %>"><%= categorias[i]%></label>
-                                <input id="categoria" class="m" type="checkbox" name="talle" value="<%= i %>"  
-                                <% if(producto.productoCategorias.productoId === producto.id) { %>
+                            <label for="TaeKwon-Do">TaeKwon-Do</label>
+                            <input class="m"id="TaeKwon-Do" type="checkbox" name="categoria" value="TaeKwon-Do"
+                            <% for (let i = 0; i < producto.categoria.length; i++) { %>
+                                <% if (producto.categoria[i].nombre === 'TaeKwon-Do') { %>
                                     checked
                                 <% } %>
-                                >
+                                
                             <% } %>
+                            >
+                            <label for="Boxeo">Boxeo</label>
+                            <input class="m"id="Boxeo" type="checkbox" name="categoria" value="Boxeo"
+                            <% for (let i = 0; i < producto.categoria.length; i++) { %>
+                                <% if (producto.categoria[i].nombre === 'Boxeo') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="Judo">Judo</label>
+                            <input class="m"id="Judo" type="checkbox" name="categoria" value="Judo"
+                            <% for (let i = 0; i < producto.categoria.length; i++) { %>
+                                <% if (producto.categoria[i].nombre === 'Judo') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="Jiu-Jitsu">Jiu-Jitsu</label>
+                            <input class="m"id="Jiu-Jitsu" type="checkbox" name="categoria" value="Jiu-Jitsu"
+                            <% for (let i = 0; i < producto.categoria.length; i++) { %>
+                                <% if (producto.categoria[i].nombre === 'Jiu-Jitsu') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="KickBoxing/MuayThai">KickBoxing/MuayThai</label>
+                            <input class="m"id="KickBoxing/MuayThai" type="checkbox" name="categoria" value="KickBoxing/MuayThai"
+                            <% for (let i = 0; i < producto.categoria.length; i++) { %>
+                                <% if (producto.categoria[i].nombre === 'KickBoxing/MuayThai') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
+                            <label for="Entrenamiento Funcional/CrossFit">Entrenamiento Funcional/CrossFit</label>
+                            <input class="m"id="Entrenamiento Funcional/CrossFit" type="checkbox" name="categoria" value="Entrenamiento Funcional/CrossFit"
+                            <% for (let i = 0; i < producto.categoria.length; i++) { %>
+                                <% if (producto.categoria[i].nombre === 'Entrenamiento Funcional/CrossFit') { %>
+                                    checked
+                                <% } %>
+                                
+                            <% } %>
+                            >
 
                         <% if (locals.errors && errors.categoria) { %>
                             <small class="errors"><%= errors.categoria.msg %></small>
