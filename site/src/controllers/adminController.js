@@ -6,7 +6,7 @@ const productosRuta = path.join(__dirname, '../data/productos.json');
 const usuariosRuta = path.join(__dirname, '../data/users.json'); */
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
-const { INSERT } = require('sequelize/types/lib/query-types');
+
 
 const controller = {
     admin: (req,res)=>{
