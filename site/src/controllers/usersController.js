@@ -53,25 +53,36 @@ const controller = {
         const loginErrors = validationResult(req);
         
 
+        
         if (loginErrors.isEmpty()) {
                 
             const {email, contraseña} = req.body;
-
-            const usuarioALoguear = usuarios.find(usuario => usuario.email === email);
-
-            if ( bcrypt.compareSync(contraseña, usuarioALoguear.contraseña )) {
-            
-                req.session.usuarioLogueado = usuarioALoguear;
-
-                if (req.body.recordarme !== undefined){
-                     res.cookie('recordarUsuario', req.session.usuarioLogueado.email,{maxAge: 60*1000*60*24})
+            db.Usuario.findOne({
+                where: {
+                    email
                 }
-
-            res.redirect("/");
+            })
+            .then(usuario => {
+                
+                if ( bcrypt.compareSync(contraseña, usuario.contraseña )) {
             
-            } else{
-                res.render("users/login", {errorContraseña: "La contraseña es incorrecta", oldData: req.body });                
-            } 
+                    req.session.usuarioLogueado = usuario;
+    
+                    if (req.body.recordarme !== undefined){
+                        res.cookie('recordarUsuario', req.session.usuarioLogueado.email,{maxAge: 60*1000*60*24})
+                    }
+    
+                res.redirect("/");
+                
+                } else {
+                    res.render("users/login", {errorContraseña: "La contraseña es incorrecta", oldData: req.body });                
+                } 
+            })
+            .catch(error => {
+                res.send('El usuario no existe en nuestra base de datos')
+                console.log(error)
+            })
+            
     
         }else{
 
