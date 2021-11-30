@@ -165,6 +165,10 @@ const controller = {
                 }
                 Promise.all([promesaImagenes, promesaCategoria, promesaTalle, promesaColor])
                 .then( () => res.redirect("/product/" + producto.id))
+                .catch(error => {
+                    res.send("No se pudo redireccionar al detalle del producto creado")
+                    console.log(error);
+                })
             }) 
             .catch(error =>{
                 res.send("No se pudo crear el producto")
@@ -201,22 +205,12 @@ const controller = {
         })
         .then((producto)=>{
             res.render('admin/edit', {producto})
-            console.log(producto.talle[0].nombre)
         })
         .catch(error => {
             console.log(error)
             res.send("No se pudo obtener el producto de la base de datos")
         })
 
-        /* let promesaImagenes = db.Imagen.findAll({
-            where: {productoId: parseInt(req.params.id)}
-        });
-
-        let promesaTalles = db.Talle.findAll();
-        let promesaColores = db.Color.findAll();
-        let promesaCategorias = db.Categoria.findAll();
-
-        Promise.all([promesaProductos, promesaImagenes, promesaTalles, promesaColores, promesaCategorias]) */
     },
     
     /////// Editar producto - Guardar ////////
@@ -225,7 +219,26 @@ const controller = {
         
         const editProductErrors = validationResult(req);
         
-        let producto = db.Producto.findByPk(req.params.id);
+        var productoAEditar = db.Producto.findOne({
+            where: {id: req.params.id},
+            include: [
+                {
+                    association: "talle",
+                },
+                {
+                    association: "color",
+                },
+                {
+                    association: "categoria",
+                },
+                {
+                    association: "imagen",
+                }
+            ],
+        })
+
+        console.log("------------------------------------------------------------------");
+        console.log(productoAEditar);
 
         if(editProductErrors.isEmpty()){
 
@@ -246,11 +259,14 @@ const controller = {
             })
             .then(producto =>{
                 //Imágenes//
-                if(req.files.length != 0){
+                console.log("//////////////////////////////////////////////////////////////////////////////")
+                console.log(productoAEditar.id)
+                var promesaImagenes;
+                if(req.files != undefined ){
                     let images = req.files.map(image => {
                         let item = {
                             nombre : image.filename,
-                            productoId : producto.id
+                            productoId : req.params.id
                         }
                         return item
                     })
@@ -259,15 +275,17 @@ const controller = {
                     })
                     .then( () => {
 
-                    var promesaImagenes = db.Imagen.bulkCreate(images)
-                        .then( () => console.log('Imágenes actualizadas satisfactoriamente'))
-                        .catch(error=> console.log(error))
+                        promesaImagenes = db.Imagen.bulkCreate(images)
+                            .then( () => console.log('Imágenes actualizadas satisfactoriamente'))
+                            .catch(error=> console.log(error))
                         
                     })
                     .catch(error => {
                         res.send("No se pudieron eliminar las imágenes anteriores");
                         console.log(error);
                     })
+                } else {
+                    console.log("No se agregaron imágenes nuevas a este producto")
                 }
                 //Categoría//
                 var promesaCategoria;
@@ -277,19 +295,21 @@ const controller = {
                         where: {productoId : req.params.id}
                     })
                     .then( () => {
-                        promesaCategoria = db.Categoria.create(
-                            {
-                                nombre: categoria,
-                                productoId: producto.id
-                                
-                            })
-                            .then( () => console.log('Categoría actualizada satisfactoriamente'))
-                            .catch(error=> console.log(error))
+                        console.log("Se eliminó la categoría anterior");
                     })
                     .catch(error => {
                         res.send("No se pudo eliminar la categoría anterior");
                         console.log(error);
                     })
+
+                    promesaCategoria = db.Categoria.create(
+                        {
+                            nombre: categoria,
+                            productoId: req.params.id
+                            
+                        })
+                        .then( () => console.log('Categoría actualizada satisfactoriamente'))
+                        .catch(error=> console.log(error))
 
                     
                 } else {
@@ -298,7 +318,7 @@ const controller = {
                         categoria.forEach(e => {
                             let item ={
                                 nombre: e,
-                                productoId: producto.id,
+                                productoId: req.params.id,
                             }
 
                             categoriasACrear.push(item)
@@ -324,13 +344,23 @@ const controller = {
                 //Talle//
                 var promesaTalle
                 if(typeof(talle) === 'string'){
-                    promesaTalle = db.Talle.create(
-                        {
-                            nombre: talle,
-                            productoId: producto.id
-                        })
-                        .then( () => console.log('Talle guardado satisfactoriamente'))
-                        .catch(error=> console.log(error))
+                    db.Talle.destroy({
+                        where: { productoId: req.params.id}
+                    })
+                    .then(()=>{
+                        promesaTalle = db.Talle.create(
+                            {
+                                nombre: talle,
+                                productoId: req.params.id
+                            })
+                            .then( () => console.log('Talle guardado satisfactoriamente'))
+                            .catch(error=> console.log(error))
+                    })
+                    .catch(error => {
+                        res.send("No se pudo eliminar el talle anterior");
+                        console.log(error);
+                    })
+                    
                     } else if(talle === undefined) {
                         db.Talle.destroy({
                             where: {productoId : req.params.id}
@@ -343,11 +373,11 @@ const controller = {
                             console.log(error);
                         })
                     } else {
-                        let tallesACrear = [];
+                        var tallesACrear = [];
                         talle.forEach(e => {
                             let item ={
                                 nombre: e,
-                                productoId: producto.id,
+                                productoId: req.params.id,
                             }
 
                             tallesACrear.push(item)
@@ -374,14 +404,22 @@ const controller = {
                 //Color//
                 var promesaColor
                 if(typeof(color) === 'string'){
-                    promesaColor = db.Color.update(
-                        {
-                            nombre: color,
-                            productoId: producto.id
-                        }
-                        )
-                        .then( () => console.log('Color guardado satisfactoriamente'))
-                        .catch(error=> console.log(error))
+                    db.Color.destroy({
+                        where: { productoId: req.params.id}
+                    })
+                    .then(()=>{
+                        promesaColor = db.Color.create(
+                            {
+                                nombre: color,
+                                productoId: req.params.id
+                            })
+                            .then( () => console.log('Color guardado satisfactoriamente'))
+                            .catch(error=> console.log(error))
+                    })
+                    .catch(error => {
+                        res.send("No se pudo eliminar el color anterior");
+                        console.log(error);
+                    })
                     } else if(color === undefined) {
                         db.Color.destroy({
                             where: {productoId : req.params.id}
@@ -398,7 +436,7 @@ const controller = {
                         color.forEach(e => {
                             let item ={
                                 nombre: e,
-                                productoId: producto.id,
+                                productoId: req.params.id,
                             }
 
                             coloresACrear.push(item)
@@ -423,31 +461,45 @@ const controller = {
                 }
 
                 Promise.all([promesaImagenes, promesaCategoria, promesaTalle, promesaColor])
-                    .then( (producto) => res.render("products/detail", {producto}))
+                .then( () => res.redirect("/product/" + req.params.id))
+                .catch(error => {
+                    res.send("No se pudo redireccionar al detalle del producto editado")
+                    console.log(error);
+                })
             })
             .catch(error =>{
                 res.send("No se pudo editar el producto")
                 console.log(error);
             })          
-                    
-            /* .then( result=>{
-                if (result[0] === 1) {
-    
-                    res.redirect(`/product/${+req.params.id}`)
-    
-                } else {
-                    res.redirect(`/product/${+req.params.id}`)
-                    
-                }
-            })
-            .catch(error =>{
-                res.???
-            }) */
-    
-            
         
         } else {
-            res.render('admin/edit', { errors: editProductErrors.mapped(), producto, oldData: req.body })
+
+            db.Producto.findOne({
+                where: {id: req.params.id},
+                include: [
+                    {
+                        association: "talle",
+                    },
+                    {
+                        association: "color",
+                    },
+                    {
+                        association: "categoria",
+                    },
+                    {
+                        association: "imagen",
+                    }
+                ],
+            })
+            .then((producto)=>{
+                res.render('admin/edit', { errors: editProductErrors.mapped(), producto, oldData: req.body })
+                console.log(producto.talle[0].nombre)
+            })
+            .catch(error => {
+                console.log(error)
+                res.send("No se pudieron enviar los errores a la vista de edición")
+            })
+
         }
 
 	},
@@ -466,18 +518,9 @@ const controller = {
             console.log(error);
         })
 
-            
-        
-            /* productos = productos.filter(e=>e.id !== parseInt(req.params.id))
-
-
-         fs.writeFileSync(productosRuta, JSON.stringify(productos, null ,2)) */
-
 		 res.redirect("/admin")
 
-        }
-
-        ,
+        },
 
         /////// administración de usuarios ///////
 
