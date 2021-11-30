@@ -60,5 +60,20 @@
     "ban": 0,
     "admin": 1,
     "telefono": 321321321321
+  },
+  {
+    "nombre": "Test",
+    "apellido": "prueba",
+    "email": "prueba@gmail.com",
+    "fechaDeNac": "2000-12-12",
+    "contraseña": "$2a$12$a8YvJIG7f1kNQyuN2VeGCuuI/VbSxSRrQLfyelxdQnx9X0VzIRAUC",
+    "contraseña2": "$2a$12$.acTKay2.lsZqB0wea7SHeGXXxTqlFIEX/YWaANDAD3KsyT7Wikqu",
+    "terminos": "1",
+    "id": 5,
+    "nombreUsuario": "Testprueba5",
+    "imagen": "img-1638313309969.jpg",
+    "ofertas": false,
+    "ban": 0,
+    "admin": 1
   }
 ]

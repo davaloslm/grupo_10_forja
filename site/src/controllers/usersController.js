@@ -4,6 +4,7 @@ const path = require('path');
 const usuariosRuta = path.join(__dirname, '../data/users.json');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
+const db = require('../database/models');
 
 const controller = {
     cart: (req, res)=> {
@@ -19,33 +20,30 @@ const controller = {
         const registerErrors = validationResult(req);
 
         if(registerErrors.isEmpty()){
-            
-        const {nombre, apellido, email, fechaDeNac, contraseña, contraseña2, terminos, ofertas} = req.body;
-        let nuevoUsuario = req.body;
-
-        nuevoUsuario.id = usuarios.length + 1;
-
-        nuevoUsuario.nombre = nombre;
-        nuevoUsuario.apellido = apellido;
-        nuevoUsuario.email = email;
-        nuevoUsuario.nombreUsuario = (nombre + apellido + (usuarios.length + 1));
-        nuevoUsuario.fechaDeNac = fechaDeNac;
-        nuevoUsuario.contraseña = bcrypt.hashSync(contraseña, 12);
-        nuevoUsuario.contraseña2 = bcrypt.hashSync(contraseña2, 12);
-        nuevoUsuario.imagen = req.file ? req.file.filename : 'default-user.jpg';
-        nuevoUsuario.terminos = terminos;
-        nuevoUsuario.ofertas = ofertas === undefined ? false : true;
-        nuevoUsuario.ban = 0;
-        nuevoUsuario.admin = 0;
-
-
-        usuarios.push(nuevoUsuario);
-
-        fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null, 2))
         
-        res.render('users/login', { email })
+            const {nombre, apellido, email, fechaDeNac, contraseña, terminos, ofertas} = req.body;
+            
+            db.Usuario.create({
+                nombre: nombre,
+                apellido: apellido,
+                email: email,
+                contraseña: bcrypt.hashSync(contraseña, 12),
+                userName: nombre+apellido,
+                fechaDeNacimiento: fechaDeNac,
+                subscripcionForja: ofertas === undefined ? 0 : 1,
+                admin: 0,
+                telefono: null,
+                imagen: req.file ? req.file.filename : 'default-user.jpg',
+            })
+            .then(() => {
+                res.render('users/login', { email })
+            })
+            .catch(error => {
+                res.send('Error al crear usuario')
+                console.log(error)
+            })
 
-        }else{
+        } else {
             res.render('users/register', {errors: registerErrors.mapped(), old: req.body} )
         }
 
