@@ -298,3 +298,261 @@ Tareas a realizar:
 
 - **Tareas a realizar:**
   - Ninguna.
+
+ # Sprint 6
+ ---
+
+ ## Reunión 5/11/2021
+- **Tareas realizadas:**
+  -  Agregar nuevas tareas al tablero de Trello.
+  -  Dividir tareas.
+  -  Asignar dificultades
+  -  Establecer fechas límite. 
+  -  Agregar nueva retrospectiva al archivo retro.md. 
+
+
+- **Inconvenientes:** 
+  -  Ninguno.
+
+- **Tareas a realizar:**
+ -  Crear diagrama de base de datos
+
+ ## Reunión 6/11/2021
+- **Tareas realizadas:**
+  -  Crear diagrama de base de datos 
+
+
+- **Inconvenientes:** 
+  -  Ninguno.
+
+- **Tareas a realizar:**
+ -  Terminar diagrama de base de datos
+
+
+
+ ## Reunión 8/11/2021
+- **Tareas realizadas:**
+  -  Corregir diagrama de base de datos 
+
+
+- **Inconvenientes:** 
+  -  Ninguno.
+
+- **Tareas a realizar:**
+ -  Terminar diagrama de base de datos
+
+ ## Reunión 9/11/2021
+- **Tareas realizadas:**
+  -  Terminar diagrama de base de datos 
+
+
+- **Inconvenientes:** 
+  -  Ninguno.
+
+- **Tareas a realizar:**
+ -  Crear  script de estructura.
+
+
+ ## Reunión 10/11/2021
+- **Tareas realizadas:**
+  -  Crear script de estructura.
+
+
+- **Inconvenientes:** 
+  -  Ninguno.
+
+- **Tareas a realizar:**
+ -  Crear script de datos.
+
+ ## Reunión 11/11/2021
+- **Tareas realizadas:**
+  -  Corregir script de estructura.
+  -  Corregir diagrama.
+
+- **Inconvenientes:**:
+  -  Ninguno
+
+- **Tareas a realizar:**
+ -  Creación de carpeta database y archivos de modelos.
+
+ ## Reunión 12/11/2021
+- **Tareas realizadas:**
+  - Creación de carpeta database y un archivo de modelos.
+
+
+- **Inconvenientes:**
+  -  Ninguno
+
+- **Tareas a realizar:**
+  -  Agregar más archivos de modelos.
+
+
+ ## Reunión 13/11/2021
+- **Tareas realizadas:**
+  -  Agregar más archivos de modelos.
+
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  CRUD.
+
+ ## Reunión 14/11/2021
+- **Tareas realizadas:**
+  -  Corregir asociaciones en sequelize.
+
+
+- **Inconvenientes:**
+  -  Asociaciones y tablas intermedias.
+
+- **Tareas a realizar:**
+  -  CRUD.
+
+ ## Reunión 15/11/2021
+- **Tareas realizadas:**
+  -  Cambiar nombres de alias de asociaciones.
+  -  Actualizar funciones listar productos y detalle de producto.
+
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  CRUD.
+
+
+ ## Reunión 16/11/2021
+- **Tareas realizadas:**
+  -  Corregir archivos de modelos y migraciones.
+ 
+
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Crear archivos de seeders.
+  -  CRUD.
+
+
+
+ ## Reunión 17/11/2021
+- **Tareas realizadas:**
+  -  Crear archivos de seeders.
+ 
+- **Inconvenientes:**
+  -  Seeders y migraciones
+
+- **Tareas a realizar:**
+  -  Crear archivos de seeders restantes.
+  -  CRUD.
+
+
+ ## Reunión 18/11/2021
+- **Tareas realizadas:**
+  -  Crear todos los archivos de seeders.
+  -  CRUD.
+ 
+- **Inconvenientes:**
+  -  Seeders y migraciones
+
+- **Tareas a realizar:**
+  -  Terminar CRUD.
+
+ ## Reunión 19/11/2021
+- **Tareas realizadas:**
+  -  CRUD: Actualizar función Crear 
+
+ 
+- **Inconvenientes:**
+  -  
+
+- **Tareas a realizar:**
+  -  Terminar CRUD.
+
+ ## Reunión 22/11/2021
+- **Tareas realizadas:**
+  -  Agregar más productos a productos.json
+
+ 
+- **Inconvenientes:**
+  -  
+
+- **Tareas a realizar:**
+  -  Terminar CRUD.
+
+ ## Reunión 23/11/2021
+- **Tareas realizadas:**
+  -  Terminar CRUD
+
+ 
+- **Inconvenientes:**
+  -  
+
+- **Tareas a realizar:**
+  -  Actualizar archivos ejs.
+
+
+ ## Reunión 24/11/2021
+- **Tareas realizadas:**
+  -  Actualizar archivos ejs.
+  -  Rehacer base de datos
+
+ 
+- **Inconvenientes:**
+  -  Relaciones N:M
+
+- **Tareas a realizar:**
+  -  Rehacer CRUD
+
+ ## Reunión 25/11/2021
+- **Tareas realizadas:**
+  -  Rehacer migraciones y seeders
+  -  Rehacer CRUD: funcion y vista de crear producto.
+  -  Rehacer controlador de productos y vistas detail.ejs y products.ejs
+
+ 
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Rehacer CRUD
+
+ ## Reunión 26/11/2021
+- **Tareas realizadas:**
+  -  Rehacer CRUD: vista editar producto.
+ 
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Corregir vista edit.ejs
+  -  Rehacer CRUD: funcion editar producto y eliminar producto.
+
+
+ ## Reunión 28/11/2021
+- **Tareas realizadas:**
+  -  Rehacer CRUD: funcion editar producto y eliminar producto.
+ 
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Rehacer CRUD: Terminar funcion editar producto y eliminar producto.
+  -  Corregir vista admin
+
+
+ ## Reunión 29/11/2021
+- **Tareas realizadas:**
+  -  Rehacer CRUD: Terminar funcion editar producto y eliminar producto.
+  -  Actualizar archivo dailies.md
+  -  Corregir vista admin
+ 
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Ninguna
