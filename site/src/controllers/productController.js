@@ -25,7 +25,7 @@ const controller = {
     //detalle
     detail: async (req, res) => {
         try {
-            const producto = await db.Producto.findByPk(req.params.id, {
+            var producto = await db.Producto.findByPk(req.params.id, {
                 include: [
                     {association: "imagen"},
                     {association: "talle"},
