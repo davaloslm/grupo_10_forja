@@ -1,4 +1,4 @@
-const usuarios = require("../data/users.json");
+const db = require('../database/models');
 const {check} = require('express-validator');
 
 const loginValidator = [
@@ -7,9 +7,19 @@ const loginValidator = [
         .isEmail().withMessage('El formato de E-mail debe ser válido').bail()
         .trim().bail()
         .custom((value)=>{
-            if(!usuarios.find(usuario=>usuario.email === value)){
-                throw new Error("Este e-mail no está registrado en nuestra base de datos")
-            } return true
+        db.Usuario.findOne({
+            where: {
+                email: value
+            }
+        })
+        .then(() => { 
+            return true
+        })
+        .catch(error => {
+            throw new Error("Este e-mail no está registrado en nuestra base de datos")
+            console.log('*************error catch middleware loginValidator*************');
+            console.log(error);
+           })
         }),
 
     check('contraseña')
