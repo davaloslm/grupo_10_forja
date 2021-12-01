@@ -93,8 +93,18 @@ const controller = {
     },
     vistaUserProfile: (req, res)=> {
         const {id} = req.params;
-        const usuario = usuarios.find(usuario=>usuario.id === parseInt(id) )
-        res.render('users/userProfile', {usuario} )
+        db.Usuario.findOne({
+            where: {
+                id: id
+            }
+        })
+        .then(usuario => {
+            res.render('users/userProfile', {usuario} )
+        })
+        .catch(error => {
+            res.send('No se pudo acceder a tu perfil de usuario')
+            console.log(error)
+        })
     },
     cerrarSesion: (req, res) => {
         res.clearCookie('recordarUsuario')
