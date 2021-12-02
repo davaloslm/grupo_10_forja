@@ -38,12 +38,11 @@
                       <li><span>Nombre completo:</span><%= usuario.nombre %> <%= usuario.apellido %> </li>
                       <li><span>Email:</span> <%= usuario.email %></li>
                       <li><span>Teléfono:</span> <%= usuario.telefono ? usuario.telefono : null %></li>
-                      <li><span>Fecha de nacimiento:</span> <%= usuario.fechaDeNac %></li>
+                      <li><span>Fecha de nacimiento:</span> <%= usuario.fechaDeNacimiento %></li>
                     </ul>
                   </div>
                   <div class="edit-profile">
-                    <button class="edit-button">Editar perfil</button>
-
+                    
                     <form action="/user/userProfile/<%= usuario.id %>?_method=PUT" method="POST">
                         <span>Nombre: </span>
                         <input type="text" name="nombre" class="edit-form" value="<%= usuario.nombre %>">
@@ -67,7 +66,7 @@
                         <% } %>
                         
                         <span>Teléfono: </span>
-                        <input type="number" name="telefono" class="edit-form" value="<%= usuario.telefono ? usuario.telefono : null %> ">
+                        <input type="number" name="telefono" class="edit-form" value="<%= usuario.telefono ? usuario.telefono : null %>">
                         <% if (locals.errors && errors.telefono) { %>
                           <small class="errors"><%= errors.telefono.msg %> </small>
                        

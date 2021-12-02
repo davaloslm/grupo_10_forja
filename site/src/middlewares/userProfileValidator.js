@@ -1,6 +1,5 @@
-const usuarios = require("../data/users.json");
-const path = require("path");
 const {check} = require('express-validator');
+const db = require('../database/models');
 
 const userProfileValidator = [
     check('nombre')
@@ -16,10 +15,24 @@ const userProfileValidator = [
         .isEmail().withMessage('El formato de E-mail debe ser válido').bail()
         .trim().bail()
         .custom((value, {req})=>{
-            if(usuarios.find(usuario=>usuario.email === value) && req.session.usuarioLogueado.email !== value){
+            return db.Usuario.findOne({
+                where: {
+                    email: value
+                }
+            })       
+    
+            .then(usuario => {
+                
+                if (usuario !== null && req.session.usuarioLogueado.email !== value){
+                    throw new Error("Este e-mail ya está registrado en nuestra base de datos")
+                } return true        
+            })
+            .catch(error => {
                 throw new Error("Este e-mail ya está registrado en nuestra base de datos")
-            } return true
-        }),
+                console.log('*************error catch middleware userProfileValidator*************');
+                console.log(error);
+               })
+            }),
     check('telefono')
         .notEmpty().withMessage('El campo teléfono es obligatorio').bail()
         .isInt().withMessage('Solo se pueden ingresar números').bail()
