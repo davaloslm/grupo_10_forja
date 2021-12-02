@@ -114,31 +114,40 @@ const controller = {
     },
     editUserProfile: (req, res)=>{
 
-        const {id} = req.params;
-        let usuario = usuarios.find(usuario=>usuario.id === parseInt(id) )
+        
+        /* var usuarioAEditar = db.Usuario.findOne({
+            where: {
+                id: req.params.id
+            }
+        })
+        console.log(usuarioAEditar); */
 
         const userProfileErrors = validationResult(req);
 
         if(userProfileErrors.isEmpty()){
             
-            /* let usuario = req.session.usuarioLogueado; */
 
             let {nombre, apellido, email, telefono} = req.body;
 
-            usuario.nombre = nombre;
-            usuario.apellido = apellido;
-            usuario.email = email;        
-            usuario.telefono = parseInt(telefono);
-            /* usuarioAEditar.contraseña = bcrypt.hashSync(contraseña); */
-            
+            db.Usuario.update({
+                nombre: nombre,
+                apellido: apellido,
+                email: email,
+                telefono: telefono === undefined ? null : telefono,
+            },
+            { where: { id : req.params.id}
+            })
+            .then( () => {
+                
+                res.redirect("/user/userProfile/" + req.params.id)
 
-            fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null ,2));
-
-            res.redirect("/user/userProfile/" + usuario.id) //si funciona//
-            /* res.render("users/userProfile", {usuario}); */ //no funciona/
+            })
+            .catch( error => {
+                res.send("No se pudo editar el usuario");
+                console.log("No se pudo editar el usuario", error);
+            })
 
         }else{
-            
 
             res.render("users/userProfile", {usuario:req.session.usuarioLogueado, errors: userProfileErrors.mapped()});
 
