@@ -69,7 +69,7 @@ const controller = {
                     req.session.usuarioLogueado = usuario;
     
                     if (req.body.recordarme !== undefined){
-                        res.cookie('recordarUsuario', req.session.usuarioLogueado.email,{maxAge: 60*1000*60*24})
+                        res.cookie('recordarUsuario', req.session.usuarioLogueado,{maxAge: 60*1000*60*24})
                     }
     
                 res.redirect("/");

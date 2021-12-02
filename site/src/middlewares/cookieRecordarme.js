@@ -1,8 +1,9 @@
-const usuarios = require('../data/users.json');
+const db = require('../database/models');
 
 const recordarme = (req, res , next) =>{
-    if(req.cookies.recordarUsuario && req.session.usuarioLogueado === undefined){
-        req.session.usuarioLogueado = usuarios.find(usuario => usuario.email === req.cookies.recordarUsuario)
+    
+    if(req.cookies.recordarUsuario){
+        req.session.usuarioLogueado = req.cookies.recordarUsuario;
     }
 
     next()
