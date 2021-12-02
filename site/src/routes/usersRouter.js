@@ -19,7 +19,7 @@ router.post('/register',  multerUser.single('imagen'), registerValidator, regist
 
 
 router.get('/userProfile/:id', /* invitado, */ vistaUserProfile);
-router.put('/userProfile/:id', userProfileValidator, editUserProfile);
+router.put('/userProfile/:id', multerUser.single('avatar'), userProfileValidator, editUserProfile);
 
 router.get('/cerrarSesion', cerrarSesion)
 

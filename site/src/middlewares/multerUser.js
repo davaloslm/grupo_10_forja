@@ -10,7 +10,15 @@ const storage = multer.diskStorage({
     }
 })
 
+const fileFilter = function(req, file,callback) {
+    if(!file.originalname.match(/\.(jpg|jpeg|png|gif|webp)$/)){
+        req.fileValidationError = "Solo se permiten los archivos con las extensiones: .JPG, .PNG, .GIF, .JPEG y .WEBP";
+        return callback(null,false,req.fileValidationError);
+    }
+    callback(null,true);
+}
 
-const upload = multer({ storage: storage })
+
+const upload = multer({ storage: storage, fileFilter})
 
 module.exports = upload;

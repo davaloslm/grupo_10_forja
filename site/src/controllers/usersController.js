@@ -127,13 +127,14 @@ const controller = {
         if(userProfileErrors.isEmpty()){
             
 
-            let {nombre, apellido, email, telefono} = req.body;
+            let {nombre, apellido, email, telefono, imagen} = req.body;
 
             db.Usuario.update({
                 nombre: nombre,
                 apellido: apellido,
                 email: email,
                 telefono: telefono === undefined ? null : telefono,
+                imagen: req.file ? req.file.filename : 'default-user.jpg'
             },
             { where: { id : req.params.id}
             })

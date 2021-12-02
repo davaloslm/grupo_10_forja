@@ -29,9 +29,7 @@
                   
                   <div class=" image-container pull-left text-center" href="#!">
                     <img class="media-object user-img" src="/img/users/<%= usuario.imagen %>" alt="Imagen de perfil">
-                    <form action="">
-                      <button class="img-button" type="submit">Cambiar imagen</button>
-                    </form>
+                    
                   </div>
                   <div class="media-body">
                     <ul class="user-profile-list">
@@ -43,7 +41,8 @@
                   </div>
                   <div class="edit-profile">
                     
-                    <form action="/user/userProfile/<%= usuario.id %>?_method=PUT" method="POST">
+                    <form action="/user/userProfile/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        <input type="file" accept="image/*" name="avatar" >
                         <span>Nombre: </span>
                         <input type="text" name="nombre" class="edit-form" value="<%= usuario.nombre %>">
                         <% if (locals.errors && errors.nombre) { %>
