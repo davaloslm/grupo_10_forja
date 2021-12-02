@@ -1,4 +1,4 @@
-const usuarios = require("../data/users.json");
+const db = require('../database/models');
 const path = require("path");
 const {check} = require('express-validator');
 
@@ -16,9 +16,21 @@ check('email')
     .isEmail().withMessage('El formato de E-mail debe ser válido').bail()
     .trim().bail()
     .custom((value)=>{
-        if(usuarios.find(usuario=>usuario.email === value)){
+        return db.Usuario.findOne({
+            where: {
+                email: value
+            }
+        })       
+        .then(usuario => {
+            if (usuario !== null){
+                throw new Error("Este e-mail ya está registrado en nuestra base de datos")
+            } return true
+        })
+        .catch(error => {
             throw new Error("Este e-mail ya está registrado en nuestra base de datos")
-        } return true
+            console.log('*************error catch middleware registerValidator*************');
+            console.log(error);
+        })
     }),
 check('fechaDeNac')
     .notEmpty().withMessage('El campo fecha de nacimiento es obligatorio').bail()
