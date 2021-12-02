@@ -1,9 +1,4 @@
-const path = require('path');
 const fs = require('fs');
-/* let productos = require("../data/productos.json");
-let usuarios = require("../data/users.json");
-const productosRuta = path.join(__dirname, '../data/productos.json');
-const usuariosRuta = path.join(__dirname, '../data/users.json'); */
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 

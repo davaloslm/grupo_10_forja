@@ -1,5 +1,3 @@
-const db = require('../database/models');
-
 const recordarme = (req, res , next) =>{
     
     if(req.cookies.recordarUsuario){

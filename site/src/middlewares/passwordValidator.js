@@ -1,4 +1,3 @@
-const usuarios = require("../data/users.json");
 const {check} = require('express-validator');
 const bcrypt = require('bcryptjs');
 

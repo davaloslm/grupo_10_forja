@@ -31,7 +31,7 @@
         <% if (locals.usuarioLogueado) { %>
         <div class="user_desktoplinks">
             <img class="avatar_userdesktop" src="/img/users/<%= locals.usuarioLogueado.imagen  %>" alt="Imagen de perfil">
-            <li class="desktop_userlink_profile"><a href="/user/userProfile/<%= usuarioLogueado.id %> "><%= usuarioLogueado.nombre %> <i class=" iconuser fas fa-user"></i></a></li>
+            <li class="desktop_userlink_profile"><a href="/user/userProfile/<%= locals.usuarioLogueado.id %> "><%= locals.usuarioLogueado.nombre %> <i class=" iconuser fas fa-user"></i></a></li>
             <li class="desktop_userlink_logout"><a href="/user/cerrarSesion">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a></li>
         </div>
         <% }else { %>
