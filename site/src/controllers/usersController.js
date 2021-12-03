@@ -1,7 +1,3 @@
-var usuarios = require('../data/users.json');
-const fs = require('fs');
-const path = require('path');
-const usuariosRuta = path.join(__dirname, '../data/users.json');
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
@@ -160,35 +156,36 @@ const controller = {
     },
     cambiarContraseña: (req, res)=>{
 
-        //falta vista de cambiar contraseña//
 
         const cambiarContraseñaErrors = validationResult(req);
 
         if(cambiarContraseñaErrors.isEmpty()){
-
-            let { contraseña, contraseña2} = req.body;
-
-            let usuarioAEditar = usuarios.find(e=>e.id === req.session.usuarioLogueado.id);
-
             
-            usuarioAEditar.contraseña = bcrypt.hashSync(contraseña2);
-            usuarioAEditar.contraseña2 = bcrypt.hashSync(contraseña2);
+            let { contraseñaNueva } = req.body;
+            let contraseñaCrypt = bcrypt.hashSync(contraseñaNueva);
 
-            fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null ,2));
-            
+            db.Usuario.update({
+                contraseña: contraseñaCrypt
+            },
+            {
+                where: { id : req.session.usuarioLogueado.id }
+            })
+            .then( () => {
+                res.redirect("/user/userProfile/" + req.session.usuarioLogueado.id)
+            })
+            .catch(error => {
+                res.send('Hubo un error al cambiar la contraseña')
+                console.log(error)
+            })
             //cerrar sesion o redirigir?//
-            res.redirect("/user/userProfile/" + usuarioAEditar.id)
-            /* res.render("users/password"); */
-    
-        }else{
+
+        } else {
     
             res.render("users/password", {errors: cambiarContraseñaErrors.mapped()});
     
             }
     }
 
-    
-    
 }
 // se puede poner .trim() al registro para que no vengan espacios en blanco
 module.exports = controller;
