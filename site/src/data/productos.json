@@ -16,7 +16,7 @@
       "TaeKwon-Do",
       "KickBoxing/MuayThai"
     ],
-    "envioGratis": true
+    "envioGratis": false
   },
   {
     "id": 2,
@@ -35,7 +35,7 @@
       "TaeKwon-Do",
       "KickBoxing/MuayThai"
     ],
-    "envioGratis": true
+    "envioGratis": false
   },
   {
     "id": 3,
@@ -54,7 +54,7 @@
       "TaeKwon-Do",
       "KickBoxing/MuayThai"
     ],
-    "envioGratis": true
+    "envioGratis": false
   },
   {
     "id": 4,
@@ -93,7 +93,7 @@
       "Boxeo",
       "KickBoxing/MuayThai"
     ],
-    "envioGratis": false
+    "envioGratis": true
   },
   {
     "id": 6,
@@ -111,7 +111,7 @@
       "Boxeo",
       "KickBoxing/MuayThai"
     ],
-    "envioGratis": false
+    "envioGratis": true
   },
   {
     "id": 7,
@@ -129,7 +129,7 @@
       "Boxeo",
       "KickBoxing/MuayThai"
     ],
-    "envioGratis": false
+    "envioGratis": true
   },
   {
     "id": 8,
@@ -148,7 +148,7 @@
       "Boxeo",
       "KickBoxing/MuayThai"
     ],
-    "envioGratis": false
+    "envioGratis": true
   },
   {
     "id": 9,
@@ -166,7 +166,7 @@
       "Boxeo",
       "KickBoxing/MuayThai"
     ],
-    "envioGratis": false
+    "envioGratis": true
   },
   {
     "id": 10,
@@ -199,7 +199,7 @@
     "nombre": "Pantalón Short de Boxeo Metal",
     "descripcion": "Short de Boxeo Metal Boxe. Fabricado en satén de alta calidad, con un cinturón ancho para un soporte excepcional y un corte corto.",
     "precio": 3500,
-    "descuento": 0,
+    "descuento": 5,
     "talle": [
       "S",
       "M",
@@ -239,7 +239,7 @@
       "KickBoxing/MuayThai",
       "TaeKwon-Do"
     ],
-    "envioGratis": false
+    "envioGratis": true
   },
   {
     "id": 13,
@@ -258,7 +258,7 @@
       "KickBoxing/MuayThai",
       "TaeKwon-Do"
     ],
-    "envioGratis": false
+    "envioGratis": true
   },
   {
     "id": 14,
@@ -326,7 +326,7 @@
       "KickBoxing/MuayThai",
       "TaeKwon-Do"
     ],
-    "envioGratis": false
+    "envioGratis": true
   },
   {
     "id": 17,
@@ -382,7 +382,7 @@
     "categoria": [
       "Funcional/Cross"
     ],
-    "envioGratis": true
+    "envioGratis": false
   },
   {
     "id": 20,
@@ -401,7 +401,7 @@
     "categoria": [
       "Funcional/Cross"
     ],
-    "envioGratis": true
+    "envioGratis": false
   },
   {
     "id": 21,
@@ -419,7 +419,7 @@
     "categoria": [
       "Funcional/Cross"
     ],
-    "envioGratis": true
+    "envioGratis": false
   },
   {
     "id": 22,
@@ -436,7 +436,7 @@
     "categoria": [
       "Funcional/Cross"
     ],
-    "envioGratis": true
+    "envioGratis": false
   },
   {
     "id": 23,
@@ -454,7 +454,7 @@
     "categoria": [
       "Funcional/Cross"
     ],
-    "envioGratis": false
+    "envioGratis": true
   },
   {
     "id": 24,
@@ -473,7 +473,7 @@
     "categoria": [
       "Funcional/Cross"
     ],
-    "envioGratis": true
+    "envioGratis": false
   },
   {
     "id": 25,
@@ -536,7 +536,7 @@
     "nombre": "Bandas Elastica Plana Tipo Tiraband Yoga/Fitness",
     "descripcion": "El tiraband es la herramienta de fitness más sencilla, práctica y útil que se ha inventado. Es una pieza de látex de una longitud aproximada de dos metros y los distintos colores de la banda diferencian las distintas resistencias que ofrecen. Inicialmente utilizado por deportistas de competición, fue pasando a los fisioterapeutas y un poco más tarde llego a los gimnasios. Sus ventajas sobre muchos de los productos, destaca por su portabilidad, progresividad, limpieza, peso y costo. Hasta gimnasias como el pilates se han sumado a esta forma de entender y practicar deporte. No existe especialidad deportiva donde estos elásticos no han encontrado su sitio. Su fácil manejo y lo complicado que resultad hacerse daño mientras se utilizan, han hecho que sea la mejor forma de iniciarse en el mundo de la musculacóon o de la gimnasia para la salud. Venta por unidad. Peso: 70 g; Medida 1,5 Mts Largo x 14,9 cm Ancho.",
     "precio": 1100,
-    "descuento": 15,
+    "descuento": 0,
     "talle": [],
     "color": ["Amarillo", "Rojo", "Negro", "Verde", "Azul"],
     "marca": "Quuz",
@@ -547,7 +547,7 @@
     "categoria": [
       "Funcional/Cross"
     ],
-    "envioGratis": false
+    "envioGratis": true
   },
   {
     "id": 29,
