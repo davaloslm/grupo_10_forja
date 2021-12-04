@@ -1,8 +1,294 @@
 [
-    {"nombre": "TaeKwon-Do" },
-    {"nombre": "Boxeo" },
-    {"nombre": "Judo" },
-    {"nombre": "Jiu-Jitsu" },
-    {"nombre": "KickBoxing/MuayThai" },
-    {"nombre": "Entrenamiento Funcional/CrossFit" }
+    {
+        "nombre": "Boxeo",
+        "productoId": 1
+    },
+    {
+        "nombre": "TaeKwon-Do",
+        "productoId": 1
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 1
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 2
+    },
+    {
+        "nombre": "TaeKwon-Do",
+        "productoId": 2
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 2
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 3
+    },
+    {
+        "nombre": "TaeKwon-Do",
+        "productoId": 3
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 3
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 4
+    },
+    {
+        "nombre": "TaeKwon-Do",
+        "productoId": 4
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 4
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 5
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 5
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 6
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 6
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 7
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 7
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 8
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 8
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 9
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 9
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 10
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 10
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 11
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 11
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 12
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 12
+    },
+    {
+        "nombre": "TaeKwon-Do",
+        "productoId": 12
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 13
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 13
+    },
+    {
+        "nombre": "TaeKwon-Do",
+        "productoId": 13
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 14
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 14
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 15
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 15
+    },
+    {
+        "nombre": "Boxeo",
+        "productoId": 16
+    },
+    {
+        "nombre": "KickBoxing/MuayThai",
+        "productoId": 16
+    },
+    {
+        "nombre": "TaeKwon-Do",
+        "productoId": 16
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 17
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 18
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 19
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 20
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 21
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 22
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 23
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 24
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 25
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 26
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 27
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 28
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 29
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 30
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 31
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 32
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 33
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 34
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 35
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 36
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 37
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 38
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 39
+    },
+    {
+        "nombre": "Entrenamiento Funcional/CrossFit",
+        "productoId": 40
+    },
+    {
+        "nombre": "Jiu-Jitsu",
+        "productoId": 41
+    },
+    {
+        "nombre": "Judo",
+        "productoId": 41
+    },
+    {
+        "nombre": "Jiu-Jitsu",
+        "productoId": 42
+    },
+    {
+        "nombre": "Jiu-Jitsu",
+        "productoId": 43
+    },
+    {
+        "nombre": "Jiu-Jitsu",
+        "productoId": 44
+    },
+    {
+        "nombre": "Jiu-Jitsu",
+        "productoId": 45
+    },
+    {
+        "nombre": "Judo",
+        "productoId": 45
+    },
+    {
+        "nombre": "Judo",
+        "productoId": 46
+    },
+    {
+        "nombre": "Judo",
+        "productoId": 47
+    },
+    {
+        "nombre": "Judo",
+        "productoId": 48
+    }
 ]
