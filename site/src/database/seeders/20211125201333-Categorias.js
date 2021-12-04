@@ -3,12 +3,12 @@
 function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
+var categoriasForja = ["TaeKwon-Do", "Boxeo", "Judo", "Jiu-Jitsu", "KickBoxing/MuayThai", "Entrenamiento Funcional/CrossFit"]
+const productosJson = require("../../data/productos.json");
 
-const categoriasJson = require('../../data/categorias.json');
-
-let categorias = categoriasJson.map(categoriaJson => {
+let categorias = productosJson.map(e => {
   let categoria = {
-    nombre: categoriaJson.nombre,
+    nombre: categoriasForja[randomInt(0, 6)],
     productoId: randomInt(1, 48),
     createdAt: new Date,
     updatedAt: new Date 

@@ -12,7 +12,7 @@
             <% productosDeLaCategoria.forEach(producto=>{%>
             <article class="producto_ofer">
                 <div class="image_container">
-                    <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.imagen[0] %>"></a>
+                    <a href="/product/<%= producto.id %>"><img src="/img/productos/<%= producto.imagen[0].nombre %>"></a>
                 </div>
                 <div class="detail_container">
                     <p class="precio">$<%= producto.precio %> </p>
