@@ -1,0 +1,383 @@
+[
+    {
+        "nombre": "Blanco",
+        "productoId": 10
+    },
+    {
+        "nombre": "Rojo",
+        "productoId": 10
+    },
+    {
+        "nombre": "Negro",
+        "productoId": 11
+    },
+    {
+        "nombre": "Negro",
+        "productoId": 16
+    },
+    {
+        "nombre": "Rojo",
+        "productoId": 16
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 16
+    },
+    {
+        "nombre": "Negro",
+        "productoId": 26
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 26
+    },
+    {
+        "nombre": "Gris",
+        "productoId": 26
+    },
+    {
+        "nombre": "Naranja",
+        "productoId": 26
+    },
+    {
+        "nombre": "Violeta",
+        "productoId": 26
+    },
+    {
+        "nombre": "Rosa",
+        "productoId": 26
+    },
+    {
+        "nombre": "Rojo",
+        "productoId": 26
+    },
+    {
+        "nombre": "Celeste",
+        "productoId": 26
+    },
+    {
+        "nombre": "Amarillo",
+        "productoId": 27
+    },
+    {
+        "nombre": "Naranja",
+        "productoId": 27
+    },
+    {
+        "nombre": "Violeta",
+        "productoId": 27
+    },
+    {
+        "nombre": "Verde",
+        "productoId": 27
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 27
+    },
+    {
+        "nombre": "Amarillo",
+        "productoId": 28
+    },
+    {
+        "nombre": "Rojo",
+        "productoId": 28
+    },
+    {
+        "nombre": "Negro",
+        "productoId": 28
+    },
+    {
+        "nombre": "Verde",
+        "productoId": 28
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 28
+    },
+    {
+        "nombre": "Rojo",
+        "productoId": 29
+    },
+    {
+        "nombre": "Verde",
+        "productoId": 30
+    },
+    {
+        "nombre": "Rosa",
+        "productoId": 30
+    },
+    {
+        "nombre": "Bordó",
+        "productoId": 30
+    },
+    {
+        "nombre": "Naranja",
+        "productoId": 30
+    },
+    {
+        "nombre": "Amarillo",
+        "productoId": 30
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 30
+    },
+    {
+        "nombre": "Celeste",
+        "productoId": 30
+    },
+    {
+        "nombre": "Verde",
+        "productoId": 31
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 31
+    },
+    {
+        "nombre": "Violeta",
+        "productoId": 31
+    },
+    {
+        "nombre": "Rojo",
+        "productoId": 31
+    },
+    {
+        "nombre": "Naranja",
+        "productoId": 31
+    },
+    {
+        "nombre": "Rosa",
+        "productoId": 31
+    },
+    {
+        "nombre": "Amarillo",
+        "productoId": 31
+    },
+    {
+        "nombre": "Verde Claro",
+        "productoId": 33
+    },
+    {
+        "nombre": "Naranja",
+        "productoId": 33
+    },
+    {
+        "nombre": "Amarillo",
+        "productoId": 33
+    },
+    {
+        "nombre": "Verde Oscuro",
+        "productoId": 33
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 33
+    },
+    {
+        "nombre": "Blanco",
+        "productoId": 33
+    },
+    {
+        "nombre": "Rojo",
+        "productoId": 33
+    },
+    {
+        "nombre": "Verde",
+        "productoId": 37
+    },
+    {
+        "nombre": "Violeta",
+        "productoId": 37
+    },
+    {
+        "nombre": "Amarillo",
+        "productoId": 37
+    },
+    {
+        "nombre": "Beige",
+        "productoId": 37
+    },
+    {
+        "nombre": "Rojo",
+        "productoId": 37
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 37
+    },
+    {
+        "nombre": "Naranja",
+        "productoId": 37
+    },
+    {
+        "nombre": "Negro",
+        "productoId": 37
+    },
+    {
+        "nombre": "Gris",
+        "productoId": 37
+    },
+    {
+        "nombre": "Rosa",
+        "productoId": 39
+    },
+    {
+        "nombre": "Amarillo",
+        "productoId": 39
+    },
+    {
+        "nombre": "Blanco",
+        "productoId": 39
+    },
+    {
+        "nombre": "Dorado",
+        "productoId": 39
+    },
+    {
+        "nombre": "Violeta",
+        "productoId": 39
+    },
+    {
+        "nombre": "Verde Claro",
+        "productoId": 39
+    },
+    {
+        "nombre": "Plateado",
+        "productoId": 39
+    },
+    {
+        "nombre": "Rojo",
+        "productoId": 39
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 39
+    },
+    {
+        "nombre": "Verde Oscuro",
+        "productoId": 39
+    },
+    {
+        "nombre": "Gris",
+        "productoId": 39
+    },
+    {
+        "nombre": "Negro",
+        "productoId": 39
+    },
+    {
+        "nombre": "Marrón",
+        "productoId": 39
+    },
+    {
+        "nombre": "Blanco",
+        "productoId": 41
+    },
+    {
+        "nombre": "Negro",
+        "productoId": 41
+    },
+    {
+        "nombre": "Violeta",
+        "productoId": 41
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 41
+    },
+    {
+        "nombre": "Marrón",
+        "productoId": 41
+    },
+    {
+        "nombre": "Blanco",
+        "productoId": 42
+    },
+    {
+        "nombre": "Negro",
+        "productoId": 42
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 42
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 43
+    },
+    {
+        "nombre": "Negro",
+        "productoId": 43
+    },
+    {
+        "nombre": "Blanco",
+        "productoId": 43
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 44
+    },
+    {
+        "nombre": "Blanco",
+        "productoId": 44
+    },
+    {
+        "nombre": "Blanco",
+        "productoId": 45
+    },
+    {
+        "nombre": "Amarillo",
+        "productoId": 45
+    },
+    {
+        "nombre": "Naranja",
+        "productoId": 45
+    },
+    {
+        "nombre": "Verde Oscuro",
+        "productoId": 45
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 45
+    },
+    {
+        "nombre": "Marrón",
+        "productoId": 45
+    },
+    {
+        "nombre": "Negro",
+        "productoId": 45
+    },
+    {
+        "nombre": "Celeste",
+        "productoId": 45
+    },
+    {
+        "nombre": "Blanco",
+        "productoId": 46
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 46
+    },
+    {
+        "nombre": "Blanco",
+        "productoId": 47
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 47
+    },
+    {
+        "nombre": "Blanco",
+        "productoId": 48
+    },
+    {
+        "nombre": "Azul",
+        "productoId": 48
+    }
+
+]
