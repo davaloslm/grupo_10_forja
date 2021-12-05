@@ -1,6 +1,6 @@
 'use strict';
 
-function randomInt(min, max) {
+/* function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 
@@ -14,12 +14,24 @@ arrayTalles.forEach(e => {
     updatedAt: new Date  
   }
   talles.push(talle)
-});
+}); */
+
+const tallesJson = require('../../data/talles.json');
+
+let tallesArray = tallesJson.map(talle => {
+  let talles = {
+    nombre: talle.nombre,
+    productoId: talle.productoId,
+    createdAt: new Date,
+    updatedAt: new Date
+  }
+  return talles
+})
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     
-    await queryInterface.bulkInsert('Talles', talles, {});
+    await queryInterface.bulkInsert('Talles', tallesArray, {});
   },
 
   down: async (queryInterface, Sequelize) => {
