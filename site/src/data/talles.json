@@ -1,0 +1,306 @@
+[
+    {
+        "nombre": "M",
+        "productoId": 10
+    },
+    {
+        "nombre": "L",
+        "productoId": 10
+    },
+    {
+        "nombre": "XL",
+        "productoId": 10
+    },
+    {
+        "nombre": "S",
+        "productoId": 11
+    },
+    {
+        "nombre": "M",
+        "productoId": 11
+    },
+    {
+        "nombre": "L",
+        "productoId": 11
+    },
+    {
+        "nombre": "XL",
+        "productoId": 11
+    },
+    {
+        "nombre": "1",
+        "productoId": 12
+    },
+    {
+        "nombre": "2",
+        "productoId": 12
+    },
+    {
+        "nombre": "S",
+        "productoId": 15
+    },
+    {
+        "nombre": "M",
+        "productoId": 15
+    },
+    {
+        "nombre": "L",
+        "productoId": 15
+    },
+    {
+        "nombre": "XL",
+        "productoId": 15
+    },
+    {
+        "nombre": "1",
+        "productoId": 26
+    },
+    {
+        "nombre": "2",
+        "productoId": 26
+    },
+    {
+        "nombre": "3",
+        "productoId": 26
+    },
+    {
+        "nombre": "M0",
+        "productoId": 42
+    },
+    {
+        "nombre": "M1",
+        "productoId": 42
+    },
+    {
+        "nombre": "M2",
+        "productoId": 42
+    },
+    {
+        "nombre": "M3",
+        "productoId": 42
+    },
+    {
+        "nombre": "A0",
+        "productoId": 42
+    },
+    {
+        "nombre": "A1",
+        "productoId": 42
+    },
+    {
+        "nombre": "A2",
+        "productoId": 42
+    },
+    {
+        "nombre": "A3",
+        "productoId": 42
+    },
+    {
+        "nombre": "A4",
+        "productoId": 42
+    },
+    {
+        "nombre": "A5",
+        "productoId": 42
+    },
+    {
+        "nombre": "M0",
+        "productoId": 43
+    },
+    {
+        "nombre": "M1",
+        "productoId": 43
+    },
+    {
+        "nombre": "M2",
+        "productoId": 43
+    },
+    {
+        "nombre": "M3",
+        "productoId": 43
+    },
+    {
+        "nombre": "A0",
+        "productoId": 43
+    },
+    {
+        "nombre": "A1",
+        "productoId": 43
+    },
+    {
+        "nombre": "A2",
+        "productoId": 43
+    },
+    {
+        "nombre": "A3",
+        "productoId": 43
+    },
+    {
+        "nombre": "A4",
+        "productoId": 43
+    },
+    {
+        "nombre": "A5",
+        "productoId": 43
+    },
+    {
+        "nombre": "M0",
+        "productoId": 44
+    },
+    {
+        "nombre": "M1",
+        "productoId": 44
+    },
+    {
+        "nombre": "M2",
+        "productoId": 44
+    },
+    {
+        "nombre": "M3",
+        "productoId": 44
+    },
+    {
+        "nombre": "A0",
+        "productoId": 44
+    },
+    {
+        "nombre": "A1",
+        "productoId": 44
+    },
+    {
+        "nombre": "A2",
+        "productoId": 44
+    },
+    {
+        "nombre": "A3",
+        "productoId": 44
+    },
+    {
+        "nombre": "A4",
+        "productoId": 44
+    },
+    {
+        "nombre": "A5",
+        "productoId": 44
+    },
+    {
+        "nombre": "M0",
+        "productoId": 46
+    },
+    {
+        "nombre": "M1",
+        "productoId": 46
+    },
+    {
+        "nombre": "M2",
+        "productoId": 46
+    },
+    {
+        "nombre": "1",
+        "productoId": 46
+    },
+    {
+        "nombre": "2",
+        "productoId": 46
+    },
+    {
+        "nombre": "3",
+        "productoId": 46
+    },
+    {
+        "nombre": "4",
+        "productoId": 46
+    },
+    {
+        "nombre": "5",
+        "productoId": 46
+    },
+    {
+        "nombre": "6",
+        "productoId": 46
+    },
+    {
+        "nombre": "7",
+        "productoId": 46
+    },
+    {
+        "nombre": "M0",
+        "productoId": 47
+    },
+    {
+        "nombre": "M1",
+        "productoId": 47
+    },
+    {
+        "nombre": "M2",
+        "productoId": 47
+    },
+    {
+        "nombre": "1",
+        "productoId": 47
+    },
+    {
+        "nombre": "2",
+        "productoId": 47
+    },
+    {
+        "nombre": "3",
+        "productoId": 47
+    },
+    {
+        "nombre": "4",
+        "productoId": 47
+    },
+    {
+        "nombre": "5",
+        "productoId": 47
+    },
+    {
+        "nombre": "6",
+        "productoId": 47
+    },
+    {
+        "nombre": "7",
+        "productoId": 47
+    },
+    {
+        "nombre": "M0",
+        "productoId": 48
+    },
+    {
+        "nombre": "M1",
+        "productoId": 48
+    },
+    {
+        "nombre": "M2",
+        "productoId": 48
+    },
+    {
+        "nombre": "1",
+        "productoId": 48
+    },
+    {
+        "nombre": "2",
+        "productoId": 48
+    },
+    {
+        "nombre": "3",
+        "productoId": 48
+    },
+    {
+        "nombre": "4",
+        "productoId": 48
+    },
+    {
+        "nombre": "5",
+        "productoId": 48
+    },
+    {
+        "nombre": "6",
+        "productoId": 48
+    },
+    {
+        "nombre": "7",
+        "productoId": 48
+    }
+]
