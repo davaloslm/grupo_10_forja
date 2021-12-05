@@ -19,7 +19,7 @@ router.post('/', multerProduct.array('imagenes'), newProductValidator, crear);
 router.get('/edit/:id', adminPass, vistaEditar);
 
 // Editar producto - Guardar
-router.put('/edit/:id', editProductValidator, editar);
+router.put('/edit/:id', multerProduct.array('imagenes'), editProductValidator, editar);
 
 //Eliminar producto//
 router.delete("/edit/:id", eliminar);

@@ -1,8 +1,10 @@
-const fs = require('fs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
 
 const controller = {
+
+//////// Vista admin con listado de usuarios y productos ///////////
+
     admin: (req,res)=>{
         let promesaProductos = db.Producto.findAll();
         let promesaUsuarios = db.Usuario.findAll();
@@ -15,21 +17,15 @@ const controller = {
                 res.send("No se pudo acceder a los productos")
                 console.log(error);
             })
-    }
-         /* (req, res)=> {
-        
-        res.render('admin/admin', {
-            productos,
-            usuarios
-        })
-    } */
+    },
 
-    ,
+//////// Vista crear producto ///////////
 
-    //////// Formulario de Creacion ///////////
     vistaCrear: (req, res)=> {
         res.render('admin/create')
     },
+
+//////// Formulario de Creacion de producto ///////////
 
     crear:(req,res) =>{
 
@@ -45,8 +41,10 @@ const controller = {
 
         if(newProductErrors.isEmpty()) {
 
-            const {imagenes, nombre, marca,  descripcion, precio, stock, descuento, talle, color, categoria, envioGratis} = req.body
-            
+            const { nombre, marca,  descripcion, precio, stock, descuento, talle, color, categoria, envioGratis } = req.body
+
+            // Creación del nuevo producto //
+
             db.Producto.create({
                 nombre: nombre,
                 descripcion: descripcion,
@@ -57,7 +55,9 @@ const controller = {
                 stock: parseInt(stock)
             })
             .then(producto =>{
-                //Imágenes//
+                // Creado el producto se crean sus imagenes, categorias, talles y colores por separado en el mismo then //
+                // Creación de las imágenes del producto min: 1 max: 3 //
+
                 if(req.files.length != 0){
                     let images = req.files.map(image => {
                         let item = {
@@ -70,8 +70,10 @@ const controller = {
                     var promesaImagenes = db.Imagen.bulkCreate(images)
                         .then( () => console.log('Imágenes guardadas satisfactoriamente'))
                         .catch(error=> console.log(error))
-                    }
-                //Categoría//
+                }
+
+                // Creación de la o las categorías min: 1 hasta 6 //
+
                 var promesaCategoria;
                 if(typeof(categoria) === 'string'){
                     promesaCategoria = db.Categoria.create(
@@ -82,7 +84,7 @@ const controller = {
                     })
                     .then( () => console.log('Categoría guardada satisfactoriamente'))
                     .catch(error=> console.log(error))
-                }else{
+                } else {
                         
                         let categoriasACrear = [];
                         categoria.forEach(e => {
@@ -100,7 +102,8 @@ const controller = {
                     
                 }
 
-                //Talle//
+                // Creación de los o el talle (puede ser undefined) //
+
                 var promesaTalle
                 if(typeof(talle) === 'string'){
                     promesaTalle = db.Talle.create(
@@ -110,25 +113,27 @@ const controller = {
                         })
                         .then( () => console.log('Talle guardado satisfactoriamente'))
                         .catch(error=> console.log(error))
-                    } else if(talle === undefined) {
-                        console.log("El producto no tiene talle")
-                    } else {
-                        let tallesACrear = [];
-                        talle.forEach(e => {
-                            let item ={
-                                nombre: e,
-                                productoId: producto.id,
-                            }
+                } else if(talle === undefined) {
+                    console.log("El producto no tiene talle")
+                } else {
+                    let tallesACrear = [];
+                    talle.forEach(e => {
+                        let item ={
+                            nombre: e,
+                            productoId: producto.id,
+                        }
 
-                            tallesACrear.push(item)
-                            
-                        });
-                        promesaTalle = db.Talle.bulkCreate(tallesACrear)
-                        .then( () => console.log('Talles guardados satisfactoriamente'))
-                        .catch(error=> console.log(error))
+                        tallesACrear.push(item)
                         
-                    }
-                //Color//
+                    });
+                    promesaTalle = db.Talle.bulkCreate(tallesACrear)
+                    .then( () => console.log('Talles guardados satisfactoriamente'))
+                    .catch(error=> console.log(error))
+                        
+                }
+
+                // Creación de los o el color (puede ser undefined) //
+
                 var promesaColor
                 if(typeof(color) === 'string'){
                     promesaColor = db.Color.create(
@@ -139,31 +144,31 @@ const controller = {
                         )
                         .then( () => console.log('Color guardado satisfactoriamente'))
                         .catch(error=> console.log(error))
-                    } else if(color === undefined) {
-                        console.log("El producto no tiene color")
-                    } else{
-                        let coloresACrear = [];
-                        color.forEach(e => {
-                            let item ={
-                                nombre: e,
-                                productoId: producto.id,
-                            }
+                } else if(color === undefined) {
+                    console.log("El producto no tiene color")
+                } else {
+                    let coloresACrear = [];
+                    color.forEach(e => {
+                        let item ={
+                            nombre: e,
+                            productoId: producto.id,
+                        }
 
-                            coloresACrear.push(item)
-                            
-                        });
-                            promesaColor = db.Color.bulkCreate(coloresACrear)
-                            .then( () => console.log('Colores guardados satisfactoriamente'))
-                            .catch(error=> console.log(error))
-
+                        coloresACrear.push(item)
+                        
+                    });
+                        promesaColor = db.Color.bulkCreate(coloresACrear)
+                        .then( () => console.log('Colores guardados satisfactoriamente'))
+                        .catch(error=> console.log(error))
                 }
+                /////// PromiseAll - Fin de la creación ////////
                 Promise.all([promesaImagenes, promesaCategoria, promesaTalle, promesaColor])
                 .then( () => res.redirect("/product/" + producto.id))
                 .catch(error => {
                     res.send("No se pudo redireccionar al detalle del producto creado")
                     console.log(error);
                 })
-            }) 
+            })
             .catch(error =>{
                 res.send("No se pudo crear el producto")
                 console.log(error);
@@ -171,11 +176,12 @@ const controller = {
 
             
         } else {
+            /////// Errores en la creación (si los hay) ////////
             res.render('admin/create', { errors: newProductErrors.mapped(), oldData: req.body })
         }
     },
 
-    //////// Formulario de edición ///////////
+    //////// Vista edición de producto ///////////
 
     vistaEditar: (req, res)=> {
 
@@ -206,14 +212,16 @@ const controller = {
         })
 
     },
-    
+
     /////// Editar producto - Guardar ////////
 
     editar: (req, res)=> {
         
         const editProductErrors = validationResult(req);
         
-        var productoAEditar = db.Producto.findOne({
+        // Se trae el producto que se quiere editar //
+
+        db.Producto.findOne({
             where: {id: req.params.id},
             include: [
                 {
@@ -231,12 +239,9 @@ const controller = {
             ],
         })
 
-        console.log("------------------------------------------------------------------");
-        console.log(productoAEditar);
-
         if(editProductErrors.isEmpty()){
 
-            const {imagenes, nombre, marca,  descripcion, precio, stock, descuento, talle, color, categoria, envioGratis} = req.body
+            const { nombre, marca,  descripcion, precio, stock, descuento, talle, color, categoria, envioGratis } = req.body
 
             db.Producto.update({
 
@@ -251,12 +256,11 @@ const controller = {
             },{
                 where: {id: req.params.id}
             })
-            .then(producto =>{
-                //Imágenes//
-                console.log("//////////////////////////////////////////////////////////////////////////////")
-                console.log(productoAEditar.id)
+            .then(producto => {
+                // Editado el producto se crean sus imagenes(si se modifica), categorias(si se modifica), talles(si se modifica) y colores(si se modifica) por separado en el mismo then  //
+                // Modificación de las imágenes del producto min: 1 max: 3. Si se envían nuevas imágenes, borra las viejas y se agregan las nuevas. Si no se envían imágenes no hace nada //
                 var promesaImagenes;
-                if(req.files != undefined ){
+                if(req.files.length != 0 ) {
                     let images = req.files.map(image => {
                         let item = {
                             nombre : image.filename,
@@ -268,7 +272,6 @@ const controller = {
                         where: {productoId : req.params.id}
                     })
                     .then( () => {
-
                         promesaImagenes = db.Imagen.bulkCreate(images)
                             .then( () => console.log('Imágenes actualizadas satisfactoriamente'))
                             .catch(error=> console.log(error))
@@ -281,9 +284,11 @@ const controller = {
                 } else {
                     console.log("No se agregaron imágenes nuevas a este producto")
                 }
-                //Categoría//
+
+                // Modificación de la categoría o las categorías del producto min: 1. Si se agregan/eliminan categorías, borra las viejas y se agregan las nuevas. //
+
                 var promesaCategoria;
-                if(typeof(categoria) === 'string'){
+                if(typeof(categoria) === 'string') {
 
                     db.Categoria.destroy({
                         where: {productoId : req.params.id}
@@ -304,8 +309,6 @@ const controller = {
                         })
                         .then( () => console.log('Categoría actualizada satisfactoriamente'))
                         .catch(error=> console.log(error))
-
-                    
                 } else {
                         
                         let categoriasACrear = [];
@@ -330,14 +333,12 @@ const controller = {
                             res.send("No se pudieron eliminar las categorías anteriores");
                             console.log(error);
                         })
-
-                        
-                    
                 }
 
-                //Talle//
+                // Creación/Modificación/Eliminado del talle o los talles del producto (puede ser undefined). Si se agregan/eliminan talles, borra los viejos y se agregan los nuevos. //
+
                 var promesaTalle
-                if(typeof(talle) === 'string'){
+                if(typeof(talle) === 'string') {
                     db.Talle.destroy({
                         where: { productoId: req.params.id}
                     })
@@ -355,47 +356,48 @@ const controller = {
                         console.log(error);
                     })
                     
-                    } else if(talle === undefined) {
-                        db.Talle.destroy({
-                            where: {productoId : req.params.id}
-                        })
-                        .then( () => {
-                            console.log('El producto no tiene talles')
-                        })
-                        .catch(error => {
-                            res.send("No se pudieron borrar los talles anteriores");
-                            console.log(error);
-                        })
-                    } else {
-                        var tallesACrear = [];
-                        talle.forEach(e => {
-                            let item ={
-                                nombre: e,
-                                productoId: req.params.id,
-                            }
+                } else if(talle === undefined) {
+                    db.Talle.destroy({
+                        where: {productoId : req.params.id}
+                    })
+                    .then( () => {
+                        console.log('El producto no tiene talles')
+                    })
+                    .catch(error => {
+                        res.send("No se pudieron borrar los talles anteriores");
+                        console.log(error);
+                    })
+                } else {
+                    var tallesACrear = [];
+                    talle.forEach(e => {
+                        let item ={
+                            nombre: e,
+                            productoId: req.params.id,
+                        }
 
-                            tallesACrear.push(item)
-                            
-                        });
-
-                        db.Talle.destroy({
-                            where: {productoId : req.params.id}
-                        })
-                        .then( () => {
-                            promesaTalle = db.Talle.bulkCreate(tallesACrear)
-                            .then( () => console.log('Talles guardados satisfactoriamente'))
-                            .catch(error => {
-                                res.send("No se pudieron guardar los talles")
-                                console.log(error)
-                            })
-                        })
-                        .catch(error => {
-                            res.send("No se pudieron borrar los talles anteriores");
-                            console.log(error);
-                        })
+                        tallesACrear.push(item)
                         
-                    }
-                //Color//
+                    });
+
+                    db.Talle.destroy({
+                        where: {productoId : req.params.id}
+                    })
+                    .then( () => {
+                        promesaTalle = db.Talle.bulkCreate(tallesACrear)
+                        .then( () => console.log('Talles guardados satisfactoriamente'))
+                        .catch(error => {
+                            res.send("No se pudieron guardar los talles")
+                            console.log(error)
+                        })
+                    })
+                    .catch(error => {
+                        res.send("No se pudieron borrar los talles anteriores");
+                        console.log(error);
+                    })
+                }
+
+                // Creación/Modificación/Eliminado del color o los colores del producto (puede ser undefined). Si se agregan/eliminan colores, borra los viejos y se agregan los nuevos. //
+
                 var promesaColor
                 if(typeof(color) === 'string'){
                     db.Color.destroy({
@@ -451,23 +453,22 @@ const controller = {
                             res.send("No se pudieron borrar los colores anteriores");
                             console.log(error);
                         })
-
-                }
-
+                    }
+                /////// PromiseAll - Fin de la edición ////////
                 Promise.all([promesaImagenes, promesaCategoria, promesaTalle, promesaColor])
                 .then( () => res.redirect("/product/" + req.params.id))
                 .catch(error => {
                     res.send("No se pudo redireccionar al detalle del producto editado")
                     console.log(error);
                 })
+
             })
             .catch(error =>{
                 res.send("No se pudo editar el producto")
                 console.log(error);
-            })          
-        
+            })
         } else {
-
+            /////// Errores en la edición (si los hay) ////////
             db.Producto.findOne({
                 where: {id: req.params.id},
                 include: [
@@ -487,24 +488,22 @@ const controller = {
             })
             .then((producto)=>{
                 res.render('admin/edit', { errors: editProductErrors.mapped(), producto, oldData: req.body })
-                console.log(producto.talle[0].nombre)
             })
             .catch(error => {
                 console.log(error)
                 res.send("No se pudieron enviar los errores a la vista de edición")
             })
-
         }
 
 	},
 
-        /////// Borrar producto ////////
+        /////// Función borrar producto ////////
 
     eliminar: (req, res)=>{
         db.Producto.destroy({
             where: {id : req.params.id}
         })
-        .then( result =>{
+        .then( result => {
             res.redirect("/admin")
         })
         .catch(error=>{
@@ -512,18 +511,12 @@ const controller = {
             console.log(error);
         })
 
-		 res.redirect("/admin")
+		res.redirect("/admin")
 
-        },
+    },
 
-        /////// administración de usuarios ///////
+    /////// administración de usuarios *COMING SOON* ///////
 
-        eliminarUsuarios: (req, res) => {
-            usuarios = usuarios.filter( e => e.ban !== 1)
-            fs.writeFileSync(usuariosRuta, JSON.stringify(usuarios, null, 2))
-            let mensaje = 'Exito'
-            res.render('admin/admin', {mensaje, productos, usuarios})
-        }
 }
 
 module.exports = controller;

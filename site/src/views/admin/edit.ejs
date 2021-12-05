@@ -18,7 +18,7 @@
                     Editar Producto  <i class="fas fa-box"></i>
                 </h1>
 
-                <form class="todo_container" action="/admin/edit/<%= producto.id  %>?_method=PUT" method="POST">
+                <form class="todo_container" action="/admin/edit/<%= producto.id  %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                     <section class="visual_container">
                         <!-- ////imagen de archivo//// -->
@@ -56,6 +56,7 @@
                                     <option value="" selected hidden>
                                         <%= producto.descuento %> %
                                     </option>
+                                    <option value="0">0</option>
                                     <option value="5">5</option>
                                     <option value="10">10</option>
                                     <option value="15">15</option>
