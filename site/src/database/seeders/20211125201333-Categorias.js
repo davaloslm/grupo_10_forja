@@ -1,6 +1,6 @@
 'use strict';
 
-function randomInt(min, max) {
+/* function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 var categoriasForja = ["TaeKwon-Do", "Boxeo", "Judo", "Jiu-Jitsu", "KickBoxing/MuayThai", "Entrenamiento Funcional/CrossFit"]
@@ -14,12 +14,24 @@ let categorias = productosJson.map(e => {
     updatedAt: new Date 
   }
   return categoria
+}) */
+
+const categoriasJson = require('../../data/categorias.json');
+
+let categoriasArray = categoriasJson.map(categoria => {
+  let categorias = {
+    nombre: categoria.nombre,
+    productoId: categoria.productoId,
+    createdAt: new Date,
+    updatedAt: new Date
+  }
+  return categorias
 })
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     
-    await queryInterface.bulkInsert('Categorias', categorias, {});
+    await queryInterface.bulkInsert('Categorias', categoriasArray, {});
   },
 
   down: async (queryInterface, Sequelize) => {
