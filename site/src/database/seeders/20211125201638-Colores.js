@@ -1,6 +1,6 @@
 'use strict';
 
-function randomInt(min, max) {
+/* function randomInt(min, max) {
   return Math.floor(Math.random() * (max - min) ) + min;
 }
 
@@ -14,12 +14,24 @@ arrayColores.forEach(e => {
     updatedAt: new Date
   }
   colores.push(color)
-});
+}); */
+
+const coloresJson = require('../../data/colores.json');
+
+let coloresArray = coloresJson.map(color => {
+  let colores = {
+    nombre: color.nombre,
+    productoId: color.productoId,
+    createdAt: new Date,
+    updatedAt: new Date
+  }
+  return colores
+})
 
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     
-    await queryInterface.bulkInsert('Colors', colores, {});
+    await queryInterface.bulkInsert('Colors', coloresArray, {});
 
   },
 
