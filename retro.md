@@ -1,4 +1,4 @@
-# Retrospectiva
+# **Retrospectiva 1**
 ---
 ## Empezar a hacer:
 - Poner fecha limite a las tareas.
@@ -17,7 +17,7 @@
 ## Hacer menos:
 - Dejar pasar tiempo entre reuniones al principio del sprint.
 ---
-# Retrospectiva 2
+# **Retrospectiva 2**
 ---
 ## Empezar a hacer:
 - Documentar dailies.
@@ -38,7 +38,7 @@
 ## Hacer menos:
 - 
 ---
-# Retrospectiva 3
+# **Retrospectiva 3**
 ---
 ## Empezar a hacer:
 - 
@@ -60,7 +60,7 @@
 ## Hacer menos:
 - 
 ---
-# Retrospectiva 4
+# **Retrospectiva 4**
 ---
 ## Empezar a hacer:
 - 
@@ -83,7 +83,7 @@
 ## Hacer menos:
 - 
 ---
-# Retrospectiva 5
+# **Retrospectiva 5**
 ---
 ## Empezar a hacer:
 - 
@@ -100,6 +100,31 @@
 - Documentar dailies.
 - Poner fecha limite a las tareas.
 - Agregar tareas extras.
+---
+## Dejar de hacer:
+- 
+---
+## Hacer menos:
+- 
+---
+# **Retrospectiva 6**
+---
+## Empezar a hacer:
+- 
+---
+## Hacer más:
+- 
+---
+## Seguir haciendo:
+- Tareas en simultáneo.
+- Tener buena comunicación.
+- Reuniones diarias (daily standups).
+- Dividir tareas y establecer dificultades al comienzo del sprint.
+- Empezar a trabajar desde el día del inicio del sprint.
+- Documentar dailies.
+- Poner fecha limite a las tareas.
+- Agregar tareas extras.
+- Trabajar más en el proyecto fuera de los Sprints.
 ---
 ## Dejar de hacer:
 - 
