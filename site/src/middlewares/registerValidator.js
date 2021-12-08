@@ -37,7 +37,11 @@ check('fechaDeNac')
     .isDate().withMessage('El formato fecha debe ser válido'),
 check('contraseña')
     .notEmpty().withMessage('El campo contraseña es obligatorio').bail()
-    .isLength({min: 8, max: 20}).withMessage('Tu contraseña debe tener un mínimo de 8 caracteres y un máximo de 20'),
+    .custom(( value, {req}) => {
+        if(!value.match(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/)) {
+            throw new Error("La contraseña debe tener entre 8 y 15 caracteres, como mínimo 1 mayúscula, 1 minúscula, 1 dígito y un caracter especial sin espacios en blanco")
+        } return true
+    }),
 check('contraseña2')
     .notEmpty().withMessage('El campo contraseña es obligatorio').bail()
     .isLength({min: 8, max: 20}).withMessage('Tu contraseña debe tener un mínimo de 8 caracteres y un máximo de 20').bail()
