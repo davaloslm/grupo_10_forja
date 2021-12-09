@@ -35,13 +35,19 @@ header .logo {
 }
 
 header nav{
+    background-color: var(--blue);
+    padding: 10px 0;
+    border: 1px solid var(--lightBlue);
+}
+
+header nav div.nav {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
-    background-color: var(--blue);
-    padding: 10px 0;
-    border: 1px solid var(--lightBlue);
+    max-width: 1024px;
+    margin: 0 auto;
+    align-items: center;
 }
 
 header nav li.admin_desktop_link {
@@ -139,10 +145,13 @@ header nav div.menu ul.user li a{
 }
 
 
+header nav div.menu ul.listaCategorias{
+    max-width: 1024px;
+    margin: 0 auto;
+}
 
 
-
-header nav input.burger:checked ~ div.menu{
+header nav div input.burger:checked ~ div.menu{
     display: block;
 }
 
@@ -412,31 +421,14 @@ header nav button.cart {
         background-repeat: repeat;
     }
 
-    header nav form {
-        width: 45%;
-    }
-
     header nav form input{
         width: 100%;
-        max-width: 500px;
     }
 
     header nav div.user_desktoplinks li.desktop_userlink_logout {
         margin-left: 50px;
     }
 
-    header nav form {
-        justify-content: flex-start;
-        
-    }
-}
-
-@media (min-width: 1300px) {
-
-    header nav form {
-        margin-right: 200px;
-        
-    }
 }
 
 @media (min-width: 1500px) {
