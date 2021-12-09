@@ -75,7 +75,15 @@ main.profile section.profile-section div ul li{
     text-align: start;
 } */
 
-/* ///////////////fin //////////////// */
+
+/* /////////////// Formulario de edición de perfil //////////////// */
+main.profile section.profile-section form.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
 
 /* /////////////// Direcciones //////////////// */

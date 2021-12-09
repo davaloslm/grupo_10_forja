@@ -41,7 +41,7 @@
                   </div>
                   <div class="edit-profile">
                     
-                    <form action="/user/userProfile/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <form class="profile" action="/user/userProfile/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                         <input type="file" accept="image/*" name="avatar" >
                         <span>Nombre: </span>
                         <input type="text" name="nombre" class="edit-form" value="<%= usuario.nombre %>">
