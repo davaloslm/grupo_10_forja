@@ -189,6 +189,18 @@ const controller = {
             res.render("users/password", {errors: cambiarContraseñaErrors.mapped()});
     
             }
+    },
+    vistaAgregarDireccion: (req, res)=> {
+        res.render("users/addAddress")
+    },
+    agregarDireccion: (req, res)=> {
+
+    },
+    vistaEditarDireccion: (req, res)=> {
+        res.render()
+    },
+    editarDireccion: (req, res)=> {
+
     }
 
 }
