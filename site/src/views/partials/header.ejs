@@ -22,7 +22,7 @@
                     <i class="fas fa-search"></i>
                 </button>
             </form>
-            <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin === 1) { %>
+            <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin == 1) { %>
                 <li class="admin_desktop_link">
                     <a href="/admin">
                         Admin <i class="fas fa-user-lock"></i>
@@ -64,7 +64,7 @@
                     <img class="avatar_usermobile" src="/img/users/<%= locals.usuarioLogueado.imagen  %>" alt="Imagen de perfil">
                     <div class="burger_userlinks">
                         <li class="burger_userlink_profile"><a href="/user/userProfile/<%= usuarioLogueado.id %> "><%= usuarioLogueado.nombre %> <i class=" iconuser fas fa-user"></i></a></li>
-                        <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin === 1) { %>
+                        <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin == 1) { %>
                         <li class="burger_userlink_admin"><a href="/admin">Admin <i class="fas fa-user-lock"></i></a></li>
                             <% } %>
                         <li class="burger_userlink_logout"><a href="/user/cerrarSesion">Cerrar sesión <i class="fas fa-sign-out-alt"></i></a></li>
