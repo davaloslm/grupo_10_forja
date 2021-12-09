@@ -202,7 +202,11 @@
                     <thead>
                       <tr>
                         
-                        <th>Dirección</th>
+                        <th>Calle</th>
+                        <th>Número</th>
+                        <th>Localidad</th>
+                        <th>Provincia</th>
+                        <th>Código Postal</th>
                         
                         
                         <th>Editar</th>
@@ -210,9 +214,15 @@
                       </tr>
                     </thead>
                     <tbody>
+                      <% for(i=0; i < usuario.direccion.length; i++){ %>
+                       
                       <tr>
                        
-                        <td>Calle Falsa 123</td>
+                        <td> <%= usuario.direccion[i].calle %>  </td>
+                        <td> <%= usuario.direccion[i].numero %></td>
+                        <td> <%= usuario.direccion[i].localidad %></td>
+                        <td> <%= usuario.direccion[i].provincia %></td>
+                        <td> <%= usuario.direccion[i].codigoPostal %></td>
                         
                         
                         <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
@@ -228,42 +238,8 @@
                          
                         
                       </tr>
-                      <tr>
-                       
-                        <td>Calle Falsa 123</td>
-                        
-                        
-                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos">
-                          <form action="" method="POST">
-                            <button  type="submit">
-                              <i class=" trash fas fa-trash-alt">
-
-                              </i>
-                            </button>
-                          </form>
-                        </td>
-                         
-                        
-                      </tr>
-                      <tr>
-                       
-                        <td>Calle Falsa 123</td>
-                        
-                        
-                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos">
-                          <form action="" method="POST">
-                            <button  type="submit">
-                              <i class=" trash fas fa-trash-alt">
-
-                              </i>
-                            </button>
-                          </form>
-                        </td>
-                         
-                        
-                      </tr>
+                      <% } %>  
+                      
                     </tbody>
                   </table>
                 </div>

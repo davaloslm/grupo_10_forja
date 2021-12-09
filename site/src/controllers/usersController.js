@@ -92,7 +92,12 @@ const controller = {
         db.Usuario.findOne({
             where: {
                 id: id
-            }
+            },
+            include: [
+                {
+                    association: "direccion",
+                }
+            ]
         })
         .then(usuario => {
             res.render('users/userProfile', {usuario} )
