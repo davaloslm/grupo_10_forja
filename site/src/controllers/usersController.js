@@ -195,9 +195,41 @@ const controller = {
     },
     agregarDireccion: (req, res)=> {
 
+        const agregarDireccionErrors = validationResult(req);
+
+        if(agregarDireccionErrors.isEmpty()){
+
+            let {calle, numero, localidad, provincia, codigoPostal, departamento } = req.body;
+
+        db.Direccion.create({
+
+            calle,
+            numero: parseInt(numero),
+            localidad,
+            provincia,
+            codigoPostal: parseInt(codigoPostal),
+            departamento: parseInt(departamento),
+            usuarioId: parseInt(req.session.usuarioLogueado.id)        
+
+        })
+        .then(()=>{
+            res.redirect("/user/userProfile/" + req.session.usuarioLogueado.id)
+        })
+        .catch(error=>{
+            res.send('Hubo un error al crear la nueva dirección')
+            console.log(error)
+
+        })
+
+        }else{
+
+            res.render("users/addAddress", {errors:agregarDireccionErrors.mapped()})
+
+        }
+        
     },
     vistaEditarDireccion: (req, res)=> {
-        res.render()
+        res.render("users/editAddress")
     },
     editarDireccion: (req, res)=> {
 

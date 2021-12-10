@@ -29,7 +29,7 @@ router.get('/password',  vistaCambiarContraseña);
 router.put('/password', passwordValidator, cambiarContraseña);
 
 router.get('/address/add',  vistaAgregarDireccion);
-router.put('/address/add',  agregarDireccion);
+router.post('/address/add',  agregarDireccion);
 
 router.get('/address/edit',  vistaEditarDireccion);
 router.put('/address/edit',  editarDireccion);
