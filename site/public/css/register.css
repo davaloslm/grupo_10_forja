@@ -92,19 +92,19 @@ main.register section form div.input-container div.check a{
     display: none;
 }
 
-.register section form div.input-container div div.grupo_input i.ojitoAct {
+.register section form div.input-container div div.grupo_input i.ojitoDes:hover, .register section form div.input-container div div.grupo_input i.ojitoAct:hover {
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+}
+
+.register section form div.input-container div div.grupo_input i.ojitoDes, .register section form div.input-container div div.grupo_input i.ojitoAct {
+    cursor: pointer;
     position: absolute;
     bottom: 22px;
     right: 10px;
-    cursor: pointer;
 }
 
 .register section form div.input-container div div.grupo_input i.ojitoDes {
-    position: absolute;
-    bottom: 22px;
-    right: 10px;
     display: none;
-    cursor: pointer;
 }
 
 #fechaDeNac {

@@ -75,7 +75,7 @@ window.addEventListener('load', () => {
     nombre.focus()
 
     
-    nombre.addEventListener('input', (e) => {
+    nombre.addEventListener('input', () => {
         switch (true) {
             case !nombre.value:
                 nombre.classList.add('nocheck')
@@ -128,7 +128,7 @@ window.addEventListener('load', () => {
         funcValidate(validate)
     })
     
-    apellido.addEventListener('input', (e) => {
+    apellido.addEventListener('input', () => {
         switch (true) {
             case !apellido.value:
                 apellido.classList.add('nocheck')
@@ -181,7 +181,7 @@ window.addEventListener('load', () => {
         funcValidate(validate)
     })
 
-    email.addEventListener('input', (e) => {
+    email.addEventListener('input', () => {
 
         switch (true) {
             case !email.value:
@@ -218,7 +218,7 @@ window.addEventListener('load', () => {
     })
 
 
-    fechaDeNac.addEventListener('input', (e) => {
+    fechaDeNac.addEventListener('input', () => {
 
         switch (true) {
             case !fechaDeNac.value:
@@ -273,7 +273,7 @@ window.addEventListener('load', () => {
     })
 
 
-    contraseña.addEventListener('input', (e) => {
+    contraseña.addEventListener('input', () => {
 
         switch (true) {
             case !contraseña.value:
@@ -330,7 +330,7 @@ window.addEventListener('load', () => {
     })
 
 
-    contraseña2.addEventListener('input', (e) => {
+    contraseña2.addEventListener('input', () => {
 
         switch (true) {
             case !contraseña2.value:
@@ -364,6 +364,59 @@ window.addEventListener('load', () => {
         }
 
         funcValidate(validate)
+    })
+
+
+    contraseña2.addEventListener('input', () => {
+
+        switch (true) {
+            case !contraseña2.value:
+                contraseña2.classList.add('nocheck')
+                contraseña2.style.border = '3px solid red'
+                contraseña2.style.color = 'red'
+                errorContraseña2.style.display = 'block'
+                checkContraseña2.style.display = 'none'
+                smallContraseña2.innerHTML = 'Es necesario que escribas nuevamente tu contraseña'
+                validate.contraseña2 = false
+                break;
+            case contraseña2.value !== contraseña.value:
+                contraseña2.classList.add('nocheck')
+                contraseña2.style.border = '3px solid red'
+                contraseña2.style.color = 'red'
+                errorContraseña2.style.display = 'block'
+                checkContraseña2.style.display = 'none'
+                smallContraseña2.innerHTML = 'Las contraseñas no coinciden'
+                validate.contraseña2 = false
+                break;
+            default:
+                contraseña2.classList.remove('nocheck')
+                contraseña2.classList.add('check')
+                contraseña2.style.border = '3px solid green'
+                contraseña2.style.color = 'green'
+                errorContraseña2.style.display = 'none'
+                checkContraseña2.style.display = 'block'
+                smallContraseña2.innerHTML = ''
+                validate.contraseña2 = true
+                break;
+        }
+
+        funcValidate(validate)
+    })
+    ocultarContraseña.addEventListener('click', () => {
+        
+        ocultarContraseña.style.display = 'none'
+        verContraseña.style.display = 'block'
+        contraseña.type = "text"
+        contraseña2.type = "text"
+    })
+
+    verContraseña.addEventListener('click', () => {
+        
+        verContraseña.style.display = 'none'
+        ocultarContraseña.style.display = 'block'
+        contraseña.type = "password"
+        contraseña2.type = "password"
+    
     })
 
     const validate = {
