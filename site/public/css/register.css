@@ -39,22 +39,33 @@ main.register section form div.input-container div label{
     display: block;
 }
 
-main.register section form div.input-container div input{
+main.register section form div.input-container div div.grupo_input input{
     width: 100%;
     border-radius: 5px;
     margin: 10px 0;
-    border: solid 1px var(--lightBlue);
-    padding: 5px;
-    cursor: pointer;
-    outline-color: #3db7b6;
+    padding: 0 60px 0 10px;
+    border: 3px solid transparent;
+    transition: .3s ease all;
+    height: 40px;
+}
 
+main.register section form div.input-container div div.grupo_input input:focus {
+    outline: none;
+    border: 3px solid var(--lightBlue);
+    box-shadow: 3px 0px 30px rgba(161, 161, 161, 0.4);
+}
+
+#imagen {
+    height: 21px;
+    border: none;
+    padding: 0 10px 0 0;
 }
 
 main.register section form div.input-container div.check{
     margin: 10px 0;
 }
 
-main.register section form div.input-container div.check input{
+main.register section form div.input-container div.check input, main.register section form div.input-container div.check label input{
     margin: 0;
     width: auto;
 }
@@ -63,7 +74,46 @@ main.register section form div.input-container div.check a{
     color: var(--lightBlue);
 }
 
-main.register section form button{
+.register section form div.input-container div div.grupo_input {
+    position: relative;
+}
+
+.register section form div.input-container div div.grupo_input i.error {
+    position: absolute;
+    bottom: 22px;
+    right: 40px;
+    color: red;
+    display: none;
+}
+
+.register section form div.input-container div div.grupo_input i.check {
+    position: absolute;
+    bottom: 22px;
+    right: 40px;
+    color: green;
+    display: none;
+}
+
+.register section form div.input-container div div.grupo_input i.ojitoDes:hover, .register section form div.input-container div div.grupo_input i.ojitoAct:hover {
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+}
+
+.register section form div.input-container div div.grupo_input i.ojitoDes, .register section form div.input-container div div.grupo_input i.ojitoAct {
+    cursor: pointer;
+    position: absolute;
+    bottom: 22px;
+    right: 10px;
+}
+
+.register section form div.input-container div div.grupo_input i.ojitoDes {
+    display: none;
+}
+
+#fechaDeNac {
+    padding: 0 5px 0 10px;
+}
+
+#send {
     padding: 10px;
     color: var(--white);
     margin: 10px auto;
@@ -79,16 +129,13 @@ main.register small.errors{
     color: crimson;
 }
 
+#smallsFront {
+    color: crimson;
+}
+
 @media (min-width: 768px){
     main.register section form div.input-container{
         max-width: 600px;
     }
     
 }
-
-
-
-
-
-
-
