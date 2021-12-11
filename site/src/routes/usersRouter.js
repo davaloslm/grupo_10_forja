@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multerUser = require('../middlewares/multerUser');
-const { cart, vistaRegistro, vistaLogin, login, registro, cerrarSesion, vistaUserProfile, editUserProfile, vistaCambiarContraseña, cambiarContraseña, vistaAgregarDireccion, agregarDireccion, vistaEditarDireccion, editarDireccion} = require("../controllers/usersController");
+const { cart, vistaRegistro, vistaLogin, login, registro, cerrarSesion, vistaUserProfile, editUserProfile, vistaCambiarContraseña, cambiarContraseña, vistaAgregarDireccion, agregarDireccion, vistaEditarDireccion, editarDireccion, eliminarDireccion} = require("../controllers/usersController");
 const invitado = require('../middlewares/invitado');
 const registerValidator = require('../middlewares/registerValidator');
 const loginValidator = require ('../middlewares/loginValidator');
@@ -31,8 +31,10 @@ router.put('/password', passwordValidator, cambiarContraseña);
 router.get('/address/add',  vistaAgregarDireccion);
 router.post('/address/add',  agregarDireccion);
 
-router.get('/address/edit',  vistaEditarDireccion);
-router.put('/address/edit',  editarDireccion);
+router.get('/address/edit/:addressId',  vistaEditarDireccion);
+router.put('/address/edit/:addressId',  editarDireccion);
+
+router.delete("/address/delete/:addressId", eliminarDireccion);
 
 
 module.exports = router;

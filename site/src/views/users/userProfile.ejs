@@ -225,9 +225,9 @@
                         <td> <%= usuario.direccion[i].codigoPostal %></td>
                         
                         
-                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href="/user/address/edit/<%= usuario.direccion[i].id %>"><i class="fas fa-wrench"></i></a></td>
                         <td class="iconos">
-                          <form action="" method="POST">
+                          <form action="/user/address/delete/<%= usuario.direccion[i].id %>?_method=DELETE" method="POST">
                             <button  type="submit">
                               <i class=" trash fas fa-trash-alt">
 

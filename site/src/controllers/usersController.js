@@ -223,15 +223,73 @@ const controller = {
 
         }else{
 
-            res.render("users/addAddress", {errors:agregarDireccionErrors.mapped()})
+            res.render("users/addAddress", {errors:agregarDireccionErrors.mapped(), old: req.body})
 
         }
         
     },
     vistaEditarDireccion: (req, res)=> {
-        res.render("users/editAddress")
+
+        db.Direccion.findOne({
+            where: {
+                id: req.params.addressId
+            }
+        })
+        .then(direccion=>{
+            
+            res.render("users/editAddress", {direccion})
+        })
+        .catch(error => {
+            console.log(error)
+            res.send("No se pudo obtener la dirección de la base de datos")
+        })
     },
     editarDireccion: (req, res)=> {
+
+        const editarDireccionErrors = validationResult(req);
+
+        if(editarDireccionErrors.isEmpty()){
+
+            let {calle, numero, localidad, provincia, codigoPostal, departamento } = req.body;
+
+            db.Direccion.update({
+
+                calle,
+                numero: parseInt(numero),
+                localidad,
+                provincia,
+                codigoPostal: parseInt(codigoPostal),
+                departamento: parseInt(departamento),
+                usuarioId: parseInt(req.session.usuarioLogueado.id)
+
+            },
+            {
+                where: {id:req.params.addressId}
+            })
+            .then( ()=>{
+                res.redirect("/user/userProfile/" + req.session.usuarioLogueado.id)
+            })
+            .catch( ()=> {
+                console.log(error)
+                res.send("No se pudo editar la dirección de la base de datos")
+            })
+
+        }
+    },
+    eliminarDireccion: (req, res)=> {
+
+        db.Direccion.destroy({
+            where: {id : req.params.addressId}
+        })
+        .then( () => {
+            res.redirect("/user/userProfile/" + req.session.usuarioLogueado.id)
+        })
+        .catch(error=>{
+            res.send("No se pudo eliminar la dirección");
+            console.log(error);
+        })
+
+		/* res.redirect("/admin") */
 
     }
 
