@@ -22,85 +22,125 @@
                 <div class="input-container">
                     <div class="cuenta">
                         <span>¿Ya tiene una cuenta?</span>
-                        <a href="/login">Inicie sesión</a>
+                        <a href="/user/login">Inicie sesión</a>
 
                     </div>
 
                     <div>
                         <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre"   placeholder="Ingresalo tal como figura en el documento" name="nombre" required value=<%= locals.old && old.nombre ? old.nombre : null %>>
-                        <% if (locals.errors && errors.nombre) { %>
-                            <small class="errors"><%= errors.nombre.msg %> </small>
-                         
-                        <% } %>
+                        <div class="grupo_input">
+                            <input type="text" id="nombre" class="inputs" placeholder="Ingresalo tal como figura en el documento" name="nombre" required value=<%= locals.old && old.nombre ? old.nombre : null %>>
+                            <% if (locals.errors && errors.nombre) { %>
+                                <small class="errors"><%= errors.nombre.msg %> </small>
+                            
+                            <% } %>
+                            <i class="error fas fa-times" id="errorNombre"></i>
+                            <i class="check fas fa-check" id="checkNombre"></i>
+                        </div>
+                        <small class="frontNombre" id="smallsFront"></small>
                     </div>
 
                     <div>
                         <label for="apellido">Apellido</label>
-                        <input type="text" id="apellido"  placeholder="Ingresalo tal como figura en el documento" name="apellido" required value=<%= locals.old && old.apellido ? old.apellido : null %> >
-                        <% if (locals.errors && errors.apellido) { %>
-                            <small class="errors"><%= errors.apellido.msg %> </small>
-                             
-                        <% } %>
+                        <div class="grupo_input">
+                            <input type="text" id="apellido" class="inputs" placeholder="Ingresalo tal como figura en el documento" name="apellido" required value=<%= locals.old && old.apellido ? old.apellido : null %> >
+                            <% if (locals.errors && errors.apellido) { %>
+                                <small class="errors"><%= errors.apellido.msg %> </small>
+                            
+                            <% } %>
+                            <i class="error fas fa-times" id="errorApellido"></i>
+                            <i class="check fas fa-check" id="checkApellido"></i>
+                        </div>
+                        <small class="frontApellido" id="smallsFront"></small>
                     </div>
 
                     <div>
                         <label for="email">E-mail</label>
-                        <input type="email" id="email"  placeholder="Asegurate de tener acceso a este e-mail" name="email" required value=<%= locals.old && old.email ? old.email : null %>>
-                        <% if (locals.errors && errors.email) { %>
-                            <small class="errors"><%= errors.email.msg %> </small>
-                         
-                        <% } %>
+                        <div class="grupo_input">
+                            <input type="email" id="email" class="inputs" placeholder="Asegurate de tener acceso a este e-mail" name="email" required value=<%= locals.old && old.email ? old.email : null %>>
+                            <% if (locals.errors && errors.email) { %>
+                                <small class="errors"><%= errors.email.msg %> </small>
+                            
+                            <% } %>
+                            <i class="error fas fa-times" id="errorEmail"></i>
+                            <i class="check fas fa-check" id="checkEmail"></i>
+                        </div>
+                        <small class="frontEmail" id="smallsFront"></small>
                     </div>
 
                     <div>
                         <label for="fechaDeNac">Fecha de nacimiento</label>
-                        <input type="date" id="fechaDeNac"  placeholder="DD/MM/YY" name="fechaDeNac" required max="2003-03-09" value=<%= locals.old && old.fechaDeNac ? old.fechaDeNac : null %>>
-                        <% if (locals.errors && errors.fechaDeNac) { %>
-                            <small class="errors"><%= errors.fechaDeNac.msg %> </small>
-                         
-                        <% } %>
+                        <div class="grupo_input">
+                            <input type="date" id="fechaDeNac" class="inputs" placeholder="DD/MM/YY" name="fechaDeNac" required value=<%= locals.old && old.fechaDeNac ? old.fechaDeNac : null %>>
+                            <% if (locals.errors && errors.fechaDeNac) { %>
+                                <small class="errors"><%= errors.fechaDeNac.msg %> </small>
+                            
+                            <% } %>
+                            <i class="error fas fa-times" id="errorFechaDeNac"></i>
+                            <i class="check fas fa-check" id="checkFechaDeNac"></i>
+                        </div>
+                        <small class="frontFecha" id="smallsFront"></small>
                     </div>
 
                     <div>
                         <label for="contraseña">Contraseña</label>
-                        <input type="password" id="contraseña" name="contraseña" required minlength="8">
-                        <% if (locals.errors && errors.contraseña) { %>
-                            <small class="errors"><%= errors.contraseña.msg %> </small>
-                         
-                        <% } %>
+                        <div class="grupo_input">
+                            <input type="password" id="contraseña" class="inputs" name="contraseña" required minlength="8">
+                            <% if (locals.errors && errors.contraseña) { %>
+                                <small class="errors"><%= errors.contraseña.msg %> </small>
+                            
+                            <% } %>
+                            <i class="error fas fa-times" id="errorContraseña"></i>
+                            <i class="check fas fa-check" id="checkContraseña"></i>
+                            <i class="ojitoAct fas fa-eye-slash" id="ocultarContraseña"></i>
+                            <i class="ojitoDes fas fa-eye" id="verContraseña"></i>
+                        </div>
+                        <small class="frontContraseña" id="smallsFront"></small>
                     </div>
 
                     <div>
                         <label for="contraseña2">Confirma tu contraseña</label>
-                        <input type="password" id="contraseña2" name="contraseña2" required minlength="8">
-                        <% if (locals.errors && errors.contraseña2) { %>
-                            <small class="errors"><%= errors.contraseña2.msg %> </small>
-                         
-                        <% } %>
+                        <div class="grupo_input">
+                            <input type="password" id="contraseña2" class="inputs" name="contraseña2" required minlength="8">
+                            <% if (locals.errors && errors.contraseña2) { %>
+                                <small class="errors"><%= errors.contraseña2.msg %> </small>
+                            
+                            <% } %>
+                            <i class="error fas fa-times" id="errorContraseña2"></i>
+                            <i class="check fas fa-check" id="checkContraseña2"></i>
+                        </div>
+                        <small class="frontContraseña2" id="smallsFront"></small>
                     </div>
 
                     <div>
                         <label for="imagen">Imagen de perfil</label>
-                        <input type="file" id="imagen" accept="image/*" name="imagen">
-                        <% if (locals.errors && errors.imagen) { %>
-                            <small class="errors"><%= errors.imagen.msg %> </small>
-                         
-                        <% } %>
+                        <div class="grupo_input">
+                            <input type="file" id="imagen" class="inputs" accept="image/*" name="imagen">
+                            <% if (locals.errors && errors.imagen) { %>
+                                <small class="errors"><%= errors.imagen.msg %> </small>
+                            
+                            <% } %>
+                        </div>
+                        <small class="frontImagen" id="smallsFront"></small>
                     </div>
 
                     <div class="check">
-                        <input type="checkbox" name="terminos" value="1" <%= locals.old && old.terminos ? "checked" : null %> required>
-                        <small>Acepto los <a href="">Términos y Condiciones</a> y autorizo el uso de mis datos de acuerdo a la <a href="">Declaración de Privacidad</a>.</small>
+                        <label>
+                            <input type="checkbox" name="terminos" class="inputs" id="terminos" value="1" <%= locals.old && old.terminos ? "checked" : null %> required>
+                            <small>Acepto los <a href="">Términos y Condiciones</a> y autorizo el uso de mis datos de acuerdo a la <a href="">Declaración de Privacidad</a>.</small>
+                        </label>
                         <% if (locals.errors && errors.terminos) { %>
                             <small class="errors"><%= errors.terminos.msg %> </small>
-                         
+                        
                         <% } %>
+                        <small class="frontTerminos" id="smallsFront"></small>
                     </div>
 
                     <div class="check">
-                        <input type="checkbox" name="ofertas">
-                        <small>Recibir ofertas exclusivas y descuentos.</small>
+                        <label>
+                            <input type="checkbox" name="ofertas">
+                            <small>Recibir ofertas exclusivas y descuentos.</small>
+                        </label>
                     </div>
                 </div>
 
@@ -108,7 +148,7 @@
 
                 </div>
 
-                <button type="submit">Crear cuenta</button>
+                <button type="submit" id="send">Crear cuenta</button>
 
 
             </form>
@@ -120,5 +160,6 @@
     <%- include('../partials/footer')  %> 
 
 </body>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
+<script src="../../../js/register.js"></script>
 </html>
