@@ -7,6 +7,7 @@ const registerValidator = require('../middlewares/registerValidator');
 const loginValidator = require ('../middlewares/loginValidator');
 const userProfileValidator = require ('../middlewares/userProfileValidator');
 const passwordValidator = require ('../middlewares/passwordValidator');
+const addressValidator = require ('../middlewares/addressValidator');
 
 
 /* GET users listing. */
@@ -29,10 +30,10 @@ router.get('/password',  vistaCambiarContraseña);
 router.put('/password', passwordValidator, cambiarContraseña);
 
 router.get('/address/add',  vistaAgregarDireccion);
-router.post('/address/add',  agregarDireccion);
+router.post('/address/add', addressValidator, agregarDireccion);
 
-router.get('/address/edit/:addressId',  vistaEditarDireccion);
-router.put('/address/edit/:addressId',  editarDireccion);
+router.get('/address/edit/:addressId', vistaEditarDireccion);
+router.put('/address/edit/:addressId', addressValidator, editarDireccion);
 
 router.delete("/address/delete/:addressId", eliminarDireccion);
 

@@ -274,6 +274,21 @@ const controller = {
                 res.send("No se pudo editar la dirección de la base de datos")
             })
 
+        }else{
+
+            db.Direccion.findOne({
+                where: {id:req.params.addressId}
+            })
+            .then(direccion=>{
+                res.render("users/editAddress", {errors:editarDireccionErrors.mapped(), direccion, old: req.body})
+            })
+            .catch(error => {
+                console.log(error)
+                res.send("No se pudieron enviar los errores a la vista de edición")
+            })
+
+            
+
         }
     },
     eliminarDireccion: (req, res)=> {
