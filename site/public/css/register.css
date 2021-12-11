@@ -56,7 +56,9 @@ main.register section form div.input-container div div.grupo_input input:focus {
 }
 
 #imagen {
-    height: 27px;
+    height: 21px;
+    border: none;
+    padding: 0 10px 0 0;
 }
 
 main.register section form div.input-container div.check{

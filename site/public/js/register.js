@@ -367,41 +367,59 @@ window.addEventListener('load', () => {
     })
 
 
-    contraseña2.addEventListener('input', () => {
+    imagen.addEventListener('change', () => {
 
         switch (true) {
-            case !contraseña2.value:
-                contraseña2.classList.add('nocheck')
-                contraseña2.style.border = '3px solid red'
-                contraseña2.style.color = 'red'
-                errorContraseña2.style.display = 'block'
-                checkContraseña2.style.display = 'none'
-                smallContraseña2.innerHTML = 'Es necesario que escribas nuevamente tu contraseña'
-                validate.contraseña2 = false
+            case !regExImg.exec(imagen.value):
+                imagen.classList.add('nocheck')
+                imagen.style.backgroundColor = 'red'
+                imagen.style.color = 'white'
+                imagen.style.boxShadow = 'none'
+                smallImagen.innerHTML = 'Solo se permiten imágenes con extensión jpg, jpeg, png, gif y webp'
+                validate.imagen = false
                 break;
-            case contraseña2.value !== contraseña.value:
-                contraseña2.classList.add('nocheck')
-                contraseña2.style.border = '3px solid red'
-                contraseña2.style.color = 'red'
-                errorContraseña2.style.display = 'block'
-                checkContraseña2.style.display = 'none'
-                smallContraseña2.innerHTML = 'Las contraseñas no coinciden'
-                validate.contraseña2 = false
+            case imagen.files[0].size > fileSize:
+                imagen.classList.add('nocheck')
+                imagen.style.backgroundColor = 'red'
+                imagen.style.color = 'white'
+                imagen.style.boxShadow = 'none'
+                smallImagen.innerHTML = 'La imagen debe pesar menos de 2MB'
+                validate.imagen = false
                 break;
             default:
-                contraseña2.classList.remove('nocheck')
-                contraseña2.classList.add('check')
-                contraseña2.style.border = '3px solid green'
-                contraseña2.style.color = 'green'
-                errorContraseña2.style.display = 'none'
-                checkContraseña2.style.display = 'block'
-                smallContraseña2.innerHTML = ''
-                validate.contraseña2 = true
+                imagen.classList.remove('nocheck')
+                imagen.classList.add('check')
+                imagen.style.boxShadow = '0px 1px 10px rgb(23 158 5)'
+                imagen.style.backgroundColor = 'white'
+                imagen.style.color = 'black'
+                smallImagen.innerHTML = ''
+                validate.imagen = true
                 break;
         }
 
         funcValidate(validate)
     })
+
+
+    terminos.addEventListener('change', () => {
+
+        if (terminos.checked !== true) {
+            terminos.classList.add('nocheck')
+            terminos.style.boxShadow = '0px 1px 10px rgb(158 5 5)'
+            smallTerminos.innerHTML = 'Debes aceptar nuestros términos y condiciones'
+            validate.terminos = false
+        } else {
+            terminos.classList.remove('nocheck')
+            terminos.classList.add('check')
+            terminos.style.boxShadow = '0px 1px 10px rgb(23 158 5)'
+            smallTerminos.innerHTML = ''
+            validate.terminos = true
+        }
+
+        funcValidate(validate)
+    })
+
+
     ocultarContraseña.addEventListener('click', () => {
         
         ocultarContraseña.style.display = 'none'
@@ -425,9 +443,9 @@ window.addEventListener('load', () => {
         email: false,
         fechaDeNac: false,
         contraseña: false,
-        contraseña2: false
-        /* imagen: false, */
-        /* terminos: false, */
+        contraseña2: false,
+        imagen: true,
+        terminos: false
     }
 
     
