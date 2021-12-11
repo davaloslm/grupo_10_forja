@@ -42,7 +42,8 @@
                   <div class="edit-profile">
                     
                     <form class="profile" action="/user/userProfile/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-                        <input type="file" accept="image/*" name="avatar" >
+                        
+                        
                         <span>Nombre: </span>
                         <input type="text" name="nombre" class="edit-form" value="<%= usuario.nombre %>">
                         <% if (locals.errors && errors.nombre) { %>
@@ -71,19 +72,24 @@
                        
                         <% } %>
 
+                        <span>Imagen de perfil: </span>
+                        <input type="file" accept="image/*" name="avatar" >
+
                         <!-- <span>Contraseña actual: </span>
                         <input type="password" name="contraseña" class="edit-form">
 
                         <span>Nueva contraseña: </span>
                         <input type="password" name="contraseña2" class="edit-form"> -->
                         
-                        <button class="edit-button" type="submit">Guardar cambios</button>
-                        
-                        <button class="cancel-button">Cancelar</button>
+                        <div>
+                          <button class="edit-button" type="submit">Guardar cambios</button>
+                          
+                          <button class="cancel-button" type="reset">Cancelar</button>
+                        </div>
 
                     </form>
 
-                    <a href="/user/password">Cambiar contraseña</a>
+                    <a href="/user/password" class="redirect">Cambiar contraseña <i class="fas fa-edit"></i></a>
 
 
                   </div>

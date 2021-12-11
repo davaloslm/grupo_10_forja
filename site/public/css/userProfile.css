@@ -83,7 +83,26 @@ main.profile section.profile-section form.profile{
     align-items: center;
 }
 
+main.profile section.profile-section form.profile input {
+    
+    border-radius: 5px;
+    margin: 10px 0;
+    border: solid 1px var(--lightBlue);
+    padding: 5px;
+    cursor: pointer;
+    outline-color: #3db7b6;
+}
 
+main.profile section.profile-section form.profile button{
+    padding: 5px;
+    color: var(--white);
+    margin: 10px auto;
+    background-color: var(--lightBlue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
 
 
 /* /////////////// Direcciones //////////////// */
@@ -98,5 +117,16 @@ main.profile section.profile-section form button {
     font-size: 18px;
     cursor: pointer;
 }
+
+main.profile section.profile-section  a.redirect{
+    color: black;
+    
+}
+
+main.profile section.profile-section  a.redirect:hover{
+    
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+}
+
 
 /* /////////////// fin //////////////// */
