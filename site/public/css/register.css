@@ -55,10 +55,11 @@ main.register section form div.input-container div div.grupo_input input:focus {
     box-shadow: 3px 0px 30px rgba(161, 161, 161, 0.4);
 }
 
-#imagen {
+main.register #imagen {
     height: 21px;
     border: none;
     padding: 0 10px 0 0;
+    background-color: var(--white);
 }
 
 main.register section form div.input-container div.check{
@@ -109,11 +110,11 @@ main.register section form div.input-container div.check a{
     display: none;
 }
 
-#fechaDeNac {
+main.register #fechaDeNac {
     padding: 0 5px 0 10px;
 }
 
-#send {
+main.register #send {
     padding: 10px;
     color: var(--white);
     margin: 10px auto;
@@ -129,7 +130,7 @@ main.register small.errors{
     color: crimson;
 }
 
-#smallsFront {
+main.register #smallsFront {
     color: crimson;
 }
 

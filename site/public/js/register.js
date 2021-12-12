@@ -1,10 +1,12 @@
 window.addEventListener('load', () => {
     // console.log('Se vinculó correctamente');
-    // query selector
+
+    // Query selector //
     const qs = (tag) => {
         return document.querySelector(tag)
     }
 
+    // Función para validar en línea //
     const funcValidate = (obj) => {
         let arr = Object.values(validate)
         
@@ -17,17 +19,18 @@ window.addEventListener('load', () => {
         }
     }
 
-    let regExUsername = /^[a-zA-Z0-9\_\-]{4,16}$/; // Letras, numeros, guion y guion_bajo
+    // let regExUsername = /^[a-zA-Z0-9\_\-]{4,16}$/; // Letras, numeros, guion y guion_bajo
+    // let regExTel = /^\d{7,14}$/; // 7 a 14 numeros.
+    
+    // Expresiones regulares //
     let regExLetras = /^[a-zA-ZÀ-ÿ\s]{2,}$/; // Letras y espacios, pueden llevar acentos.
     let regExPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,}$/; // 4 a 12 digitos.
     let regExEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
-    let regExFecha = /^([0-2][0-9]|3[0-1])(\/|-)(0[1-9]|1[0-2])\2(\d{4})$/;
-    let regExTel = /^\d{7,14}$/; // 7 a 14 numeros.
     let regExImg = /(.jpg|.jpeg|.png|.gif|.webp)$/i;
     let fileSize = 2100000
 
 
-    /* Inputs */
+    // Inputs //
     const form = qs('form')
     const nombre = qs('#nombre')
     const apellido = qs('#apellido')
@@ -38,7 +41,7 @@ window.addEventListener('load', () => {
     const imagen = qs('#imagen')
     const terminos = qs('#terminos')
 
-    /* iconos */
+    // Iconos //
     const checkNombre = qs('#checkNombre')
     const errorNombre = qs('#errorNombre')
     const checkApellido = qs('#checkApellido')
@@ -54,6 +57,7 @@ window.addEventListener('load', () => {
     const verContraseña = qs('#verContraseña')
     const ocultarContraseña = qs('#ocultarContraseña')
     
+    // Smalls //
     const smallNombre = qs('small.frontNombre')
     const smallApellido = qs('small.frontApellido')
     const smallEmail = qs('small.frontEmail')
@@ -67,14 +71,15 @@ window.addEventListener('load', () => {
     const small = document.querySelectorAll('#smallsFront')
 
     const bttnEnviar = qs('#send')
-    
+
     bttnEnviar.disabled = true
     bttnEnviar.style.backgroundColor = 'gray'
 
 
     nombre.focus()
-
     
+    // Validaciones //
+    // NOMBRE //
     nombre.addEventListener('input', () => {
         switch (true) {
             case !nombre.value:
@@ -127,7 +132,9 @@ window.addEventListener('load', () => {
 
         funcValidate(validate)
     })
-    
+
+
+    // APELLIDO //
     apellido.addEventListener('input', () => {
         switch (true) {
             case !apellido.value:
@@ -181,6 +188,8 @@ window.addEventListener('load', () => {
         funcValidate(validate)
     })
 
+
+    // EMAIL //
     email.addEventListener('input', () => {
 
         switch (true) {
@@ -218,6 +227,7 @@ window.addEventListener('load', () => {
     })
 
 
+    // FECHA DE NACIMIENTO //
     fechaDeNac.addEventListener('input', () => {
 
         switch (true) {
@@ -273,6 +283,7 @@ window.addEventListener('load', () => {
     })
 
 
+    // CONTRASEÑA //
     contraseña.addEventListener('input', () => {
 
         switch (true) {
@@ -330,6 +341,7 @@ window.addEventListener('load', () => {
     })
 
 
+    // CONTRASEÑA 2 //
     contraseña2.addEventListener('input', () => {
 
         switch (true) {
@@ -367,6 +379,7 @@ window.addEventListener('load', () => {
     })
 
 
+    // IMAGEN //
     imagen.addEventListener('change', () => {
 
         switch (true) {
@@ -401,6 +414,7 @@ window.addEventListener('load', () => {
     })
 
 
+    // TERMINOS //
     terminos.addEventListener('change', () => {
 
         if (terminos.checked !== true) {
@@ -420,6 +434,7 @@ window.addEventListener('load', () => {
     })
 
 
+    // VER/OCULTAR CONTRASEÑA //
     ocultarContraseña.addEventListener('click', () => {
         
         ocultarContraseña.style.display = 'none'
@@ -437,6 +452,7 @@ window.addEventListener('load', () => {
     
     })
 
+    // VALIDACION //
     const validate = {
         nombre: false,
         apellido: false,
@@ -448,7 +464,6 @@ window.addEventListener('load', () => {
         terminos: false
     }
 
-    
 
     form.addEventListener('submit', (e) => {
 
