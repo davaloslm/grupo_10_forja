@@ -41,8 +41,9 @@
                   </div>
                   <div class="edit-profile">
                     
-                    <form action="/user/userProfile/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-                        <input type="file" accept="image/*" name="avatar" >
+                    <form class="profile" action="/user/userProfile/<%= usuario.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                        
+                        
                         <span>Nombre: </span>
                         <input type="text" name="nombre" class="edit-form" value="<%= usuario.nombre %>">
                         <% if (locals.errors && errors.nombre) { %>
@@ -71,19 +72,24 @@
                        
                         <% } %>
 
+                        <span>Imagen de perfil: </span>
+                        <input type="file" accept="image/*" name="avatar" >
+
                         <!-- <span>Contraseña actual: </span>
                         <input type="password" name="contraseña" class="edit-form">
 
                         <span>Nueva contraseña: </span>
                         <input type="password" name="contraseña2" class="edit-form"> -->
                         
-                        <button class="edit-button" type="submit">Guardar cambios</button>
-                        
-                        <button class="cancel-button">Cancelar</button>
+                        <div>
+                          <button class="edit-button" type="submit">Guardar cambios</button>
+                          
+                          <button class="cancel-button" type="reset">Cancelar</button>
+                        </div>
 
                     </form>
 
-                    <a href="/user/password">Cambiar contraseña</a>
+                    <a href="/user/password" class="redirect">Cambiar contraseña <i class="fas fa-edit"></i></a>
 
 
                   </div>
@@ -202,7 +208,11 @@
                     <thead>
                       <tr>
                         
-                        <th>Dirección</th>
+                        <th>Calle</th>
+                        <th>Número</th>
+                        <th>Localidad</th>
+                        <th>Provincia</th>
+                        <th>Código Postal</th>
                         
                         
                         <th>Editar</th>
@@ -210,14 +220,20 @@
                       </tr>
                     </thead>
                     <tbody>
+                      <% for(i=0; i < usuario.direccion.length; i++){ %>
+                       
                       <tr>
                        
-                        <td>Calle Falsa 123</td>
+                        <td> <%= usuario.direccion[i].calle %>  </td>
+                        <td> <%= usuario.direccion[i].numero %></td>
+                        <td> <%= usuario.direccion[i].localidad %></td>
+                        <td> <%= usuario.direccion[i].provincia %></td>
+                        <td> <%= usuario.direccion[i].codigoPostal %></td>
                         
                         
-                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
+                        <td class="iconos"><a href="/user/address/edit/<%= usuario.direccion[i].id %>"><i class="fas fa-wrench"></i></a></td>
                         <td class="iconos">
-                          <form action="" method="POST">
+                          <form action="/user/address/delete/<%= usuario.direccion[i].id %>?_method=DELETE" method="POST">
                             <button  type="submit">
                               <i class=" trash fas fa-trash-alt">
 
@@ -228,44 +244,11 @@
                          
                         
                       </tr>
-                      <tr>
-                       
-                        <td>Calle Falsa 123</td>
-                        
-                        
-                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos">
-                          <form action="" method="POST">
-                            <button  type="submit">
-                              <i class=" trash fas fa-trash-alt">
-
-                              </i>
-                            </button>
-                          </form>
-                        </td>
-                         
-                        
-                      </tr>
-                      <tr>
-                       
-                        <td>Calle Falsa 123</td>
-                        
-                        
-                        <td class="iconos"><a href=""><i class="fas fa-wrench"></i></a></td>
-                        <td class="iconos">
-                          <form action="" method="POST">
-                            <button  type="submit">
-                              <i class=" trash fas fa-trash-alt">
-
-                              </i>
-                            </button>
-                          </form>
-                        </td>
-                         
-                        
-                      </tr>
+                      <% } %>  
+                      
                     </tbody>
                   </table>
+                  <a href="admin/create" class="redirect">Agregar nueva dirección <i class="fas fa-plus-square"></i></a> 
                 </div>
               </div>
             </div>

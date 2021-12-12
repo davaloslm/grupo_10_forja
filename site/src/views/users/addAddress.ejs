@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/head')  %>
+    <title>Agregar Dirección</title>
+</head>
+
+<body>
+
+    <%- include('../partials/header')  %> 
+
+    <main class="addAddress">
+
+
+        <h2>Agregar nueva dirección</h2>
+
+
+        <section>
+
+            <form action="/user/address/add" method="POST" >
+                <div class="input-container">
+                    
+                    <div>
+                        <label for="calle">Calle</label>
+                        <input type="text" id="calle"   placeholder="Ingresá el nombre de la calle sin número" name="calle" required value=<%= locals.old && old.calle ? old.calle : null %>>
+                        <% if (locals.errors && errors.calle) { %>
+                            <small class="errors"><%= errors.calle.msg %> </small>
+                         
+                        <% } %>
+                    </div>
+
+                    <div>
+                        <label for="numero">Número</label>
+                        <input type="number" id="numero"  placeholder="Ingresá el número" name="numero" required value=<%= locals.old && old.numero ? old.numero : null %> >
+                        <% if (locals.errors && errors.numero) { %>
+                            <small class="errors"><%= errors.numero.msg %> </small>
+                             
+                        <% } %>
+                    </div>
+
+                    <div>
+                        <label for="localidad">Localidad</label>
+                        <input type="text" id="localidad"  placeholder="Ingresá tu localidad o partido" name="localidad" required value=<%= locals.old && old.localidad ? old.localidad : null %> >
+                        <% if (locals.errors && errors.localidad) { %>
+                            <small class="errors"><%= errors.localidad.msg %> </small>
+                             
+                        <% } %>
+                    </div>
+
+                    <div>
+                        <label for="provincia">Provincia</label>
+                        <input type="text" id="provincia"  placeholder="Ingresá tu provincia" name="provincia" required value=<%= locals.old && old.provincia ? old.provincia : null %> >
+                        <% if (locals.errors && errors.provincia) { %>
+                            <small class="errors"><%= errors.provincia.msg %> </small>
+                             
+                        <% } %>
+                    </div>
+
+                    <div>
+                        <label for="codigoPostal">Código Postal</label>
+                        <input type="number" id="codigoPostal"  placeholder="Ingresá tu Código Postal" name="codigoPostal" required value=<%= locals.old && old.codigoPostal ? old.codigoPostal : null %> >
+                        <% if (locals.errors && errors.codigoPostal) { %>
+                            <small class="errors"><%= errors.codigoPostal.msg %> </small>
+                             
+                        <% } %>
+                    </div>
+
+                    <div>
+                        <label for="departamento">Departamento</label>
+                        <input type="number" id="departamento"  placeholder=""  name="departamento" value=<%= locals.old && old.departamento ? old.departamento : null %> >
+                        <% if (locals.errors && errors.departamento) { %>
+                            <small class="errors"><%= errors.departamento.msg %> </small>
+                             
+                        <% } %>
+                    </div>
+
+                <button type="submit">Agregar</button>
+
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <%- include('../partials/footer')  %> 
+
+</body>
+
+</html>

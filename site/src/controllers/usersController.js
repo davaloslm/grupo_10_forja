@@ -92,7 +92,12 @@ const controller = {
         db.Usuario.findOne({
             where: {
                 id: id
-            }
+            },
+            include: [
+                {
+                    association: "direccion",
+                }
+            ]
         })
         .then(usuario => {
             res.render('users/userProfile', {usuario} )
@@ -184,6 +189,123 @@ const controller = {
             res.render("users/password", {errors: cambiarContraseñaErrors.mapped()});
     
             }
+    },
+    vistaAgregarDireccion: (req, res)=> {
+        res.render("users/addAddress")
+    },
+    agregarDireccion: (req, res)=> {
+
+        const agregarDireccionErrors = validationResult(req);
+
+        if(agregarDireccionErrors.isEmpty()){
+
+            let {calle, numero, localidad, provincia, codigoPostal, departamento } = req.body;
+
+        db.Direccion.create({
+
+            calle,
+            numero: parseInt(numero),
+            localidad,
+            provincia,
+            codigoPostal: parseInt(codigoPostal),
+            departamento: parseInt(departamento),
+            usuarioId: parseInt(req.session.usuarioLogueado.id)        
+
+        })
+        .then(()=>{
+            res.redirect("/user/userProfile/" + req.session.usuarioLogueado.id)
+        })
+        .catch(error=>{
+            res.send('Hubo un error al crear la nueva dirección')
+            console.log(error)
+
+        })
+
+        }else{
+
+            res.render("users/addAddress", {errors:agregarDireccionErrors.mapped(), old: req.body})
+
+        }
+        
+    },
+    vistaEditarDireccion: (req, res)=> {
+
+        db.Direccion.findOne({
+            where: {
+                id: req.params.addressId
+            }
+        })
+        .then(direccion=>{
+            
+            res.render("users/editAddress", {direccion})
+        })
+        .catch(error => {
+            console.log(error)
+            res.send("No se pudo obtener la dirección de la base de datos")
+        })
+    },
+    editarDireccion: (req, res)=> {
+
+        const editarDireccionErrors = validationResult(req);
+
+        if(editarDireccionErrors.isEmpty()){
+
+            let {calle, numero, localidad, provincia, codigoPostal, departamento } = req.body;
+
+            db.Direccion.update({
+
+                calle,
+                numero: parseInt(numero),
+                localidad,
+                provincia,
+                codigoPostal: parseInt(codigoPostal),
+                departamento: parseInt(departamento),
+                usuarioId: parseInt(req.session.usuarioLogueado.id)
+
+            },
+            {
+                where: {id:req.params.addressId}
+            })
+            .then( ()=>{
+                res.redirect("/user/userProfile/" + req.session.usuarioLogueado.id)
+            })
+            .catch( ()=> {
+                console.log(error)
+                res.send("No se pudo editar la dirección de la base de datos")
+            })
+
+        }else{
+
+            db.Direccion.findOne({
+                where: {id:req.params.addressId}
+            })
+            .then(direccion=>{
+                res.render("users/editAddress", {errors:editarDireccionErrors.mapped(), direccion, old: req.body})
+            })
+            .catch(error => {
+                console.log(error)
+                res.send("No se pudieron enviar los errores a la vista de edición")
+            })
+
+            
+
+        }
+    },
+    eliminarDireccion: (req, res)=> {
+
+        db.Direccion.destroy({
+            where: {id : req.params.addressId}
+        })
+        .then( () => {
+            res.redirect("/user/userProfile/" + req.session.usuarioLogueado.id)
+        })
+        .catch(error=>{
+            res.send("No se pudo eliminar la dirección");
+            console.log(error);
+        })
+
+		/* res.redirect("/admin") */
+
     }
 
 }
