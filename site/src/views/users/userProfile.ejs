@@ -18,11 +18,7 @@
           <h4>Detalles de perfil</h4>
           <div class="row">
             <div class="col-md-12">
-                <!-- <ul class="list-inline dashboard-menu text-center">
-                    <li><a href="">Mis compras/a></li>
-                    <li><a href="">Mis direcciones</a></li>
-                    <li><a href="">Detalles de mi perfil</a></li>
-                </ul> -->
+                
               
               <div class="dashboard-wrapper dashboard-user-profile">
                 <div class="media">
@@ -45,41 +41,75 @@
                         
                         
                         <span>Nombre: </span>
-                        <input type="text" name="nombre" class="edit-form" value="<%= usuario.nombre %>">
+                        <div class="inputs">
+                          <input type="text" id="nombre" name="nombre" class="edit-form" value="<%= usuario.nombre %>">
+                          <i class="error fas fa-times" id="errorNombre"></i>
+                          <i class="check fas fa-check" id="checkNombre"></i>
+                        </div>
                         <% if (locals.errors && errors.nombre) { %>
                           <small class="errors"><%= errors.nombre.msg %> </small>
                        
                         <% } %>
+                        <small id="smallNombre" class="errors"></small>
+                        
 
                         <span>Apellido: </span>
-                        <input type="text" name="apellido" class="edit-form" value="<%= usuario.apellido %>">
+                        <div class="inputs">
+                          <input type="text"id="apellido" name="apellido" class="edit-form" value="<%= usuario.apellido %>">
+                          <i class="error fas fa-times" id="errorApellido"></i>
+                          <i class="check fas fa-check" id="checkApellido"></i>
+                        </div>
                         <% if (locals.errors && errors.apellido) { %>
                           <small class="errors"><%= errors.apellido.msg %> </small>
                        
                         <% } %>
-
-                        <span>Email: </span>
-                        <input type="email" name="email" class="edit-form" value="<%= usuario.email %>">
-                        <% if (locals.errors && errors.email) { %>
-                          <small class="errors"><%= errors.email.msg %> </small>
+                        <small id="smallApellido" class="errors"></small>
+                        
+                        <span>Nombre de usuario: </span>
+                        <div class="inputs">
+                          <input type="text"id="userName" name="userName" class="edit-form" value="<%= usuario.userName %>">
+                          <i class="error fas fa-times" id="errorUserName"></i>
+                          <i class="check fas fa-check" id="checkUserName"></i>
+                        </div>
+                        <% if (locals.errors && errors.userName) { %>
+                          <small class="errors"><%= errors.userName.msg %> </small>
                        
                         <% } %>
+                        <small id="smallUserName" class="errors"></small>
+
+                        <span>Email: </span>
+                        <div class="inputs">
+                          <input type="email" id="email" name="email" class="edit-form" value="<%= usuario.email %>">
+                          <i class="error fas fa-times" id="errorEmail"></i>
+                          <i class="check fas fa-check" id="checkEmail"></i>
+                        </div>
+                        <% if (locals.errors && errors.email) { %>
+                          <small  class="errors"><%= errors.email.msg %> </small>
+                       
+                        <% } %>
+                        <small id="smallEmail" class="errors"></small>
                         
                         <span>Teléfono: </span>
-                        <input type="number" name="telefono" class="edit-form" value="<%= usuario.telefono ? usuario.telefono : null %>">
+                        <div class="inputs">
+                          <input type="number" id="telefono" name="telefono" class="edit-form" value="<%= usuario.telefono ? usuario.telefono : null %>">
+                          <i class="error fas fa-times" id="errorTelefono"></i>
+                          <i class="check fas fa-check" id="checkTelefono"></i>
+                        </div>
                         <% if (locals.errors && errors.telefono) { %>
                           <small class="errors"><%= errors.telefono.msg %> </small>
                        
                         <% } %>
+                        <small id="smallTelefono" class="errors"></small>
 
                         <span>Imagen de perfil: </span>
-                        <input type="file" accept="image/*" name="avatar" >
-
-                        <!-- <span>Contraseña actual: </span>
-                        <input type="password" name="contraseña" class="edit-form">
-
-                        <span>Nueva contraseña: </span>
-                        <input type="password" name="contraseña2" class="edit-form"> -->
+                        <div class="inputs">
+                          <input type="file" id="imagen" accept="image/*" name="avatar" >
+                        </div>
+                        <% if (locals.errors && errors.imagen) { %>
+                          <small class="errors"><%= errors.imagen.msg %> </small>
+                      
+                        <% } %>
+                        <small id="smallImagen" class="errors"></small>
                         
                         <div>
                           <button class="edit-button" type="submit">Guardar cambios</button>
@@ -100,28 +130,7 @@
           </div>
         </div>
       </section>
-    <!-- perfil -->
-    <!-- <section class="user-dashboard page-wrapper">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    
-                    <div class="dashboard-wrapper user-dashboard">
-                        <div class="media">
-                            
-                            <div class="media-body">
-                                
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, iure, est. Sit mollitia est maxime! Eos
-                                    cupiditate tempore, tempora omnis. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Enim, nihil. </p>
-                            </div>
-                        </div>
-                        
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
+
 
     <!-- compras -->
 
@@ -233,7 +242,7 @@
                         
                         <td class="iconos"><a href="/user/address/edit/<%= usuario.direccion[i].id %>"><i class="fas fa-wrench"></i></a></td>
                         <td class="iconos">
-                          <form action="/user/address/delete/<%= usuario.direccion[i].id %>?_method=DELETE" method="POST">
+                          <form class="address" action="/user/address/delete/<%= usuario.direccion[i].id %>?_method=DELETE" method="POST">
                             <button  type="submit">
                               <i class=" trash fas fa-trash-alt">
 
@@ -264,4 +273,5 @@
 <!-- ////////// -->
     <%- include('../partials/footer')  %> 
 </body>
+<script src="../../../js/userProfile.js"></script>
 </html>
