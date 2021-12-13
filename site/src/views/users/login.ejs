@@ -18,27 +18,40 @@
         <section>
             <h2>Iniciar Sesión</h2>
             <% if (locals.email == undefined) { %>
-                <samp>¿No tenés una cuenta?</samp><a href="/user/register">¡Creá una cuenta!</a>
+                <samp>¿No tenés una cuenta?</samp><a href="/user/register" class="newAccount">¡Creá una cuenta!</a>
                 
             <% } else { %>
                 <p>Ingresá solo tu contraseña</p>
                 <% } %> 
             <form action="/user/login" method="POST">
 
-                <input type="email" name="email" id="email" class="email" placeholder="Escribe tu e-mail" 
-                <% if (locals.email != undefined) { %>
-                value="<%= email %>"
-                <% } %>
 
-                <% if (locals.oldData && locals.oldData.email) { %>
-                value="<%= locals.oldData.email %>"
-                <% } %> 
-                >
+                <div class="grupo_input">
+                    <input type="email" name="email" id="email" class="inputLogin" placeholder="Escribe tu e-mail" 
+                    <% if (locals.email != undefined) { %>
+                    value="<%= email %>"
+                    <% } %>
+                    
+                    <% if (locals.oldData && locals.oldData.email) { %>
+                    value="<%= locals.oldData.email %>"
+                    <% } %> 
+                    >
+                    <i class="error fas fa-times" id="errorEmail"></i>
+                    <i class="check fas fa-check" id="checkEmail"></i>
+                </div>
                 <% if (locals.errors && errors.email) { %>
                     <small class="errors"><%= errors.email.msg %> </small>
                 <% } %>
+                <small class="smallsLoginFront" id="smallLoginEmail"></small>
 
-                <input type="password" name="contraseña" id="password" placeholder="Contraseña" >
+                <div class="grupo_input">
+                    <input type="password" name="contraseña" id="password" class="inputLogin" placeholder="Contraseña" >
+                    <i class="error fas fa-times" id="errorContraseña"></i>
+                    <i class="check fas fa-check" id="checkContraseña"></i>
+                    <i class="ojitoAct fas fa-eye-slash" id="ocultarContraseña"></i>
+                    <i class="ojitoDes fas fa-eye" id="verContraseña"></i>
+                </div>
+                <small class="smallsLoginFront" id="smallLoginContraseña"></small>
                 <% if (locals.errors && errors.contraseña) { %>
                     <small class="errors"><%= errors.contraseña.msg %> </small>
 
@@ -51,8 +64,10 @@
             
             <h5><a href="">¿Olvidaste tu contraseña?</a></h5>
 
-            <label for="recordarme">Recordame </label>
+            <div>
+                <label for="recordarme">Recordame </label>
                 <input type="checkbox" name="recordarme" id="recordarme" value="recordarme">
+            </div>
 
             <button type="submit" >Iniciar Sesión</button>
             </form>

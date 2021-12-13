@@ -15,7 +15,7 @@ main.login{
 
 }
 
-main.login section{
+main.login section {
     background-color: var(--white);
     width: 80%;
     max-width: 400px;
@@ -47,13 +47,53 @@ main.login section form{
     padding: 10px;
 }
 
-main.login section form input{
+.login section form #label {
+    text-align: start;
+}
+
+main.login section form div .inputLogin {
+    width: 100%;
     border-radius: 5px;
-    margin: 10px;
-    border: solid 1px var(--lightBlue);
-    padding: 4px;
-    cursor: pointer;
-    outline-color: #3db7b6;
+    margin: 10px 0;
+    padding: 0 60px 0 10px;
+    border: 3px solid transparent;
+    transition: .3s ease all;
+    height: 40px;
+}
+
+main.login section form div .inputLogin:focus {
+    outline: none;
+    border: 3px solid var(--lightBlue);
+    box-shadow: 3px 0px 30px rgba(161, 161, 161, 0.4);
+}
+
+main.login section form div {
+    position: relative;
+}
+
+main.login section form div i.error, main.login section form div i.check {
+    position: absolute;
+    bottom: 21px;
+    right: 45px;
+    display: none;
+}
+
+main.login section form div i.error {
+    color: red;
+}
+
+main.login section form div i.check {
+    color: green;
+}
+
+main.login section form div.grupo_input i.ojitoDes, main.login section form div.grupo_input i.ojitoAct {
+    position: absolute;
+    bottom: 21px;
+    right: 10px;
+}
+
+main.login section form div.grupo_input i.ojitoDes {
+    display: none;
 }
 
 main.login section h5{
@@ -69,7 +109,7 @@ main.login section button{
     padding: 5px;
     background-color: var(--lightBlue);
     border-radius: 5px;
-    border: none;
+    border: 3px solid var(--lightBlue);
     cursor: pointer;
 }
 
