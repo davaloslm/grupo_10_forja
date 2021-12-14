@@ -151,7 +151,23 @@ const controller = {
 
         }else{
 
-            res.render("users/userProfile", {usuario:req.session.usuarioLogueado, errors: userProfileErrors.mapped()});
+            db.Usuario.findOne({
+                where: { id: req.session.usuarioLogueado.id},
+                include: [
+                    {
+                        association: "direccion",
+                    }
+                ]
+            })
+            .then(usuario=>{
+                res.render("users/userProfile", {usuario, errors: userProfileErrors.mapped()});
+
+            })
+            .catch(error => {
+                console.log(error)
+                res.send("No se pudieron enviar los errores a la vista de perfil de usuario")
+            })
+
 
         }
     },
