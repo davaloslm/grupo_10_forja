@@ -15,7 +15,7 @@ main.login{
 
 }
 
-main.login section{
+main.login section {
     background-color: var(--white);
     width: 80%;
     max-width: 400px;
@@ -47,13 +47,54 @@ main.login section form{
     padding: 10px;
 }
 
-main.login section form input{
+.login section form #label {
+    text-align: start;
+}
+
+main.login section form div .inputLogin {
+    width: 100%;
     border-radius: 5px;
-    margin: 10px;
-    border: solid 1px var(--lightBlue);
-    padding: 4px;
-    cursor: pointer;
-    outline-color: #3db7b6;
+    margin: 10px 0;
+    padding: 0 60px 0 10px;
+    border: 3px solid transparent;
+    transition: .3s ease all;
+    height: 40px;
+}
+
+main.login section form div .inputLogin:focus {
+    outline: none;
+    border: 3px solid var(--lightBlue);
+    box-shadow: 3px 0px 30px rgba(161, 161, 161, 0.4);
+}
+
+main.login section form div.grupo_input {
+    width: 100%;
+    position: relative;
+}
+
+main.login section form div i.error, main.login section form div i.check {
+    position: absolute;
+    bottom: 21px;
+    right: 45px;
+    display: none;
+}
+
+main.login section form div i.error {
+    color: red;
+}
+
+main.login section form div i.check {
+    color: green;
+}
+
+main.login section form div.grupo_input i.ojitoDes, main.login section form div.grupo_input i.ojitoAct {
+    position: absolute;
+    bottom: 21px;
+    right: 10px;
+}
+
+main.login section form div.grupo_input i.ojitoDes {
+    display: none;
 }
 
 main.login section h5{
@@ -69,7 +110,7 @@ main.login section button{
     padding: 5px;
     background-color: var(--lightBlue);
     border-radius: 5px;
-    border: none;
+    border: 3px solid transparent;
     cursor: pointer;
 }
 
@@ -82,22 +123,27 @@ main.login small.errors{
     color: crimson;
 }
 
+main.login small.smallsLoginFront{
+    color: crimson;
+}
+
+main.login #send:hover {
+    box-shadow: 0px 1px 5px rgb(0 0 0);
+}
+
 @media(min-width: 425px){
 
     main.login section h2{
         font-size: 1.8rem;
     }
 
-    
 }
+
 @media(min-width: 768px){
     main.login section samp{
         display: inline-block;
     }
-    main.login section form input{
-        width: 210px;
-        padding: 5px;
-    }
+
     main.login section button:hover{
         background-color: #2dbdbd;
     }
@@ -112,11 +158,6 @@ main.login small.errors{
         align-items: center;
     }
 
-    main.login section form input{
-        width: 240px;
-        padding: 5px;
-    }
-
     main.login section button{
         width: 130px;
         
@@ -126,6 +167,7 @@ main.login small.errors{
         background-color: #2dbdbd;
     }
 }
+
 @keyframes respiracion_login {
     0% {
         box-shadow: 0px 0px 10px 10px rgba(42,210,210,0);
