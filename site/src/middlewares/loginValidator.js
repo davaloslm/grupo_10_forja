@@ -7,32 +7,43 @@ const loginValidator = [
         .isEmail().withMessage('El formato de E-mail debe ser válido').bail()
         .trim().bail()
         .custom((value)=>{
-            
-        return db.Usuario.findOne({
-            where: {
-                email: value
+
+            let regExEmail = /^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$/;
+
+            if (!value.trim().match(regExEmail)) {
+                throw new Error("Formato email inválido")
+            } else {
+
+                return db.Usuario.findOne({
+                    where: {
+                        email: value
+                    }
+                })       
+
+                .then(usuario => {
+
+                    if (usuario === null){
+                        throw new Error("Este e-mail no está registrado en nuestra base de datos")
+                    } return true        
+                })
+                .catch(error => {
+                    throw new Error("Este e-mail no está registrado en nuestra base de datos")
+                    console.log('*************error catch middleware loginValidator*************');
+                    console.log(error);
+                })
             }
-        })       
 
-        .then(usuario => {
-            console.log(value);           
-            console.log(usuario);
-            if (usuario === null){
-                throw new Error("Este e-mail no está registrado en nuestra base de datos")
-            } return true        
-        })
-        .catch(error => {
-            throw new Error("Este e-mail no está registrado en nuestra base de datos")
-            console.log('*************error catch middleware loginValidator*************');
-            console.log(error);
-           })
         }),
-        
-        
-
     check('contraseña')
         .notEmpty().withMessage('El campo contraseña es obligatorio').bail()
-        .isLength({min: 8, max: 20}).withMessage('Tu contraseña debe tener un mínimo de 8 caracteres y un máximo de 20'),
+        .custom(( value ) => {
+
+            let regExPass = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[$@$!%*?&])([A-Za-z\d$@$!%*?&]|[^ ]){8,15}$/
+            if(!value.match(regExPass)) {
+                throw new Error("Formato contraseña inválido")
+            } return true
+
+        }),
 ]
 module.exports = loginValidator;
 
