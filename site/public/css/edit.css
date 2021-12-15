@@ -92,6 +92,11 @@ body.editar main.edit section.product_container form section.info_container div.
     align-items: center;
 }
 
+
+body.editar main.edit section.product_container form section.info_container div.tallaLetra input.nl {
+    margin-right: 10px;
+}
+
 body.editar main.edit section.product_container form section.info_container div.tallaNumero{
     display: flex;
     flex-wrap: wrap;
@@ -156,7 +161,7 @@ body.editar main.edit section.delete_container form{
 /* //////////Estilo de boton Eliminar Producto////////// */
 body.editar main.edit section.delete_container form button{
     padding: 6px 15px;
-    background-color: #2ad2d2;
+    background-color: #db3e49;
     color: white;
     border-radius: 5px;
     border: none;
@@ -224,16 +229,33 @@ body.editar main.edit section.delete_container form button{
 }
 
 
+@media(min-width:320px){
+
+    body.editar main.edit section.product_container form section.info_container div.tallaLetra {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+}
 
 /*////////////////////////////// Movil-M///////////////////////////// */
 @media(min-width:375px){
-    body.editar main.edit section.product_container form section.info_container div.tallaNumero{
+
+    body.editar main.edit section.product_container form section.info_container div.tallaLetra {
+        width: 80%;
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    /* body.editar main.edit section.product_container form section.info_container div.tallaNumero{
         width: 81%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        /* margin-top: 15px; */
-    }
+        margin-top: 15px; 
+    } */
 }
 
 
@@ -259,9 +281,14 @@ body.editar main.edit section.delete_container form button{
     body.editar main.edit section.product_container form section.visual_container div.descuento_envio_container div.descuento_container select{
         margin-left: 10px;
     }
-/* ///////////Talla en Nuemros////////////// */
-    body.editar main.edit section.product_container form section.info_container div.tallaNumero{
-        width: 85%;
+
+
+/* ///////////Tallas////////////// */
+    body.editar main.edit section.product_container form section.info_container div.tallaLetra {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
     }
 
     /* //////////Descripcion de producto//////// */

@@ -61,6 +61,14 @@ body.crear main.create section.product_container form section.visual_container d
 
 /* ////////////titulo de producto//////////////////// */
 
+body.crear main.create section.product_container form section.visual_container div.info_titulo_container input{
+    border-radius: 5px;
+    border: var(--lightBlue) solid 1px;
+    padding: 5px;
+    cursor: pointer;
+    outline-color: var(--lightBlue);
+}
+
 body.crear main.create section.product_container form.todo_container section.visual_container h2{
     margin: 10px;
 }
@@ -97,12 +105,14 @@ body.crear main.create section.product_container form section.info_container{
 
 /* ///Estilos a tallas//// */
 
-body.crear main.create section.product_container form section.info_container div.tallaLetra{
+body.crear main.create section.product_container form section.info_container div.tallas{
+    margin: 10px;
     display: flex;
     align-items: center;
+
 }
 
-body.crear main.create section.product_container form section.info_container div.tallaNumero{
+body.crear main.create section.product_container form section.info_container div.tallas{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -227,6 +237,11 @@ body.crear main.create section.product_container form section.button_container b
         align-items: center;
         /* margin-top: 15px; */
     }
+
+    body.crear main.create section.product_container form section.visual_container div.selec textarea {
+        width: 234px;
+        height: 126px;
+    }
 }
 
 
@@ -265,9 +280,7 @@ body.crear main.create section.product_container form section.button_container b
 
     /* 7//////////Ancho de los input//////////////// */
 
-    body.crear main.create section.product_container form section.info_container div.selec input{
-        width: 300px;
-    }
+    
 
     /* //////Estilo de categoria///// */
     body.crear main.create section.product_container form section.info_container div.info_categoria_container{

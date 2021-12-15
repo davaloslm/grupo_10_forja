@@ -21,15 +21,16 @@
                 <form class="todo_container" action="/admin/edit/<%= producto.id  %>?_method=PUT" method="POST" enctype="multipart/form-data">
 
                     <section class="visual_container">
-                        <!-- ////imagen de archivo//// -->
-                        <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="">
-                        <label for="imagenes">Imagen del producto</label>
-                        <input type="file" accept="image/*" name="imagenes" multiple>
 
                         <!-- /////titulo de producto//// -->
                         <h2>
                             <%= producto.nombre %> 
                         </h2>
+
+                        <!-- ////imagen de archivo//// -->
+                        <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="">
+                        <label for="imagenes">Imagen del producto</label>
+                        <input type="file" accept="image/*" name="imagenes" multiple>
 
                         <!-- /////Descripcion de Producto///// -->
                         <div class="selec info_des_container">
@@ -73,9 +74,10 @@
                         <!-- /////seccion de talla///// -->
                         <p>Tallas</p>
                         <div class= "tallaLetra">
-                            <p>Tallas</p>
+
+                        <div>
                             <label for="M0">M0</label>
-                            <input class="talles"id="M0" type="checkbox" name="talle" value="M0"
+                            <input class="nl"id="M0" type="checkbox" name="talle" value="M0"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'M0') { %>
                                     checked
@@ -83,8 +85,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="M1">M1</label>
-                            <input class="talles"id="M1" type="checkbox" name="talle" value="M1"
+                            <input class="nl"id="M1" type="checkbox" name="talle" value="M1"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'M1') { %>
                                     checked
@@ -92,8 +98,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="M2">M2</label>
-                            <input class="talles"id="M2" type="checkbox" name="talle" value="M2"
+                            <input class="nl"id="M2" type="checkbox" name="talle" value="M2"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'M2') { %>
                                     checked
@@ -101,8 +111,11 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+                        <div>
                             <label for="M3">M3</label>
-                            <input class="talles"id="M3" type="checkbox" name="talle" value="M3"
+                            <input class="nl"id="M3" type="checkbox" name="talle" value="M3"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'M3') { %>
                                     checked
@@ -110,8 +123,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="A0">A0</label>
-                            <input class="talles"id="A0" type="checkbox" name="talle" value="A0"
+                            <input class="nl"id="A0" type="checkbox" name="talle" value="A0"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'A0') { %>
                                     checked
@@ -119,8 +136,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="A1">A1</label>
-                            <input class="talles"id="A1" type="checkbox" name="talle" value="A1"
+                            <input class="nl"id="A1" type="checkbox" name="talle" value="A1"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'A1') { %>
                                     checked
@@ -128,8 +149,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="A2">A2</label>
-                            <input class="talles"id="A2" type="checkbox" name="talle" value="A2"
+                            <input class="nl"id="A2" type="checkbox" name="talle" value="A2"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'A2') { %>
                                     checked
@@ -137,8 +162,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="A3">A3</label>
-                            <input class="talles"id="A3" type="checkbox" name="talle" value="A3"
+                            <input class="nl"id="A3" type="checkbox" name="talle" value="A3"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'A3') { %>
                                     checked
@@ -146,8 +175,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="A4">A4</label>
-                            <input class="talles"id="A4" type="checkbox" name="talle" value="A4"
+                            <input class="nl"id="A4" type="checkbox" name="talle" value="A4"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'A4') { %>
                                     checked
@@ -155,8 +188,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="A5">A5</label>
-                            <input class="talles"id="A5" type="checkbox" name="talle" value="A5"
+                            <input class="nl"id="A5" type="checkbox" name="talle" value="A5"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'A5') { %>
                                     checked
@@ -164,8 +201,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="0">0</label>
-                            <input class="talles"id="0" type="checkbox" name="talle" value="0"
+                            <input class="nl"id="0" type="checkbox" name="talle" value="0"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === '0') { %>
                                     checked
@@ -173,8 +214,13 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+
+                        <div>
                             <label for="1">1</label>
-                            <input class="talles"id="1" type="checkbox" name="talle" value="1"
+                            <input class="nl"id="1" type="checkbox" name="talle" value="1"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === '1') { %>
                                     checked
@@ -182,8 +228,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+                        
+
+                        <div>
                             <label for="2">2</label>
-                            <input class="talles"id="2" type="checkbox" name="talle" value="2"
+                            <input class="nl"id="2" type="checkbox" name="talle" value="2"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === '2') { %>
                                     checked
@@ -191,8 +241,13 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+
+                        <div>
                             <label for="3">3</label>
-                            <input class="talles"id="3" type="checkbox" name="talle" value="3"
+                            <input class="nl"id="3" type="checkbox" name="talle" value="3"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === '3') { %>
                                     checked
@@ -200,8 +255,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="4">4</label>
-                            <input class="talles"id="4" type="checkbox" name="talle" value="4"
+                            <input class="nl"id="4" type="checkbox" name="talle" value="4"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === '4') { %>
                                     checked
@@ -209,8 +268,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="5">5</label>
-                            <input class="talles"id="5" type="checkbox" name="talle" value="5"
+                            <input class="nl"id="5" type="checkbox" name="talle" value="5"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === '5') { %>
                                     checked
@@ -218,8 +281,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="6">6</label>
-                            <input class="talles"id="6" type="checkbox" name="talle" value="6"
+                            <input class="nl"id="6" type="checkbox" name="talle" value="6"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === '6') { %>
                                     checked
@@ -227,8 +294,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="7">7</label>
-                            <input class="talles"id="7" type="checkbox" name="talle" value="7"
+                            <input class="nl"id="7" type="checkbox" name="talle" value="7"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === '7') { %>
                                     checked
@@ -236,8 +307,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="8">8</label>
-                            <input class="talles"id="8" type="checkbox" name="talle" value="8"
+                            <input class="nl"id="8" type="checkbox" name="talle" value="8"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === '8') { %>
                                     checked
@@ -245,8 +320,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="9">9</label>
-                            <input class="talles"id="9" type="checkbox" name="talle" value="9"
+                            <input class="nl"id="9" type="checkbox" name="talle" value="9"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === '9') { %>
                                     checked
@@ -254,8 +333,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="S">S</label>
-                            <input class="talles"id="S" type="checkbox" name="talle" value="S"
+                            <input class="nl"id="S" type="checkbox" name="talle" value="S"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'S') { %>
                                     checked
@@ -263,8 +346,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="L">L</label>
-                            <input class="talles"id="L" type="checkbox" name="talle" value="L"
+                            <input class="nl"id="L" type="checkbox" name="talle" value="L"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'L') { %>
                                     checked
@@ -272,8 +359,12 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+
+                        <div>
                             <label for="M">M</label>
-                            <input class="talles"id="M" type="checkbox" name="talle" value="M"
+                            <input class="nl"id="M" type="checkbox" name="talle" value="M"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'M') { %>
                                     checked
@@ -281,8 +372,11 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+                        <div>
                             <label for="XL">XL</label>
-                            <input class="talles"id="XL" type="checkbox" name="talle" value="XL"
+                            <input class="nl"id="XL" type="checkbox" name="talle" value="XL"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'XL') { %>
                                     checked
@@ -290,8 +384,11 @@
                                 
                             <% } %>
                             >
+                        </div>
+
+                        <div>
                             <label for="XXL">XXL</label>
-                            <input class="talles"id="XXL" type="checkbox" name="talle" value="XXL"
+                            <input class="nl"id="XXL" type="checkbox" name="talle" value="XXL"
                             <% for (let i = 0; i < producto.talle.length; i++) { %>
                                 <% if (producto.talle[i].nombre === 'XXL') { %>
                                     checked
@@ -299,6 +396,8 @@
                                 
                             <% } %>
                             >
+                        </div>
+
                         </div>
                         <!-- /////Nombre de Producto///// -->
                         <div class="selec info_titulo_container">
@@ -471,33 +570,55 @@
                         <!-- /////categoria de producto///// -->
                         <p>Categoría</p>
                         <div class="selec info_categoria_container">
-                            <label for="TaeKwon-Do">TaeKwon-Do</label>
-                            <input class="m"id="TaeKwon-Do" type="checkbox" name="categoria" value="TaeKwon-Do"
-                            <% for (let i = 0; i < producto.categoria.length; i++) { %>
-                                <% if (producto.categoria[i].nombre === 'TaeKwon-Do') { %>
+
+                            <div class="Categoria1">
+                                
+                                <div> 
+                                    <label for="TaeKwon-Do">TaeKwon-Do</label>
+                                    <input class="m"id="TaeKwon-Do" type="checkbox" name="categoria" value="TaeKwon-Do"
+                                    <% for (let i = 0; i < producto.categoria.length; i++) { %>
+                                     <% if (producto.categoria[i].nombre === 'TaeKwon-Do') { %>
                                     checked
                                 <% } %>
                                 
                             <% } %>
                             >
-                            <label for="Boxeo">Boxeo</label>
-                            <input class="m"id="Boxeo" type="checkbox" name="categoria" value="Boxeo"
-                            <% for (let i = 0; i < producto.categoria.length; i++) { %>
+                            </div>
+
+                               
+
+                            <div>
+                                <label for="Boxeo">Boxeo</label>
+                                <input class="m"id="Boxeo" type="checkbox" name="categoria" value="Boxeo"
+                                <% for (let i = 0; i < producto.categoria.length; i++) { %>
                                 <% if (producto.categoria[i].nombre === 'Boxeo') { %>
                                     checked
                                 <% } %>
                                 
                             <% } %>
                             >
-                            <label for="Judo">Judo</label>
-                            <input class="m"id="Judo" type="checkbox" name="categoria" value="Judo"
-                            <% for (let i = 0; i < producto.categoria.length; i++) { %>
+                            </div>
+
+                            
+
+                            <div>
+                                <label for="Judo">Judo</label>
+                                <input class="m"id="Judo" type="checkbox" name="categoria" value="Judo"
+                                <% for (let i = 0; i < producto.categoria.length; i++) { %>
                                 <% if (producto.categoria[i].nombre === 'Judo') { %>
                                     checked
                                 <% } %>
                                 
                             <% } %>
                             >
+                            </div>
+
+                            
+                            </div>
+                            
+
+                    <div class="Categoria2">
+                        <div>
                             <label for="Jiu-Jitsu">Jiu-Jitsu</label>
                             <input class="m"id="Jiu-Jitsu" type="checkbox" name="categoria" value="Jiu-Jitsu"
                             <% for (let i = 0; i < producto.categoria.length; i++) { %>
@@ -507,6 +628,10 @@
                                 
                             <% } %>
                             >
+                        </div>
+                            
+
+                        <div>
                             <label for="KickBoxing/MuayThai">KickBoxing/MuayThai</label>
                             <input class="m"id="KickBoxing/MuayThai" type="checkbox" name="categoria" value="KickBoxing/MuayThai"
                             <% for (let i = 0; i < producto.categoria.length; i++) { %>
@@ -516,6 +641,8 @@
                                 
                             <% } %>
                             >
+                        </div>
+                            
                             <label for="Entrenamiento Funcional/CrossFit">Entrenamiento Funcional/CrossFit</label>
                             <input class="m"id="Entrenamiento Funcional/CrossFit" type="checkbox" name="categoria" value="Entrenamiento Funcional/CrossFit"
                             <% for (let i = 0; i < producto.categoria.length; i++) { %>
@@ -525,17 +652,20 @@
                                 
                             <% } %>
                             >
+                        </div>
 
                         <% if (locals.errors && errors.categoria) { %>
                             <small class="errors"><%= errors.categoria.msg %></small>
                         
                         <% } %>
-                        </div>
+
+                    </div>
+                            
 
                     </section>
                     <!-- ///botones//// -->
                     <section class="button_container">
-                        <button class="boton" type="submit">Crear</button>
+                        <button class="boton" type="submit">Actualizar</button>
                         <button class="boton" type="reset">Borrar</button>
                     </section>
                     
