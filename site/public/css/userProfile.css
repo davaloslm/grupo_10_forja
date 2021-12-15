@@ -75,7 +75,45 @@ main.profile section.profile-section div ul li{
     text-align: start;
 } */
 
-/* ///////////////fin //////////////// */
+
+/* /////////////// Formulario de edición de perfil //////////////// */
+main.profile section.profile-section form.profile{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main.profile section.profile-section form.profile input {
+    height: 40px;
+    border-radius: 5px;
+    margin: 10px 0;
+    border: solid 3px var(--lightBlue);
+    padding: 5px;
+    cursor: pointer;
+    outline-color: transparent;
+}
+
+/* Input number sin flechas en Chrome, Safari, Edge, Opera  */
+main.profile section.profile-section form.profile #telefono::-webkit-outer-spin-button, main.profile section.profile-section form.profile #telefono::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+}
+
+/* Input number sin flechas en Firefox  */
+main.profile section.profile-section form.profile #telefono{
+    -moz-appearance: textfield;
+
+}
+
+main.profile section.profile-section form.profile button{
+    padding: 5px;
+    color: var(--white);
+    margin: 10px auto;
+    background-color: var(--lightBlue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+}
 
 
 /* /////////////// Direcciones //////////////// */
@@ -91,4 +129,43 @@ main.profile section.profile-section form button {
     cursor: pointer;
 }
 
+main.profile section.profile-section  a.redirect{
+    color: black;
+    
+}
+
+main.profile section.profile-section  a.redirect:hover{
+    
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+}
+
+
 /* /////////////// fin //////////////// */
+
+/* /////////////// JS front //////////////// */
+
+main.profile section.profile-section form div.inputs {
+    position: relative;
+}
+
+main.profile section.profile-section form div.inputs i.error{
+    position: absolute;
+    bottom: 22px;
+    right: 40px;
+    color: red;
+    display: none;
+
+}
+
+main.profile section.profile-section form div.inputs i.check{
+    position: absolute;
+    bottom: 22px;
+    right: 40px;
+    color: green;
+    display: none;
+}
+
+main.profile small.errors{
+    display: block;
+    color: crimson;
+}
