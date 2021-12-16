@@ -220,9 +220,12 @@
     
     /* carrusel */
     .home section.carrusel {
+        background-image: url("/img/design/fondo.png");
+        background-repeat: repeat;
         display: block;
         width: 100%;
-        padding-top: 20px;
+        padding: 20px 0;
+        position: relative;
     }
 
     .home section.carrusel div.fondo {
@@ -235,8 +238,9 @@
 
     .home section.carrusel div.fondo div.slider {
         display: flex;
-        width: 500%;
+        width: 300%;
         height: 400px;
+        margin-left: -100%;
     }
 
     .home section.carrusel div.fondo div.slider article.productosCarrusel {
@@ -251,26 +255,36 @@
         border-radius: 5px;
     }
 
-    .home section.carrusel div.botones_container {
-        display: flex;
-        justify-content: center;
-        margin-top: 5px;
+    .home section.carrusel button.botonesCarrusel {
+        position: absolute;
+        top: 50%;
     }
 
-    .home section.carrusel div.botones_container ul.botones_slide li {
-        display: inline-block;
+    .home section.carrusel button.botonesCarrusel {
+        background: none;
+        border: none;
+        font-size: 30px;
+        font-weight: bold;
+        color: var(--lightBlue);
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        width: 37px;
     }
 
-    .home section.carrusel div.botones_container ul.botones_slide li p{
-        position: relative;
-        display: inline-block;
-        background-color: var(--black);
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
+    .home section.carrusel button.rightbttn {
+        right: 3%;
     }
 
-    /* /////////////////////////////////////////////////////////////////// */
+    .home section.carrusel button.leftbttn {
+        left: 3%;
+    }
+
+    .home section.carrusel button.botonesCarrusel:hover {
+        background-color: #fff;
+    }
+
+    /* ////////////////////////// Fin Carrusel ///////////////////////////////////////// */
 
     .home section.destacados div.destacados_contenedor article.producto_des div.detail_container i {
         top: -25px;
@@ -318,12 +332,6 @@
 
 /*                                                     Laptop                                          */
 @media (min-width: 768px) {
-
-    .home section.carrusel {
-        background-image: url("/img/design/fondo.png");
-        background-repeat: repeat;
-        
-    }
 
     .home section.carrusel div.botones_container ul.botones_slide li a:hover {
         background-color: var(--white);
