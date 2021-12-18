@@ -179,21 +179,27 @@
     margin-right: 10px;
 }
 
-.home div.go-top a.top {
+.home div.go-top div.top {
+    display: none;
     margin-top: 10px;
     border-radius: 20px;
     background-color: var(--lightBlue);
     padding: 3px;
-    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
 }
 
-.home div.go-top a.top span {
+.home div.go-top div.top:hover {
+    box-shadow: 0px 1px 5px rgb(0 0 0);
+}
+
+.home div.go-top div.top i {
     margin-left: 5px;
     margin-right: 5px;
     color: var(--white);
 }
 
-.home div.go-top a.top i {
+.home div.go-top div.top i {
     color: white;
     margin-right: 4px;
 }

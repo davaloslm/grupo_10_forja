@@ -56,4 +56,27 @@ window.addEventListener('load', () => {
         Next()
     }, 5000);
 
+
+    // Go Top //
+    const goTop = qs('#goTop')
+
+    let goTopRefresh = () => {
+        if(document.documentElement.scrollTop <= 2250) {
+            goTop.style.display = 'none'
+        } else {
+            goTop.style.display = 'block'
+        }
+    }
+
+    goTopRefresh();
+
+    goTop.addEventListener('click', (e) => {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    })
+
+    document.addEventListener('scroll', () => {
+        goTopRefresh()
+    })
+
 })
