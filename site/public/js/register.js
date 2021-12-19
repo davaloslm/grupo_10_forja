@@ -39,6 +39,7 @@ window.addEventListener('load', () => {
     const contraseña = qs('#contraseña')
     const contraseña2 = qs('#contraseña2')
     const imagen = qs('#imagen')
+    const labelImagen = qs('#labelImagen')
     const terminos = qs('#terminos')
 
     // Iconos //
@@ -385,27 +386,27 @@ window.addEventListener('load', () => {
         switch (true) {
             case !regExImg.exec(imagen.value):
                 imagen.classList.add('nocheck')
-                imagen.style.backgroundColor = 'red'
-                imagen.style.color = 'white'
-                imagen.style.boxShadow = 'none'
+                labelImagen.style.backgroundColor = 'red'
+                labelImagen.style.color = 'white'
                 smallImagen.innerHTML = 'Solo se permiten imágenes con extensión jpg, jpeg, png, gif y webp'
+                smallImagen.style.color = 'red'
                 validate.imagen = false
                 break;
             case imagen.files[0].size > fileSize:
                 imagen.classList.add('nocheck')
-                imagen.style.backgroundColor = 'red'
-                imagen.style.color = 'white'
-                imagen.style.boxShadow = 'none'
+                labelImagen.style.backgroundColor = 'red'
+                labelImagen.style.color = 'white'
                 smallImagen.innerHTML = 'La imagen debe pesar menos de 2MB'
+                smallImagen.style.color = 'red'
                 validate.imagen = false
                 break;
             default:
                 imagen.classList.remove('nocheck')
                 imagen.classList.add('check')
-                imagen.style.boxShadow = '0px 1px 10px rgb(23 158 5)'
-                imagen.style.backgroundColor = 'white'
-                imagen.style.color = 'black'
-                smallImagen.innerHTML = ''
+                labelImagen.style.backgroundColor = 'green'
+                labelImagen.style.color = 'black'
+                smallImagen.innerHTML = `Tu imagen de perfil: ${imagen.value}`
+                smallImagen.style.color = 'green'
                 validate.imagen = true
                 break;
         }
