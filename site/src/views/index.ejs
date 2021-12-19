@@ -11,33 +11,27 @@
 
     <main class="home">
         <section class="carrusel">
-            <div class="carrusel_container">
-                <ul class="slider">
-                    <li id="slide-1">
-                        <img src="/img/carrusel/cobrakai-forja.jpg" alt="Forja foto motivación">
-                    </li>
-                    <li id="slide-2">
-                        <img src="/img/carrusel/everlast.jpg" alt="Foto marca Everlast">
-                    </li>
-                    <li id="slide-3">
-                        <img src="/img/carrusel/fujimae.jpg" alt="Foto marca FujiMae">
-                    </li>
-                </ul>
-                <img src="/img/carrusel/señuelo.jpg" alt="Señuelo">
-                <div class="botones_container">
-                    <ul class="botones_slide">
-                        <li>
-                            <a href="#slide-1"> </a>
-                        </li>
-                        <li>
-                            <a href="#slide-2"> </a>
-                        </li>
-                        <li>
-                            <a href="#slide-3"> </a>
-                        </li>
-                    </ul>
+            <div class="fondo">
+                <div class="slider" id="slider">
+                    <article class="productosCarrusel" id="articles">
+                        <img src="/img/carrusel/everlast.jpg" alt="Marca Everlast">
+                    </article>
+                    <article class="productosCarrusel" id="articles">
+                        <img src="/img/carrusel/bannerCarrusel.png" alt="Banner Forja">
+                    </article>
+                    <article class="productosCarrusel" id="articles">
+                        <img src="/img/carrusel/fujimae.jpg" alt="Marca Fujimae">
+                    </article>
+                    <!-- <article class="productosCarrusel" id="articles">
+                        <img src="/img/carrusel/everlast.jpg" alt="Marca Everlast">
+                    </article>
+                    <article class="productosCarrusel" id="articles">
+                        <img src="/img/carrusel/fujimae.jpg" alt="Marca Fujimae">
+                    </article> -->
                 </div>
             </div>
+            <button class="rightbttn botonesCarrusel" id="bttnRight">&#62</button>
+            <button class="leftbttn botonesCarrusel" id="bttnLeft">&#60</button>
         </section>
 
         <section class="populares">
@@ -104,7 +98,9 @@
         </section>
 
         <div class="go-top">
-            <a href="#" class="top"><span>GoTop</span><i class="fas fa-chevron-up"></i></a>
+            <div class="top" id="goTop">
+                <i class="fas fa-chevron-up"></i>
+            </div>
             <a href="<!-- link whatsapp -->" class="whatsapp" target="blank"><i class="fab fa-whatsapp whatsapp-icon"></i></a>
         </div>
     </main>
@@ -112,5 +108,6 @@
     <%- include('./partials/footer')  %> 
     
 </body>
-
+<script src="../../js/general.js"></script>
+<script src="../../js/home.js"></script>
 </html>

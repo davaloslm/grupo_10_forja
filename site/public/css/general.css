@@ -17,6 +17,17 @@
 
 }
 
+body::-webkit-scrollbar {
+    width: 10px;
+    background-color: var(--black)
+}
+
+body::-webkit-scrollbar-thumb {
+    background: var(--lightBlue);
+    border-radius: 10px;
+    border: 2px solid var(--blue);
+}
+
 a{
     text-decoration: none;
 }

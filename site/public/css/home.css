@@ -179,21 +179,27 @@
     margin-right: 10px;
 }
 
-.home div.go-top a.top {
+.home div.go-top div.top {
+    display: none;
     margin-top: 10px;
     border-radius: 20px;
     background-color: var(--lightBlue);
     padding: 3px;
-    font-size: 13px;
+    text-align: center;
+    cursor: pointer;
 }
 
-.home div.go-top a.top span {
+.home div.go-top div.top:hover {
+    box-shadow: 0px 1px 5px rgb(0 0 0);
+}
+
+.home div.go-top div.top i {
     margin-left: 5px;
     margin-right: 5px;
     color: var(--white);
 }
 
-.home div.go-top a.top i {
+.home div.go-top div.top i {
     color: white;
     margin-right: 4px;
 }
@@ -217,64 +223,74 @@
 
 /*                                                 Tablet                                      */
 @media (min-width: 425px) {
-
-    /* señuelo */
-    .home section.carrusel div.carrusel_container img {
-        width: 100%;
-        max-height: 768px;
-        max-width: 1024px;
-    }
     
     /* carrusel */
     .home section.carrusel {
+        background-image: url("/img/design/fondo.png");
+        background-repeat: repeat;
         display: block;
-    }
-    .home section.carrusel div.carrusel_container {
         width: 100%;
-        text-align: center;
-    }
-
-    .home section.carrusel div.carrusel_container ul.slider {
+        padding: 20px 0;
         position: relative;
     }
 
-    .home section.carrusel div.carrusel_container ul.slider li {
-        position: absolute;
-        top: 0;
-        opacity: 0;
-        width: 100%;
-        transition: opacity 1s;
-    }
-
-    .home section.carrusel div.carrusel_container ul.slider li img {
-        width: 100%;
-        max-height: 768px;
-        /* max-width: 1024px; */
-        object-fit: cover;
+    .home section.carrusel div.fondo {
+        width: 95%;
+        margin: 0 auto;
+        overflow: hidden;
         animation: respiracion1 5s linear alternate infinite;
         animation-delay: 5s;
     }
 
-    .home section.carrusel div.carrusel_container ul.slider li:first-child {
-        opacity: 1;
+    .home section.carrusel div.fondo div.slider {
+        display: flex;
+        width: 300%;
+        height: 400px;
+        margin-left: -100%;
     }
 
-    .home section.carrusel div.carrusel_container ul.slider li:target {
-        opacity: 1;
+    .home section.carrusel div.fondo div.slider article.productosCarrusel {
+        width: 100%;
     }
 
-    .home section.carrusel div.botones_container ul.botones_slide li {
-        display: inline-block;
+    .home section.carrusel div.fondo div.slider article.productosCarrusel img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 5px;
     }
 
-    .home section.carrusel div.botones_container ul.botones_slide li a{
-        position: relative;
-        display: inline-block;
-        background-color: var(--black);
-        width: 15px;
-        height: 15px;
-        border-radius: 100%;
+    .home section.carrusel button.botonesCarrusel {
+        position: absolute;
+        top: 50%;
     }
+
+    .home section.carrusel button.botonesCarrusel {
+        background: none;
+        border: none;
+        font-size: 30px;
+        font-weight: bold;
+        color: var(--lightBlue);
+        background-color: rgba(255, 255, 255, 0.5);
+        border-radius: 50%;
+        cursor: pointer;
+        width: 37px;
+    }
+
+    .home section.carrusel button.rightbttn {
+        right: 3%;
+    }
+
+    .home section.carrusel button.leftbttn {
+        left: 3%;
+    }
+
+    .home section.carrusel button.botonesCarrusel:hover {
+        background-color: #fff;
+    }
+
+    /* ////////////////////////// Fin Carrusel ///////////////////////////////////////// */
 
     .home section.destacados div.destacados_contenedor article.producto_des div.detail_container i {
         top: -25px;
@@ -322,12 +338,6 @@
 
 /*                                                     Laptop                                          */
 @media (min-width: 768px) {
-
-    .home section.carrusel div.carrusel_container {
-        background-image: url("/img/design/fondo.png");
-        background-repeat: repeat;
-        
-    }
 
     .home section.carrusel div.botones_container ul.botones_slide li a:hover {
         background-color: var(--white);

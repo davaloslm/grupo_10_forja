@@ -44,7 +44,7 @@ main.register section form div.input-container div div.grupo_input input{
     border-radius: 5px;
     margin: 10px 0;
     padding: 0 60px 0 10px;
-    border: 3px solid transparent;
+    border: 2px solid var(--lightBlue);
     transition: .3s ease all;
     height: 40px;
 }
@@ -56,10 +56,18 @@ main.register section form div.input-container div div.grupo_input input:focus {
 }
 
 main.register #imagen {
-    height: 21px;
-    border: none;
-    padding: 0 10px 0 0;
-    background-color: var(--white);
+    display: none;
+}
+
+main.register section form div.input-container div label.label_imagen {
+    background-color: var(--lightBlue);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+main.register section form div.input-container div label.label_imagen:hover {
+    box-shadow: 0px 1px 5px rgb(0 0 0);
 }
 
 main.register section form div.input-container div.check{
