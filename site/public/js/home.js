@@ -69,6 +69,8 @@ window.addEventListener('load', () => {
     }
 
     goTopRefresh();
+    
+    /* requestAnimationFrame() */
 
     goTop.addEventListener('click', (e) => {
         document.body.scrollTop = 0;
