@@ -66,8 +66,15 @@ body.crear main.create section.product_container form section.visual_container d
     border: var(--lightBlue) solid 1px;
     padding: 5px;
     cursor: pointer;
-    outline-color: var(--lightBlue);
+    outline-color:transparent;
 }
+
+main.create form section.visual_container div.selec  {
+    position: relative;
+}
+
+
+
 
 body.crear main.create section.product_container form.todo_container section.visual_container h2{
     margin: 10px;
@@ -144,11 +151,12 @@ body.crear main.create section.product_container form section.info_container div
 
 /* ////////// estolo a los bordes de input y textArea /////////// */
 body.crear main.create section.product_container form section.info_container div.selec input, textarea, select{
+    height: 40px;
     border-radius: 5px;
     border: var(--lightBlue) solid 1px;
     padding: 5px;
     cursor: pointer;
-    outline-color: var(--lightBlue);
+    outline-color: transparent;
 }
 
 /* //////////////////////Tamaño de botonosr///////////////// */
@@ -303,17 +311,25 @@ body.crear main.create section.product_container form section.button_container b
     }
 }
 
-/* /////////////////////////Portátil-1024/////////////////////////////// */
-@media(min-width:1024px){
-    
-    /* body main.crear section.product_container form section.info_container div.info_categoria_container div.Categoria1{
-        position: absolute;
-        left: 350px;
-        text-align: end;
-    }
-    body main.crear section.product_container form section.info_container div.info_categoria_container div.Categoria2{
-        position: absolute;
-        right: 410px;
-        text-align: end;
-    } */
+/* ///////colores//////// */
+body.crear main.create section.product_container form section.visual_container  div.info_titulo_container i.error{
+    position: absolute;
+    bottom: 22px;
+    right: 40px;
+    color: red;
+    display: none;
+
+}
+
+main.create section.product_container form section.visual_container div.info_titulo_container i.check{
+    position: absolute;
+    bottom: 22px;
+    right: 40px;
+    color: green;
+    display: none;
+}
+
+main.create section.producto_container form.todo_container section.visual_container small.errors{
+    display: block;
+    color: crimson;
 }
