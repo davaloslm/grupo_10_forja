@@ -37,8 +37,7 @@
                 <div>
                     <p>Nombre de Producto</p>
                     <div class= "selec info_titulo_container">
-                        
-                        <input type="text" id="nombreDeProducto" name="nombre" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.nombre ? oldData.nombre : null %> >
+                        <input class="validar" type="text" id="nombreDeProducto" name="nombre" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.nombre ? oldData.nombre : null %> >
                         <i class="error fas fa-times" id="errorNombreProducto"></i>
                         <i class="check fas fa-check" id="checkNombreProducto"></i>
                     </div>
@@ -53,10 +52,10 @@
 
                 
                 <!-- /////Descripcion de Producto///// -->
-            <div class="inputs">
+            <div>
+                <p>Ingresá una descripción</p>
                 <div class= "selec info_des_container">
-                    <p>Ingresá una descripción</p>
-                    <textarea name="descripcion" id="descripcion" placeholder="Ingresá una descripción" required ><%= locals.oldData && oldData.descripcion ? oldData.descripcion : null %></textarea>
+                    <textarea class="validar" name="descripcion" id="descripcion" placeholder="Ingresá una descripción" required ><%= locals.oldData && oldData.descripcion ? oldData.descripcion : null %></textarea>
                     <i class="error fas fa-times" id="errorDescripcion"></i>
                     <i class="check fas fa-check" id="checkDescripcion"></i>
                 </div>
@@ -493,9 +492,9 @@
                 
                 <!-- /////Marca de Producto///// -->
             <div> 
+                <p>Marca</p>
                 <div class= "selec info_titulo_container">
-                    <p>Marca</p>
-                    <input type="text" id="marca" name="marca" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.marca ? oldData.marca : null %> >
+                    <input class="validar" type="text" id="marca" name="marca" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.marca ? oldData.marca : null %> >
                     <i class="error fas fa-times" id="errorMarca"></i>
                     <i class="check fas fa-check" id="checkMarca"></i>
                 </div>
@@ -509,9 +508,9 @@
                 
                 <!-- /////Precio de producto///// -->
             <div>
+                <p>Precio $</p>
                 <div class= "selec info_precio_container">
-                    <p>Precio $</p>
-                    <input type="number" id="precio" name="precio" placeholder="Ingresá un precio" value=<%= locals.oldData && oldData.precio ? oldData.precio : null %> required >
+                    <input class="validar" type="number" id="precio" name="precio" placeholder="Ingresá un precio" value=<%= locals.oldData && oldData.precio ? oldData.precio : null %> required >
                     <i class="error fas fa-times" id="errorPrecio"></i>
                     <i class="check fas fa-check" id="checkPrecio"></i>
                 </div>
@@ -523,9 +522,10 @@
             </div>
 
                 <!-- /////Stock de producto///// -->
+            <div>
                 <div class= "selec info_precio_container">
                     <p>Stock</p>
-                    <input type="number" id="stock" name="stock" placeholder="Ingresá un stock" value=<%= locals.oldData && oldData.stock ? oldData.stock : null %> required >
+                    <input class="validar" type="number" id="stock" name="stock" placeholder="Ingresá un stock" value=<%= locals.oldData && oldData.stock ? oldData.stock : null %> required >
                     <i class="error fas fa-times" id="errorStock"></i>
                     <i class="check fas fa-check" id="checkStock"></i>
                 </div>
@@ -534,6 +534,9 @@
                 
                 <% } %>
                 <small class="errors" id="smallsStock"></small>
+            </div>    
+                
+
                 <!-- /////Colores de producto///// -->
                 <div class= "selec color_container">
                     <p>Colores</p>
