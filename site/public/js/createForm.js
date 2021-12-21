@@ -5,6 +5,7 @@ window.addEventListener('load', () =>{
         return document.querySelector(tag)
     }
 
+    // VALIDACION //
     var validate
 
     if(location.href.includes("create")){
@@ -27,7 +28,7 @@ window.addEventListener('load', () =>{
 
         validate = {
             imagenDeProducto: true,
-            nombreDeProducto: true,
+            nombreDeProducto: false,
             descripcion: true,
             talle: true,
             marca: true,
@@ -39,8 +40,6 @@ window.addEventListener('load', () =>{
 
         
     }
-
-    // VALIDACION //
 
 
     // Función para validar en línea //
@@ -59,7 +58,7 @@ window.addEventListener('load', () =>{
     // Expresiones regulares //
     const regExLetras = /^[a-zA-ZÀ-ÿ\s]{2,}$/; // Letras y espacios,
     const regExNum = /^\d{1,9}$/; 
-    const regExLetrasNumero=/^[A-Za-z0-9]+$/g;//letras y numeros
+    const regExLetrasNumero=/^[a-zA-ZÀ-ÿ0-9\_\-/%&=".'+$@#!()\s]{2,}$/;//letras y numeros
     const regExpNumeroLetra = /^[a-zA-Z0-9\_\-]{4,16}$/;
     const regExImg = /(.jpg|.jpeg|.png|.gif|.webp)$/i;//formato de imagen
 
@@ -136,13 +135,13 @@ window.addEventListener('load', () =>{
             validate.nombreDeProducto = false
             break;
 
-        case !regExLetras.test(nombreDeProducto.value):
+        case !regExLetrasNumero.test(nombreDeProducto.value):
             nombreDeProducto.classList.add('nocheck')
             nombreDeProducto.style.border = '3px solid red'
             nombreDeProducto.style.color = 'red'
             errorNombreProducto.style.display = 'block'
             checkNombreProducto.style.display = 'none'
-            smallNombreProducto.innerHTML = "El nombre de producto debe contener solo letras y numeros"
+            smallNombreProducto.innerHTML = "El nombre de producto no puede tener estos carácteres '¿ ?', '¡ !', '< >', ';' "
             validate.nombreDeProducto = false
             break;
 
@@ -158,9 +157,10 @@ window.addEventListener('load', () =>{
             break;
     
 
+        }
+
         funcValidate(validate)
-    }
-  })
+    })
 
 
   descripcion.addEventListener('input', () => {
@@ -192,14 +192,6 @@ window.addEventListener('load', () =>{
             validate.descripcion = false
             break;
         
-        case !regExLetrasNumero.test(descripcion.value):
-            descripcion.style.border = '3px solid red'
-            descripcion.style.color = 'red'
-            errorDescripciono.style.display = 'block'
-            checkDescripcion.style.display = 'none'
-            smallDescripcion.innerHTML = "La descripcion debe contener solo letras y numeros"
-            validate.descripcion = false
-            break;
           default:
             descripcion.classList.remove('nocheck')
             descripcion.classList.add('check')
@@ -228,7 +220,7 @@ window.addEventListener('load', () =>{
                 smallMarca.innerHTML = 'El campo marca no puede estar vacío'
                 validate.marca = false
                 break;
-            case !regExLetras.test(marca.value):
+            case !regExLetrasNumero.test(marca.value):
                 marca.classList.add('nocheck')
                 marca.style.border = '3px solid red'
                 marca.style.color = 'red'

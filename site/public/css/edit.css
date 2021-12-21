@@ -125,6 +125,11 @@ body.editar main.edit form  select{
     outline-color: transparent;
 }
 
+main.edit form div.selec  {
+    position: relative;
+}
+
+
 /* ////Estilo a los botones de edit y borrar//// */
 body.editar main.edit section.product_container form section.button_container{
     text-align: center;

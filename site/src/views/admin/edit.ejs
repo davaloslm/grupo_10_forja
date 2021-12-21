@@ -30,8 +30,8 @@
                         <!-- ////imagen de archivo//// -->
                     <div>
                         <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="">
-                        <label for="imagenes">Imagen del producto</label>
-                        <input type="file" accept="image/*" name="imagenes" multiple>
+                        <label  for="imagenes">Imagen del producto</label>
+                        <input type="file" id="imagenDeProducto" accept="image/*" name="imagenes" multiple>
 
                         <small class="errors" id="smallsImagenDeProducto"></small>
 
@@ -43,7 +43,7 @@
                         <div>
                             <p>Ingresá una descripción</p>
                             <div class="selec info_des_container">
-                                <textarea class="validar" name="descripcion" id=""><%= producto.descripcion %></textarea>
+                                <textarea class="validar" name="descripcion" id="descripcion"><%= producto.descripcion %></textarea>
                                 <i class="error fas fa-times" id="errorDescripcion"></i>
                                 <i class="check fas fa-check" id="checkDescripcion"></i>
                             </div>
@@ -418,7 +418,8 @@
                         <div>
                             <p>Nombre de Producto</p>
                             <div class="selec info_titulo_container">
-                            <input class="validar" type="text" name="nombre" value="<%= producto.nombre %>">
+                            <input class="validar" type="text" 
+                            id="nombreDeProducto" name="nombre" value="<%= producto.nombre %>">
                             <i class="error fas fa-times" id="errorNombreProducto"></i>
                             <i class="check fas fa-check" id="checkNombreProducto"></i>
                         </div>
@@ -435,7 +436,8 @@
                     <div>
                         <p>Precio $</p>
                         <div class="selec info_precio_container">
-                            <input class="validar" type="number" name="precio" value="<%= producto.precio %>">
+                            <input class="validar" type="number" 
+                            id="precio" name="precio" value="<%= producto.precio %>">
                             <i class="error fas fa-times" id="errorPrecio"></i>
                             <i class="check fas fa-check" id="checkPrecio"></i>
                             </div>
@@ -730,7 +732,7 @@
 
                     <!-- ///botones//// -->
                     <section class="button_container">
-                        <button class="boton" type="submit">Actualizar</button>
+                        <button class="boton" id="send" type="submit">Actualizar</button>
                         <button class="boton" type="reset">Borrar</button>
                     </section>
                     
