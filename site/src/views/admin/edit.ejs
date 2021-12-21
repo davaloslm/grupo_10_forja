@@ -28,19 +28,32 @@
                         </h2>
 
                         <!-- ////imagen de archivo//// -->
+                    <div>
                         <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="">
                         <label for="imagenes">Imagen del producto</label>
                         <input type="file" accept="image/*" name="imagenes" multiple>
 
+                        <small class="errors" id="smallsImagenDeProducto"></small>
+
+                    </div>
+                        
+
+
                         <!-- /////Descripcion de Producto///// -->
-                        <div class="selec info_des_container">
+                        <div>
                             <p>Ingresá una descripción</p>
-                            <textarea name="descripcion" id=""><%= producto.descripcion %></textarea>
+                            <div class="selec info_des_container">
+                                <textarea class="validar" name="descripcion" id=""><%= producto.descripcion %></textarea>
+                                <i class="error fas fa-times" id="errorDescripcion"></i>
+                                <i class="check fas fa-check" id="checkDescripcion"></i>
+                            </div>
                             <% if (locals.errors && errors.descripcion) { %>
                                 <small class="errors"><%= errors.descripcion.msg %></small>
                             
                             <% } %>
+                            <small class="errors" id="smallsDescripcion"></small>
                         </div>
+                        
 
                         <!-- ////////selector de enviar//////// -->
                         <div class="descuento_envio_container">
@@ -398,26 +411,74 @@
                             >
                         </div>
 
-                        </div>
+                    </div>
+
                         <!-- /////Nombre de Producto///// -->
-                        <div class="selec info_titulo_container">
+
+                        <div>
                             <p>Nombre de Producto</p>
-                            <input type="text" name="nombre" value="<%= producto.nombre %>">
-                            <% if (locals.errors && errors.nombre) { %>
+                            <div class="selec info_titulo_container">
+                            <input class="validar" type="text" name="nombre" value="<%= producto.nombre %>">
+                            <i class="error fas fa-times" id="errorNombreProducto"></i>
+                            <i class="check fas fa-check" id="checkNombreProducto"></i>
+                        </div>
+                        <% if (locals.errors && errors.nombre) { %>
                                 <small class="errors"><%= errors.nombre.msg %></small>
                             
                             <% } %>
+                            <small class="errors" id="smallsNombreProducto"></small>  
                         </div>
                         
+
+                        
                         <!-- /////Precio de producto///// -->
+                    <div>
+                        <p>Precio $</p>
                         <div class="selec info_precio_container">
-                            <p>Precio $</p>
-                            <input type="number" name="precio" value="<%= producto.precio %>">
+                            <input class="validar" type="number" name="precio" value="<%= producto.precio %>">
+                            <i class="error fas fa-times" id="errorPrecio"></i>
+                            <i class="check fas fa-check" id="checkPrecio"></i>
+                            </div>
                             <% if (locals.errors && errors.precio) { %>
                                 <small class="errors"><%= errors.precio.msg %></small>
                             
                             <% } %>
-                        </div>
+                            <small class="errors" id="smallsPrecio"></small>
+                    </div>
+
+                 <!-- /////Marca de Producto///// --> 
+            <div> 
+                <p>Marca</p>
+                <div class= "selec info_titulo_container">
+                    <input class="validar" type="text" id="marca" name="marca" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.marca ? oldData.marca : null %> >
+                    <i class="error fas fa-times" id="errorMarca"></i>
+                    <i class="check fas fa-check" id="checkMarca"></i>
+                </div>
+                <% if (locals.errors && errors.marca) { %>
+                    <small class="errors"><%= errors.marca.msg %></small>
+                
+                <% } %>
+                <small class="errors" id="smallsMarca"></small>
+            </div>
+
+
+                    <!-- /////Stock de producto///// -->
+            <div>
+                <div class= "selec info_precio_container">
+                    <p>Stock</p>
+                    <input class="validar" type="number" id="stock" name="stock" placeholder="Ingresá un stock" value=<%= locals.oldData && oldData.stock ? oldData.stock : null %> required >
+                    <i class="error fas fa-times" id="errorStock"></i>
+                    <i class="check fas fa-check" id="checkStock"></i>
+                </div>
+                <% if (locals.errors && errors.stock) { %>
+                    <small class="errors"><%= errors.stock.msg %></small>
+                
+                <% } %>
+                <small class="errors" id="smallsStock"></small>
+            </div>
+
+
+                        
                         <!-- /////Colores de producto///// -->
                         <div class="selec color_container">
                             <p>Colores</p>
@@ -567,6 +628,8 @@
                             >
 
                         </div>
+
+
                         <!-- /////categoria de producto///// -->
                         <p>Categoría</p>
                         <div class="selec info_categoria_container">
@@ -663,6 +726,8 @@
                             
 
                     </section>
+
+
                     <!-- ///botones//// -->
                     <section class="button_container">
                         <button class="boton" type="submit">Actualizar</button>
@@ -682,5 +747,6 @@
         </main>
         <%- include('../partials/footer') %>
 </body>
+<script src="../../../js/createForm.js"></script>
 <script src="../../../js/general.js"></script>
 </html>

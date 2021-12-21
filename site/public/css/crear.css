@@ -298,7 +298,7 @@ body.crear main.create section.product_container form section.button_container b
     }
 }
 
-/* ///////colores//////// */
+/* ///////colore de validador//////// */
 body.crear main.create  form  i.error{
     position: absolute;
     bottom: 12px;

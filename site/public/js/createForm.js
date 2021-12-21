@@ -5,17 +5,43 @@ window.addEventListener('load', () =>{
         return document.querySelector(tag)
     }
 
+    var validate
+
+    if(location.href.includes("create")){
+        console.log("create");
+
+        validate = {
+            imagenDeProducto: false,
+            nombreDeProducto: false,
+            descripcion: false,
+            talle: true,
+            marca: false,
+            precio: false,
+            stock: false,
+            color:true,
+            categoria: true,
+        }
+
+    }else{
+        console.log("edit");
+
+        validate = {
+            imagenDeProducto: true,
+            nombreDeProducto: true,
+            descripcion: true,
+            talle: true,
+            marca: true,
+            precio: true,
+            stock: true,
+            color:true,
+            categoria: true,
+        }
+
+        
+    }
 
     // VALIDACION //
-    const validate = {
-        imagenDeProducto: false,
-        nombreDeProducto: false,
-        descripcion: false,
-        marca: false,
-        precio: false,
-        stock: false,
-        categoria: false,
-    }
+
 
     // Función para validar en línea //
     const funcValidate = (obj) => {
@@ -31,8 +57,10 @@ window.addEventListener('load', () =>{
     }
 
     // Expresiones regulares //
-    const regExLetras = /^[a-zA-ZÀ-ÿ\s]{2,}$/; // Letras y espacios, 
-    const regExLetrasNumrod= /^[a-zA-Z0-9\_\-]{4,16}$/;//letras y numeros
+    const regExLetras = /^[a-zA-ZÀ-ÿ\s]{2,}$/; // Letras y espacios,
+    const regExNum = /^\d{1,9}$/; 
+    const regExLetrasNumero=/^[A-Za-z0-9]+$/g;//letras y numeros
+    const regExpNumeroLetra = /^[a-zA-Z0-9\_\-]{4,16}$/;
     const regExImg = /(.jpg|.jpeg|.png|.gif|.webp)$/i;//formato de imagen
 
     /* /////input///// */
@@ -62,8 +90,9 @@ window.addEventListener('load', () =>{
     const smallImagenDeProducto = qs('#smallsImagenDeProducto')
     const smallNombreProducto = qs('#smallsNombreProducto')
     const smallDescripcion = qs('#smallsDescripcion')
-    const smallPrecio = qs('#smallsMarca')
-    const smallStock = qs('#smallsPrecio')
+    const smallMarca=qs('#smallsMarca')
+    const smallPrecio = qs('#smallsPrecio')
+    const smallStock = qs('#smallsStock')
 
     console.log(smallNombreProducto);
 
@@ -113,7 +142,7 @@ window.addEventListener('load', () =>{
             nombreDeProducto.style.color = 'red'
             errorNombreProducto.style.display = 'block'
             checkNombreProducto.style.display = 'none'
-            smallNombreProducto.innerHTML = "El nombre de producto debe contener solo letras"
+            smallNombreProducto.innerHTML = "El nombre de producto debe contener solo letras y numeros"
             validate.nombreDeProducto = false
             break;
 
@@ -163,12 +192,12 @@ window.addEventListener('load', () =>{
             validate.descripcion = false
             break;
         
-        case !regExLetrasNumrod.test(descripcion.value):
+        case !regExLetrasNumero.test(descripcion.value):
             descripcion.style.border = '3px solid red'
             descripcion.style.color = 'red'
             errorDescripciono.style.display = 'block'
             checkDescripcion.style.display = 'none'
-            smallDescripcion.innerHTML = "La descripcion debe contener solo letras"
+            smallDescripcion.innerHTML = "La descripcion debe contener solo letras y numeros"
             validate.descripcion = false
             break;
           default:
@@ -196,7 +225,7 @@ window.addEventListener('load', () =>{
                 marca.style.color = 'red'
                 errorMarca.style.display = 'block'
                 checkMarca.style.display = 'none'
-                checkMarca.innerHTML = 'El campo marca no puede estar vacío'
+                smallMarca.innerHTML = 'El campo marca no puede estar vacío'
                 validate.marca = false
                 break;
             case !regExLetras.test(marca.value):
@@ -205,7 +234,7 @@ window.addEventListener('load', () =>{
                 marca.style.color = 'red'
                 errorMarca.style.display = 'block'
                 checkMarca.style.display = 'none'
-                checkMarca.innerHTML = 'Debes ingresar un marca válido'
+                smallMarca.innerHTML = 'Debes ingresar un marca válido'
                 validate.marca = false
                 break;
             default:
@@ -215,7 +244,7 @@ window.addEventListener('load', () =>{
                 marca.style.color = 'green'
                 errorMarca.style.display = 'none'
                 checkMarca.style.display = 'block'
-                checkMarca.innerHTML = ''
+                smallMarca.innerHTML = ''
                 validate.marca = true
                 break;
         }
@@ -234,13 +263,21 @@ window.addEventListener('load', () =>{
                 smallPrecio.innerHTML = 'El campo precio no puede estar vacío'
                 validate.precio = false
                 break;
-            case moment(precio.value) > moment():
+            case precio.value.length > 9:
                 precio.style.border = '3px solid red'
                 precio.style.color = 'red'
                 errorPrecio.style.display = 'block'
                 checkPrecio.style.display = 'none'
-                smallPrecio.innerHTML = 'Debes ingresar una fecha válida'
-                validate.precio = false
+                smallPrecio.innerHTML = "El número es demasiado largo"
+                validateObj.precio = false
+                break;
+            case !regExNum.test(precio.value):
+                precio.style.border = '3px solid red'
+                precio.style.color = 'red'
+                errorPrecio.style.display = 'block'
+                checkPrecio.style.display = 'none'
+                smallPrecio.innerHTML = "El campo precio solo puede contener números"
+                validateObj.precio = false
                 break;
             default:
                 precio.classList.add('check')
@@ -274,23 +311,24 @@ window.addEventListener('load', () =>{
                 smallStock.innerHTML = "El stock debe tener como mínimo 2 letras"
                 validate.stock = false
                 break;
-            case stock.value.length > 50:
+                ////////
+            case stock.value.length > 9:
                 stock.style.border = '3px solid red'
                 stock.style.color = 'red'
                 errorStock.style.display = 'block'
                 checkStock.style.display = 'none'
-                smallStock.innerHTML = "El stock es demasiado largo"
-                validate.stock = false
+                smallStock.innerHTML = "El número es demasiado largo"
+                validateObj.stock = false
                 break;
-            case !regExLetras.test(nombre.value):
-                stock.classList.add('nocheck')
+            case !regExNum.test(stock.value):
                 stock.style.border = '3px solid red'
                 stock.style.color = 'red'
                 errorStock.style.display = 'block'
                 checkStock.style.display = 'none'
-                smallStock.innerHTML = "El stock debe contener solo letras"
-                validate.stock = false
+                smallStock.innerHTML = "El campo stock solo puede contener números"
+                validateObj.stock = false
                 break;
+
             default:
                 stock.classList.add('check')
                 stock.style.border = '3px solid green'
