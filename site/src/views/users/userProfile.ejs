@@ -101,9 +101,9 @@
                         <% } %>
                         <small id="smallTelefono" class="errors"></small>
 
-                        <span>Imagen de perfil: </span>
+                        <label for="imagen" class="label_imagen" id="labelImagen">Imagen de perfil</label>
                         <div class="inputs">
-                          <input type="file" id="imagen" accept="image/*" name="avatar" >
+                          <input type="file" id="imagen" class="inputs"accept="image/*" name="avatar" >
                         </div>
                         <% if (locals.errors && errors.imagen) { %>
                           <small class="errors"><%= errors.imagen.msg %> </small>

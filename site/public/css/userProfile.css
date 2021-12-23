@@ -93,6 +93,21 @@ main.profile section.profile-section form.profile input {
     outline-color: transparent;
 }
 
+main.profile section.profile-section form.profile label#labelImagen{
+    display: block;
+    background-color: var(--lightBlue);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+main.profile section.profile-section form.profile input#imagen{
+    display: none;
+}
+
+
+
+
 /* Input number sin flechas en Chrome, Safari, Edge, Opera  */
 main.profile section.profile-section form.profile #telefono::-webkit-outer-spin-button, main.profile section.profile-section form.profile #telefono::-webkit-inner-spin-button{
     -webkit-appearance: none;

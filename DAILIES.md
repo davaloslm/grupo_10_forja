@@ -556,3 +556,176 @@ Tareas a realizar:
 
 - **Tareas a realizar:**
   -  Ninguna
+
+# Sprint 7
+ ---
+ ## Reunión 06/12/2021
+- **Tareas realizadas:**
+  -  Agregar nuevas tareas al tablero de Trello.
+  -  Dividir tareas.
+  -  Asignar dificultades.
+  -  Establecer fechas límite.
+  -  Agregar nueva retrospectiva al archivo retro.md. 
+ 
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Revisar validaciones del back.
+
+ ## Reunión 07/12/2021
+- **Tareas realizadas:**
+  -  Revisar validaciones del back.
+ 
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Comenzar validaciones del front.
+
+ ## Reunión 08/12/2021
+- **Tareas realizadas:**
+  -  Comenzar validaciones del front de la vista Registro.
+
+ 
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Corregir vista userProfile.
+  -  Agregar vistas y funciones de editar y agregar direcciones.
+
+
+ ## Reunión 09/12/2021
+- **Tareas realizadas:**
+  -  Comenzar validaciones del front de la vista Registro.
+  -  Agregar vista de agregar nueva dirección.
+ 
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Corregir vista userProfile.
+
+ ## Reunión 10/12/2021
+- **Tareas realizadas:**
+  -  Agregar función de agregar nueva dirección.
+ 
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Corregir vista userProfile y terminar funciones y vistas de dirección.
+
+ ## Reunión 11/12/2021
+- **Tareas realizadas:**
+  -  Agregar función y vista de editar dirección.
+  -  Agregar validaciones del back a las vistas de creacion y edicion de direcciones.
+  -  Corregir estilos de la vista userProfile.
+  -  Agregar validaciones del front a la vista userProfile.
+  -  Agregar validaciones del front de la vista Registro.
+ 
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  -  Terminar validaciones del front de la vista UserProfile.
+
+
+ ## Reunión 13/12/2021
+- **Tareas realizadas:**
+  -  Terminar validaciones del front de la vista UserProfile.
+  -  Actualizar validaciones del back de la vista UserProfile.
+  -  Terminar validaciones del front de la vista login.
+  -  Actualizar validaciones del back de la vista login.
+ 
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  - Implementar validaciones del front de las vistas editar y crear dirección.
+  - Implementar validaciones del front de la vista cambiar contraseña.
+  - Tareas extras: Carrousel, header, go top(scroll).
+
+
+ ## Reunión 14/12/2021
+- **Tareas realizadas:**
+  - Tareas extras: Header(botón hamburguesa).
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+ - Tareas extras: Carrousel, go top(scroll).
+ - Implementar validaciones del front de las vistas editar y crear dirección.
+ - Implementar validaciones del front de la vista cambiar contraseña.
+
+
+ ## Reunión 15/12/2021
+- **Tareas realizadas:**
+  - Implementar validaciones del front de las vistas editar y crear direccion.
+  - Implementar validaciones del front de la vista cambiar contraseña.
+
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  - Tareas extras: Carrousel, go top(scroll).
+
+
+
+
+ ## Reunión 17/12/2021
+- **Tareas realizadas:**
+  - Tareas extras: Carrousel, go top(scroll).
+  - Comenzar validaciones del front de la vista editar producto.
+
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  - Tareas extras: Carrousel, go top(scroll).
+
+ ## Reunión 18/12/2021
+- **Tareas realizadas:**
+  - Corregir validaciones del front de la vista editar producto.
+
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  - Finalizar validaciones del front de la vista editar y crear producto.
+
+ ## Reunión 19/12/2021
+- **Tareas realizadas:**
+  - Finalizar validaciones del front de la vista crear producto.
+
+
+- **Inconvenientes:**
+  - Ninguno.
+
+- **Tareas a realizar:**
+  - Finalizar validaciones del front de la vista editar producto.
+
+ 
+ ## Reunión 22/12/2021
+- **Tareas realizadas:**
+  - Actualizar middlewares de validación de las vistas crear y editar producto.
+  - Corregir validaciones del front de la vista editar producto.
+
+
+- **Inconvenientes:**
+  -  Ninguno.
+
+- **Tareas a realizar:**
+  - Ninguno.
