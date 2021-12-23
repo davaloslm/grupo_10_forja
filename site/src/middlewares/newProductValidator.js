@@ -18,7 +18,7 @@ check('nombre')
     .notEmpty().withMessage('El producto debe tener nombre.').bail()
     .isLength({ min: 2, max:50 }).withMessage('El nombre del producto debe tener entre 2 y 50 caracteres.').bail()
     .custom((value) => {
-        let regExLetrasNumero=/^[a-zA-ZÀ-ÿ0-9\_\-/%&=".'+$@#!()\s]{2,50}$/;
+        let regExLetrasNumero=/^[a-zA-ZÀ-ÿ0-9\_\-/%&=".'+$@#!¡;()\s]{2,50}$/;
 
         if (!value.match(regExLetrasNumero)) {
             throw new Error("Formato de nombre inválido")
@@ -34,7 +34,7 @@ check('marca')
     .notEmpty().withMessage('El producto debe tener una marca.').bail()
     .isLength({ min: 2, max:50 }).withMessage('La marca debe tener entre 2 y 50 caracteres.').bail()
     .custom((value) => {
-        let regExLetrasNumero=/^[a-zA-ZÀ-ÿ0-9\_\-/%&=".'+$@#!()\s]{2,50}$/;
+        let regExLetrasNumero=/^[a-zA-ZÀ-ÿ0-9\_\-/%&=".'+$@#!¡;()\s]{2,50}$/;
 
         if (!value.match(regExLetrasNumero)) {
             throw new Error("Formato de marca inválido")

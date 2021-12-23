@@ -15,12 +15,10 @@ window.addEventListener('load', () =>{
             imagenDeProducto: false,
             nombreDeProducto: false,
             descripcion: false,
-            talle: true,
             marca: false,
             precio: false,
             stock: false,
-            color:true,
-            categoria: true,
+            /* categoria: true, */
         }
 
     }else{
@@ -30,12 +28,10 @@ window.addEventListener('load', () =>{
             imagenDeProducto: true,
             nombreDeProducto: false,
             descripcion: true,
-            talle: true,
             marca: true,
             precio: true,
             stock: true,
-            color:true,
-            categoria: true,
+            /* categoria: true, */
         }
 
         
@@ -58,7 +54,7 @@ window.addEventListener('load', () =>{
     // Expresiones regulares //
     const regExLetras = /^[a-zA-ZÀ-ÿ\s]{2,}$/; // Letras y espacios,
     const regExNum = /^\d{1,9}$/; 
-    const regExLetrasNumero=/^[a-zA-ZÀ-ÿ0-9\_\-/%&=".'+$@#!()\s]{2,}$/;//letras y numeros
+    const regExLetrasNumero=/^[a-zA-ZÀ-ÿ0-9\_\-/%&=".'+$@#!¡;()\s]{2,}$/;//letras y numeros
     const regExpNumeroLetra = /^[a-zA-Z0-9\_\-]{4,16}$/;
     const regExImg = /(.jpg|.jpeg|.png|.gif|.webp)$/i;//formato de imagen
 
@@ -141,7 +137,7 @@ window.addEventListener('load', () =>{
             nombreDeProducto.style.color = 'red'
             errorNombreProducto.style.display = 'block'
             checkNombreProducto.style.display = 'none'
-            smallNombreProducto.innerHTML = "El nombre de producto no puede tener estos carácteres '¿ ?', '¡ !', '< >', ';' "
+            smallNombreProducto.innerHTML = "El nombre de producto no puede tener estos carácteres '¿ ?', '< >' "
             validate.nombreDeProducto = false
             break;
 
@@ -178,7 +174,7 @@ window.addEventListener('load', () =>{
             descripcion.style.border = '3px solid red'
             descripcion.style.color = 'red'
             errorDescripcion.style.display = 'block'
-            checkApellido.style.display = 'none'
+            checkDescripcion.style.display = 'none'
             smallDescripcion.innerHTML = "La descripcion debe tener como mínimo 2 letras"
             validate.descripcion = false
             break;
@@ -188,7 +184,7 @@ window.addEventListener('load', () =>{
             descripcion.style.color = 'red'
             errorDescripcion.style.display = 'block'
             checkDescripcion.style.display = 'none'
-            checkDescripcion.innerHTML = "La descripcion es demasiado largo"
+            smallDescripcion.innerHTML = "La descripcion es demasiado largo"
             validate.descripcion = false
             break;
         
@@ -261,7 +257,7 @@ window.addEventListener('load', () =>{
                 errorPrecio.style.display = 'block'
                 checkPrecio.style.display = 'none'
                 smallPrecio.innerHTML = "El número es demasiado largo"
-                validateObj.precio = false
+                validate.precio = false
                 break;
             case !regExNum.test(precio.value):
                 precio.style.border = '3px solid red'
@@ -269,7 +265,7 @@ window.addEventListener('load', () =>{
                 errorPrecio.style.display = 'block'
                 checkPrecio.style.display = 'none'
                 smallPrecio.innerHTML = "El campo precio solo puede contener números"
-                validateObj.precio = false
+                validate.precio = false
                 break;
             default:
                 precio.classList.add('check')
@@ -310,7 +306,7 @@ window.addEventListener('load', () =>{
                 errorStock.style.display = 'block'
                 checkStock.style.display = 'none'
                 smallStock.innerHTML = "El número es demasiado largo"
-                validateObj.stock = false
+                validate.stock = false
                 break;
             case !regExNum.test(stock.value):
                 stock.style.border = '3px solid red'
@@ -318,7 +314,7 @@ window.addEventListener('load', () =>{
                 errorStock.style.display = 'block'
                 checkStock.style.display = 'none'
                 smallStock.innerHTML = "El campo stock solo puede contener números"
-                validateObj.stock = false
+                validate.stock = false
                 break;
 
             default:
