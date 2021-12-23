@@ -26,7 +26,7 @@ window.addEventListener('load', () =>{
 
         validate = {
             imagenDeProducto: true,
-            nombreDeProducto: false,
+            nombreDeProducto: true,
             descripcion: true,
             marca: true,
             precio: true,
