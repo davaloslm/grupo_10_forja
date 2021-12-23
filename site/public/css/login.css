@@ -91,6 +91,7 @@ main.login section form div.grupo_input i.ojitoDes, main.login section form div.
     position: absolute;
     bottom: 21px;
     right: 10px;
+    cursor: pointer;
 }
 
 main.login section form div.grupo_input i.ojitoDes {
