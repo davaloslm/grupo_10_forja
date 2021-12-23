@@ -259,6 +259,15 @@ window.addEventListener('load', () => {
                 smallFechaDeNac.innerHTML = 'Debes ser mayor de edad para registrarte'
                 validate.fechaDeNac = false
                 break;
+            case moment().diff(moment(fechaDeNac.value), 'years') > 120:
+                fechaDeNac.classList.add('nocheck')
+                fechaDeNac.style.border = '3px solid red'
+                fechaDeNac.style.color = 'red'
+                errorFechaDeNac.style.display = 'block'
+                checkFechaDeNac.style.display = 'none'
+                smallFechaDeNac.innerHTML = '¿Acaso tienes mas años que Chiyo Miyako?'
+                validate.fechaDeNac = false
+                break;
             /* case !regExFecha.test(fechaDeNac.value):
                 fechaDeNac.classList.add('nocheck')
                 fechaDeNac.style.border = '3px solid red'
