@@ -76,7 +76,7 @@ window.addEventListener('load', () =>{
     const checkNombreProducto = qs('#checkNombreProducto')
     const errorNombreProducto = qs('#errorNombreProducto')
     const checkDescripcion = qs('#checkDescripcion')
-    const errorDescripciono = qs('#errorDescripcion')
+    const errorDescripcion = qs('#errorDescripcion')
     const checkMarca = qs('#checkMarca')
     const errorMarca = qs ('#errorMarca')
     const checkPrecio = qs('#checkPrecio')
@@ -168,7 +168,7 @@ window.addEventListener('load', () =>{
         case !descripcion.value:
             descripcion.style.border = '3px solid red'
             descripcion.style.color = 'red'
-            errorDescripciono.style.display = 'block'
+            errorDescripcion.style.display = 'block'
             checkDescripcion.style.display = 'none'
             smallDescripcion.innerHTML = "El campo Description no puede estar vacío"
             validate.descripcion = false  
@@ -177,18 +177,18 @@ window.addEventListener('load', () =>{
         case descripcion.value.length < 2:
             descripcion.style.border = '3px solid red'
             descripcion.style.color = 'red'
-            errorDescripciono.style.display = 'block'
+            errorDescripcion.style.display = 'block'
             checkApellido.style.display = 'none'
             smallDescripcion.innerHTML = "La descripcion debe tener como mínimo 2 letras"
             validate.descripcion = false
             break;
 
-        case descripcion.value.length > 50:
+        case descripcion.value.length > 1000:
             descripcion.style.border = '3px solid red'
             descripcion.style.color = 'red'
-            errorDescripciono.style.display = 'block'
+            errorDescripcion.style.display = 'block'
             checkDescripcion.style.display = 'none'
-            smallDescripcion.innerHTML = "La descripcion es demasiado largo"
+            checkDescripcion.innerHTML = "La descripcion es demasiado largo"
             validate.descripcion = false
             break;
         
@@ -197,7 +197,7 @@ window.addEventListener('load', () =>{
             descripcion.classList.add('check')
             descripcion.style.border = '3px solid green'
             descripcion.style.color = 'green'
-            errorDescripciono.style.display = 'none'
+            errorDescripcion.style.display = 'none'
             checkDescripcion.style.display = 'block'
             smallDescripcion.innerHTML = ""
             validate.descripcion = true
