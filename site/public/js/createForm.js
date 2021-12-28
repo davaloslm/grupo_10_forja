@@ -18,7 +18,7 @@ window.addEventListener('load', () =>{
             marca: false,
             precio: false,
             stock: false,
-            /* categoria: true, */
+            /* categoria: true,*/
         }
 
     }else{
@@ -37,8 +37,13 @@ window.addEventListener('load', () =>{
         
     }
 
-
     // Función para validar en línea //
+
+    const bttnCrear = qs('#send')
+
+    bttnCrear.disabled = true
+    bttnCrear.style.backgroundColor = 'gray'
+
     const funcValidate = (obj) => {
         let arr = Object.values(validate)
         
@@ -57,6 +62,7 @@ window.addEventListener('load', () =>{
     const regExLetrasNumero=/^[a-zA-ZÀ-ÿ0-9\_\-/%&=".'+$@#!¡;()\s]{2,}$/;//letras y numeros
     const regExpNumeroLetra = /^[a-zA-Z0-9\_\-]{4,16}$/;
     const regExImg = /(.jpg|.jpeg|.png|.gif|.webp)$/i;//formato de imagen
+    const fileSize = 2100000
 
     /* /////input///// */
     const imagenDeProducto = qs('#imagenDeProducto')
@@ -75,7 +81,7 @@ window.addEventListener('load', () =>{
     const errorDescripcion = qs('#errorDescripcion')
     const checkMarca = qs('#checkMarca')
     const errorMarca = qs ('#errorMarca')
-    const checkPrecio = qs('#checkPrecio')
+    const checkPrecio = qs('#checkPrecio') 
     const errorPrecio = qs('#errorPrecio')
     const checkStock = qs('#checkStock')
     const errorStock = qs('#errorStock')
@@ -92,10 +98,7 @@ window.addEventListener('load', () =>{
     console.log(smallNombreProducto);
 
     
-    const bttnCrear = qs('#send')
-
-    bttnCrear.disabled = true
-    bttnCrear.style.backgroundColor = 'gray'
+    
 
 
 
@@ -159,7 +162,7 @@ window.addEventListener('load', () =>{
     })
 
 
-  descripcion.addEventListener('input', () => {
+ descripcion.addEventListener('input', () => {
     switch (true) {
         case !descripcion.value:
             descripcion.style.border = '3px solid red'
@@ -333,7 +336,7 @@ window.addEventListener('load', () =>{
 
     ///imagen/////
 
-    imagenDeProducto.addEventListener('change', () => {
+    /* imagenDeProducto.addEventListener('change', () => {
 
         switch (true) {
             case !regExImg.exec(imagenDeProducto.value):
@@ -349,7 +352,7 @@ window.addEventListener('load', () =>{
                 imagenDeProducto.style.backgroundColor = 'red'
                 imagenDeProducto.style.color = 'white'
                 imagenDeProducto.style.boxShadow = 'none'
-                smallImagenDeProducto.innerHTML = 'La imagenDeProducto debe pesar menos de 2MB'
+                smallImagenDeProducto.innerHTML = 'Las imagenes del Producto debe pesar menos de 2MB'
                 validate.imagenDeProducto = false
                 break;
             default:
@@ -360,9 +363,9 @@ window.addEventListener('load', () =>{
                 imagenDeProducto.style.color = 'black'
                 smallImagenDeProducto.innerHTML = ''
                 validate.imagenDeProducto = true
-                break;
-        }
+                break; */
+        //}
 
-        funcValidate(validate)
-    })
+       // funcValidate(validate)
+    //})
 })
