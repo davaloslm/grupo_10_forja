@@ -57,6 +57,7 @@ window.addEventListener('load', () =>{
     const regExLetrasNumero=/^[a-zA-ZÀ-ÿ0-9\_\-/%&=".'+$@#!¡;()\s]{2,}$/;//letras y numeros
     const regExpNumeroLetra = /^[a-zA-Z0-9\_\-]{4,16}$/;
     const regExImg = /(.jpg|.jpeg|.png|.gif|.webp)$/i;//formato de imagen
+    const fileSize = 2100000
 
     /* /////input///// */
     const imagenDeProducto = qs('#imagenDeProducto')
@@ -335,8 +336,15 @@ window.addEventListener('load', () =>{
 
     imagenDeProducto.addEventListener('change', () => {
 
+        let previewsDiv = qs("#previews")
+
         switch (true) {
             case !regExImg.exec(imagenDeProducto.value):
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                  }
+
                 imagenDeProducto.classList.add('nocheck')
                 imagenDeProducto.style.backgroundColor = 'red'
                 imagenDeProducto.style.color = 'white'
@@ -345,6 +353,11 @@ window.addEventListener('load', () =>{
                 validate.imagenDeProducto = false
                 break;
             case imagenDeProducto.files[0].size > fileSize:
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                }
+                
                 imagenDeProducto.classList.add('nocheck')
                 imagenDeProducto.style.backgroundColor = 'red'
                 imagenDeProducto.style.color = 'white'
@@ -353,6 +366,19 @@ window.addEventListener('load', () =>{
                 validate.imagenDeProducto = false
                 break;
             default:
+                console.log(imagenDeProducto.files[0]);
+                /* Previsualización de imagen */
+
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                  }
+                
+                for ( i = 0; i < imagenDeProducto.files.length; i++) {
+                    previewsDiv.appendChild(document.createElement("img")).src = URL.createObjectURL(imagenDeProducto.files[i])
+                    
+                }
+         
                 imagenDeProducto.classList.remove('nocheck')
                 imagenDeProducto.classList.add('check')
                 imagenDeProducto.style.boxShadow = '0px 1px 10px rgb(23 158 5)'
@@ -366,3 +392,4 @@ window.addEventListener('load', () =>{
         funcValidate(validate)
     })
 })
+
