@@ -222,7 +222,7 @@ window.addEventListener('load', () =>{
                 marca.style.color = 'red'
                 errorMarca.style.display = 'block'
                 checkMarca.style.display = 'none'
-                smallMarca.innerHTML = 'Debes ingresar un marca válido'
+                smallMarca.innerHTML = 'Debes ingresar una marca válida'
                 validate.marca = false
                 break;
             default:

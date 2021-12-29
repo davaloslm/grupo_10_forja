@@ -72,7 +72,9 @@ main.create form div.selec  {
     position: relative;
 }
 
-
+body.crear main.create section.product_container form section.visual_container small {
+    margin-top: 10px;
+}
 
 
 body.crear main.create section.product_container form.todo_container section.visual_container h2{
@@ -94,12 +96,13 @@ body.crear main.create section.product_container form section.visual_container d
 body.crear main.create section.product_container form section.visual_container div.descuento_envio_container {
     margin: 15px 0;
     display: flex;
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 
-body.crear main.create section.product_container form section.info_container{
+body.crear main.create section.product_container form section.info_container {
     flex-direction: column;
     align-items: center; 
 }
@@ -117,6 +120,7 @@ body.crear main.create section.product_container form section.info_container div
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
 }
 
 body.crear main.create section.product_container form section.info_container div.tallaLetra input.m, input.nl{
@@ -127,18 +131,13 @@ body.crear main.create section.product_container form section.info_container div
     margin: 10px 0;
 }
 
-/* //////Estilo de Categoria////// */
-body.crear main.create section.product_container form section.info_container div.info_categoria_container{
-    text-align: end;
-}
-
-
 /* //////////Descripcion de producto//////// */
 body.crear main.create section.product_container form section.info_container div.selec textarea{
     
     width: 234px;
     height: 126px;
 }
+
 
 
 
@@ -226,10 +225,27 @@ body.crear main.create section.product_container form section.button_container b
     box-shadow: 0px 0px 2px 5px slategrey
 }
 
+body.crear main.create section.product_container form.todo_container div.inputs {
+    margin-top: 15px;
+}
 
+body.crear main.create section.product_container form.todo_container div.inputs small {
+    margin-top: 15px;
+}
+
+body.crear main.create section.product_container form.todo_container div.inputs input#imagenDeProducto {
+    display: none;
+}
+
+body.crear main.create section.product_container form.todo_container div.inputs label {
+    background-color: var(--lightBlue);
+    border-radius: 5px;
+    padding: 5px;
+    cursor: pointer;
+}
 
 /*////////////////////////////// Movil-M///////////////////////////// */
-@media(min-width:375px){
+@media(min-width:425px){
     body.crear main.create section.product_container form section.info_container div.tallaNumero{
         width: 81%;
         display: flex;
@@ -240,6 +256,28 @@ body.crear main.create section.product_container form section.button_container b
 
     body.crear main.create section.product_container form section.visual_container div.selec textarea {
         height: 126px;
+    }
+
+    /* //////Estilo de categoria///// */
+    body.crear main.create section.product_container form section.info_container div.info_categoria_container{
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    /* 7//////////Ancho de los input//////////////// */
+
+    body.crear main.create section.product_container form section.info_container div.info_categoria_container div.Categoria1{
+        text-align: end;
+
+    }
+    body.crear main.create section.product_container form section.info_container div.info_categoria_container div.Categoria2{
+        text-align: end;
+    }
+
+    body.crear main.create section.product_container form section.visual_container div.descuento_envio_container div.descuento_container select {
+        width: 100px;
     }
 }
 
@@ -277,25 +315,7 @@ body.crear main.create section.product_container form section.button_container b
         height: 120px;
     }
 
-    /* 7//////////Ancho de los input//////////////// */
 
-    
-
-    /* //////Estilo de categoria///// */
-    body.crear main.create section.product_container form section.info_container div.info_categoria_container{
-        height: 100px;
-        display: flex;
-        align-items: flex-start;
-        width: 100%;
-        justify-content: space-around;
-    }
-    body.crear main.create section.product_container form section.info_container div.info_categoria_container div.Categoria1{
-        text-align: end;
-
-    }
-    body.crear main.create section.product_container form section.info_container div.info_categoria_container div.Categoria2{
-        text-align: end;
-    }
 }
 
 /* ///////colore de validador//////// */
