@@ -347,7 +347,7 @@ main.edit  form .validar{
 
 /* ///////Vista previa de imágenes//////// */
 
-main.edit div#previews{
+main.edit div#previews,main.edit div.productoImg-container{
     display: grid;
     grid-template-columns: repeat(3, auto);
     gap: 10px;
