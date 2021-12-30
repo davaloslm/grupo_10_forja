@@ -16,24 +16,9 @@
 
         <form class="todo_container" action="/admin" method="POST" enctype="multipart/form-data">
 
-            <section class="visual_container">
-                <!-- ////Eligir archivo//// -->
-                <div class="inputs">
-                    <label for="imagenes">Imagen del producto</label>
-                    <input type="file" accept="image/*" id="imagenDeProducto" name="imagenes" multiple>
-                    
-                    <% if (locals.errors && errors.imagenes) { %>
-                        <small class="errors"><%= errors.imagenes.msg %></small>
-                    
-                    <% } %>
-                    <div id="previews"></div>
-                        <small class="errors" id="smallsImagenDeProducto"></small>
-                </div>
-                    
-                </div>
-                    
+            <section class="visual_container">   
 
-                    <!-- /////Nombre de Producto///// -->
+                <!-- /////Nombre de Producto///// -->
                 <div>
                     <p>Nombre de Producto</p>
                     <div class= "selec info_titulo_container">
@@ -42,11 +27,11 @@
                         <i class="check fas fa-check" id="checkNombreProducto"></i>
                     </div>
                     <% if (locals.errors && errors.nombre) { %>
-                        <small class="errors"><%= errors.nombre.msg %></small>
+                    <small class="errors"><%= errors.nombre.msg %></small>
                     
                     <% } %>
                     
-                        <small class="errors" id="smallsNombreProducto"></small>      
+                    <small class="errors" id="smallsNombreProducto"></small>      
                 </div>
                     
 
@@ -82,6 +67,7 @@
                         <label for="descuento">Descuento</label>
                         <select name="descuento" id="Descuento">
                             <option value="0" selected hidden>Seleccione %</option>
+                            <option value="0" <%= locals.oldData && ("0" === oldData.descuento) ? 'selected' : null %> >0% </option>
                             <option value="5" <%= locals.oldData && ("5" === oldData.descuento) ? 'selected' : null %> >5% </option>
                             <option value="10" <%= locals.oldData && ("10" === oldData.descuento) ? 'selected' : null %> >10% </option>
                             <option value="15" <%= locals.oldData && ("15" === oldData.descuento) ? 'selected' : null %> >15% </option>
@@ -582,7 +568,7 @@
                         </div>
 
                         <div>
-                        <label for="EntrenamientoFuncional/Crossfit">Funcional/Cross<</label>
+                        <label for="EntrenamientoFuncional/Crossfit">Funcional/Crossfit</label>
                         <input class="m" name="categoria" id="EntrenamientoFuncional/Crossfit" type="checkbox" value="6"
                         <% if(locals.oldData && oldData.categoria) { %>
 
@@ -599,8 +585,8 @@
 
                     <div class="Categoria2">
                         <div>
-                        <label for="Jupo">Jupo</label>
-                        <input class="m" name="categoria" id="Jupo" type="checkbox" value="Judo"
+                        <label for="Jupo">Judo</label>
+                        <input class="m" name="categoria" id="Judo" type="checkbox" value="Judo"
                         <% if(locals.oldData && oldData.categoria) { %>
 
                             <% if (oldData.categoria.includes("3")) { %>
@@ -642,14 +628,25 @@
 
 
                     </div>
-                    <% if (locals.errors && errors.categoria) { %>
-                        <small class="errors"><%= errors.categoria.msg %></small>
+                </div>
+                <% if (locals.errors && errors.categoria) { %>
+                    <small class="errors"><%= errors.categoria.msg %></small>
+                
+                <% } %>
+                <small class="errors" id="smallsCategoria"></small>
+
+                <!-- ////Eligir archivo//// -->
+                <div class="inputs">
+                    <label for="imagenes">Imagen del producto</label>
+                    <input type="file" accept="image/*" id="imagenDeProducto" name="imagenes" multiple>
+                    
+                    <% if (locals.errors && errors.imagenes) { %>
+                        <small class="errors"><%= errors.imagenes.msg %></small>
                     
                     <% } %>
-
-                    <small class="errors" id="smallsCategoria"></small>
+                    <div id="previews"></div>
+                        <small class="errors" id="smallsImagenDeProducto"></small>
                 </div>
-                
             </section>
 <!-- ///botones//// -->
             <section class="button_container">
