@@ -336,10 +336,17 @@ window.addEventListener('load', () =>{
 
     ///imagen/////
 
-    /* imagenDeProducto.addEventListener('change', () => {
+     imagenDeProducto.addEventListener('change', () => {
+
+        let previewsDiv = qs("#previews")
 
         switch (true) {
             case !regExImg.exec(imagenDeProducto.value):
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                  }
+
                 imagenDeProducto.classList.add('nocheck')
                 imagenDeProducto.style.backgroundColor = 'red'
                 imagenDeProducto.style.color = 'white'
@@ -348,6 +355,11 @@ window.addEventListener('load', () =>{
                 validate.imagenDeProducto = false
                 break;
             case imagenDeProducto.files[0].size > fileSize:
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                }
+                
                 imagenDeProducto.classList.add('nocheck')
                 imagenDeProducto.style.backgroundColor = 'red'
                 imagenDeProducto.style.color = 'white'
@@ -356,6 +368,19 @@ window.addEventListener('load', () =>{
                 validate.imagenDeProducto = false
                 break;
             default:
+                console.log(imagenDeProducto.files[0]);
+                /* Previsualización de imagen */
+
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                  }
+                
+                for ( i = 0; i < imagenDeProducto.files.length; i++) {
+                    previewsDiv.appendChild(document.createElement("img")).src = URL.createObjectURL(imagenDeProducto.files[i])
+                    
+                }
+         
                 imagenDeProducto.classList.remove('nocheck')
                 imagenDeProducto.classList.add('check')
                 imagenDeProducto.style.boxShadow = '0px 1px 10px rgb(23 158 5)'
@@ -363,9 +388,10 @@ window.addEventListener('load', () =>{
                 imagenDeProducto.style.color = 'black'
                 smallImagenDeProducto.innerHTML = ''
                 validate.imagenDeProducto = true
-                break; */
-        //}
+                break;
+        }
 
-       // funcValidate(validate)
-    //})
+        funcValidate(validate)
+    })
 })
+

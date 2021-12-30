@@ -637,15 +637,15 @@
 
                 <!-- ////Eligir archivo//// -->
                 <div class="inputs">
-                    <label for="imagenDeProducto">Imagen del producto</label>
+                    <label for="imagenes">Imagen del producto</label>
                     <input type="file" accept="image/*" id="imagenDeProducto" name="imagenes" multiple>
                     
                     <% if (locals.errors && errors.imagenes) { %>
-                    <small class="errors"><%= errors.imagenes.msg %></small>
+                        <small class="errors"><%= errors.imagenes.msg %></small>
                     
                     <% } %>
-                    
-                    <small class="errors" id="smallsImagenDeProducto"></small>
+                    <div id="previews"></div>
+                        <small class="errors" id="smallsImagenDeProducto"></small>
                 </div>
             </section>
 <!-- ///botones//// -->
