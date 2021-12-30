@@ -715,22 +715,22 @@
 
 
                     <!-- ////imagen de archivo//// -->
-                    <div class="imagen">
+                    <div class="inputs">
                         <label  for="imagenDeProducto">Imagen del producto</label>
                         <input type="file" id="imagenDeProducto" accept="image/*" name="imagenes" multiple>
-                        
+                        <div id="previews"></div>
                         <small class="errors" id="smallsImagenDeProducto"></small>
                         
                     </div>
                     <div>
-                        <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="">
+                        <img class="productoImg" src="/img/productos/<%= producto.imagen[0].nombre %>" alt="">
 
                         <% if(producto.imagen[1]) { %>
-                        <img src="/img/productos/<%= producto.imagen[1].nombre %>" alt="">
+                        <img class="productoImg" src="/img/productos/<%= producto.imagen[1].nombre %>" alt="">
                         <% } %>
 
                         <% if(producto.imagen[2]) { %>
-                        <img src="/img/productos/<%= producto.imagen[2].nombre %>" alt="">
+                        <img class="productoImg" src="/img/productos/<%= producto.imagen[2].nombre %>" alt="">
                         <% } %>
 
                     </div>

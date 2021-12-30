@@ -239,15 +239,15 @@ body.editar main.edit section.delete_container form button{
     box-shadow: 0px 0px 2px 5px slategrey
 }
 
-body.editar main.edit section.product_container form.todo_container div.imagen {
+body.editar main.edit section.product_container form.todo_container div.inputs {
     margin: 15px;
 }
 
-body.editar main.edit section.product_container form.todo_container div.imagen input#imagenDeProducto {
+body.editar main.edit section.product_container form.todo_container div.inputs input#imagenDeProducto {
     display: none;
 }
 
-body.editar main.edit section.product_container form.todo_container div.imagen label {
+body.editar main.edit section.product_container form.todo_container div.inputs label {
     background-color: var(--lightBlue);
     border-radius: 5px;
     padding: 5px;
@@ -343,4 +343,17 @@ main.edit  form .validar{
     padding: 5px;
     cursor: pointer;
     outline-color:transparent;
+}
+
+/* ///////Vista previa de imágenes//////// */
+
+main.edit div#previews{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+main.edit div.inputs img{
+    width: 100%;
 }
