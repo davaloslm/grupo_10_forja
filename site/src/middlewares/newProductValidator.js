@@ -56,7 +56,7 @@ check('precio')
     .trim(),
 check('stock')
     .notEmpty().withMessage('El producto debe tener un stock.').bail()
-    .isLength({ min: 2, max:9 }).withMessage('El stock debe tener entre 2 y 9 caracteres.').bail()
+    .isLength({ min: 1, max:9 }).withMessage('El stock debe tener entre 1 y 9 caracteres.').bail()
     .custom((value) => {
         let regExNum = /^\d{1,9}$/; 
 
