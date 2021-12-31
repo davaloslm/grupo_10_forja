@@ -338,7 +338,8 @@ window.addEventListener('load', () =>{
 
      imagenDeProducto.addEventListener('change', () => {
 
-        let previewsDiv = qs("#previews")
+        let previewsDiv = qs("#previews");
+        let productoImg = qs("img.productoImg");
 
         switch (true) {
             case !regExImg.exec(imagenDeProducto.value):
@@ -368,9 +369,8 @@ window.addEventListener('load', () =>{
                 validate.imagenDeProducto = false
                 break;
             default:
-                console.log(imagenDeProducto.files[0]);
+                productoImg.style.display = "none"
                 /* Previsualización de imagen */
-
                 /* Borrado de imágenes anteriores */
                 while (previewsDiv.firstChild) {
                     previewsDiv.removeChild(previewsDiv.firstChild);
