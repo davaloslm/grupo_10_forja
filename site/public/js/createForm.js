@@ -366,7 +366,7 @@ window.addEventListener('load', () =>{
                 validate.imagenDeProducto = false
                 break;
             default:
-                productoImg.style.display = "none"
+                productoImg ? productoImg.style.display = "none" : null
                 /* Previsualización de imagen */
                 /* Borrado de imágenes anteriores */
                 while (previewsDiv.firstChild) {
