@@ -335,27 +335,45 @@ window.addEventListener('load', () => {
 
     imagen.addEventListener('change', () => {
 
+        let previewsDiv = qs("#previews");
+
         switch (true) {
             case !regExImg.exec(imagen.value):
                 imagen.style.backgroundColor = 'red'
                 imagen.style.color = 'white'
                 imagen.style.boxShadow = 'none'
                 smallImagen.innerHTML = 'Solo se permiten imágenes con extensión jpg, jpeg, png, gif y webp'
-                validateObj.imagen = false
+                validateObj.imagen = false;
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                  }
                 break;
             case imagen.files[0].size > fileSize:
                 imagen.style.backgroundColor = 'red'
                 imagen.style.color = 'white'
                 imagen.style.boxShadow = 'none'
                 smallImagen.innerHTML = 'La imagen debe pesar menos de 2MB'
-                validateObj.imagen = false
+                validateObj.imagen = false;
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                  }
                 break;
             default:
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                }
+
+                /* Previsualización de imagen */
+                previewsDiv.appendChild(document.createElement("img")).src = URL.createObjectURL(imagen.files[0])
+                
                 imagen.style.boxShadow = '0px 1px 10px rgb(23 158 5)'
                 imagen.style.backgroundColor = 'white'
                 imagen.style.color = 'black'
                 smallImagen.innerHTML = ''
-                validateObj.imagen = true
+                validateObj.imagen = true;
                 break;
         }
 
