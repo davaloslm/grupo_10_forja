@@ -65,6 +65,7 @@ window.addEventListener('load', () =>{
     const marca = qs('#marca')
     const precio = qs('#precio')
     const stock = qs('#stock')
+    const categorias = document.getElementsByName('categoria')
     
 
     /* //////Icono////// */
@@ -88,6 +89,7 @@ window.addEventListener('load', () =>{
     const smallMarca=qs('#smallsMarca')
     const smallPrecio = qs('#smallsPrecio')
     const smallStock = qs('#smallsStock')
+    const smallCategoria = qs('#smallsCategoria')
 
     const labelImagen = qs('#labelImagen')
     const bttnCrear = qs('#send')
@@ -407,5 +409,22 @@ window.addEventListener('load', () =>{
 
         funcValidate(validate)
     })
+    
+    ///validación de las categorías de producto////
+    
+    /*for ( let i = 0; i < categorias.length; i++) {
+        console.log(categorias[i])
+
+        if (categorias[i].checked === true) {
+            validate.categoria = true
+
+        } else {
+
+            validate.categoria = false
+
+        }
+        funcValidate(validate)
+    } */
+
 })
 
