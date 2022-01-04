@@ -29,7 +29,7 @@ const controller = {
                     
                 }
 
-                res.render("products/category", {productosDeLaCategoria: productosFiltrados, categoriaCorrecta: categoria});
+                res.render("products/category", {productos: productosFiltrados, categoria});
             })
             .catch(error => {
                 res.send('No se encontraron productos con esa categoría')
