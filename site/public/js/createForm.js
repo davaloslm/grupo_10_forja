@@ -56,6 +56,12 @@ window.addEventListener('load', () =>{
         }
     }
 
+    //////ALERTA de Elimonar producto////////
+    const alertaEliminar = qs('#eliminar');
+
+    alertaEliminar.addEventListener('click',()=> alert('Quiere borrar el producto'))
+
+    
     // Expresiones regulares //
     const regExLetras = /^[a-zA-ZÀ-ÿ\s]{2,}$/; // Letras y espacios,
     const regExNum = /^\d{1,9}$/; 
