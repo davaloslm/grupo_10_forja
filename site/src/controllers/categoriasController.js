@@ -5,7 +5,7 @@ const controller = {
     category: (req, res)=> {
         const {categoria} = req.params;
         let promesaCategorias = db.Categoria.findAll({
-            where: {nombre: categoria},
+            where: {nombre:{ [Op.substring]: "%"+categoria+"%"}},
             include: [
                 {association: "categoriaProducto"}
             ]
