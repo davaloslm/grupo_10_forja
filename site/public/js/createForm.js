@@ -294,15 +294,14 @@ window.addEventListener('load', () =>{
                 smallStock.innerHTML = "El campo stock no puede estar vacío"
                 validate.stock = false
                 break;
-            case stock.value.length < 2:
+            case stock.value == 0:
                 stock.style.border = '3px solid red'
                 stock.style.color = 'red'
                 errorStock.style.display = 'block'
                 checkStock.style.display = 'none'
-                smallStock.innerHTML = "El stock debe tener como mínimo 2 letras"
+                smallStock.innerHTML = "Debes tener como mínimo 1 producto"
                 validate.stock = false
                 break;
-                ////////
             case stock.value.length > 9:
                 stock.style.border = '3px solid red'
                 stock.style.color = 'red'
@@ -365,11 +364,11 @@ window.addEventListener('load', () =>{
                 imagenDeProducto.style.backgroundColor = 'red'
                 imagenDeProducto.style.color = 'white'
                 imagenDeProducto.style.boxShadow = 'none'
-                smallImagenDeProducto.innerHTML = 'Las imagenes del Producto debe pesar menos de 2MB'
+                smallImagenDeProducto.innerHTML = 'La imagen del producto debe pesar menos de 2MB'
                 validate.imagenDeProducto = false
                 break;
             default:
-                productoImg.style.display = "none"
+                productoImg ? productoImg.style.display = "none" : null
                 /* Previsualización de imagen */
                 /* Borrado de imágenes anteriores */
                 while (previewsDiv.firstChild) {
@@ -386,7 +385,7 @@ window.addEventListener('load', () =>{
                 imagenDeProducto.style.boxShadow = '0px 1px 10px rgb(23 158 5)'
                 imagenDeProducto.style.backgroundColor = 'white'
                 imagenDeProducto.style.color = 'black'
-                smallImagenDeProducto.innerHTML = ''
+                smallImagenDeProducto.innerHTML = `Las imágenes: ${imagen.value}`
                 validate.imagenDeProducto = true
                 break;
         }

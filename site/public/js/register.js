@@ -392,8 +392,14 @@ window.addEventListener('load', () => {
     // IMAGEN //
     imagen.addEventListener('change', () => {
 
+        let previewsDiv = qs("#previews");
+
         switch (true) {
             case !regExImg.exec(imagen.value):
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                }
                 imagen.classList.add('nocheck')
                 labelImagen.style.backgroundColor = 'red'
                 labelImagen.style.color = 'white'
@@ -402,6 +408,10 @@ window.addEventListener('load', () => {
                 validate.imagen = false
                 break;
             case imagen.files[0].size > fileSize:
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                }
                 imagen.classList.add('nocheck')
                 labelImagen.style.backgroundColor = 'red'
                 labelImagen.style.color = 'white'
@@ -410,6 +420,13 @@ window.addEventListener('load', () => {
                 validate.imagen = false
                 break;
             default:
+                /* Borrado de imágenes anteriores */
+                while (previewsDiv.firstChild) {
+                    previewsDiv.removeChild(previewsDiv.firstChild);
+                }
+                /* Previsualización de imagen */
+                previewsDiv.appendChild(document.createElement("img")).src = URL.createObjectURL(imagen.files[0])
+            
                 imagen.classList.remove('nocheck')
                 imagen.classList.add('check')
                 labelImagen.style.backgroundColor = 'green'
