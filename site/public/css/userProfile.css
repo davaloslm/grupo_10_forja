@@ -45,6 +45,7 @@ main.profile section.profile-section img{
     height: 180px;
     object-fit: cover;
     border-radius: 50%;
+    margin-top: 10px;
     
 }
 
