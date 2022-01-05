@@ -38,10 +38,6 @@ window.addEventListener('load', () =>{
 
     // Función para validar en línea //
 
-    /* const bttnCrear = qs('#send')
-
-    bttnCrear.disabled = true
-    bttnCrear.style.backgroundColor = 'gray' */
 
     const funcValidate = (obj) => {
         let arr = Object.values(validate)
@@ -59,53 +55,28 @@ window.addEventListener('load', () =>{
     const alertaEliminar = qs('#eliminar');
 
     /* alertaEliminar.addEventListener('click',()=> alert('Quiere borrar el producto')) */
-    const swalWithBootstrapButtons = Swal.mixin({
-        customClass: {
-          confirmButton: '#eliminarjjj',
-          cancelButton: 'btn btn-danger'
-        },
-        buttonsStyling: false
-      })
-      
-      swalWithBootstrapButtons.fire({
-        title: '¿Estas seguro?',
-        text: "¡No podrás reverti esto!",
-        icon: 'warning',
-        showCancelButton: true,
-        confirmButtonText: '¡si, Eliminar!',
-        cancelButtonText: '¡No, cancelar!',
-        reverseButtons: true
-      }).then((result) => {
-        if (result.isConfirmed) {
-          swalWithBootstrapButtons.fire(
-            '¡producto Eliminado!',
-            'correctamente'
-          )
-        } else if (
-          /* Read more about handling dismissals below */
-          result.dismiss === Swal.DismissReason.cancel
-        ) {
-          swalWithBootstrapButtons.fire(
-            'Cancelled',
-            'Your imaginary file is safe :)',
-            'error'
-          )
-        }
-      })
 
-    alertaEliminar.onclick(()=>{
-        swalWithBootstrapButtons
-    })
+    alertaEliminar.addEventListener('click',()=>{
+        Swal.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: 'Yes, delete it!'
+          }).then((result) => {
+            if (result.isConfirmed) {
+              Swal.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+            }
+        })
+    })    
 
     
-
-
-
-
-    
-
-    
-
     
     // Expresiones regulares //
     const regExLetras = /^[a-zA-ZÀ-ÿ\s]{2,}$/; // Letras y espacios,
