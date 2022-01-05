@@ -39,10 +39,10 @@ window.addEventListener('load', () =>{
 
     // Función para validar en línea //
 
-    const bttnCrear = qs('#send')
+    /* const bttnCrear = qs('#send')
 
     bttnCrear.disabled = true
-    bttnCrear.style.backgroundColor = 'gray'
+    bttnCrear.style.backgroundColor = 'gray' */
 
     const funcValidate = (obj) => {
         let arr = Object.values(validate)
@@ -56,10 +56,56 @@ window.addEventListener('load', () =>{
         }
     }
 
-    //////ALERTA de Elimonar producto////////
+    ////////ALERTA de Elimonar producto////////
     const alertaEliminar = qs('#eliminar');
 
-    alertaEliminar.addEventListener('click',()=> alert('Quiere borrar el producto'))
+    /* alertaEliminar.addEventListener('click',()=> alert('Quiere borrar el producto')) */
+    const swalWithBootstrapButtons = Swal.mixin({
+        customClass: {
+          confirmButton: '#eliminarjjj',
+          cancelButton: 'btn btn-danger'
+        },
+        buttonsStyling: false
+      })
+      
+      swalWithBootstrapButtons.fire({
+        title: '¿Estas seguro?',
+        text: "¡No podrás reverti esto!",
+        icon: 'warning',
+        showCancelButton: true,
+        confirmButtonText: '¡si, Eliminar!',
+        cancelButtonText: '¡No, cancelar!',
+        reverseButtons: true
+      }).then((result) => {
+        if (result.isConfirmed) {
+          swalWithBootstrapButtons.fire(
+            '¡producto Eliminado!',
+            'correctamente'
+          )
+        } else if (
+          /* Read more about handling dismissals below */
+          result.dismiss === Swal.DismissReason.cancel
+        ) {
+          swalWithBootstrapButtons.fire(
+            'Cancelled',
+            'Your imaginary file is safe :)',
+            'error'
+          )
+        }
+      })
+
+    alertaEliminar.onclick(()=>{
+        swalWithBootstrapButtons
+    })
+
+    
+
+
+
+
+    
+
+    
 
     
     // Expresiones regulares //
