@@ -9,7 +9,6 @@ window.addEventListener('load', () =>{
     var validate
 
     if(location.href.includes("create")){
-        console.log("create");
 
         validate = {
             imagenDeProducto: false,
@@ -18,7 +17,7 @@ window.addEventListener('load', () =>{
             marca: false,
             precio: false,
             stock: false,
-            /* categoria: true, */
+            categoria: false,
         }
 
     }else{
@@ -31,7 +30,7 @@ window.addEventListener('load', () =>{
             marca: true,
             precio: true,
             stock: true,
-            /* categoria: true, */
+            categoria: true,
         }
 
         
@@ -66,6 +65,7 @@ window.addEventListener('load', () =>{
     const marca = qs('#marca')
     const precio = qs('#precio')
     const stock = qs('#stock')
+    const categorias = document.getElementsByName('categoria')
     
 
     /* //////Icono////// */
@@ -89,10 +89,9 @@ window.addEventListener('load', () =>{
     const smallMarca=qs('#smallsMarca')
     const smallPrecio = qs('#smallsPrecio')
     const smallStock = qs('#smallsStock')
+    const smallCategoria = qs('#smallsCategoria')
 
-    console.log(smallNombreProducto);
-
-    
+    const labelImagen = qs('#labelImagen')
     const bttnCrear = qs('#send')
 
     bttnCrear.disabled = true
@@ -337,8 +336,29 @@ window.addEventListener('load', () =>{
 
         let previewsDiv = qs("#previews");
         let productoImg = qs("img.productoImg");
+        let validacionTamaño = []
+
+        for ( i = 0; i < imagenDeProducto.files.length; i++) {
+            if(imagenDeProducto.files[i].size >= fileSize) {
+
+                let archivo = {
+                    id: imagenDeProducto.files[i],
+                    tamaño: imagenDeProducto.files[i].size
+                }
+                validacionTamaño.push(archivo)
+
+            }
+
+        }
 
         switch (true) {
+            case !imagenDeProducto.value:
+                imagenDeProducto.classList.add('nocheck')
+                labelImagen.style.backgroundColor = 'red'
+                smallImagenDeProducto.innerHTML = 'El producto debe tener como mínimo una imagen'
+                smallImagenDeProducto.style.color = 'red'
+                validate.imagenDeProducto = false
+                break;
             case !regExImg.exec(imagenDeProducto.value):
                 /* Borrado de imágenes anteriores */
                 while (previewsDiv.firstChild) {
@@ -346,23 +366,21 @@ window.addEventListener('load', () =>{
                   }
 
                 imagenDeProducto.classList.add('nocheck')
-                imagenDeProducto.style.backgroundColor = 'red'
-                imagenDeProducto.style.color = 'white'
-                imagenDeProducto.style.boxShadow = 'none'
+                labelImagen.style.backgroundColor = 'red'
                 smallImagenDeProducto.innerHTML = 'Solo se permiten imágenes con extensión jpg, jpeg, png, gif y webp'
+                smallImagenDeProducto.style.color = 'red'
                 validate.imagenDeProducto = false
                 break;
-            case imagenDeProducto.files[0].size > fileSize:
+            case validacionTamaño.length > 0:
                 /* Borrado de imágenes anteriores */
                 while (previewsDiv.firstChild) {
                     previewsDiv.removeChild(previewsDiv.firstChild);
                 }
-                
+
                 imagenDeProducto.classList.add('nocheck')
-                imagenDeProducto.style.backgroundColor = 'red'
-                imagenDeProducto.style.color = 'white'
-                imagenDeProducto.style.boxShadow = 'none'
-                smallImagenDeProducto.innerHTML = 'La imagen del producto debe pesar menos de 2MB'
+                labelImagen.style.backgroundColor = 'red'
+                smallImagenDeProducto.innerHTML = 'Hay una o más imágenes que pesan más de 2MB'
+                smallImagenDeProducto.style.color = 'red'
                 validate.imagenDeProducto = false
                 break;
             default:
@@ -371,24 +389,42 @@ window.addEventListener('load', () =>{
                 /* Borrado de imágenes anteriores */
                 while (previewsDiv.firstChild) {
                     previewsDiv.removeChild(previewsDiv.firstChild);
-                  }
+                }
                 
+                let imagenes = []
+
                 for ( i = 0; i < imagenDeProducto.files.length; i++) {
                     previewsDiv.appendChild(document.createElement("img")).src = URL.createObjectURL(imagenDeProducto.files[i])
-                    
+                    imagenes.push(imagenDeProducto.files[i].name)
                 }
-         
+        
                 imagenDeProducto.classList.remove('nocheck')
                 imagenDeProducto.classList.add('check')
-                imagenDeProducto.style.boxShadow = '0px 1px 10px rgb(23 158 5)'
-                imagenDeProducto.style.backgroundColor = 'white'
-                imagenDeProducto.style.color = 'black'
-                smallImagenDeProducto.innerHTML = `Las imágenes: ${imagen.value}`
+                labelImagen.style.backgroundColor = 'green'
+                smallImagenDeProducto.innerHTML = `Las imágenes: ${imagenes.join(", ")}`
+                smallImagenDeProducto.style.color = 'green'
                 validate.imagenDeProducto = true
                 break;
         }
 
         funcValidate(validate)
     })
+    
+    ///validación de las categorías de producto////
+    
+    /*for ( let i = 0; i < categorias.length; i++) {
+        console.log(categorias[i])
+
+        if (categorias[i].checked === true) {
+            validate.categoria = true
+
+        } else {
+
+            validate.categoria = false
+
+        }
+        funcValidate(validate)
+    } */
+
 })
 
