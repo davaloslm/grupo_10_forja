@@ -5,7 +5,7 @@ const controller = {
     category: (req, res)=> {
         const {categoria} = req.params;
         let promesaCategorias = db.Categoria.findAll({
-            where: {nombre: categoria},
+            where: {nombre:{ [Op.substring]: "%"+categoria+"%"}},
             include: [
                 {association: "categoriaProducto"}
             ]
@@ -29,7 +29,7 @@ const controller = {
                     
                 }
 
-                res.render("products/category", {productosDeLaCategoria: productosFiltrados, categoriaCorrecta: categoria});
+                res.render("products/category", {productos: productosFiltrados, categoria});
             })
             .catch(error => {
                 res.send('No se encontraron productos con esa categoría')
