@@ -1,5 +1,6 @@
 .home section.carrusel {
     display: none;
+    z-index: -1;
 }
 /*                                       sección categorías más populares                               */
 .home section.populares h2 {
