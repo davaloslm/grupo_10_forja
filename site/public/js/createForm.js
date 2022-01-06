@@ -56,22 +56,20 @@ window.addEventListener('load', () =>{
 
     /* alertaEliminar.addEventListener('click',()=> alert('Quiere borrar el producto')) */
 
-    alertaEliminar.addEventListener('click',()=>{
+    alertaEliminar.addEventListener('submit', event =>{
+        event.preventDefault();
         Swal.fire({
-            title: 'Are you sure?',
-            text: "You won't be able to revert this!",
+            title: '¿Estas seguro?',
+            text: "¡No podrás revertirlo, una ves eliminado!",
             icon: 'warning',
             showCancelButton: true,
-            confirmButtonColor: '#3085d6',
+            confirmButtonColor: '#2ad2d2',
             cancelButtonColor: '#d33',
-            confirmButtonText: 'Yes, delete it!'
-          }).then((result) => {
-            if (result.isConfirmed) {
-              Swal.fire(
-                'Deleted!',
-                'Your file has been deleted.',
-                'success'
-              )
+            confirmButtonText: 'si, eliminar!',
+            cancelButtonText: 'No, cancelar!'
+        }).then((result) => {
+            if(result.isConfirmed){
+                alertaEliminar.submit();
             }
         })
     })    

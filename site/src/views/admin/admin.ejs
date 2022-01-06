@@ -70,7 +70,7 @@
                         <td class="iconos"><a href="product/<%= producto.id %>"><i class="fas fa-eye"></i></a></td>
                         <td class="iconos"><a href="admin/edit/<%= producto.id %>"><i class="fas fa-wrench"></i></a></td>
                         <td class="iconos">
-                            <form action="/admin/edit/<%=producto.id%>?_method=DELETE" method="POST">
+                            <form class="eliminarProductos" action="/admin/edit/<%=producto.id%>?_method=DELETE" method="POST">
 
                             <button class="delete" type="submit"><i class=" trash fas fa-trash-alt"></i></button>
                         </form></td>
@@ -147,5 +147,7 @@
     <%- include('../partials/footer')  %> 
 
 </body>
+<script src='../../../js/admin.js'></script>
 <script src="../../../js/general.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
