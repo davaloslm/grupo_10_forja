@@ -22,10 +22,9 @@ window.addEventListener('load', () => {
     /* Menu desplegable */
 
     const spansCategorias = document.querySelectorAll("span");
-    const divsSubmenu = document.querySelectorAll("div.submenu");
+    
     const divSubmenuTkd = qs("div#submenu0");
     const divSubmenuBoxeo = qs("div#submenu1");
-    console.log(divSubmenuBoxeo);
     const divSubmenuKick = qs("div#submenu2");
     const divSubmenuJudo = qs("div#submenu3");
     const divSubmenuJiu = qs("div#submenu4");
@@ -38,76 +37,90 @@ window.addEventListener('load', () => {
     const aMenuJiu = document.querySelectorAll("a.submenu4");
     const aMenuEntrenam = document.querySelectorAll("a.submenu5");
 
-    console.log(divsSubmenu);
+   /* Funciones de deplegar y ocultar menu */
+    const desplegar = (divSubmenu, aSubmenu)=>{
+        divSubmenu.style.maxHeight = "300px";
+        for (let i = 0; i < aSubmenu.length; i++) {
+        aSubmenu[i].style.opacity = "100"
+        }
+    }
+    const ocultar = (divSubmenu, aSubmenu)=>{
+        divSubmenu.style.maxHeight = "0px";
+        for (let i = 0; i < aSubmenu.length; i++) {
+        aSubmenu[i].style.opacity = "0"
+        }
+    }
+    /* Función que despliega u oculta*/
+    const menu = (divSubmenu, aSubmenu) =>{
+        if(divSubmenu.style.maxHeight != "300px"){
+            desplegar(divSubmenu,aSubmenu)          
+        }else{
+            ocultar(divSubmenu,aSubmenu)
+        }
+    }
    
-
-   
-
+    /* Al desplegar un menu se ocultan los demás */
     
-
+    /* TaeKwon-Do */
     spansCategorias[0].addEventListener("click", ()=>{
-        console.log(divSubmenuTkd.style.maxHeight );
-        if(divSubmenuTkd.style.maxHeight == "0" ){
-            divSubmenuTkd.style.maxHeight = "300px";
-            for (let i = 0; i < aMenuTkd.length; i++) {
-            aMenuTkd[i].style.opacity = "100"
-            console.log("if");
-            }
-        }
-        if(divSubmenuTkd.style.maxHeight != "0px" ){
-            divSubmenuTkd.style.maxHeight = "0px";
-            for (let i = 0; i < aMenuTkd.length; i++) {
-            aMenuTkd[i].style.opacity = "0"
-            console.log("else");
-            }
-        }
 
+        menu(divSubmenuTkd, aMenuTkd);
+        ocultar(divSubmenuBoxeo, aMenuBoxeo);
+        ocultar(divSubmenuKick, aMenuKick);
+        ocultar(divSubmenuJudo, aMenuJudo);
+        ocultar(divSubmenuJiu, aMenuJiu);
+        ocultar(divSubmenuEntrenam, aMenuEntrenam);
         
     })
+
+    /* Boxeo */
     spansCategorias[1].addEventListener("click", ()=>{
-        divSubmenuBoxeo.style.maxHeight = "300px"
-        for (let i = 0; i < aMenuBoxeo.length; i++) {
-            aMenuBoxeo[i].style.opacity = "100"
-            
-        }
-        
+        menu(divSubmenuBoxeo, aMenuBoxeo);
+        ocultar(divSubmenuTkd, aMenuTkd);
+        ocultar(divSubmenuKick, aMenuKick);
+        ocultar(divSubmenuJudo, aMenuJudo);
+        ocultar(divSubmenuJiu, aMenuJiu);
+        ocultar(divSubmenuEntrenam, aMenuEntrenam);
     })
-    spansCategorias[2].addEventListener("click", ()=>{
-        divSubmenuKick.style.maxHeight = "300px"
-        for (let i = 0; i < aMenuKick.length; i++) {
-            aMenuKick[i].style.opacity = "100"
-            
-        }
-        
-    })
-    spansCategorias[3].addEventListener("click", ()=>{
-        divSubmenuJudo.style.maxHeight = "300px"
-        for (let i = 0; i < aMenuJudo.length; i++) {
-            aMenuJudo[i].style.opacity = "100"
-            
-        }
-        
-    })
-    spansCategorias[4].addEventListener("click", ()=>{
-        divSubmenuJiu.style.maxHeight = "300px"
-        for (let i = 0; i < aMenuJiu.length; i++) {
-            aMenuJiu[i].style.opacity = "100"
-            
-        }
-        
-    })
-    spansCategorias[5].addEventListener("click", ()=>{
-        divSubmenuEntrenam.style.maxHeight = "300px"
-        for (let i = 0; i < aMenuEntrenam.length; i++) {
-            aMenuEntrenam[i].style.opacity = "100"
-            
-        }
-        
-    })
-
-          
-
     
-
-
+    /* KickBoxing/MuayThai */
+    spansCategorias[2].addEventListener("click", ()=>{
+        menu(divSubmenuKick, aMenuKick);
+        ocultar(divSubmenuBoxeo, aMenuBoxeo);
+        ocultar(divSubmenuTkd, aMenuTkd);
+        ocultar(divSubmenuJudo, aMenuJudo);
+        ocultar(divSubmenuJiu, aMenuJiu);
+        ocultar(divSubmenuEntrenam, aMenuEntrenam);
+    })
+    
+    /* Judo */
+    spansCategorias[3].addEventListener("click", ()=>{
+        menu(divSubmenuJudo, aMenuJudo);
+        ocultar(divSubmenuTkd, aMenuTkd);
+        ocultar(divSubmenuBoxeo, aMenuBoxeo);
+        ocultar(divSubmenuKick, aMenuKick);
+        ocultar(divSubmenuJiu, aMenuJiu);
+        ocultar(divSubmenuEntrenam, aMenuEntrenam);
+    })
+    
+    /* Jiu-Jitsu */
+    spansCategorias[4].addEventListener("click", ()=>{
+        menu(divSubmenuJiu, aMenuJiu);
+        ocultar(divSubmenuTkd, aMenuTkd);
+        ocultar(divSubmenuBoxeo, aMenuBoxeo);
+        ocultar(divSubmenuKick, aMenuKick);
+        ocultar(divSubmenuJudo, aMenuJudo);
+        ocultar(divSubmenuEntrenam, aMenuEntrenam);
+    })
+    
+    /* Entrenamiento */
+    spansCategorias[5].addEventListener("click", ()=>{
+        menu(divSubmenuEntrenam, aMenuEntrenam);
+        ocultar(divSubmenuTkd, aMenuTkd);
+        ocultar(divSubmenuBoxeo, aMenuBoxeo);
+        ocultar(divSubmenuKick, aMenuKick);
+        ocultar(divSubmenuJudo, aMenuJudo);
+        ocultar(divSubmenuJiu, aMenuJiu);
+    })
+    
 })
