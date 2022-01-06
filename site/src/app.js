@@ -15,7 +15,10 @@ const usersRouter = require('./routes/usersRouter');
 const detailRouter = require("./routes/detailRouter"); 
 const categoriasRouter = require("./routes/categoriasRouter");
 const adminRouter = require("./routes/adminRouter");
-const productsRouter = require("./routes/productsRouter")
+const productsRouter = require("./routes/productsRouter");
+
+/* /////////////////Archivos de rutas (APIs)////////////////////// */
+const apiProductRouter = require("./routes/api/apiProductRouter");
 
 const app = express();
 
@@ -40,6 +43,9 @@ app.use('/product', detailRouter);
 app.use('/products', productsRouter); //Todos los productos
 app.use('/categories', categoriasRouter); //Ruta para las categorías
 app.use('/admin', adminRouter); //Ruta para las admin
+
+/* /////////////////Archivos de rutas (APIs)////////////////////// */
+app.use('/api/products', apiProductRouter);
 
 
 
