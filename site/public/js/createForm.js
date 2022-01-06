@@ -4,7 +4,7 @@ window.addEventListener('load', () =>{
     const qs = (tag) => {
         return document.querySelector(tag)
     }
-
+   
     // VALIDACION //
     var validate
 
@@ -121,7 +121,8 @@ window.addEventListener('load', () =>{
     const bttnCrear = qs('#send')
 
     bttnCrear.disabled = true
-    bttnCrear.style.backgroundColor = 'gray'
+    bttnCrear.style.backgroundColor = 'gray';
+
 
 
 
@@ -436,21 +437,55 @@ window.addEventListener('load', () =>{
         funcValidate(validate)
     })
     
-    ///validación de las categorías de producto////
+    ///Categorías ////
     
-    /*for ( let i = 0; i < categorias.length; i++) {
-        console.log(categorias[i])
 
-        if (categorias[i].checked === true) {
-            validate.categoria = true
+    /* Objeto con el estado inicial de cada checkbox */
+    let objCategorias = {
+            tkd : categorias[0].checked,
+            box : categorias[1].checked, 
+            cross : categorias[2].checked,
+            judo: categorias[3].checked, 
+            jiu: categorias[4].checked,
+            kick: categorias[5].checked
+        }
 
+    /* Array con todos los estados de los checkboxes */
+    let arrC = Object.values(objCategorias);
+
+    /* Función que verifica que al menos haya un checkbox con checked=true */
+     const validateCategory = () => {        
+    
+        if(arrC.includes(true) === true){
+            validate.categoria = true;
+            smallCategoria.innerHTML = ""
         } else {
-
-            validate.categoria = false
+            validate.categoria = false;
+            smallCategoria.innerHTML = "El producto debe tener como mínimo una categoría"
 
         }
-        funcValidate(validate)
-    } */
+    }
 
+    /* Cada checkbox tiene un evento change. Al chequear o deschequear se ejecutan las funciones */
+    for ( let i = 0; i < categorias.length; i++) {
+        categorias[i].addEventListener("change", (e)=>{
+            if(arrC[i] === true){
+                console.log("Unchecked!");
+                arrC[i] = false
+                validateCategory();
+                funcValidate(validate);
+                
+            }else{
+                arrC[i] = true
+                console.log("Checked!");
+                validateCategory();
+                funcValidate(validate);
+                
+            }
+            console.log(validate,);
+            
+            
+        })
+    }
+ 
 })
-
