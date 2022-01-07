@@ -20,7 +20,7 @@
 
                 <!-- /////Nombre de Producto///// -->
                 <div>
-                    <p>Nombre de Producto</p>
+                    <p>Nombre de Producto *</p>
                     <div class= "selec info_titulo_container">
                         <input class="validar" type="text" id="nombreDeProducto" name="nombre" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.nombre ? oldData.nombre : null %> >
                         <i class="error fas fa-times" id="errorNombreProducto"></i>
@@ -38,7 +38,7 @@
                 
                 <!-- /////Descripcion de Producto///// -->
             <div>
-                <p>Ingresá una descripción</p>
+                <p>Ingresá una descripción *</p>
                 <div class= "selec info_des_container">
                     <textarea class="validar" name="descripcion" id="descripcion" placeholder="Ingresá una descripción" required ><%= locals.oldData && oldData.descripcion ? oldData.descripcion : null %></textarea>
                     <i class="error fas fa-times" id="errorDescripcion"></i>
@@ -478,7 +478,7 @@
                 
                 <!-- /////Marca de Producto///// -->
             <div> 
-                <p>Marca</p>
+                <p>Marca *</p>
                 <div class= "selec info_titulo_container">
                     <input class="validar" type="text" id="marca" name="marca" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.marca ? oldData.marca : null %> >
                     <i class="error fas fa-times" id="errorMarca"></i>
@@ -494,7 +494,7 @@
                 
                 <!-- /////Precio de producto///// -->
             <div>
-                <p>Precio $</p>
+                <p>Precio *</p>
                 <div class= "selec info_precio_container">
                     <input class="validar" type="number" id="precio" name="precio" placeholder="Ingresá un precio" value=<%= locals.oldData && oldData.precio ? oldData.precio : null %> required >
                     <i class="error fas fa-times" id="errorPrecio"></i>
@@ -510,7 +510,7 @@
                 <!-- /////Stock de producto///// -->
             <div>
                 <div class= "selec info_precio_container">
-                    <p>Stock</p>
+                    <p>Stock *</p>
                     <input class="validar" type="number" id="stock" name="stock" placeholder="Ingresá un stock" value=<%= locals.oldData && oldData.stock ? oldData.stock : null %> required >
                     <i class="error fas fa-times" id="errorStock"></i>
                     <i class="check fas fa-check" id="checkStock"></i>
@@ -533,7 +533,7 @@
                 </div>
                 <!-- /////categoria de producto///// -->
 
-                <p>Categoría</p>
+                <p>Categoría *</p>
                 
                 <div class= "selec info_categoria_container">
                     
@@ -637,7 +637,7 @@
 
                 <!-- ////Eligir archivo//// -->
                 <div class="inputs">
-                    <label for="imagenDeProducto" id="labelImagen">Imagen del producto</label>
+                    <label for="imagenDeProducto" id="labelImagen">Imagen del producto *</label>
                     <input type="file" accept="image/*" id="imagenDeProducto" name="imagenes" multiple>
                     
                     <% if (locals.errors && errors.imagenes) { %>
