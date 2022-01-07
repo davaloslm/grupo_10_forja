@@ -30,7 +30,7 @@
                         <!-- /////Nombre de Producto///// -->
 
                         <div>
-                            <p>Nombre de Producto</p>
+                            <p>Nombre de Producto *</p>
                             <div class="selec info_titulo_container">
                             <input class="validar" type="text" 
                             id="nombreDeProducto" name="nombre" value="<%= producto.nombre %>">
@@ -46,7 +46,7 @@
 
                         <!-- /////Descripcion de Producto///// -->
                         <div>
-                            <p>Ingresá una descripción</p>
+                            <p>Ingresá una descripción *</p>
                             <div class="selec info_des_container">
                                 <textarea class="validar" name="descripcion" id="descripcion"><%= producto.descripcion %></textarea>
                                 <i class="error fas fa-times" id="errorDescripcion"></i>
@@ -424,9 +424,9 @@
 
                         <!-- /////Marca de Producto///// --> 
                     <div> 
-                        <p>Marca</p>
+                        <p>Marca *</p>
                         <div class= "selec info_titulo_container">
-                            <input class="validar" type="text" id="marca" name="marca" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.marca ? oldData.marca : null %> >
+                            <input class="validar" type="text" id="marca" name="marca" placeholder="Ingresá un título" value="<%= producto.marca %>" required >
                             <i class="error fas fa-times" id="errorMarca"></i>
                             <i class="check fas fa-check" id="checkMarca"></i>
                         </div>
@@ -439,7 +439,7 @@
                         
                         <!-- /////Precio de producto///// -->
                     <div>
-                        <p>Precio $</p>
+                        <p>Precio *</p>
                         <div class="selec info_precio_container">
                             <input class="validar" type="number" 
                             id="precio" name="precio" value="<%= producto.precio %>">
@@ -456,8 +456,8 @@
                     <!-- /////Stock de producto///// -->
                     <div>
                         <div class= "selec info_precio_container">
-                            <p>Stock</p>
-                            <input class="validar" type="number" id="stock" name="stock" placeholder="Ingresá un stock" value=<%= locals.oldData && oldData.stock ? oldData.stock : null %> required >
+                            <p>Stock *</p>
+                            <input class="validar" type="number" id="stock" name="stock" placeholder="Ingresá un stock" value="<%= producto.stock %>" required >
                             <i class="error fas fa-times" id="errorStock"></i>
                             <i class="check fas fa-check" id="checkStock"></i>
                         </div>
@@ -473,7 +473,7 @@
                         <!-- /////Colores de producto///// -->
                         <div class="selec color_container">
                             <p>Colores</p>
-                            <input class="color0"id="inputColores" type="checkbox" name="color" value="Rojo"
+                            <input class="clr color0"id="inputColores" type="checkbox" name="color" value="Rojo"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Rojo') { %>
                                     checked
@@ -481,7 +481,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color1"id="inputColores" type="checkbox" name="color" value="Blanco"
+                            <input class="clr color1"id="inputColores" type="checkbox" name="color" value="Blanco"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Blanco') { %>
                                     checked
@@ -489,7 +489,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color2"id="inputColores" type="checkbox" name="color" value="Violeta"
+                            <input class="clr color2"id="inputColores" type="checkbox" name="color" value="Violeta"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Violeta') { %>
                                     checked
@@ -497,7 +497,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color3"id="inputColores" type="checkbox" name="color" value="Rosado"
+                            <input class="clr color3"id="inputColores" type="checkbox" name="color" value="Rosado"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Rosado') { %>
                                     checked
@@ -505,7 +505,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color4"id="inputColores" type="checkbox" name="color" value="Azul"
+                            <input class="clr color4"id="inputColores" type="checkbox" name="color" value="Azul"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Azul') { %>
                                     checked
@@ -513,7 +513,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color5"id="inputColores" type="checkbox" name="color" value="Amarillo"
+                            <input class="clr color5"id="inputColores" type="checkbox" name="color" value="Amarillo"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Amarillo') { %>
                                     checked
@@ -521,7 +521,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color6"id="inputColores" type="checkbox" name="color" value="Negro"
+                            <input class="clr color6"id="inputColores" type="checkbox" name="color" value="Negro"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Negro') { %>
                                     checked
@@ -529,7 +529,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color7"id="inputColores" type="checkbox" name="color" value="Verde claro"
+                            <input class="clr color7"id="inputColores" type="checkbox" name="color" value="Verde claro"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Verde claro') { %>
                                     checked
@@ -537,7 +537,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color8"id="inputColores" type="checkbox" name="color" value="Verde oscuro"
+                            <input class="clr color8"id="inputColores" type="checkbox" name="color" value="Verde oscuro"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Verde oscuro') { %>
                                     checked
@@ -545,7 +545,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color9"id="inputColores" type="checkbox" name="color" value="Celeste"
+                            <input class="clr color9"id="inputColores" type="checkbox" name="color" value="Celeste"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Celeste') { %>
                                     checked
@@ -553,7 +553,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color10"id="inputColores" type="checkbox" name="color" value="Naranja"
+                            <input class="clr color10"id="inputColores" type="checkbox" name="color" value="Naranja"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Naranja') { %>
                                     checked
@@ -561,7 +561,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color11"id="inputColores" type="checkbox" name="color" value="Gris"
+                            <input class="clr color11"id="inputColores" type="checkbox" name="color" value="Gris"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Gris') { %>
                                     checked
@@ -569,7 +569,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color12"id="inputColores" type="checkbox" name="color" value="Fucsia"
+                            <input class="clr color12"id="inputColores" type="checkbox" name="color" value="Fucsia"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Fucsia') { %>
                                     checked
@@ -577,7 +577,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color13"id="inputColores" type="checkbox" name="color" value="Bordó"
+                            <input class="clr color13"id="inputColores" type="checkbox" name="color" value="Bordó"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Bordó') { %>
                                     checked
@@ -585,7 +585,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color14"id="inputColores" type="checkbox" name="color" value="Marrón"
+                            <input class="clr color14"id="inputColores" type="checkbox" name="color" value="Marrón"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Marrón') { %>
                                     checked
@@ -593,7 +593,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color15"id="inputColores" type="checkbox" name="color" value="Dorado"
+                            <input class="clr color15"id="inputColores" type="checkbox" name="color" value="Dorado"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Dorado') { %>
                                     checked
@@ -601,7 +601,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color16"id="inputColores" type="checkbox" name="color" value="Beige"
+                            <input class="clr color16"id="inputColores" type="checkbox" name="color" value="Beige"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Beige') { %>
                                     checked
@@ -609,7 +609,7 @@
                                 
                             <% } %>
                             >
-                            <input class="color17"id="inputColores" type="checkbox" name="color" value="Plateado"
+                            <input class="clr color17"id="inputColores" type="checkbox" name="color" value="Plateado"
                             <% for (let i = 0; i < producto.color.length; i++) { %>
                                 <% if (producto.color[i].nombre === 'Plateado') { %>
                                     checked
@@ -622,7 +622,7 @@
 
 
                         <!-- /////categoria de producto///// -->
-                        <p>Categoría</p>
+                        <p>Categoría *</p>
 
 
                             <div class="selec info_categoria_container">
@@ -690,7 +690,6 @@
                                         <% } %>
                                         >
                                     </div>
-                                        
                                 
                                     <div>
                                         <label for="KickBoxing/MuayThai">KickBoxing/MuayThai</label>
@@ -717,7 +716,7 @@
 
                     <!-- ////imagen de archivo//// -->
                     <div class="inputs">
-                        <label  for="imagenDeProducto" id="labelImagen">Imagen del producto</label>
+                        <label  for="imagenDeProducto" id="labelImagen">Imagen del producto *</label>
                         <input type="file" id="imagenDeProducto" accept="image/*" name="imagenes" multiple>
                         <div id="previews"></div>
                         <small class="errors" id="smallsImagenDeProducto"></small>
@@ -750,9 +749,9 @@
             </form>
             </section>
             <section class="delete_container">
-                        <form action="/admin/edit/<%=producto.id%>?_method=DELETE" method="POST">
+                        <form id="eliminar" action="/admin/edit/<%=producto.id%>?_method=DELETE" method="POST">
 
-                            <button type="submit">Eliminar producto</button>
+                            <button type="submit" >Eliminar producto</button>
                         </form>
                     </section>
         </main>
@@ -760,4 +759,5 @@
 </body>
 <script src="../../../js/createForm.js"></script>
 <script src="../../../js/general.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>

@@ -4,7 +4,7 @@ const newProductValidator = [
 body('imagenes')
     .custom((value, { req }) => {
     let imagenes = []
-    console.log([req.files]);
+
     req.files.forEach(image => {
         imagenes.push(image.filename)
     });
