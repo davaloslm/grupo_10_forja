@@ -26,8 +26,13 @@
                         <i class="error fas fa-times" id="errorNombreProducto"></i>
                         <i class="check fas fa-check" id="checkNombreProducto"></i>
                     </div>
-                        
-    
+                    <% if (locals.errors && errors.nombre) { %>
+                    <small class="errors"><%= errors.nombre.msg %></small>
+                    
+                    <% } %>
+                    
+                    <small class="errors" id="smallsNombreProducto"></small>      
+                </div>
                     
 
                 
@@ -55,321 +60,413 @@
 
                         <small class="errors" id="smallsEnvioGratis"></small>
                     </div>
-                    <% if (locals.errors && errors.descripcion) { %>
-                        <small class="errors"><%= errors.descripcion.msg %></small>
                     
-                    <% } %>
-                    <small class="errors" id="smallsDescripcion"></small>
-                </div>
-    
-    
-                    <!-- ////////selector de enviar//////// -->
-                    <div class="descuento_envio_container">
-                        <div class="envio_container">
-                            <input type="checkbox" name="envioGratis" id="envio" <%= locals.oldData && oldData.envioGratis ? "checked" : null %> >
-                            <label for="envio">Envío</label>
-    
-                            <small class="errors" id="smallsEnvioGratis"></small>
-                        </div>
-                        
-    
-                        <!-- ///////selector de % y Descuento /////// -->
-                        <div class="descuento_container">
-                            <label for="descuento">Descuento</label>
-                            <select name="descuento" id="Descuento">
-                                <option value="0" selected hidden>Seleccione %</option>
-                                <option value="0" <%= locals.oldData && ("0" === oldData.descuento) ? 'selected' : null %> >0% </option>
-                                <option value="5" <%= locals.oldData && ("5" === oldData.descuento) ? 'selected' : null %> >5% </option>
-                                <option value="10" <%= locals.oldData && ("10" === oldData.descuento) ? 'selected' : null %> >10% </option>
-                                <option value="15" <%= locals.oldData && ("15" === oldData.descuento) ? 'selected' : null %> >15% </option>
-                                <option value="20" <%= locals.oldData && ("20" === oldData.descuento) ? 'selected' : null %> >20% </option>
-                                <option value="25" <%= locals.oldData && ("25" === oldData.descuento) ? 'selected' : null %> >25% </option>
-                            </select>
-                            <small class="errors" id="smallsDescuento"></small>
-                        </div>
-    
+
+                    <!-- ///////selector de % y Descuento /////// -->
+                    <div class="descuento_container">
+                        <label for="descuento">Descuento</label>
+                        <select name="descuento" id="Descuento">
+                            <option value="0" selected hidden>Seleccione %</option>
+                            <option value="0" <%= locals.oldData && ("0" === oldData.descuento) ? 'selected' : null %> >0% </option>
+                            <option value="5" <%= locals.oldData && ("5" === oldData.descuento) ? 'selected' : null %> >5% </option>
+                            <option value="10" <%= locals.oldData && ("10" === oldData.descuento) ? 'selected' : null %> >10% </option>
+                            <option value="15" <%= locals.oldData && ("15" === oldData.descuento) ? 'selected' : null %> >15% </option>
+                            <option value="20" <%= locals.oldData && ("20" === oldData.descuento) ? 'selected' : null %> >20% </option>
+                            <option value="25" <%= locals.oldData && ("25" === oldData.descuento) ? 'selected' : null %> >25% </option>
+                        </select>
+                        <small class="errors" id="smallsDescuento"></small>
                     </div>
-                </section>
-    
-                <section class="info_container">
-    
-    
-     <!-- /////seccion de talla///// -->
-                <p>Tallas</p>
-                
-                <div class="tallas">
-    
-                    <div>
-                        <label for="M0">M0</label>
-                        <input class="m"id="M0" type="checkbox" name="talle" value="M0" 
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                        <% if (oldData.talle.includes("M0")) { %>
+
+                </div>
+            </section>
+
+            <section class="info_container">
+
+
+ <!-- /////seccion de talla///// -->
+            <p>Tallas</p>
+            
+            <div class="tallas">
+
+                <div>
+                    <label for="M0">M0</label>
+                    <input class="m"id="M0" type="checkbox" name="talle" value="M0" 
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                    <% if (oldData.talle.includes("M0")) { %>
+                    checked
+                    <% } else { %>
+                        null
+                        <% } %>
+                    <% } %>
+                    >
+                </div>
+
+
+                <div>
+                    <label for="M1">M1</label>
+                    <input class="m"id="M1" type="checkbox" name="talle"value="M1" 
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("M1")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+                <div>
+                    <label for="M2">M2</label>
+                    <input class="m"id="M2" type="checkbox" name="talle" value="M2"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("M2")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+
+                <div>
+                    <label for="M3">M3</label>
+                    <input class="m"id="M3" type="checkbox" name="talle" value="M3"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("M3")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+                    
+            </div>
+
+            <div class="tallas">
+
+                <div>
+                    <label for="A0">A0</label>
+                    <input class="m"id="A0" type="checkbox" name="talle" value="A0"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("A0")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+                <div>
+                    <label for="A1">A1</label>
+                    <input class="nl" id="A1" type="checkbox" name="talle" value="A1"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("A1")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+
+                <div>
+                    <label for="A2">A2</label>
+                    <input class="nl" type="checkbox" id="A2"name="talle" value="A2"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("A2")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+
+                <div>
+                    <label for="A3">A3</label>
+                    <input class="nl" type="checkbox" id="A3"name="talle" value="A3"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("A3")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+
+                <div>
+                    <label for="A4">A4</label>
+                    <input class="nl" type="checkbox" id="A4"name="talle" value="A4"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("A4")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+
+                <div>
+                    <label for="A5">A5</label>
+                    <input class="nl" type="checkbox" id="A5"name="talle" value="A5"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("A5")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+            </div>
+
+
+            <div class="tallas">
+                    
+                <div>
+                    <label for="0">0</label>
+                    <input class="nl" type="checkbox" id="0"name="talle" value="0"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("0")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+                <div>
+                    <label for="1">1</label>
+                    <input class="nl" type="checkbox" id="1"name="talle" value="1"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("1")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+
+                <div>
+                    <label for="2">2</label>
+                    <input class="nl" type="checkbox" id="2"name="talle" value="2"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("2")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %> 
+                    >
+                </div>
+
+
+                <div>
+                    <label for="3">3</label>
+                    <input class="nl" type="checkbox" id="3"name="talle" value="3"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("3")) { %>
                         checked
                         <% } else { %>
                             null
                             <% } %>
                         <% } %>
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="M1">M1</label>
-                        <input class="m"id="M1" type="checkbox" name="talle"value="M1" 
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("M1")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
-                    <div>
-                        <label for="M2">M2</label>
-                        <input class="m"id="M2" type="checkbox" name="talle" value="M2"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("M2")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="M3">M3</label>
-                        <input class="m"id="M3" type="checkbox" name="talle" value="M3"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("M3")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-                        
+                    >
                 </div>
-    
-                <div class="tallas">
-    
-                    <div>
-                        <label for="A0">A0</label>
-                        <input class="m"id="A0" type="checkbox" name="talle" value="A0"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("A0")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
-                    <div>
-                        <label for="A1">A1</label>
-                        <input class="nl" id="A1" type="checkbox" name="talle" value="A1"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("A1")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="A2">A2</label>
-                        <input class="nl" type="checkbox" id="A2"name="talle" value="A2"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("A2")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="A3">A3</label>
-                        <input class="nl" type="checkbox" id="A3"name="talle" value="A3"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("A3")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="A4">A4</label>
-                        <input class="nl" type="checkbox" id="A4"name="talle" value="A4"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("A4")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="A5">A5</label>
-                        <input class="nl" type="checkbox" id="A5"name="talle" value="A5"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("A5")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
+
+
+                <div>
+                    <label for="4">4</label>
+                    <input class="nl" type="checkbox" id="4"name="talle" value="4"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("4")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %>
+                    >
                 </div>
-    
-    
-                <div class="tallas">
-                        
-                    <div>
-                        <label for="0">0</label>
-                        <input class="nl" type="checkbox" id="0"name="talle" value="0"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("0")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
-                    <div>
-                        <label for="1">1</label>
-                        <input class="nl" type="checkbox" id="1"name="talle" value="1"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("1")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="2">2</label>
-                        <input class="nl" type="checkbox" id="2"name="talle" value="2"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("2")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %> 
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="3">3</label>
-                        <input class="nl" type="checkbox" id="3"name="talle" value="3"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("3")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
+
+
+                <div>
+                    <label for="5">5</label>
+                    <input class="nl" type="checkbox" id="5"name="talle" value="5"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("5")) { %>
+                        checked
+                        <% } else { %>
+                            null
                             <% } %>
-                        >
-                    </div>
-    
-    
+                        <% } %>
+                    >
+                </div>
+
+
+                <div>
+                    <label for="6">6</label>
+                    <input class="nl" type="checkbox" id="6"name="talle" value="6"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("6")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %>
+                    >
+                </div>
+
+
+                <div>
+                    <label for="7">7</label>
+                    <input class="nl" type="checkbox" id="7"name="talle" value="7"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("7")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %>
+                    >
+                </div>
+
+
+                <div>
+                    <label for="8">8</label>
+                    <input class="nl" type="checkbox" id="8"name="talle" value="8"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("8")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %>
+                    >
+                </div>
+
+
+                <div>
+                    <label for="9">9</label>
+                    <input class="nl" type="checkbox" id="9"name="talle" value="9"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("9")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %>
+                    >
+                </div>
+               
+            </div>
+
+
+            <div class="tallas">
+
+
+                <div>
+                    <label for="L">L</label>
+                    <input class="nl" type="checkbox" id="L"name="talle" value="L"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("L")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %>
+                    >
+                </div>
+
+
+                <div>
+                    <label for="S">S</label>
+                    <input class="nl" type="checkbox" id="S"name="talle" value="S"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("S")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %>
+                    >
+                </div>
+
+
+                <div>
+                    <label for="M">M</label>
+                    <input class="nl" type="checkbox" id="M"name="talle" value="M"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("M")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %>
+                    >
+                </div>
+
+                <div>
+                    <label for="XL">XL</label>
+                    <input class="nl" type="checkbox" id="XL"name="talle" value="XL"
+                    <% if(locals.oldData && oldData.talle) { %>
+
+                        <% if (oldData.talle.includes("XL")) { %>
+                        checked
+                        <% } else { %>
+                            null
+                            <% } %>
+                        <% } %>
+                    >
+                </div>
+
                     <div>
-                        <label for="4">4</label>
-                        <input class="nl" type="checkbox" id="4"name="talle" value="4"
+                        <label for="XXL">XXL</label>
+                        <input class="nl" type="checkbox" id="XXL"name="talle" value="XXL"
                         <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("4")) { %>
+
+                             <% if (oldData.talle.includes("XXL")) { %>
                             checked
                             <% } else { %>
                                 null
-                                <% } %>
-                            <% } %>
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="5">5</label>
-                        <input class="nl" type="checkbox" id="5"name="talle" value="5"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("5")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %>
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="6">6</label>
-                        <input class="nl" type="checkbox" id="6"name="talle" value="6"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("6")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %>
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="7">7</label>
-                        <input class="nl" type="checkbox" id="7"name="talle" value="7"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("7")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %>
-                        >
+                               <% } %>
+                        <% } %>
+                    >
                     </div>
                     
             </div>
@@ -454,121 +551,83 @@
                                 <% } %>
                             <% } %>
                         >
-                    </div>
-    
-    
-                    <div>
-                        <label for="9">9</label>
-                        <input class="nl" type="checkbox" id="9"name="talle" value="9"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("9")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %>
-                        >
-                    </div>
-                   
-                </div>
-    
-    
-                <div class="tallas">
-    
-    
-                    <div>
-                        <label for="L">L</label>
-                        <input class="nl" type="checkbox" id="L"name="talle" value="L"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("L")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %>
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="S">S</label>
-                        <input class="nl" type="checkbox" id="S"name="talle" value="S"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("S")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %>
-                        >
-                    </div>
-    
-    
-                    <div>
-                        <label for="M">M</label>
-                        <input class="nl" type="checkbox" id="M"name="talle" value="M"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("M")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %>
-                        >
-                    </div>
-    
-                    <div>
-                        <label for="XL">XL</label>
-                        <input class="nl" type="checkbox" id="XL"name="talle" value="XL"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("XL")) { %>
-                            checked
-                            <% } else { %>
-                                null
-                                <% } %>
-                            <% } %>
-                        >
-                    </div>
-    
+                        </div>
+
                         <div>
-                            <label for="XXL">XXL</label>
-                            <input class="nl" type="checkbox" id="XXL"name="talle" value="XXL"
-                            <% if(locals.oldData && oldData.talle) { %>
-    
-                                 <% if (oldData.talle.includes("XXL")) { %>
-                                checked
-                                <% } else { %>
-                                    null
-                                   <% } %>
+                        <label for="Boxeo">Boxeo</label>
+                        <input class="m" name="categoria" id="Boxeo" type="checkbox" value="2"
+                        <% if(locals.oldData && oldData.categoria) { %>
+
+                            <% if (oldData.categoria.includes("Boxeo")) { %>
+                            checked
+                            <% } else { %>
+                                null
+                                <% } %>
                             <% } %>
                         >
                         </div>
-                        
-                </div>
-    
-    
-    
-                    
-                    
-                    
-                    <!-- /////Marca de Producto///// -->
-                <div> 
-                    <p>Marca</p>
-                    <div class= "selec info_titulo_container">
-                        <input class="validar" type="text" id="marca" name="marca" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.marca ? oldData.marca : null %> >
-                        <i class="error fas fa-times" id="errorMarca"></i>
-                        <i class="check fas fa-check" id="checkMarca"></i>
+
+                        <div>
+                        <label for="EntrenamientoFuncional/Crossfit">Funcional/Crossfit</label>
+                        <input class="m" name="categoria" id="EntrenamientoFuncional/Crossfit" type="checkbox" value="6"
+                        <% if(locals.oldData && oldData.categoria) { %>
+
+                            <% if (oldData.categoria.includes("Funcional/Cross")) { %>
+                            checked
+                            <% } else { %>
+                                null
+                                <% } %>
+                            <% } %>
+                        >
+                        </div>
+
                     </div>
-                    <% if (locals.errors && errors.marca) { %>
-                        <small class="errors"><%= errors.marca.msg %></small>
-                    
-                    <% } %>
-                    <small class="errors" id="smallsMarca"></small>
+
+                    <div class="Categoria2">
+                        <div>
+                        <label for="Jupo">Judo</label>
+                        <input class="m" name="categoria" id="Judo" type="checkbox" value="Judo"
+                        <% if(locals.oldData && oldData.categoria) { %>
+
+                            <% if (oldData.categoria.includes("3")) { %>
+                            checked
+                            <% } else { %>
+                                null
+                                <% } %>
+                            <% } %>
+                        >
+                        </div>
+
+                        <div>
+                        <label for="Jiu-Jitsu">Jiu-Jitsu</label>
+                        <input class="m"  name="categoria" id="Jiu-Jitsu" type="checkbox" value="4"
+                        <% if(locals.oldData && oldData.categoria) { %>
+
+                            <% if (oldData.categoria.includes("Jiu-Jitsu")) { %>
+                            checked
+                            <% } else { %>
+                                null
+                                <% } %>
+                            <% } %>
+                        >
+                        </div>
+
+                        <div>
+                        <label for="KickBoxing/MuayThai">KickBoxing/MuayThai</label>
+                        <input class="m" name="categoria" id="KickBoxing/MuayThai" type="checkbox" value="5"
+                        <% if(locals.oldData && oldData.categoria) { %>
+
+                            <% if (oldData.categoria.includes("KickBoxing/MuayThai")) { %>
+                            checked
+                            <% } else { %>
+                                null
+                                <% } %>
+                            <% } %>
+                        >
+                        </div>
+
+
+                    </div>
                 </div>
                 <% if (locals.errors && errors.categoria) { %>
                     <small class="errors"><%= errors.categoria.msg %></small>
@@ -581,163 +640,14 @@
                     <label for="imagenDeProducto" id="labelImagen">Imagen del producto *</label>
                     <input type="file" accept="image/*" id="imagenDeProducto" name="imagenes" multiple>
                     
-                    
-                    <!-- /////Precio de producto///// -->
-                <div>
-                    <p>Precio $</p>
-                    <div class= "selec info_precio_container">
-                        <input class="validar" type="number" id="precio" name="precio" placeholder="Ingresá un precio" value=<%= locals.oldData && oldData.precio ? oldData.precio : null %> required >
-                        <i class="error fas fa-times" id="errorPrecio"></i>
-                        <i class="check fas fa-check" id="checkPrecio"></i>
-                    </div>
-                    <% if (locals.errors && errors.precio) { %>
-                        <small class="errors"><%= errors.precio.msg %></small>
+                    <% if (locals.errors && errors.imagenes) { %>
+                        <small class="errors"><%= errors.imagenes.msg %></small>
                     
                     <% } %>
-                    <small class="errors" id="smallsPrecio"></small>
+                    <div id="previews"></div>
+                    <small class="errors" id="smallsImagenDeProducto"></small>
                 </div>
-    
-                    <!-- /////Stock de producto///// -->
-                <div>
-                    <div class= "selec info_precio_container">
-                        <p>Stock</p>
-                        <input class="validar" type="number" id="stock" name="stock" placeholder="Ingresá un stock" value=<%= locals.oldData && oldData.stock ? oldData.stock : null %> required >
-                        <i class="error fas fa-times" id="errorStock"></i>
-                        <i class="check fas fa-check" id="checkStock"></i>
-                    </div>
-                    <% if (locals.errors && errors.stock) { %>
-                        <small class="errors"><%= errors.stock.msg %></small>
-                    
-                    <% } %>
-                    <small class="errors" id="smallsStock"></small>
-                </div>    
-                    
-    
-                    <!-- /////Colores de producto///// -->
-                    <div class= "selec color_container">
-                        <p>Colores</p>
-                        <% let arrayColores = ['Rojo','Blanco','Violeta','Rosado','Azul','Amarillo', 'Negro', 'Verde claro', 'Verde oscuro', 'Celeste', 'Naranja', 'Gris', 'Fucsia', 'Bordó', 'Marrón', 'Dorado', 'Beige', 'Plateado'] %>
-                        <% for (let i = 0; i < arrayColores.length; i++) { %>
-                            <input id="inputColores" class="color<%= i %>" type="checkbox" name="color" value="<%= arrayColores[i] %>">
-                        <% } %>
-                    </div>
-                    <!-- /////categoria de producto///// -->
-    
-                    <p>Categoría</p>
-                    
-                    <div class= "selec info_categoria_container">
-                        
-                        
-                        <div class="Categoria1">
-                            <div>
-                            <label for="taekwon-Do">Taekwon-Do</label>
-                            <input class="m" name="categoria" id="taekwon-Do" type="checkbox" value="1"
-                            <% if(locals.oldData && oldData.categoria) { %>
-    
-                                <% if (oldData.categoria.includes("TaeKwon-Do")) { %>
-                                checked
-                                <% } else { %>
-                                    null
-                                    <% } %>
-                                <% } %>
-                            >
-                            </div>
-    
-                            <div>
-                            <label for="Boxeo">Boxeo</label>
-                            <input class="m" name="categoria" id="Boxeo" type="checkbox" value="2"
-                            <% if(locals.oldData && oldData.categoria) { %>
-    
-                                <% if (oldData.categoria.includes("Boxeo")) { %>
-                                checked
-                                <% } else { %>
-                                    null
-                                    <% } %>
-                                <% } %>
-                            >
-                            </div>
-    
-                            <div>
-                            <label for="EntrenamientoFuncional/Crossfit">Funcional/Crossfit</label>
-                            <input class="m" name="categoria" id="EntrenamientoFuncional/Crossfit" type="checkbox" value="6"
-                            <% if(locals.oldData && oldData.categoria) { %>
-    
-                                <% if (oldData.categoria.includes("Funcional/Cross")) { %>
-                                checked
-                                <% } else { %>
-                                    null
-                                    <% } %>
-                                <% } %>
-                            >
-                            </div>
-    
-                        </div>
-    
-                        <div class="Categoria2">
-                            <div>
-                            <label for="Jupo">Judo</label>
-                            <input class="m" name="categoria" id="Judo" type="checkbox" value="Judo"
-                            <% if(locals.oldData && oldData.categoria) { %>
-    
-                                <% if (oldData.categoria.includes("3")) { %>
-                                checked
-                                <% } else { %>
-                                    null
-                                    <% } %>
-                                <% } %>
-                            >
-                            </div>
-    
-                            <div>
-                            <label for="Jiu-Jitsu">Jiu-Jitsu</label>
-                            <input class="m"  name="categoria" id="Jiu-Jitsu" type="checkbox" value="4"
-                            <% if(locals.oldData && oldData.categoria) { %>
-    
-                                <% if (oldData.categoria.includes("Jiu-Jitsu")) { %>
-                                checked
-                                <% } else { %>
-                                    null
-                                    <% } %>
-                                <% } %>
-                            >
-                            </div>
-    
-                            <div>
-                            <label for="KickBoxing/MuayThai">KickBoxing/MuayThai</label>
-                            <input class="m" name="categoria" id="KickBoxing/MuayThai" type="checkbox" value="5"
-                            <% if(locals.oldData && oldData.categoria) { %>
-    
-                                <% if (oldData.categoria.includes("KickBoxing/MuayThai")) { %>
-                                checked
-                                <% } else { %>
-                                    null
-                                    <% } %>
-                                <% } %>
-                            >
-                            </div>
-    
-    
-                        </div>
-                    </div>
-                    <% if (locals.errors && errors.categoria) { %>
-                        <small class="errors"><%= errors.categoria.msg %></small>
-                    
-                    <% } %>
-                    <small class="errors" id="smallsCategoria"></small>
-    
-                    <!-- ////Eligir archivo//// -->
-                    <div class="inputs">
-                        <label for="imagenDeProducto" id="labelImagen">Imagen del producto</label>
-                        <input type="file" accept="image/*" id="imagenDeProducto" name="imagenes" multiple>
-                        
-                        <% if (locals.errors && errors.imagenes) { %>
-                            <small class="errors"><%= errors.imagenes.msg %></small>
-                        
-                        <% } %>
-                        <div id="previews"></div>
-                        <small class="errors" id="smallsImagenDeProducto"></small>
-                    </div>
-                </section>
+            </section>
 <!-- ///botones//// -->
             <section class="button_container">
                 <button class="boton" id="send" type="submit">Crear</button>
@@ -749,6 +659,7 @@
 </main>
     <%- include('../partials/footer')  %> 
 </body>
+
 <script src="../../../js/createForm.js"></script>
 <script src="../../../js/general.js"></script>
 </html> 

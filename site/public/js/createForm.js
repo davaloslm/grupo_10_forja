@@ -61,6 +61,28 @@ window.addEventListener('load', () =>{
                 bttnCrear.style.backgroundColor = '#2AD2D2'
             })
         }
+         ////////ALERTA de Elimonar producto////////
+        const alertaEliminar = qs('#eliminar');
+
+        /* alertaEliminar.addEventListener('click',()=> alert('Quiere borrar el producto')) */
+
+        alertaEliminar.addEventListener('submit', event =>{
+            event.preventDefault();
+            Swal.fire({
+                title: '¿Estas seguro?',
+                text: "¡No podrás revertirlo, una ves eliminado!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#2ad2d2',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'si, eliminar!',
+                cancelButtonText: 'No, cancelar!'
+            }).then((result) => {
+                if(result.isConfirmed){
+                    alertaEliminar.submit();
+                }
+            })
+        }) 
     }
 
     // Función para validar en línea //
@@ -78,28 +100,7 @@ window.addEventListener('load', () =>{
         }
     }
 
-    ////////ALERTA de Elimonar producto////////
-    const alertaEliminar = qs('#eliminar');
-
-    /* alertaEliminar.addEventListener('click',()=> alert('Quiere borrar el producto')) */
-
-    alertaEliminar.addEventListener('submit', event =>{
-        event.preventDefault();
-        Swal.fire({
-            title: '¿Estas seguro?',
-            text: "¡No podrás revertirlo, una ves eliminado!",
-            icon: 'warning',
-            showCancelButton: true,
-            confirmButtonColor: '#2ad2d2',
-            cancelButtonColor: '#d33',
-            confirmButtonText: 'si, eliminar!',
-            cancelButtonText: 'No, cancelar!'
-        }).then((result) => {
-            if(result.isConfirmed){
-                alertaEliminar.submit();
-            }
-        })
-    })    
+      
 
     
     
