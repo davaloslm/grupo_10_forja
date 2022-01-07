@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../partials/head')  %>
+    <title><%= busqueda %></title>
+</head>
+<body>
+    <%- include('../partials/header')  %>
+    <main class="todos">
+        <% if(productos.length > 0) { %>
+            <h1>Resultados con: <%= busqueda %></h1>
+            <section class="todos">
+                
+                <div class="todos_contenedor">
+                    <% productos.forEach(producto=>{%>
+                
+                    <% for (let i = 0; i < producto.imagen.length ; i++){ %> 
+                    <% if (producto.id == producto.imagen[i].productoId) { %>
+                        
+                        <article class="producto_des">
+
+                        <div class="image_container">
+                            <a href="/product/<%= producto.id %>"> <img src="/img/productos/<%= producto.imagen[i].nombre %>" alt="<%= producto.nombre %> "></a>
+                        </div>
+
+                        <div class="detail_container">
+                            <i class="fas fa-truck" id="envio"></i>
+                            <p class="precio">$ <%= producto.precio %> </p>
+                            <h4 class="titulo"><%= producto.nombre %> </h4>
+                            <p class="descripcion"><%= producto.descripcion %> </p>
+                        </div>
+
+                        </article>
+                    <% break } %>
+                    <% } %> 
+                    
+                    <% }) %> 
+                </div>
+            </section>
+        <% } else { %>
+            <h1>Lo sentimos, no se encontraron coincidencias de productos con tu búsqueda</h1>
+            <section class="todos">
+                
+            </section>
+        <% } %> 
+
+
+    </main>
+    <%- include('../partials/footer')  %>
+    
+</body>
+<script src="../../../js/general.js"></script>
+</html>

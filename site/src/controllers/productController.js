@@ -41,8 +41,38 @@ const controller = {
             res.send('Error al requerir producto de la base de datos')
             console.log('Error al requerir producto de la base de datos.', error);
         }
+    },
+    buscador: async (req, res) => {
+        try {
+            let busqueda = req.query.search.toLowerCase().trim()
+
+            let busquedaProductos = await db.Producto.findAll({
+                where: {
+                    [Op.or]: [{
+                            nombre: {
+                                [Op.substring]: busqueda
+                            }
+                        },
+                        {
+                            marca: {
+                                [Op.substring]: busqueda
+                            }
+                        },
+                    ]
+                },
+                include: [{
+                    all: true
+                }]
+            })
+
+            /* res.send(busquedaProductos) */
+            res.render('products/buscador', {productos: busquedaProductos, busqueda})
+            
+        } catch (error) {
+            res.send('Error al buscar los productos')
+            console.log('Error al buscar los productos.', error);
+        }
     }
-    
 
 
 }
