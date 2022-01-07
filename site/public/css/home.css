@@ -277,6 +277,7 @@
         border-radius: 50%;
         cursor: pointer;
         width: 37px;
+        display: none;
     }
 
     .home section.carrusel button.rightbttn {
