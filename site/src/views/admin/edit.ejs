@@ -749,9 +749,9 @@
             </form>
             </section>
             <section class="delete_container">
-                        <form action="/admin/edit/<%=producto.id%>?_method=DELETE" method="POST">
+                        <form id="eliminar" action="/admin/edit/<%=producto.id%>?_method=DELETE" method="POST">
 
-                            <button type="submit">Eliminar producto</button>
+                            <button type="submit" >Eliminar producto</button>
                         </form>
                     </section>
         </main>
@@ -759,4 +759,5 @@
 </body>
 <script src="../../../js/createForm.js"></script>
 <script src="../../../js/general.js"></script>
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </html>
