@@ -400,6 +400,7 @@ header nav button.cart {
 
    header nav div.menu ul.listaCategorias li.categorias span{
        text-transform: uppercase;
+       cursor: pointer;
    }
 
    header nav div.menu ul.listaCategorias li.categorias div.submenu a:hover{
