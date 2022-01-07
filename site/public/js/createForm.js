@@ -20,8 +20,7 @@ window.addEventListener('load', () =>{
             categoria: false,
         }
 
-    }else{
-        console.log("edit");
+    } else {
 
         validate = {
             imagenDeProducto: true,
@@ -33,7 +32,35 @@ window.addEventListener('load', () =>{
             categoria: true,
         }
 
+        const envioEdit = qs('#envio');
+        const descuentoEdit = qs('#Descuento');
+        const tallesArray = document.querySelectorAll('.nl')
+
+        const coloresArray = document.querySelectorAll('.clr');
+
+        envioEdit.addEventListener('change', () => {
+            bttnCrear.disabled = false
+            bttnCrear.style.backgroundColor = '#2AD2D2'
+        })
         
+        descuentoEdit.addEventListener('change', () => {
+            bttnCrear.disabled = false
+            bttnCrear.style.backgroundColor = '#2AD2D2'
+        })
+
+        for (const talle of tallesArray) {
+            talle.addEventListener('change', () => {
+                bttnCrear.disabled = false
+                bttnCrear.style.backgroundColor = '#2AD2D2'
+            })
+        }
+
+        for (const color of coloresArray) {
+            color.addEventListener('change', () => {
+                bttnCrear.disabled = false
+                bttnCrear.style.backgroundColor = '#2AD2D2'
+            })
+        }
     }
 
     // Función para validar en línea //

@@ -10,39 +10,50 @@
 
     <%- include('../partials/header')  %> 
 
-    <main class="create">
-        <section class="product_container">
-            <h1>Crear Producto  <i class="fas fa-box"></i></h1>
-    
-            <form class="todo_container" action="/admin" method="POST" enctype="multipart/form-data">
-    
-                <section class="visual_container">   
-    
-                    <!-- /////Nombre de Producto///// -->
-                    <div>
-                        <p>Nombre de Producto</p>
-                        <div class= "selec info_titulo_container">
-                            <input class="validar" type="text" id="nombreDeProducto" name="nombre" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.nombre ? oldData.nombre : null %> >
-                            <i class="error fas fa-times" id="errorNombreProducto"></i>
-                            <i class="check fas fa-check" id="checkNombreProducto"></i>
-                        </div>
-                        <% if (locals.errors && errors.nombre) { %>
-                        <small class="errors"><%= errors.nombre.msg %></small>
-                        
-                        <% } %>
-                        
-                        <small class="errors" id="smallsNombreProducto"></small>      
+ <main class="create">
+    <section class="product_container">
+        <h1>Crear Producto  <i class="fas fa-box"></i></h1>
+
+        <form class="todo_container" action="/admin" method="POST" enctype="multipart/form-data">
+
+            <section class="visual_container">   
+
+                <!-- /////Nombre de Producto///// -->
+                <div>
+                    <p>Nombre de Producto *</p>
+                    <div class= "selec info_titulo_container">
+                        <input class="validar" type="text" id="nombreDeProducto" name="nombre" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.nombre ? oldData.nombre : null %> >
+                        <i class="error fas fa-times" id="errorNombreProducto"></i>
+                        <i class="check fas fa-check" id="checkNombreProducto"></i>
                     </div>
                         
     
                     
-                    <!-- /////Descripcion de Producto///// -->
-                <div>
-                    <p>Ingresá una descripción</p>
-                    <div class= "selec info_des_container">
-                        <textarea class="validar" name="descripcion" id="descripcion" placeholder="Ingresá una descripción" required ><%= locals.oldData && oldData.descripcion ? oldData.descripcion : null %></textarea>
-                        <i class="error fas fa-times" id="errorDescripcion"></i>
-                        <i class="check fas fa-check" id="checkDescripcion"></i>
+
+                
+                <!-- /////Descripcion de Producto///// -->
+            <div>
+                <p>Ingresá una descripción *</p>
+                <div class= "selec info_des_container">
+                    <textarea class="validar" name="descripcion" id="descripcion" placeholder="Ingresá una descripción" required ><%= locals.oldData && oldData.descripcion ? oldData.descripcion : null %></textarea>
+                    <i class="error fas fa-times" id="errorDescripcion"></i>
+                    <i class="check fas fa-check" id="checkDescripcion"></i>
+                </div>
+                <% if (locals.errors && errors.descripcion) { %>
+                    <small class="errors"><%= errors.descripcion.msg %></small>
+                
+                <% } %>
+                <small class="errors" id="smallsDescripcion"></small>
+            </div>
+
+
+                <!-- ////////selector de enviar//////// -->
+                <div class="descuento_envio_container">
+                    <div class="envio_container">
+                        <input type="checkbox" name="envioGratis" id="envio" <%= locals.oldData && oldData.envioGratis ? "checked" : null %> >
+                        <label for="envio">Envío</label>
+
+                        <small class="errors" id="smallsEnvioGratis"></small>
                     </div>
                     <% if (locals.errors && errors.descripcion) { %>
                         <small class="errors"><%= errors.descripcion.msg %></small>
@@ -360,14 +371,83 @@
                             <% } %>
                         >
                     </div>
-    
-    
-                    <div>
-                        <label for="8">8</label>
-                        <input class="nl" type="checkbox" id="8"name="talle" value="8"
-                        <% if(locals.oldData && oldData.talle) { %>
-    
-                            <% if (oldData.talle.includes("8")) { %>
+                    
+            </div>
+
+
+
+                
+                
+                
+                <!-- /////Marca de Producto///// -->
+            <div> 
+                <p>Marca *</p>
+                <div class= "selec info_titulo_container">
+                    <input class="validar" type="text" id="marca" name="marca" placeholder="Ingresá un título" value=<%= locals.oldData && oldData.marca ? oldData.marca : null %> >
+                    <i class="error fas fa-times" id="errorMarca"></i>
+                    <i class="check fas fa-check" id="checkMarca"></i>
+                </div>
+                <% if (locals.errors && errors.marca) { %>
+                    <small class="errors"><%= errors.marca.msg %></small>
+                
+                <% } %>
+                <small class="errors" id="smallsMarca"></small>
+            </div>
+                
+                
+                <!-- /////Precio de producto///// -->
+            <div>
+                <p>Precio *</p>
+                <div class= "selec info_precio_container">
+                    <input class="validar" type="number" id="precio" name="precio" placeholder="Ingresá un precio" value=<%= locals.oldData && oldData.precio ? oldData.precio : null %> required >
+                    <i class="error fas fa-times" id="errorPrecio"></i>
+                    <i class="check fas fa-check" id="checkPrecio"></i>
+                </div>
+                <% if (locals.errors && errors.precio) { %>
+                    <small class="errors"><%= errors.precio.msg %></small>
+                
+                <% } %>
+                <small class="errors" id="smallsPrecio"></small>
+            </div>
+
+                <!-- /////Stock de producto///// -->
+            <div>
+                <div class= "selec info_precio_container">
+                    <p>Stock *</p>
+                    <input class="validar" type="number" id="stock" name="stock" placeholder="Ingresá un stock" value=<%= locals.oldData && oldData.stock ? oldData.stock : null %> required >
+                    <i class="error fas fa-times" id="errorStock"></i>
+                    <i class="check fas fa-check" id="checkStock"></i>
+                </div>
+                <% if (locals.errors && errors.stock) { %>
+                    <small class="errors"><%= errors.stock.msg %></small>
+                
+                <% } %>
+                <small class="errors" id="smallsStock"></small>
+            </div>    
+                
+
+                <!-- /////Colores de producto///// -->
+                <div class= "selec color_container">
+                    <p>Colores</p>
+                    <% let arrayColores = ['Rojo','Blanco','Violeta','Rosado','Azul','Amarillo', 'Negro', 'Verde claro', 'Verde oscuro', 'Celeste', 'Naranja', 'Gris', 'Fucsia', 'Bordó', 'Marrón', 'Dorado', 'Beige', 'Plateado'] %>
+                    <% for (let i = 0; i < arrayColores.length; i++) { %>
+                        <input id="inputColores" class="color<%= i %>" type="checkbox" name="color" value="<%= arrayColores[i] %>">
+                    <% } %>
+                </div>
+                <!-- /////categoria de producto///// -->
+
+                <p>Categoría *</p>
+                
+                <div class= "selec info_categoria_container">
+                    
+                    
+                    <div class="Categoria1">
+                        <div>
+                        <label for="taekwon-Do">Taekwon-Do</label>
+                        <input class="m" name="categoria" id="taekwon-Do" type="checkbox" value="1"
+                        <% if(locals.oldData && oldData.categoria) { %>
+
+                            <% if (oldData.categoria.includes("TaeKwon-Do")) { %>
                             checked
                             <% } else { %>
                                 null
@@ -490,6 +570,16 @@
                     <% } %>
                     <small class="errors" id="smallsMarca"></small>
                 </div>
+                <% if (locals.errors && errors.categoria) { %>
+                    <small class="errors"><%= errors.categoria.msg %></small>
+                
+                <% } %>
+                <small class="errors" id="smallsCategoria"></small>
+
+                <!-- ////Eligir archivo//// -->
+                <div class="inputs">
+                    <label for="imagenDeProducto" id="labelImagen">Imagen del producto *</label>
+                    <input type="file" accept="image/*" id="imagenDeProducto" name="imagenes" multiple>
                     
                     
                     <!-- /////Precio de producto///// -->
