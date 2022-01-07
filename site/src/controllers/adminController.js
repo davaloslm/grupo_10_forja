@@ -1,5 +1,7 @@
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
+const fs = require('fs');
+const path = require('path');
 
 const controller = {
 
@@ -500,18 +502,41 @@ const controller = {
         /////// Función borrar producto ////////
 
     eliminar: (req, res)=>{
-        db.Producto.destroy({
-            where: {id : req.params.id}
+        
+        db.Producto.findByPk(req.params.id,{
+            include: [
+                {
+                    association: "imagen",
+                }
+            ]
         })
-        .then( result => {
+        .then( producto =>{
+            /* Borra imagenes del producto del sistema de archivos  */
+            if (producto.imagen.length !== 0) {
+                producto.imagen.forEach(e=>{
+                    if (fs.existsSync(path.join(__dirname, '../../public/img/productos', e.nombre))) {
+                        fs.unlinkSync(path.join(__dirname, '../../public/img/productos', e.nombre))
+                    }
+                })
+            };
+
+            db.Producto.destroy({
+                where: {id : req.params.id}
+            })
+            .then( result => {
+                res.redirect("/admin")
+            })
+            .catch(error=>{
+                res.send("No se pudo eliminar el producto");
+                console.log(error);
+            })
+    
             res.redirect("/admin")
         })
-        .catch(error=>{
-            res.send("No se pudo eliminar el producto");
-            console.log(error);
+        .catch(error =>{
+            res.send("No se pudo encontrar el producto");
+                console.log(error);
         })
-
-		res.redirect("/admin")
 
     },
 
