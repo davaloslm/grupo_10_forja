@@ -6,7 +6,7 @@
 </head>
 <body>
     <%- include('../partials/header')  %>
-    <main class="todos">
+    <main class="buscador">
         <% if(productos.length > 0) { %>
             <h1>Resultados con: <%= busqueda %></h1>
             <section class="todos">
@@ -39,8 +39,8 @@
             </section>
         <% } else { %>
             <h1>Lo sentimos, no se encontraron coincidencias de productos con tu búsqueda</h1>
-            <section class="todos">
-                
+            <section class="gifContainer">
+                <img src="/img/design/VanDammeError.gif" alt="Error" class="vanDamme">
             </section>
         <% } %> 
 
