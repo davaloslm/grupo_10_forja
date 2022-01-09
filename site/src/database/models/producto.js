@@ -31,7 +31,7 @@ module.exports = (sequelize, DataTypes) => {
         foreignKey: "productoId"
       })
 
-      Producto.belongsToMany(modelos.Usuario, {
+      Producto.belongsToMany(models.Usuario, {
         as: 'productoCarrito',
         through: 'carritos',
         foreignKey: 'productoId',
