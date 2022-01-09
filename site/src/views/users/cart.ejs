@@ -20,89 +20,41 @@
                 <h2>Artículo</h2>
                 <h2>Monto</h2>
             </div>
-            <article class="product_info">
+            <% carritos.forEach(carrito=>{%>
+                <article class="product_info">
                 <div class="foto_product">
-                    <a href="#" target="blank"><img src="/img/productos/product-1.jpg" alt=""></a>
+                    <a href="#" target="blank"><img src="/img/productos/<%=carrito.carritoProducto.imagen[0].nombre%>" alt=""></a>
                     <a href="#" class="icono"><button><i class="fas fa-trash trash"></button></i></a>
                     <a href="#" class="eliminar_a"><button class="eliminar">Eliminar</button></a>
                     <p class="modelo_article"></p>
                 </div>
                 <div class="detail_product">
                     <div class="detail_article_cart">
-                        <h4 class="tittle_article">Soga crossfit 50x9mts Yute punta sellada</h4>
-                        <a href="#" target="blank">Productos similares</a>
+                        <h4 class="tittle_article"><%=carrito.carritoProducto.nombre%></h4>
                     </div>
                     <div class="cantidad_container">
                         <div class="box_quantity">
                             <button>-</button>
-                            <input type="number" class="quantity" min="0">
+                            <input type="number" value="<%=carrito.cantidad%>" class="quantity" min="0">
                             <button>+</button>
                         </div>
-                        <p class="stock">5 disponibles</p>
+                        <!-- <p class="stock">5 disponibles</p> -->
                     </div>
                     <div class="monto_container">
-                        <h5>Envío</h5>
-                        <p class="precio">GRATIS</p>
-                        <p class="precio">+ 19.000 $</p>
+                        <!-- <h5>Envío</h5>
+                        <p class="precio"><%= carrito.carritoProducto.envio === 1 ? "GRATIS": "$500"%> </p> -->
+                        <% if(carrito.carritoProducto.descuento>0){ %> 
+                        <p class="precio">$<%= carrito.carritoProducto.precio - carrito.carritoProducto.precio*carrito.carritoProducto.descuento/100  %></p>
+                    
+                        <% }else{ %> 
+                        <p class="precio">$<%=carrito.carritoProducto.precio%></p>
+                        <% }  %> 
                     </div>
                 </div>
             </article>
-            <!-- <article class="product_info">
-                <div class="foto_product">
-                    <a href="#" target="blank"><img src="/img/productos/product-5.jpg" alt=""></a>
-                    <a href="#" class="icono"><button><i class="fas fa-trash trash"></button></i></a>
-                    <a href="#" class="eliminar_a"><button class="eliminar">Eliminar</button></a>
-                    <p class="modelo_article">Modelo: Vampiro</p>
-                </div>
-                <div class="detail_product">
-                    <div class="detail_article_cart">
-                        <h4 class="tittle_article">Bucal Personalizado termo-ajustable</h4>
-                        <a href="#" target="blank">Productos similares</a>
-                    </div>
-                    <div class="cantidad_container">
-                        <div class="box_quantity">
-                            <button>-</button>
-                            <input type="number" class="quantity" min="0">
-                            <button>+</button>
-                        </div>
-                        <p class="stock">10 disponibles</p>
-                    </div>
-                    <div class="monto_container">
-                        <h5>Envío</h5>
-                        <p class="precio">GRATIS</p>
-                        <p class="precio">+ 480 $</p>
-                    </div>
-                </div>
-            </article>
-            <article class="product_info">
-                <div class="foto_product">
-                    <a href="#" target="blank"><img src="/img/productos/product-14.jpg" alt=""></a>
-                    <p class="descuento">- 15%</p>
-                    <a href="#" class="icono"><button><i class="fas fa-trash trash"></button></i></a>
-                    <a href="#" class="eliminar_a"><button class="eliminar">Eliminar</button></a>
-                    <p class="modelo_article">Modelo: Único</p>
-                </div>
-                <div class="detail_product">
-                    <div class="detail_article_cart">
-                        <h4 class="tittle_article">Combo bolsa + soporte + cadenas + relleno EVERLAST boxeo</h4>
-                        <a href="#" target="blank">Productos similares</a>
-                    </div>
-                    <div class="cantidad_container">
-                        <div class="box_quantity">
-                            <button>-</button>
-                            <input type="number" class="quantity" min="0">
-                            <button>+</button>
-                        </div>
-                        <p class="stock">Último disponible</p>
-                    </div>
-                    <div class="monto_container">
-                        <h5>Envío</h5>
-                        <p class="precio">+ 300 $</p>
-                        <p class="precio_ant">11.200 $</p>
-                        <p class="precio_des">+ 9.520 $</p>
-                    </div>
-                </div>
-            </article> -->
+            <% }) %> 
+            
+            
             <section class="monto_final">
                 <div class="total_container">
                     <div class="seguro">
@@ -111,14 +63,22 @@
                         <a href="#">Leer más</a>
                     </div>
                     <div class="totales">
-                        <h5>Artículos</h5>
+                        <h5>Subtotal</h5>
                         <h5>Envío</h5>
                         <h5>Total</h5>
                     </div>
                     <div class="precio_total">
-                        <h5>29.000 $</h5>
-                        <h5>300 $</h5>
-                        <h5>29.300 $</h5>
+                        <% var subtotal = 0 %>
+                        <%carritos.forEach(carrito=>{%>
+                            <% if(carrito.carritoProducto.descuento>0){ %>
+                            <% subtotal = subtotal + parseInt(carrito.carritoProducto.precio - carrito.carritoProducto.precio*carrito.carritoProducto.descuento/100)  %>
+                            <% }else{ %>
+                            <% subtotal = subtotal + parseInt(carrito.carritoProducto.precio)  %>
+                            <% } %> 
+                        <%})%>
+                        <h5>$<%= subtotal %></h5>
+                        <h5>$300</h5>
+                        <h5>$<%= subtotal + 300 %> </h5>
                     </div>
                 </div>
                 <div class="mercado_pago">
