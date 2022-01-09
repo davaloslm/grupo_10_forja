@@ -1,6 +1,7 @@
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
+const transporter = require('../functions/nodemailerTransporter');
 
 const controller = {
     cart: (req, res)=> {
@@ -32,6 +33,27 @@ const controller = {
                 imagen: req.file ? req.file.filename : 'default-user.jpg',
             })
             .then(() => {
+
+                let forjaMail = {
+                    from: 'Forja Tienda Web<forja.tiendaweb@gmail.com>',
+                    to: email,
+                    subject: '¡Bienvenido a Tienda Forja Online!',
+                    html: `
+                    <div class="header" style="width:100%;background-color: #fff;padding: 5px;">
+                        <h2 style="color:#204051;">Hola ${nombre}, gracias por elegirnos.</h2>
+                        <div class="img" style="width: 30%;min-width: 140px;max-width: 270px;">
+                            <img src="https://i.postimg.cc/v8tQ1jrt/Logo.png" alt="Tienda Forja" style="width: 70%;">
+                        </div>
+                    </div>`
+                }
+                /* self signed certificate in certificate chain */
+                transporter.sendMail(forjaMail, (err, data) => {
+                    if(err) {
+                        console.log(err)
+                    } else {
+                        console.log('Email de bienvenida enviado con éxito.')
+                    }
+                });
                 res.render('users/login', { email })
             })
             .catch(error => {
@@ -325,5 +347,5 @@ const controller = {
     }
 
 }
-// se puede poner .trim() al registro para que no vengan espacios en blanco
+
 module.exports = controller;
