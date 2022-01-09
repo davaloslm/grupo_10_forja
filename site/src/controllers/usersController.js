@@ -4,7 +4,22 @@ const db = require('../database/models');
 
 const controller = {
     cart: (req, res)=> {
-        res.render('users/cart')
+        db.Carrito.findAll({
+            where: {
+                usuarioId: req.session.usuarioLogueado.id
+            },
+            include: [{association: 'carritoProducto',
+                include: [{association: 'imagen'}]
+            }]
+        })
+        .then(carritos=>{
+            console.log(carritos);
+            res.render("users/cart", {carritos})
+        })
+        .catch(error=>{
+            console.log(error);
+            res.send("No se pudo traer los productos del carrito")
+        })
     },
     vistaRegistro: (req, res)=> {
         res.render('users/register')

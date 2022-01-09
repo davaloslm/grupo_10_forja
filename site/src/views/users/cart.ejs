@@ -9,6 +9,12 @@
 
     <main class="cart">
         <h1 class="titulo">Carrito</h1>
+        <% if (carritos.length === 0) { %>
+         <div>
+             <h2>No hay productos en el carrito</h2>
+         </div>
+        <% } else{ %>
+        
         <section class="container">
             <div class="info_cart">
                 <h2>Artículo</h2>
@@ -41,7 +47,7 @@
                     </div>
                 </div>
             </article>
-            <article class="product_info">
+            <!-- <article class="product_info">
                 <div class="foto_product">
                     <a href="#" target="blank"><img src="/img/productos/product-5.jpg" alt=""></a>
                     <a href="#" class="icono"><button><i class="fas fa-trash trash"></button></i></a>
@@ -96,7 +102,7 @@
                         <p class="precio_des">+ 9.520 $</p>
                     </div>
                 </div>
-            </article>
+            </article> -->
             <section class="monto_final">
                 <div class="total_container">
                     <div class="seguro">
@@ -123,6 +129,7 @@
                 </div>
             </section>
         </section>
+        <% }  %> 
         <section class="similares">
             <h2>Productos relacionados</h2>
             <div class="similares_contenedor">
