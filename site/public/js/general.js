@@ -6,6 +6,18 @@ window.addEventListener('load', () => {
         return document.querySelector(tag)
     }
 
+    // Buscador //
+    const formSearch = qs('#searchForm');
+    const inputSearch = qs('#search');
+
+    formSearch.addEventListener('submit', (e) => {
+        
+        if (inputSearch.value === '') {
+            e.preventDefault()
+        }
+
+    })
+
     /* Burger Menu */
     const burgerMenu = qs('#burgerMenu')
     const sideNav = qs('div.menu')

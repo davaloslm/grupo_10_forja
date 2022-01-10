@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const multerUser = require('../middlewares/multerUser');
-const { cart, vistaRegistro, vistaLogin, login, registro, cerrarSesion, vistaUserProfile, editUserProfile, vistaCambiarContraseña, cambiarContraseña, vistaAgregarDireccion, agregarDireccion, vistaEditarDireccion, editarDireccion, eliminarDireccion} = require("../controllers/usersController");
+const { cart, agregarAlCarrito, borrarDelCarrito, cambiarCantidadCarrito, vistaRegistro, vistaLogin, login, registro, cerrarSesion, vistaUserProfile, editUserProfile, vistaCambiarContraseña, cambiarContraseña, vistaAgregarDireccion, agregarDireccion, vistaEditarDireccion, editarDireccion, eliminarDireccion} = require("../controllers/usersController");
 const invitado = require('../middlewares/invitado');
 const registerValidator = require('../middlewares/registerValidator');
 const loginValidator = require ('../middlewares/loginValidator');
@@ -24,8 +24,6 @@ router.put('/userProfile/:id', multerUser.single('avatar'), userProfileValidator
 
 router.get('/cerrarSesion', cerrarSesion)
 
-router.get('/cart',  cart);
-
 router.get('/password',  vistaCambiarContraseña);
 router.put('/password', passwordValidator, cambiarContraseña);
 
@@ -36,6 +34,16 @@ router.get('/address/edit/:addressId', vistaEditarDireccion);
 router.put('/address/edit/:addressId', addressValidator, editarDireccion);
 
 router.delete("/address/delete/:addressId", eliminarDireccion);
+
+/* cart */
+
+router.get('/cart',  cart);
+
+router.post('/cart/add/:id', agregarAlCarrito);
+
+router.delete('/cart/delete/:id', borrarDelCarrito);
+
+router.put('/cart/changeQuantity/:id', cambiarCantidadCarrito);
 
 
 module.exports = router;

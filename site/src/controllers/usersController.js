@@ -1,10 +1,110 @@
 const bcrypt = require('bcryptjs');
 const { validationResult } = require('express-validator');
 const db = require('../database/models');
+const transporter = require('../functions/nodemailerTransporter');
 
 const controller = {
     cart: (req, res)=> {
-        res.render('users/cart')
+        db.Carrito.findAll({
+            where: {
+                usuarioId: req.session.usuarioLogueado.id
+            },
+            include: [{association: 'carritoProducto',
+                include: [{association: 'imagen'}]
+            }]
+        })
+        .then(carritos=>{
+            console.log(carritos);
+            res.render("users/cart", {carritos})
+        })
+        .catch(error=>{
+            console.log(error);
+            res.send("No se pudo traer los productos del carrito")
+        })
+    },
+    agregarAlCarrito: (req, res)=>{
+        let productoId = req.params.id;
+        let cantidad = parseInt(req.body.cantidad);
+
+        db.Carrito.findOne({
+            where:{
+                usuarioId: req.session.usuarioLogueado.id,
+                productoId: productoId
+            }
+        })
+        .then(result=>{
+            
+            if (result === null) {
+                db.Carrito.create({
+                    usuarioId: req.session.usuarioLogueado.id,
+                    productoId: productoId,
+                    cantidad: cantidad
+                })
+                .then(carritos=>{
+                    console.log(carritos);
+                    res.redirect("/product/"+productoId)
+                })
+                .catch(error=>{
+                    console.log(error);
+                    res.send("No se pudo crear el carrito")
+                })
+            } else {
+                db.Carrito.update({
+                    cantidad: result.cantidad + cantidad
+                }, {
+                    where: {
+                        usuarioId: req.session.usuarioLogueado.id,
+                        productoId: productoId,
+                    }
+                })
+                .then(carritos=>{
+                    console.log(carritos);
+                    res.redirect("/product/"+productoId)
+                })
+                .catch(error=>{
+                    console.log(error);
+                    res.send("No se pudo actualizar el carrito existente")
+                })
+            }
+        })
+    },
+    borrarDelCarrito: (req, res)=>{
+        let productoId = req.params.id;
+
+        db.Carrito.destroy({
+            where: {
+                usuarioId: req.session.usuarioLogueado.id,
+                productoId: productoId,
+            }
+        })
+        .then(()=>{
+            res.redirect("/user/cart")
+
+        })
+        .catch(error=>{
+            res.send("No se pudo quitar el producto del carrito")
+            console.log(error);
+        })
+    },
+    cambiarCantidadCarrito: (req, res)=>{
+        let productoId = req.params.id;
+        let cantidad = parseInt(req.body.cantidad);
+
+        db.Carrito.update({
+            cantidad: cantidad
+        },{
+            where: {
+                usuarioId: req.session.usuarioLogueado.id,
+                productoId: productoId
+            }
+        })
+        .then(()=>{
+            res.redirect("/user/cart")
+        })
+        .catch(error=>{
+            res.send("No se pudo cambiar la cantidad de productos del carrito");
+            console.log(error);
+        })
     },
     vistaRegistro: (req, res)=> {
         res.render('users/register')
@@ -32,6 +132,27 @@ const controller = {
                 imagen: req.file ? req.file.filename : 'default-user.jpg',
             })
             .then(() => {
+
+                let forjaMail = {
+                    from: 'Forja Tienda Web<forja.tiendaweb@gmail.com>',
+                    to: email,
+                    subject: '¡Bienvenido a Tienda Forja Online!',
+                    html: `
+                    <div class="header" style="width:100%;background-color: #fff;padding: 5px;">
+                        <h2 style="color:#204051;">Hola ${nombre}, gracias por elegirnos.</h2>
+                        <div class="img" style="width: 30%;min-width: 140px;max-width: 270px;">
+                            <img src="https://i.postimg.cc/v8tQ1jrt/Logo.png" alt="Tienda Forja" style="width: 70%;">
+                        </div>
+                    </div>`
+                }
+                /* self signed certificate in certificate chain */
+                transporter.sendMail(forjaMail, (err, data) => {
+                    if(err) {
+                        console.log(err)
+                    } else {
+                        console.log('Email de bienvenida enviado con éxito.')
+                    }
+                });
                 res.render('users/login', { email })
             })
             .catch(error => {
@@ -325,5 +446,5 @@ const controller = {
     }
 
 }
-// se puede poner .trim() al registro para que no vengan espacios en blanco
+
 module.exports = controller;

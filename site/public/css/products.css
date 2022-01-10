@@ -7,6 +7,10 @@
     text-transform: uppercase;
 }
 
+.todos section.todos {
+    margin-bottom: 20px
+}
+
 .todos section.todos div.todos_contenedor {
     display: flex;
     flex-direction: row;
