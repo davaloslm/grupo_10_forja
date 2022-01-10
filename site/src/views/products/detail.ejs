@@ -54,6 +54,11 @@
             </section>
             
             <section class="detalles">
+                <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin == 1) { %>
+                    <button class="button_editarProducto">
+                        <a href="/admin/edit/<%= producto.id %>"><i class="wrench fas fa-wrench"></i></a>
+                    </button>
+                <% } %>
             
                 <h1><%= producto.nombre %></h1>
                 <div class="detalles">
