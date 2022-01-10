@@ -41,9 +41,8 @@ const controller = {
                     cantidad: cantidad
                 })
                 .then(carritos=>{
-                    res.send(carritos)
                     console.log(carritos);
-                    /* res.render("users/cart", {carritos}) */
+                    res.redirect("/product/"+productoId)
                 })
                 .catch(error=>{
                     console.log(error);
@@ -55,17 +54,36 @@ const controller = {
                 }, {
                     where: {
                         usuarioId: req.session.usuarioLogueado.id,
-                        productoId: producto,
+                        productoId: productoId,
                     }
                 })
                 .then(carritos=>{
-                    res.render("users/cart", {carritos})
+                    console.log(carritos);
+                    res.redirect("/product/"+productoId)
                 })
                 .catch(error=>{
                     console.log(error);
                     res.send("No se pudo actualizar el carrito existente")
                 })
             }
+        })
+    },
+    borrarDelCarrito: (req, res)=>{
+        let productoId = req.params.id;
+
+        db.Carrito.destroy({
+            where: {
+                usuarioId: req.session.usuarioLogueado.id,
+                productoId: productoId,
+            }
+        })
+        .then(()=>{
+            res.redirect("/user/cart")
+
+        })
+        .catch(error=>{
+            res.send("No se pudo quitar el producto del carrito")
+            console.log(error);
         })
     },
     vistaRegistro: (req, res)=> {

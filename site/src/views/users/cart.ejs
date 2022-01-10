@@ -24,8 +24,9 @@
                 <article class="product_info">
                 <div class="foto_product">
                     <a href="#" target="blank"><img src="/img/productos/<%=carrito.carritoProducto.imagen[0].nombre%>" alt=""></a>
-                    <a href="#" class="icono"><button><i class="fas fa-trash trash"></button></i></a>
-                    <a href="#" class="eliminar_a"><button class="eliminar">Eliminar</button></a>
+                    <form action="/user/cart/borrar/<%= carrito.carritoProducto.id%>?_method=DELETE" method="POST" >
+                        <button class="eliminar" type="submit">Eliminar<i class="fas fa-trash trash"></i></button>
+                    </form>
                     <p class="modelo_article"></p>
                 </div>
                 <div class="detail_product">
@@ -44,10 +45,10 @@
                         <!-- <h5>Envío</h5>
                         <p class="precio"><%= carrito.carritoProducto.envio === 1 ? "GRATIS": "$500"%> </p> -->
                         <% if(carrito.carritoProducto.descuento>0){ %> 
-                        <p class="precio">$<%= carrito.carritoProducto.precio - carrito.carritoProducto.precio*carrito.carritoProducto.descuento/100  %></p>
+                        <p class="precio">$<%= (carrito.carritoProducto.precio - carrito.carritoProducto.precio*carrito.carritoProducto.descuento/100) * carrito.cantidad  %></p>
                     
                         <% }else{ %> 
-                        <p class="precio">$<%=carrito.carritoProducto.precio%></p>
+                        <p class="precio">$<%=carrito.carritoProducto.precio * carrito.cantidad%></p>
                         <% }  %> 
                     </div>
                 </div>
@@ -71,9 +72,9 @@
                         <% var subtotal = 0 %>
                         <%carritos.forEach(carrito=>{%>
                             <% if(carrito.carritoProducto.descuento>0){ %>
-                            <% subtotal = subtotal + parseInt(carrito.carritoProducto.precio - carrito.carritoProducto.precio*carrito.carritoProducto.descuento/100)  %>
+                            <% subtotal = subtotal + parseInt(carrito.carritoProducto.precio - carrito.carritoProducto.precio*carrito.carritoProducto.descuento/100) * carrito.cantidad %>
                             <% }else{ %>
-                            <% subtotal = subtotal + parseInt(carrito.carritoProducto.precio)  %>
+                            <% subtotal = subtotal + parseInt(carrito.carritoProducto.precio) * carrito.cantidad  %>
                             <% } %> 
                         <%})%>
                         <h5>$<%= subtotal %></h5>
