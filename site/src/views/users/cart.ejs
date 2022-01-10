@@ -24,7 +24,7 @@
                 <article class="product_info">
                 <div class="foto_product">
                     <a href="#" target="blank"><img src="/img/productos/<%=carrito.carritoProducto.imagen[0].nombre%>" alt=""></a>
-                    <form action="/user/cart/borrar/<%= carrito.carritoProducto.id%>?_method=DELETE" method="POST" >
+                    <form action="/user/cart/delete/<%= carrito.carritoProducto.id%>?_method=DELETE" method="POST" >
                         <button class="eliminar" type="submit">Eliminar<i class="fas fa-trash trash"></i></button>
                     </form>
                     <p class="modelo_article"></p>
@@ -35,9 +35,12 @@
                     </div>
                     <div class="cantidad_container">
                         <div class="box_quantity">
-                            <button>-</button>
-                            <input type="number" value="<%=carrito.cantidad%>" class="quantity" min="0">
-                            <button>+</button>
+                            <form action="/user/cart/changeQuantity/<%= carrito.carritoProducto.id%>?_method=PUT" method="POST">
+                                <button>-</button>
+                                <input type="number" name="cantidad" value="<%=carrito.cantidad%>" class="quantity" min="0">
+                                <button>+</button>
+                                <button type="submit">Cambiar cantidad</button>
+                            </form>
                         </div>
                         <!-- <p class="stock">5 disponibles</p> -->
                     </div>
