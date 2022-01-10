@@ -5,7 +5,68 @@ const transporter = require('../functions/nodemailerTransporter');
 
 const controller = {
     cart: (req, res)=> {
-        res.render('users/cart')
+        db.Carrito.findAll({
+            where: {
+                usuarioId: req.session.usuarioLogueado.id
+            },
+            include: [{association: 'carritoProducto',
+                include: [{association: 'imagen'}]
+            }]
+        })
+        .then(carritos=>{
+            console.log(carritos);
+            res.render("users/cart", {carritos})
+        })
+        .catch(error=>{
+            console.log(error);
+            res.send("No se pudo traer los productos del carrito")
+        })
+    },
+    agregarAlCarrito: (req, res)=>{
+        let productoId = req.params.id;
+        let cantidad = parseInt(req.body.cantidad);
+
+        db.Carrito.findOne({
+            where:{
+                usuarioId: req.session.usuarioLogueado.id,
+                productoId: productoId
+            }
+        })
+        .then(result=>{
+            
+            if (result === null) {
+                db.Carrito.create({
+                    usuarioId: req.session.usuarioLogueado.id,
+                    productoId: productoId,
+                    cantidad: cantidad
+                })
+                .then(carritos=>{
+                    res.send(carritos)
+                    console.log(carritos);
+                    /* res.render("users/cart", {carritos}) */
+                })
+                .catch(error=>{
+                    console.log(error);
+                    res.send("No se pudo crear el carrito")
+                })
+            } else {
+                db.Carrito.update({
+                    cantidad: result.cantidad + cantidad
+                }, {
+                    where: {
+                        usuarioId: req.session.usuarioLogueado.id,
+                        productoId: producto,
+                    }
+                })
+                .then(carritos=>{
+                    res.render("users/cart", {carritos})
+                })
+                .catch(error=>{
+                    console.log(error);
+                    res.send("No se pudo actualizar el carrito existente")
+                })
+            }
+        })
     },
     vistaRegistro: (req, res)=> {
         res.render('users/register')

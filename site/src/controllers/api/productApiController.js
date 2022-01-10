@@ -3,7 +3,7 @@ const { Op } = require('sequelize');
 
 const controller = {
     //todos los productos Api
-    listaProductos: async (req, res)=>{
+    listaProductos: (req, res)=>{
 
         let promesaProductos = db.Producto.findAll();
         let promesaImagenes = db.Imagen.findAll();

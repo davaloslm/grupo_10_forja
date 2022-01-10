@@ -73,7 +73,7 @@
                     </div> -->
                     
                     
-                    <form action="">
+                    
                         <% if(producto.talle[0]){ %> 
                         <label for="talle"><h4>Talle:</h4></label>
                         <select name="talle" id="talle">
@@ -101,22 +101,22 @@
                         
                             </select>
                             <% } %>
-                    
+                    <form action="../user/cart/agregar/<%=producto.id%>" method="POST">
                         <div class="cantidad">
                             <label for="cantidad"><h4>Cantidad:</h4></label>
                             <div class="box-quantity-container">
                                 <div class="box-quantity">
                                     <button>-</button>
-                                    <input id="cantidad" type="number" class="quantity" min="0">
+                                    <input id="cantidad" type="number" value="1" name="cantidad" class="quantity" min="1" max="100">
                                     <button>+</button>
                                 </div>
                             </div>
                         </div>
                     
+                        <button type="submit">Añadir al carrito</button>
                     
                     </form>
                     
-                    <button>Añadir al carrito</button>
                 </div>
                 
                 <h4>Descripción:</h4>
