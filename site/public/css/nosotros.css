@@ -1,5 +1,5 @@
 main.nosotros{
-    background-color: #07cfcf;
+    background-color: white;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -7,7 +7,7 @@ main.nosotros{
     padding: 10px;
 }
 main.nosotros div.inicio{
-    color: white;
+    color: rgb(0, 0, 0);
     width: 80%;
     margin: 20px 20px;
     
@@ -47,6 +47,6 @@ main.nosotros p.subtitule{
 
 main.nosotros div.vision{
     margin: 10px 0;
-    color: white;
+    color: rgb(0, 0, 0);
     width: 80%;
 }

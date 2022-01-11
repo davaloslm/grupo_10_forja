@@ -54,12 +54,16 @@ main.contacto section div.iconoYcontacto article ul li{
 }
 
 
-main.contacto section div.iconoYcontacto article ul li a samp i.fas ,samp{
+main.contacto section div.iconoYcontacto article ul li a samp i.fas{
     color: white;
     font-size: 18px;
     margin: 2px;
 }
-
+main.contacto section div.iconoYcontacto article ul li a samp{
+    color: white;
+    font-size: 18px;
+    margin: 2px;
+}
 /* ////////////tableta- 590 x 564/////////////////// */
 
 @media (min-width: 590px){
