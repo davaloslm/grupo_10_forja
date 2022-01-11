@@ -10,7 +10,7 @@
     <%- include('../partials/header')  %>
     <main class="admin">
 
-        <h1 class="tittle">Bienvenido<!-- imprimir el nombre del administrador que inició sesión --></h1>
+        <h1 class="tittle">Bienvenido <%= locals.usuarioLogueado.nombre %></h1>
         <section class="tarjetas_container">
             <article class="tarjetas">
                 <a href="#adp"><img src="../../../img/design/box_admin.jpg" alt=""></a>

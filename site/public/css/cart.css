@@ -86,21 +86,23 @@
     justify-content: space-around;
 }
 
-.cart section.container article.product_info div.foto_product a.icono button {
-    width: 95%;
+.cart section.container article.product_info div.foto_product form {
+    width: 90%;
+}
+
+.cart section.container article.product_info div.foto_product form button.eliminar {
+    width: 100%;
     background-color: var(--lightBlue);
     border-radius: 0 0 5px 5px;
     border: none;
     cursor: pointer;
-}
-
-.cart section.container article.product_info div.foto_product a button i {
     color: var(--white);
+    padding: 2px;
 }
 
-.cart section.container article.product_info div.foto_product a.eliminar_a button.eliminar, .cart section.container article.product_info div.foto_product a.eliminar_a {
+.cart section.container article.product_info div.foto_product form button.eliminar i {
+    color: var(--white);
     display: none;
-    cursor: pointer;
 }
 
 .cart section.container article.product_info div.detail_product {
@@ -127,6 +129,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .cart section.container article.product_info div.detail_product div.cantidad_container p.stock {
@@ -137,19 +140,21 @@
 .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity {
     display: flex;
     margin-bottom: 20px;
-    justify-content: center;
+    flex-direction: row;
+    align-items: baseline;
 }
 
-.cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button {
+.cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button.sumaResta {
     background-color: var(--lightBlue);
     color: var(--white);
     width: 15px;
+    height: 18px;
     border-radius: 5px 0 0 5px;
     border: none;
     cursor: pointer;
 }
 
-.cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button:last-child {
+.cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button.sumaResta:last-child {
     border-radius: 0 5px 5px 0;
 }
 
@@ -158,6 +163,21 @@
     border-left: none;
     border-right: none;
     border: 1px solid var(--lightBlue);
+    text-align: center;
+}
+
+.cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity form {
+    width: 30px;
+}
+
+.cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity form button#cambiarCantidad {
+    background-color: var(--lightBlue);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    width: 30px;
+    padding: 1px;
+    border-radius: 5px;
 }
 
 .cart section.container article.product_info div.detail_product div.monto_container {
@@ -375,17 +395,25 @@
         font-weight: 400;
     }
 
-    .cart section.container article.product_info div.foto_product a.icono button {
-        width: 95%;
-    }    
+    .cart section.container article.product_info div.foto_product form {
+        width: 92%;
+    }
+
+    .cart section.container article.product_info div.detail_product div.cantidad_container {
+        align-items: center;
+    }
 
     .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity input {
-        width: 50px;
         height: 30px;
     }
 
-    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button {
+    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity form button#cambiarCantidad {
+        height: 30px;
+    }
+
+    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button.sumaResta {
         width: 25px;
+        height: 30px;
     }
 
     .cart section.container article.product_info div.detail_product div.monto_container h5 {
@@ -448,23 +476,14 @@
     .cart section.container article.product_info div.detail_product div.detail_article_cart h4.tittle_article {
         padding-top: 30px;
     }
-
-    .cart section.container article.product_info div.foto_product a.icono i, .cart section.container article.product_info div.foto_product a.icono {
-        display: none;
-    }
-
-    .cart section.container article.product_info div.foto_product a.eliminar_a {
-        display: block;
-        width: 99%;
-    }
     
-    .cart section.container article.product_info div.foto_product a.eliminar_a button.eliminar {
+    .cart section.container article.product_info div.foto_product form button.eliminar {
         color: var(--white);
         display: block;
-        margin-left: 10px;
+        margin-left: -4px;
         padding: 5px;
         border-radius: 0 0 5px 5px;
-        width: 93%;
+        width: 100%;
         max-width: 240px;
         font-size: 17px;
         font-weight: 600;
@@ -472,15 +491,8 @@
         border: none;
     }
 
-    .cart section.container article.product_info div.foto_product a.eliminar_a button.eliminar:hover {
+    .cart section.container article.product_info div.foto_product form button.eliminar:hover {
         box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
-    }
-
-    .cart section.container article.product_info div.foto_product a.icono {
-        width: 100%;
-        display: flex;
-        margin-left: 10px;
-        justify-content: space-around;
     }
 
     .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button:hover {
@@ -490,6 +502,19 @@
     .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity input:focus {
         box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
         transition: all .5s;
+    }
+
+    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity form {
+        width: 60px;
+    }
+
+    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity input {
+        width: 60px;
+    }
+
+    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity form button#cambiarCantidad {
+        width: 60px;
+        margin-top: 5px;
     }
 
     .cart section.container article.product_info div.detail_product div.monto_container {
@@ -565,11 +590,6 @@
 
     .cart section.container {
         max-width: 1250px;
-    }
-
-    .cart section.container article.product_info div.foto_product a.eliminar_a button.eliminar {
-        margin-left: 9px;
-        width: 96%;
     }
 
     .cart section.monto_final div.mercado_pago div.boton_container button.pagar {
