@@ -35,12 +35,12 @@
                     </div>
                     <div class="cantidad_container">
                         <div class="box_quantity">
+                            <button class="sumaResta">-</button>
                             <form action="/user/cart/changeQuantity/<%= carrito.carritoProducto.id%>?_method=PUT" method="POST">
-                                <button>-</button>
                                 <input type="number" name="cantidad" value="<%=carrito.cantidad%>" class="quantity" min="0">
-                                <button>+</button>
-                                <button type="submit">Cambiar cantidad</button>
+                                <button type="submit" id="cambiarCantidad">Cambiar</button>
                             </form>
+                            <button class="sumaResta">+</button>
                         </div>
                         <!-- <p class="stock">5 disponibles</p> -->
                     </div>
