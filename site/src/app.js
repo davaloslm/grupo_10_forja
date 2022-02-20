@@ -21,6 +21,7 @@ const nosotrosControllers = require('./routes/nosotrosRouter');
 
 /* /////////////////Archivos de rutas (APIs)////////////////////// */
 const apiProductRouter = require("./routes/api/apiProductRouter");
+const cartApiRouter = require("./routes/api/cartApiRouter");
 
 const app = express();
 
@@ -49,7 +50,8 @@ app.use('/contact', contactRouter); //Ruta de contacto
 app.use('/nosotros', nosotrosControllers) // Ruta de Nosotros
 
 /* /////////////////Archivos de rutas (APIs)////////////////////// */
-app.use('/api/products', apiProductRouter);
+app.use('/api', apiProductRouter);
+app.use('/api/cart', cartApiRouter);
 
 
 

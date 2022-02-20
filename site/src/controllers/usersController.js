@@ -86,6 +86,26 @@ const controller = {
             console.log(error);
         })
     },
+    cambiarCantidadCarrito: (req, res)=>{
+        let productoId = req.params.id;
+        let cantidad = parseInt(req.body.cantidad);
+
+        db.Carrito.update({
+            cantidad: cantidad
+        },{
+            where: {
+                usuarioId: req.session.usuarioLogueado.id,
+                productoId: productoId
+            }
+        })
+        .then(()=>{
+            res.redirect("/user/cart")
+        })
+        .catch(error=>{
+            res.send("No se pudo cambiar la cantidad de productos del carrito");
+            console.log(error);
+        })
+    },
     vistaRegistro: (req, res)=> {
         res.render('users/register')
     },
