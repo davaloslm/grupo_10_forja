@@ -106,7 +106,7 @@
                         
                             </select>
                             <% } %>
-                    <form action="../user/cart/agregar/<%=producto.id%>" method="POST">
+                    <form action="../user/cart/agregar/<%=producto.id%>" method="POST" id="<%=producto.id%>" class="formAgregarProducto">
                         <div class="cantidad">
                             <label for="cantidad"><h4>Cantidad:</h4></label>
                             <div class="box-quantity-container">
@@ -201,4 +201,5 @@
     
 </body>
 <script src="../../../js/general.js"></script>
+<script src="../../../js/addToCart.js"></script>
 </html>

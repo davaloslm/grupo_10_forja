@@ -8,4 +8,13 @@ window.addEventListener('load', () => {
     })
     .catch(error=>console.log(error))
 
+    /* fetch(`http://localhost:3000/api/cart/add/5/5`, {
+        method: 'POST'
+    }) */
+
+
+    /* fetch(`http://localhost:3000/api/cart/delete/5`, {
+        method: 'DELETE'
+    }) */
+
 })

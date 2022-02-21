@@ -28,7 +28,7 @@ const controller = {
     },
     agregarAlCarrito: (req, res)=>{
         let productoId = req.params.id;
-        let cantidad = parseInt(req.body.cantidad);
+        let cantidad = parseInt(req.params.cant);
 
         db.Carrito.findOne({
             where:{
