@@ -1,4 +1,4 @@
-const invitado = (req, res, next) => {
+const guestUserCheck = (req, res, next) => {
     if (req.session.usuarioLogueado === undefined) {
         next()
     } else {
@@ -6,4 +6,4 @@ const invitado = (req, res, next) => {
     }
 }
 
-module.exports = invitado;
+module.exports = guestUserCheck;

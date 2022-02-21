@@ -24,7 +24,7 @@
                 <article class="product_info">
                 <div class="foto_product">
                     <a href="#" target="blank"><img src="/img/productos/<%=carrito.carritoProducto.imagen[0].nombre%>" alt=""></a>
-                    <form action="/user/cart/delete/<%= carrito.carritoProducto.id%>?_method=DELETE" method="POST" >
+                    <form action="/user/cart/borrar/<%= carrito.carritoProducto.id%>?_method=DELETE" method="POST" >
                         <button class="eliminar" type="submit">Eliminar<i class="fas fa-trash trash"></i></button>
                     </form>
                     <p class="modelo_article"></p>
@@ -182,4 +182,5 @@
     
 </body>
 <script src="../../../js/general.js"></script>
+<script src="../../../js/cart.js"></script>
 </html>
