@@ -24,9 +24,9 @@
                 <article class="product_info">
                 <div class="foto_product">
                     <a href="#" target="blank"><img src="/img/productos/<%=carrito.carritoProducto.imagen[0].nombre%>" alt=""></a>
-                    <form class="deleteForm"  id="<%= carrito.carritoProducto.id%>">
-                        <button id="<%= carrito.carritoProducto.id%>" class="eliminar" >Eliminar<i class="fas fa-trash trash"></i></button>
-                    </form>
+                    <!-- <form class="deleteForm"  id="<%= carrito.carritoProducto.id%>"> -->
+                        <button id="<%= carrito.carritoProducto.id%>" class="eliminar" onclick=<%= `eliminarProducto(${carrito.carritoProducto.id})`%> >Eliminar<i class="fas fa-trash trash"></i></button>
+                    <!-- </form> -->
                     <p class="modelo_article"></p>
                 </div>
                 <div class="detail_product">
