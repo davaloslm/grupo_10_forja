@@ -1,4 +1,4 @@
-window.addEventListener('load', () => {
+
 
     const qs = (tag) => {
         return document.querySelector(tag)
@@ -12,19 +12,7 @@ window.addEventListener('load', () => {
     const cartContainer = qs(".container")
     var subtotal = 0;
 
-    const eliminarProducto = (id) =>{
-
-        fetch(`http://localhost:3000/api/cart/delete/${id}`, {
-            method: 'DELETE'
-        })
-        .then(response => response.json())
-        .then(data =>{
-            console.log(data);
-            listarProductos();
-        })
-        .catch(error=>console.log(error))
-
-    }
+    
     
     const listarProductos =() =>{
         
@@ -114,6 +102,23 @@ window.addEventListener('load', () => {
         .catch(error=>console.log(error))
     }
 
+    const eliminarProducto = (id) =>{
+
+        fetch(`http://localhost:3000/api/cart/delete/${id}`, {
+            method: 'DELETE'
+        })
+        .then(data =>{
+            console.log(data);
+            
+        })
+        .then(()=>
+            listarProductos()
+        )
+        
+        .catch(error=>console.log(error + "catch"))
+
+    }
+
     
     
     /* botonEliminar.addEventListener('click', (e) => {
@@ -121,6 +126,5 @@ window.addEventListener('load', () => {
         eliminarProducto()
     }) */
 
-    listarProductos();
+    /* listarProductos(); */
 
-})

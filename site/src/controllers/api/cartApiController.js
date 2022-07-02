@@ -93,15 +93,8 @@ const controller = {
                 productoId: productoId,
             }
         })
-        .then(()=>{
-            res.status(200).json({
-                meta: {
-                    status: 200,
-                    total: carritos.cantidad,
-                    url: "/api/cart/delete/:id"
-                },
-                data: carritos
-            })
+        .then((result)=>{
+            res.json()
 
         })
         .catch(error=>{
