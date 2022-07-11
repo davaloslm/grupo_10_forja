@@ -8,133 +8,217 @@
     <%- include('../partials/header')  %> 
 
     <main class="product">
-        
 
-        <section class="carrusel-descripcion">
-            <section class="carrusel">
-                <div class="carrusel_container">
-                    
-                    <ul class="slider">
-                        <li id="slide-1">
-                            <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
-                        </li>
-                        <% if(producto.imagen[1]){ %>
-                            <li id="slide-2">
-                                <img src="/img/productos/<%= producto.imagen[1].nombre %>" alt="<%= producto.nombre %>">
-                            </li> 
-                            <% } %> 
-                        
-                        <% if(producto.imagen[2]){ %>
-                            <li id="slide-3">
-                                <img src="/img/productos/<%= producto.imagen[2].nombre %>" alt="<%= producto.nombre %>">
-                            </li> 
-                            <% } %> 
-                        
-                    </ul>
-                    <img src="/img/carrusel/señuelo.jpg" alt="Señuelo">
-                    <div class="botones_container">
-                        <ul class="botones_slide">
-                            <li class="button1">
-                                <a href="#slide-1" style="background: url('/img/productos/<%= producto.imagen[0].nombre %>'); background-size: contain;"> </a>
-                            </li>
-                            <% if(producto.imagen[1]){ %>
-                            
-                            <li class="button2">
-                                <a href="#slide-2" style="background: url('/img/productos/<%= producto.imagen[1].nombre %>'); background-size: contain;"> </a>
-                            </li>
-                            <% } %>
-                            <% if(producto.imagen[2]){ %> 
-                            <li class="button3">
-                                <a href="#slide-3" style="background: url('/img/productos/<%= producto.imagen[2].nombre %>'); background-size: contain;"> </a>
-                            </li>
-                            <% } %> 
-                        </ul>
-                    </div>
+        <section class="contenedorGeneral">
+            <!-- Acceso directo para editar producto, solo admin -->
+            <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin == 1) { %>
+                <button class="button_editarProducto">
+                    <a href="/admin/edit/<%= producto.id %>"><i class="wrench fas fa-wrench"></i></a>
+                </button>
+            <% } %>
+            <h1 class="tituloMobile"><%= producto.nombre  %></h1>
+            <section class="cajaCarrusel">
+                <div class="slider">
+                    <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
                 </div>
             </section>
-            
-            <section class="detalles">
-                <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin == 1) { %>
-                    <button class="button_editarProducto">
-                        <a href="/admin/edit/<%= producto.id %>"><i class="wrench fas fa-wrench"></i></a>
-                    </button>
-                <% } %>
-            
-                <h1><%= producto.nombre %></h1>
-                <div class="detalles">
-                    <h2 class="precio">$<%= producto.precio %></h2>
+            <section class="cajaDetalles">
+                <div class="cajaTitulo">
+                    <h1 class="titulo"><%= producto.nombre  %></h1>
+                    <!-- New in Font Awesome 5 is the fas prefix, Font Awesome 4 uses fa. 
+                    The s in fas stands for solid, and some icons also have a regular mode, specified by using the prefix far. -->
+                    <i class="favMarcado fas fa-solid fa-heart"></i>
+                    <i class="favDesmarcado far fa-solid fa-heart"></i>
+                </div>
+                <div class="valoracion">
+                    <!-- De momento estático / no funciona media estrella-->
+                    <i class="fas fa-solid fa-star"></i>
+                    <i class="fas fa-solid fa-star"></i>
+                    <i class="fas fa-solid fa-star"></i>
+                    <i class="fas fa-solid fa-star"></i>
+                    <i class="far fa-solid fa-star"></i>
+                </div>
+                <div class="cajaPrecio">
+                    <h2 class="<%= producto.descuento > 0 ? "precioConDescuento" : "precioSinDescuento"  %>">$<%= producto.precio %></h2>
                     <% if(producto.descuento>0){ %> 
-                    <h2 ><%= producto.descuento %>% OFF</h2>
-                    <h2 >$<%= producto.precio - producto.precio*producto.descuento/100  %></h2>
-            
-                    <% } %>                 
-                    
-                    <div class="marca">
-                        <h4>Marca:</h4><span><%= producto.marca %></span>
-                    </div>
-            
-                    <!-- <div class="modelo">
-                        <h4>Modelo:</h4><span>Gup</span>
-                    </div> -->
-                    
-                    
-                    
+                        <span class="precioDescuento">$<%= producto.precio - producto.precio*producto.descuento/100  %></span>
+                        <span class="descuento"><%= producto.descuento %>% OFF</span>
+                    <% } %>
+                </div>
+                <form action="../user/cart/agregar/<%=producto.id%>" method="POST" id="<%=producto.id%>" class="formAgregarProducto">
+                    <div class="selectores">
                         <% if(producto.talle[0]){ %> 
-                        <label for="talle"><h4>Talle:</h4></label>
-                        <select name="talle" id="talle">
-                            <% for(i=0; i<producto.talle.length; i++) {%> 
-                            <option value="<%= producto.talle[i].nombre %> "><%= producto.talle[i].nombre %></option>
-                            <% } %>
-                            <!-- <option value="6">6</option>
-                            <option value="7">7</option>
-                            <option value="8">8</option>
-                            <option value="9">9</option> -->
-                    
-                        </select>
+                            <div class="cajaTalle">
+                                <label for="talle">Talle: </label>
+                                <select name="talle" id="talle">
+                                    <% producto.talle.forEach(talle => { %> 
+                                        <option value="<%= talle.nombre %>"><%= talle.nombre %></option>
+                                    <% }) %>
+                                </select>
+                            </div>
                         <% } %>
-            
+                
                         <% if(producto.color[0]){ %> 
-                            <label for="color"><h4>Color:</h4></label>
-                            <select name="color" id="color">
-                                <% for(i=0; i<producto.color.length; i++) {%> 
-                                <option value="<%= producto.color[i].nombre %> "><%= producto.color[i].nombre %></option>
-                                <% } %>
-                                <!-- <option value="6">6</option>
-                                <option value="7">7</option>
-                                <option value="8">8</option>
-                                <option value="9">9</option> -->
-                        
-                            </select>
-                            <% } %>
-                    <form action="../user/cart/agregar/<%=producto.id%>" method="POST" id="<%=producto.id%>" class="formAgregarProducto">
-                        <div class="cantidad">
-                            <label for="cantidad"><h4>Cantidad:</h4></label>
-                            <div class="box-quantity-container">
-                                <div class="box-quantity">
-                                    <button>-</button>
-                                    <input id="cantidad" type="number" value="1" name="cantidad" class="quantity" min="1" max="100">
-                                    <button>+</button>
-                                </div>
+                            <div class="cajaColor">
+                                <label for="color">Color: </label>
+                                <select name="color" id="color">
+                                    <% producto.color.forEach(color => { %> 
+                                    <option value="<%= color.nombre %>"><%= color.nombre %></option>
+                                    <% }) %>
+                                </select>
+                            </div>
+                        <% } %>
+                    </div>
+                    <div class="cantidad">
+                        <label for="cantidad">Cantidad: </label>
+                        <div class="box-quantity-container">
+                            <div class="box-quantity">
+                                <button>-</button>
+                                <input id="cantidad" type="number" value="1" name="cantidad" class="quantity" min="1" max="100">
+                                <button>+</button>
                             </div>
                         </div>
-                    
-                        <button type="submit">Añadir al carrito</button>
-                    
-                    </form>
-                    
-                </div>
+                    </div>
                 
-                <h4>Descripción:</h4>
-            
-                <p class="descripcion"><%= producto.descripcion %><!-- Elaborado con tejido plano ripstop (antidesgarro) de 6 onz de peso. Diseño clásico, corte amplio, pantalón con cintura elastizada con cordón de 3 cm, chaqueta cómoda y resistente, logos oficiales estampados. Ideal para principiantes, soporta continuos lavados y es de fácil planchado. Sujeción con cinta de abrojo. Incluye cinto blanco. --></p>                       
-            
-            
+                    <button type="submit">Añadir al carrito</button>
+                    <p>Compra 100% protegida</p>
+                </form>
             </section>
-        </section class="carrusel-descripcion">
+            <section class="caracteristicasContenedor">
+                <div class="marca">
+                    <span class="marcaNegrita">Marca: </span>
+                    <span class="marcaContenido"><%= producto.marca %></span>
+                </div>
+            </section>
+            <section class="descripcionContenedor">
+                <div class="descripcion">
+                    <p class="contenido"><%= producto.descripcion %></p>
+                </div>
+            </section>
+            <section class="opinionesContenedor">
+                <div class="Contenedor_vov">
+                    <div class="valoracion">
+                        <!-- De momento estático / no funciona media estrella-->
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="far fa-solid fa-star"></i>
+                    </div>
+                    <div>
+                        <span class="opinionesContador">18 Opiniones / </span>
+                        <span class="vendidosContador">23 Vendidos</span>
+                    </div>
+                </div>
+                <!-- implementar for con las opiniones de cada producto / de momento estático -->
+                <article class="clienteSatisfecho">
+                    <div class="valoracion">
+                        <span class="username">user1234</span>
+                        <!-- De momento estático / no funciona media estrella-->
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                    </div>
+                    <p class="enResumen">Lorem impsum</p>
+                    <p class="valoracionUsuario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, excepturi aliquid nulla magni commodi pariatur, sint natus nihil sapiente eligendi dolore blanditiis neque eum. In voluptates nemo a nam explicabo.</p>
+                </article>
+                <article class="clienteSatisfecho">
+                    <div class="valoracion">
+                        <span class="username">user1234</span>
+                        <!-- De momento estático / no funciona media estrella-->
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                    </div>
+                    <p class="enResumen">Lorem impsum</p>
+                    <p class="valoracionUsuario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, excepturi aliquid nulla magni commodi pariatur, sint natus nihil sapiente eligendi dolore blanditiis neque eum. In voluptates nemo a nam explicabo.</p>
+                </article>
+                <article class="clienteSatisfecho">
+                    <div class="valoracion">
+                        <span class="username">user1234</span>
+                        <!-- De momento estático / no funciona media estrella-->
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="fas fa-solid fa-star"></i>
+                        <i class="far fa-solid fa-star"></i>
+                    </div>
+                    <p class="enResumen">Lorem impsum</p>
+                    <p class="valoracionUsuario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, excepturi aliquid nulla magni commodi pariatur, sint natus nihil sapiente eligendi dolore blanditiis neque eum. In voluptates nemo a nam explicabo.</p>
+                </article>
+                <button class="masComentarios">Cargar más...</button>
+            </section>
+        </section>
 
-        <section class="relacionados">
+        <section class="mismaMarca"><!-- Productos de la misma marca -->
 
-            <h2>Productos relacionados</h2>
+            <h2>Productos de la misma marca</h2>
+
+            <div class="relacionados_contenedor">
+                <article class="producto_relacionado">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-13.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">4.800 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">2.400 $</p>
+                        <h4 class="titulo">Manoplas almohadilla entrenamiento wushengreen</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_relacionado">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-17.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">26.499 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">13.249 $</p>
+                        <h4 class="titulo">Saco Boxeo de pie 165cm con soporte</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_relacionado">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-14.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">22.400 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">11.200 $</p>
+                        <h4 class="titulo">Combo bolsa + soporte + cadenas + relleno EVERLAST boxeo</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+                <article class="producto_relacionado">
+                    <div class="image_container">
+                        <a href="#"><img src="/img/productos/product-19.jpg"></a>
+                    </div>
+                    <div class="detail_container">
+                        <p class="precio">1.400 $</p>
+                        <p class="descuento">- 15%</p>
+                        <p class="precio_des">700 $</p>
+                        <h4 class="titulo">Cinturón cinto artes marciales</h4>
+                        <p class="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam odio
+                            repellendus necessitatibus veniam aliquid excepturi autem? Corrupti non illum</p>
+                    </div>
+                </article>
+            </div>
+            <button class="bttnVerMasMismaMarca">Ver más</button>
+            
+        </section>
+        
+        <section class="relacionados"> <!-- Productos Similares -->
+
+            <h2>Productos similares</h2>
 
             <div class="relacionados_contenedor">
                 <article class="producto_relacionado">
@@ -191,8 +275,7 @@
                 </article>
             </div>
 
-            
-            
+            <button class="bttnVerMasSimilares">Ver más</button>
         </section>
 
     </main>
