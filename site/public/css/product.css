@@ -1,6 +1,385 @@
-.product section.contenedorGeneral {
-    margin: 10px;
+main.product section.contenedorGeneral {
+    width: 95%;
+    margin: 20px auto;
     background-color: var(--white);
+    position: relative;
 }
 
-/* font-weight: bold */
+main.product section.contenedorGeneral h1.tituloMobile {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+main.product section.contenedorGeneral button.bttn_editarProducto {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: var(--lightBlue);
+    border: none;
+    padding: 4px;
+    cursor: pointer;
+}
+
+main.product section.contenedorGeneral button.bttn_editarProducto a i.wrench {
+    color: var(--white);
+}
+
+/* Carrusel */
+main.product section.contenedorGeneral section.cajaCarrusel {
+    width: 95%;
+    margin: 20px auto;
+}
+
+main.product section.contenedorGeneral section.cajaCarrusel div.slider {
+    width: 100%;
+}
+
+main.product section.contenedorGeneral section.cajaCarrusel div.slider img {
+    width: 100%;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles {
+    width: 95%;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5)
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.cajaTitulo {
+    position: relative;
+    padding: 10px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.cajaTitulo h1.titulo {
+    padding-right: 25px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.cajaTitulo i {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--lightBlue);
+    font-size: 25px;
+    cursor: pointer;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.cajaTitulo i.favMarcado {
+    display: none;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.valoracion {
+    margin: 15px 10px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.valoracion i {
+    color: var(--lightBlue);
+    font-size: 18px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.cajaPrecio {
+    margin: 0 10px 10px 10px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.cajaPrecio h2.precioConDescuento {
+    text-decoration: line-through;
+    font-size: 16px;
+    font-weight: lighter;
+    color: red;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.cajaPrecio h2.precioSinDescuento {
+    font-size: 26px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.cajaPrecio span.precioDescuento {
+    font-weight: bold;
+    font-size: 26px;
+
+}
+
+main.product section.contenedorGeneral section.cajaDetalles div.cajaPrecio span.descuento {
+    font-size: 16px;
+    color: green;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form {
+    margin: 10px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.selectores {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 70px;
+    margin-bottom: 20px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.selectores div.cajaTalle label,main.product section.contenedorGeneral section.cajaDetalles form div.selectores div.cajaColor label, main.product section.contenedorGeneral section.cajaDetalles form div.cantidad label {
+    font-weight: bold;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.selectores div.cajaTalle, main.product section.contenedorGeneral section.cajaDetalles form div.selectores div.cajaColor {
+    display: flex;
+    align-items: center;
+    height: 25px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.selectores div.cajaTalle select, main.product section.contenedorGeneral section.cajaDetalles form div.selectores div.cajaColor select {
+    border: 2px solid var(--lightBlue);
+    border-radius: 5px;
+    margin-left: 5px;
+    cursor: pointer;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.selectores div.cajaTalle select:focus, main.product section.contenedorGeneral section.cajaDetalles form div.selectores div.cajaColor select:focus {
+    border: 3px solid var(--lightBlue);
+    transition: .1s ease all;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.cantidad input{
+    width: 40px;
+    margin: 0;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.cantidad div.box-quantity-container {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.cantidad div.box-quantity-container div.box-quantity {
+    display: flex;
+    
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.cantidad div.box-quantity-container div.box-quantity button{
+    background-color: var(--lightBlue);
+    color: var(--white);
+    width: 25px;
+    border-radius: 5px 0 0 5px;
+    height: 30px;
+    margin: 0;
+    border: none;
+    cursor: pointer;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.cantidad div.box-quantity-container div.box-quantity button:last-child{
+    border-radius: 0 5px 5px 0;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.cantidad div.box-quantity input {
+    width: 35px;
+    border-left: none;
+    border-right: none;
+    border: 2px solid var(--lightBlue);
+    border-radius: 0;
+    text-align: center;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.cantidad div.box-quantity input:focus {
+    border: 3px solid var(--lightBlue);
+    transition: .1s ease all;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.cantidad div.box-quantity input:focus-visible {
+    outline: 1px solid var(--lightBlue);
+    transition: .1s ease all;
+}
+
+/* esconder botones de input type number */
+main.product input::-webkit-outer-spin-button, main.product input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Firefox */
+main.product input[type=number] {
+    -moz-appearance: textfield;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.contenedorFinal {
+    text-align: center;
+    margin-top: 20px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.contenedorFinal button {
+    background-color: var(--lightBlue);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+main.product section.contenedorGeneral section.cajaDetalles form div.contenedorFinal p {
+    margin-top: 10px;
+    padding-bottom: 10px;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+main.product section.contenedorGeneral section.caracteristicasContenedor {
+    width: 95%;
+    margin: 20px auto;
+}
+
+main.product section.contenedorGeneral section.caracteristicasContenedor h2, main.product section.contenedorGeneral section.descripcionContenedor h2 {
+    text-align: center;
+    background-color: var(--lightBlue);
+    color: white;
+    border-radius: 5px;
+}
+
+main.product section.contenedorGeneral section.caracteristicasContenedor div.marca {
+    margin-top: 15px;
+    border: 2px solid var(--lightBlue);
+    border-radius: 5px;
+    padding: 5px;
+}
+
+main.product section.contenedorGeneral section.caracteristicasContenedor div.marca span:first-child {
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+main.product section.contenedorGeneral section.descripcionContenedor {
+    width: 95%;
+    margin: 0 auto 20px auto;
+}
+
+main.product section.contenedorGeneral section.descripcionContenedor div.descripcion {
+    margin-top: 15px;
+}
+
+main.product section.contenedorGeneral section.opinionesContenedor {
+    width: 95%;
+    margin: 0 auto;
+    padding-bottom: 20px;
+}
+
+main.product section.contenedorGeneral section.opinionesContenedor div.Contenedor_vov {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+main.product section.contenedorGeneral section.opinionesContenedor div.Contenedor_vov div.valoracion i {
+    color: var(--lightBlue);
+    font-size: 18px;
+}
+
+main.product section.contenedorGeneral section.opinionesContenedor div.Contenedor_vov div.contador_ov span {
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+}
+
+main.product section.contenedorGeneral section.opinionesContenedor article.clienteSatisfecho {
+    margin: 20px 0;
+}
+
+main.product section.contenedorGeneral section.opinionesContenedor article.clienteSatisfecho div {
+    margin: 10px 0;
+}
+
+main.product section.contenedorGeneral section.opinionesContenedor article.clienteSatisfecho div span {
+    font-weight: bold;
+    margin-right: 20px;
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+}
+
+main.product section.contenedorGeneral section.opinionesContenedor article.clienteSatisfecho p.enResumen {
+    font-weight: bold;
+}
+
+main.product section.contenedorGeneral section.opinionesContenedor button.masComentarios {
+    background-color: var(--lightBlue);
+    border-radius: 5px;
+    border: none;
+    color: white;
+    padding: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    font-size: 15px;
+}
+
+/* productos relacionados  y de la misma marca */
+
+main.product section.mismaMarca h2{
+    background-color: var(--lightBlue);
+    text-align: center;
+    color: var(--white);
+    padding: 5px 0 5px 0;
+    margin: 20px 0 10px 0;
+    text-transform: uppercase;
+}
+
+main.product section.mismaMarca div.relacionados_contenedor {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+main.product section.mismaMarca div.relacionados_contenedor article.producto_relacionado {
+    margin-top: 10px;
+    width: 45%;
+    background-color: var(--white);
+    border-radius: 5px;
+}
+
+main.product section.mismaMarca div.relacionados_contenedor article.producto_relacionado div.image_container a img {
+    width: 100%;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+main.product section.mismaMarca div.relacionados_contenedor article.producto_relacionado div.detail_container {
+    position: relative;
+    text-align: center;
+    padding: 0px 10px 10px 10px;
+}
+
+main.product section.mismaMarca div.relacionados_contenedor article.producto_relacionado div.detail_container p.descuento {
+    position: absolute;
+    top: -40px;
+    left: 10px;
+    color: var(--white);
+    background-color: var(--lightBlue);
+    font-size: 15px;
+}
+
+main.product section.mismaMarca div.relacionados_contenedor article.producto_relacionado div.detail_container p.descripcion {
+    display: none;
+}
+
+main.product section.mismaMarca div.relacionados_contenedor article.producto_relacionado div.detail_container p.precio {
+    text-decoration: line-through;
+    color: red;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 16px;
+}
+
+main.product section.mismaMarca div.relacionados_contenedor article.producto_relacionado div.detail_container p.precio_des  {
+    color: var(--black);
+    text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+
+main.product section.mismaMarca div {
+    width: 95%;
+    margin: 0 auto;
+}
+
+main.product section.mismaMarca div p.bttnVerMas {
+    color: white;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 80px;
+}

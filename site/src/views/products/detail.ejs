@@ -12,7 +12,7 @@
         <section class="contenedorGeneral">
             <!-- Acceso directo para editar producto, solo admin -->
             <% if (locals.usuarioLogueado && locals.usuarioLogueado.admin == 1) { %>
-                <button class="button_editarProducto">
+                <button class="bttn_editarProducto">
                     <a href="/admin/edit/<%= producto.id %>"><i class="wrench fas fa-wrench"></i></a>
                 </button>
             <% } %>
@@ -80,17 +80,21 @@
                         </div>
                     </div>
                 
-                    <button type="submit">Añadir al carrito</button>
-                    <p>Compra 100% protegida</p>
+                    <div class="contenedorFinal">
+                        <button type="submit">Añadir al carrito</button>
+                        <p>Compra 100% protegida</p>
+                    </div>
                 </form>
             </section>
             <section class="caracteristicasContenedor">
+                <h2>Características</h2>
                 <div class="marca">
-                    <span class="marcaNegrita">Marca: </span>
-                    <span class="marcaContenido"><%= producto.marca %></span>
+                    <span>Marca: </span>
+                    <span><%= producto.marca %></span>
                 </div>
             </section>
             <section class="descripcionContenedor">
+                <h2>Descripción</h2>
                 <div class="descripcion">
                     <p class="contenido"><%= producto.descripcion %></p>
                 </div>
@@ -105,14 +109,14 @@
                         <i class="fas fa-solid fa-star"></i>
                         <i class="far fa-solid fa-star"></i>
                     </div>
-                    <div>
-                        <span class="opinionesContador">18 Opiniones / </span>
-                        <span class="vendidosContador">23 Vendidos</span>
+                    <div class="contador_ov">
+                        <span>18 Opiniones / </span>
+                        <span>23 Vendidos</span>
                     </div>
                 </div>
                 <!-- implementar for con las opiniones de cada producto / de momento estático -->
                 <article class="clienteSatisfecho">
-                    <div class="valoracion">
+                    <div>
                         <span class="username">user1234</span>
                         <!-- De momento estático / no funciona media estrella-->
                         <i class="fas fa-solid fa-star"></i>
@@ -125,7 +129,7 @@
                     <p class="valoracionUsuario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, excepturi aliquid nulla magni commodi pariatur, sint natus nihil sapiente eligendi dolore blanditiis neque eum. In voluptates nemo a nam explicabo.</p>
                 </article>
                 <article class="clienteSatisfecho">
-                    <div class="valoracion">
+                    <div>
                         <span class="username">user1234</span>
                         <!-- De momento estático / no funciona media estrella-->
                         <i class="fas fa-solid fa-star"></i>
@@ -138,7 +142,7 @@
                     <p class="valoracionUsuario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatibus, excepturi aliquid nulla magni commodi pariatur, sint natus nihil sapiente eligendi dolore blanditiis neque eum. In voluptates nemo a nam explicabo.</p>
                 </article>
                 <article class="clienteSatisfecho">
-                    <div class="valoracion">
+                    <div>
                         <span class="username">user1234</span>
                         <!-- De momento estático / no funciona media estrella-->
                         <i class="fas fa-solid fa-star"></i>
@@ -212,11 +216,13 @@
                     </div>
                 </article>
             </div>
-            <button class="bttnVerMasMismaMarca">Ver más</button>
+            <div>
+                <p class="bttnVerMas">Ver más</p>
+            </div>
             
         </section>
         
-        <section class="relacionados"> <!-- Productos Similares -->
+        <section class="mismaMarca relacionados"> <!-- Productos Similares -->
 
             <h2>Productos similares</h2>
 
@@ -275,7 +281,9 @@
                 </article>
             </div>
 
-            <button class="bttnVerMasSimilares">Ver más</button>
+            <div>
+                <p class="bttnVerMas">Ver más</p>
+            </div>
         </section>
 
     </main>
