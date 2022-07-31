@@ -10,10 +10,15 @@
     const precio = qs(".precio") 
     const articleProducto = qs(".product_info")
     const cartContainer = qs(".container")
+    const quantityLayer = qs(".quantity-layer")
+    const quantityInput = qs(".quantity-input")
+    const quantityCancelBtn = qs(".quantity-cancel")
+    const quantityAcceptBtn = qs(".quantity-accept")
+    var productoId;
     var subtotal = 0;
 
     
-    
+/* Mostrar productos del carrito */
     const listarProductos =() =>{
         
         fetch("http://localhost:3000/api/cart")
@@ -68,7 +73,7 @@
                     } 
                 });
 
-                console.log(subtotal);
+                
                 cartContainer.innerHTML += `<section class="monto_final">
                 <div class="total_container">
                 <div class="seguro">
@@ -102,6 +107,8 @@
         .catch(error=>console.log(error))
     }
 
+
+ /* Eliminar productos del carrito */
     const eliminarProducto = (id) =>{
 
         fetch(`http://localhost:3000/api/cart/delete/${id}`, {
@@ -119,12 +126,48 @@
 
     }
 
+/* Cambiar cantidad de productos del carrito */
+const cambiarCantidad = (id, cant)=>{
     
-    
-    /* botonEliminar.addEventListener('click', (e) => {
-        e.preventDefault()
-        eliminarProducto()
-    }) */
+    fetch(`http://localhost:3000/api/cart/changeQuantity/${id}/${cant}`,{
+        method: "PUT"
+    })
+    .then(response => response.json())
+    .then(()=>{
+        console.log("cant +-");
+        listarProductos()
+        }
+    )
 
-    /* listarProductos(); */
+    .catch(error=>console.log(error + "catch"))
+}
+
+    
+
+
+
+    /* Mostrar selector de cantidad */
+
+    const mostrarSelectorCantidad = (id) => {
+        quantityInput.value = "1";
+        quantityLayer.style.display = "flex";
+        productoId = id;
+    }
+
+    /* Cerrar selector de cantidad */
+    quantityCancelBtn.addEventListener("click", ()=>{
+        quantityLayer.style.display = "none";
+    })
+
+    /* Aceptar cambiar cantidad de un producto */
+    quantityAcceptBtn.addEventListener("click", ()=>{
+        quantityLayer.style.display = "none";      
+
+        cambiarCantidad(productoId, quantityInput.value);
+
+        listarProductos();
+
+        
+    })
+
 
