@@ -24,6 +24,8 @@
         fetch("http://localhost:3000/api/cart")
         .then(response => response.json())
         .then(result =>{
+
+            subtotal = 0;
             /* console.log(result.data); */
                 if (result.data.length) {
                     cartContainer.innerHTML= `<div class="info_cart">
@@ -47,12 +49,10 @@
                     </div>
                     <div class="cantidad_container">
                         <div class="box_quantity">
-                            <button class="sumaResta">-</button>
-                            <form action="/user/cart/changeQuantity/${carrito.carritoProducto.id}?_method=PUT" method="POST">
+                            
                                 <input type="number" name="cantidad" value="${carrito.cantidad}" class="quantity" min="0">
-                                <button type="submit" id="cambiarCantidad">Cambiar</button>
-                            </form>
-                            <button class="sumaResta">+</button>
+                                <button type="submit" id="cambiarCantidad" onclick="mostrarSelectorCantidad(${carrito.carritoProducto.id})">Cambiar cantidad</button>
+                            
                         </div>
                         <!-- <p class="stock">5 disponibles</p> -->
                     </div>
