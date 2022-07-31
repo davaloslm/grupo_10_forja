@@ -5,6 +5,15 @@
     <title>Carrito</title>
 </head>
 <body>
+
+    <div class="quantity-layer">
+        <div class="quantity-card">
+            <span  class="quantity-cancel"><i class="fas fa-times"></i></span>
+            <input class="quantity-input" type="number" value="1" min="1" max="100" >
+            <button type="button" class="quantity-accept">Aceptar</button>
+        </div>
+    </div>
+
     <%- include('../partials/header')  %> 
 
     <main class="cart">
@@ -35,13 +44,13 @@
                     </div>
                     <div class="cantidad_container">
                         <div class="box_quantity">
-                            <button class="sumaResta">-</button>
-                            <form action="/user/cart/changeQuantity/<%= carrito.carritoProducto.id%>?_method=PUT" method="POST">
+<!--                             <button class="sumaResta" onclick=<%= `disminuirCantidad(${carrito.carritoProducto.id},${carrito.cantidad})`%>>-</button>
+ -->                            <form action="/user/cart/changeQuantity/<%= carrito.carritoProducto.id%>?_method=PUT" method="POST">
                                 <input type="number" name="cantidad" value="<%=carrito.cantidad%>" class="quantity" min="0">
-                                <button type="submit" id="cambiarCantidad">Cambiar</button>
+                                <button type="button" id="cambiarCantidad" onclick=<%= `mostrarSelectorCantidad(${carrito.carritoProducto.id})`%> >Cambiar cantidad</button>
                             </form>
-                            <button class="sumaResta">+</button>
-                        </div>
+<!--                             <button class="sumaResta" onclick=<%= `cambiarCantidad(${carrito.carritoProducto.id},${carrito.cantidad+1})`%> >+</button>
+ -->                        </div>
                         <!-- <p class="stock">5 disponibles</p> -->
                     </div>
                     <div class="monto_container">

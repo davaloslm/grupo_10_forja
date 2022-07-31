@@ -3,6 +3,68 @@
     margin: 20px 0px 20px 20px;
 }
 
+/* Selector de cantidad */
+div.quantity-layer{
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .55);
+    z-index: 100;
+}
+
+div.quantity-layer .quantity-card{
+    width: 300px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: var(--white);
+    border-radius: 10px;
+    position: relative;
+    border: solid 3px var(--lightBlue);
+}
+
+div.quantity-layer .quantity-card .quantity-cancel{
+    padding: 15px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    cursor: pointer;
+    
+}
+
+div.quantity-layer .quantity-card .quantity-cancel i {
+    color: var(--lightBlue);
+    font-size: 25px;
+}
+
+div.quantity-layer .quantity-input{
+    width: 60px;
+    height: 30px;
+    border-left: none;
+    border-right: none;
+    border: 1px solid var(--lightBlue);
+    text-align: center;
+    height: 35px;
+    width: 60px;
+
+}
+
+div.quantity-layer .quantity-accept{
+    padding: 5px;
+    color: var(--white);
+    margin: 10px auto;
+    background-color: var(--lightBlue);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;    
+}
 /*                         Carrito                              */
 .cart section.container {
     background-color: var(--white);
@@ -90,7 +152,7 @@
     width: 90%;
 }
 
-.cart section.container article.product_info div.foto_product form button.eliminar {
+.cart section.container article.product_info div.foto_product button.eliminar {
     width: 100%;
     background-color: var(--lightBlue);
     border-radius: 0 0 5px 5px;
@@ -407,9 +469,9 @@
         height: 30px;
     }
 
-    .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity form button#cambiarCantidad {
+    /* .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity form button#cambiarCantidad {
         height: 30px;
-    }
+    } */
 
     .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button.sumaResta {
         width: 25px;

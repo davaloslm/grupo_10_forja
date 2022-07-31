@@ -102,7 +102,26 @@ const controller = {
             console.log(error);
         })
     },
+    cambiarCantidad: (req, res)=>{
+        let productoId = req.params.id;
+        let cantidad = parseInt(req.params.cant);
 
+        db.Carrito.update({
+            cantidad: cantidad
+        }, {
+            where: {
+                usuarioId: req.session.usuarioLogueado.id,
+                productoId: productoId,
+            }
+        })
+        .then(result=>{
+            res.json(result)
+        })
+        .catch(error=>{
+            res.send("No se pudo cambiar la cantidad del producto del carrito")
+            console.log(error);
+        })
+    }
 }
 
 module.exports = controller
