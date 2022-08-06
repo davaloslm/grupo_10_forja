@@ -14,6 +14,8 @@
     const quantityInput = qs(".quantity-input")
     const quantityCancelBtn = qs(".quantity-cancel")
     const quantityAcceptBtn = qs(".quantity-accept")
+    const increasetBtn = qs(".increase")
+    const decreasetBtn = qs(".decrease")
     var productoId;
     var subtotal = 0;
 
@@ -169,4 +171,12 @@ const cambiarCantidad = (id, cant)=>{
         
     })
 
+    /* boton + - */
+
+    increasetBtn.addEventListener("click", ()=>{
+        quantityInput.stepUp()
+    })
+    decreasetBtn.addEventListener("click", ()=>{
+        quantityInput.stepDown()
+    })
 

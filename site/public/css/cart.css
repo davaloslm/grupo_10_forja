@@ -45,6 +45,30 @@ div.quantity-layer .quantity-card .quantity-cancel i {
     font-size: 25px;
 }
 
+div.quantity-layer div.quantity-input-container{
+    display: flex;
+}
+
+div.quantity-layer div.quantity-input-container button.increase{
+    height: 35px;
+    width: 35px;
+    color: white;
+    background-color: var(--lightBlue);
+    border: none;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+}
+
+div.quantity-layer div.quantity-input-container button.decrease{
+    height: 35px;
+    width: 35px;
+    color: white;
+    background-color: var(--lightBlue);
+    border: none;
+    cursor: pointer;
+    border-radius:  5px 0 0 5px;
+}
+
 div.quantity-layer .quantity-input{
     width: 60px;
     height: 30px;
@@ -54,7 +78,8 @@ div.quantity-layer .quantity-input{
     text-align: center;
     height: 35px;
     width: 60px;
-
+    -moz-appearance: textfield;
+    -webkit-appearance: textfield
 }
 
 div.quantity-layer .quantity-accept{
