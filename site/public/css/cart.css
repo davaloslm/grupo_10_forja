@@ -198,30 +198,13 @@ div.quantity-layer .quantity-accept{
     align-items: center;
 }
 
-/* .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity button.sumaResta {
-    background-color: var(--lightBlue);
-    color: var(--white);
-    width: 15px;
-    height: 18px;
-    border-radius: 5px 0 0 5px;
-    border: none;
-    cursor: pointer;
-} */
-
-.cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity input {
-    width: 30px;
-    border-left: none;
-    border-right: none;
-    border: 1px solid var(--lightBlue);
-    text-align: center;
-}
-
 .cart section.container article.product_info div.detail_product div.cantidad_container div.box_quantity  button#cambiarCantidad {
     background-color: var(--lightBlue);
     color: var(--white);
     border: none;
     cursor: pointer;
-    width: 60px;
+    width: 90px;
+    height: 30px;
     padding: 1px;
     border-radius: 5px;
     margin: 10px;

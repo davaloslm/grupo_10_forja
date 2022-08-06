@@ -50,8 +50,7 @@
                     <div class="cantidad_container">
                         <div class="box_quantity">
                             
-                                <input type="number" name="cantidad" value="${carrito.cantidad}" class="quantity" min="0">
-                                <button type="submit" id="cambiarCantidad" onclick="mostrarSelectorCantidad(${carrito.carritoProducto.id})">Cambiar cantidad</button>
+                                <button type="submit" id="cambiarCantidad" onclick="mostrarSelectorCantidad(${carrito.carritoProducto.id})">Cantidad: ${carrito.cantidad} <i class="fas fa-chevron-down"></i></button>
                             
                         </div>
                         <!-- <p class="stock">5 disponibles</p> -->
