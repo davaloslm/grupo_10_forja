@@ -14,6 +14,8 @@
     const quantityInput = qs(".quantity-input")
     const quantityCancelBtn = qs(".quantity-cancel")
     const quantityAcceptBtn = qs(".quantity-accept")
+    const increasetBtn = qs(".increase")
+    const decreasetBtn = qs(".decrease")
     var productoId;
     var subtotal = 0;
 
@@ -50,8 +52,7 @@
                     <div class="cantidad_container">
                         <div class="box_quantity">
                             
-                                <input type="number" name="cantidad" value="${carrito.cantidad}" class="quantity" min="0">
-                                <button type="submit" id="cambiarCantidad" onclick="mostrarSelectorCantidad(${carrito.carritoProducto.id})">Cambiar cantidad</button>
+                                <button type="submit" id="cambiarCantidad" onclick="mostrarSelectorCantidad(${carrito.carritoProducto.id})">Cantidad: ${carrito.cantidad} <i class="fas fa-chevron-down"></i></button>
                             
                         </div>
                         <!-- <p class="stock">5 disponibles</p> -->
@@ -170,4 +171,12 @@ const cambiarCantidad = (id, cant)=>{
         
     })
 
+    /* boton + - */
+
+    increasetBtn.addEventListener("click", ()=>{
+        quantityInput.stepUp()
+    })
+    decreasetBtn.addEventListener("click", ()=>{
+        quantityInput.stepDown()
+    })
 

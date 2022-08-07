@@ -9,7 +9,11 @@
     <div class="quantity-layer">
         <div class="quantity-card">
             <div  class="quantity-cancel"><i class="fas fa-times"></i></div>
-            <input class="quantity-input" type="number" value="1" min="1" max="100" >
+            <div class="quantity-input-container">
+                <button class="decrease"><i class="fas fa-minus"></i></button>
+                <input class="quantity-input" type="number" value="1" min="1" max="100" >
+                <button class="increase"><i class="fas fa-plus"></i></button>
+            </div>
             <button type="button" class="quantity-accept">Aceptar</button>
         </div>
     </div>
@@ -42,8 +46,7 @@
                     </div>
                     <div class="cantidad_container">
                         <div class="box_quantity">
-                                <input type="number" name="cantidad" value="<%=carrito.cantidad%>" class="quantity" min="0">
-                                <button type="button" id="cambiarCantidad" onclick=<%= `mostrarSelectorCantidad(${carrito.carritoProducto.id})`%> >Cambiar cantidad</button>
+                                <button type="button" id="cambiarCantidad" onclick=<%= `mostrarSelectorCantidad(${carrito.carritoProducto.id})`%> >Cantidad: <%=carrito.cantidad%> <i class="fas fa-chevron-down"></i></button>
                        </div>
                     </div>
                     <div class="monto_container">

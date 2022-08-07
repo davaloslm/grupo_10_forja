@@ -9,6 +9,7 @@ window.addEventListener('load', () => {
     const formulario = qs('.formAgregarProducto');
     const productoId = formulario.attributes.id.textContent;
     const inputCantidad = qs('.quantity');
+    const addBtn = qs("#añadir")
     
     
     formulario.addEventListener('submit', (e) => {
@@ -19,7 +20,16 @@ window.addEventListener('load', () => {
         })
         .then(response => response.json())
         .then(data =>{
-            console.log(data)
+        
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Se agregó el producto al carrito',
+                    position: 'top-end',
+                    showConfirmButton: false,
+                    timer: 3000,
+                    timerProgressBar: true,
+                  })
+            
         })
         .catch(error=>console.log(error))
 
