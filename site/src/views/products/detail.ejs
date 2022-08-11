@@ -17,11 +17,49 @@
                 </button>
             <% } %>
             <h1 class="tituloMobile"><%= producto.nombre  %></h1>
-            <section class="cajaCarrusel">
-                <div class="slider">
-                    <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
-                </div>
-            </section>
+            <% if (producto.imagen[1]) { %>
+                <section class="cajaCarrusel">
+                    <% if (producto.imagen[2]) { %>
+                        <!-- OPCIÓN 1: PRODUCTO CON 3 FOTOS -->
+                        <div class="slider" id="slider">
+                            <article class="fotos" id="articles">
+                                <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
+                            </article>
+                            <article class="fotos" id="articles">
+                                <img src="/img/productos/<%= producto.imagen[1].nombre %>" alt="<%= producto.nombre %>">
+                            </article>
+                            <article class="fotos" id="articles">
+                                <img src="/img/productos/<%= producto.imagen[2].nombre %>" alt="<%= producto.nombre %>">
+                            </article>
+                        </div>
+                        <% } else { %>
+                        <!-- OPCIÓN 2: PRODUCTO CON 2 FOTOS -->
+                        <div class="slider2" id="slider">
+                            <article class="fotos" id="articles">
+                                <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
+                            </article>
+                            <article class="fotos" id="articles">
+                                <img src="/img/productos/<%= producto.imagen[1].nombre %>" alt="<%= producto.nombre %>">
+                            </article>
+                        </div>
+                    <% } %>
+                    <span class="botonesCarrusel" id="bttnRight">&#62</span>
+                    <span class="botonesCarrusel" id="bttnLeft">&#60</span>
+                </section>
+                
+            <% } else { %>
+                <!-- OPCIÓN 3: PRODUCTO CON 1 SOLA FOTO -->
+                <section class="cajaCarrusel_opcion3">
+                    <div class="slider_opcion3" id="slider">
+                        <article class="fotos_opcion3" id="articles">
+                            <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
+                        </article>
+                    </div>
+                    <span class="botonesCarrusel_opcion3" id="bttnRight">&#62</span>
+                    <span class="botonesCarrusel_opcion3" id="bttnLeft">&#60</span>
+                </section>
+            <% } %>
+                
             <section class="cajaDetalles">
                 <div class="cajaTitulo">
                     <h1 class="titulo"><%= producto.nombre  %></h1>
@@ -46,29 +84,60 @@
                     <% } %>
                 </div>
                 <form action="../user/cart/agregar/<%=producto.id%>" method="POST" id="<%=producto.id%>" class="formAgregarProducto">
-                    <div class="selectores">
-                        <% if(producto.talle[0]){ %> 
-                            <div class="cajaTalle">
-                                <label for="talle">Talle: </label>
-                                <select name="talle" id="talle">
-                                    <% producto.talle.forEach(talle => { %> 
-                                        <option value="<%= talle.nombre %>"><%= talle.nombre %></option>
-                                    <% }) %>
-                                </select>
-                            </div>
-                        <% } %>
-                
-                        <% if(producto.color[0]){ %> 
-                            <div class="cajaColor">
-                                <label for="color">Color: </label>
-                                <select name="color" id="color">
-                                    <% producto.color.forEach(color => { %> 
-                                    <option value="<%= color.nombre %>"><%= color.nombre %></option>
-                                    <% }) %>
-                                </select>
-                            </div>
-                        <% } %>
-                    </div>
+                    <% if (producto.talle[0] && producto.color[0]) { %>
+                        <!-- opción 1, producto con colores y talle a elegir -->
+                        <div class="selectores">
+                            <% if(producto.talle[0]){ %> 
+                                <div class="cajaTalle">
+                                    <label for="talle">Talle: </label>
+                                    <select name="talle" id="talle">
+                                        <% producto.talle.forEach(talle => { %> 
+                                            <option value="<%= talle.nombre %>"><%= talle.nombre %></option>
+                                        <% }) %>
+                                    </select>
+                                </div>
+                            <% } %>
+                    
+                            <% if(producto.color[0]){ %> 
+                                <div class="cajaColor">
+                                    <label for="color">Color: </label>
+                                    <select name="color" id="color">
+                                        <% producto.color.forEach(color => { %> 
+                                        <option value="<%= color.nombre %>"><%= color.nombre %></option>
+                                        <% }) %>
+                                    </select>
+                                </div>
+                            <% } %>
+                        </div>
+                    <% } else if (producto.talle[0] || producto.color[0]) { %>
+                        <!-- opción 2, producto con colores o talles a elegir, se cambia estilos del primer div-->
+                        <div class="selectores1">
+                            <% if(producto.talle[0]){ %> 
+                                <div class="cajaTalle">
+                                    <label for="talle">Talle: </label>
+                                    <select name="talle" id="talle">
+                                        <% producto.talle.forEach(talle => { %> 
+                                            <option value="<%= talle.nombre %>"><%= talle.nombre %></option>
+                                        <% }) %>
+                                    </select>
+                                </div>
+                            <% } %>
+
+                            <% if(producto.color[0]){ %> 
+                                <div class="cajaColor">
+                                    <label for="color">Color: </label>
+                                    <select name="color" id="color">
+                                        <% producto.color.forEach(color => { %> 
+                                        <option value="<%= color.nombre %>"><%= color.nombre %></option>
+                                        <% }) %>
+                                    </select>
+                                </div>
+                            <% } %>
+                        </div>
+                    <% } else { %>
+                        <!-- opción 3, no agrega nada -->
+                    <% } %>
+                    
                     <div class="cantidad">
                         <label for="cantidad">Cantidad: </label>
                         <div class="box-quantity-container">
@@ -293,4 +362,5 @@
 </body>
 <script src="../../../js/general.js"></script>
 <script src="../../../js/addToCart.js"></script>
+<script src="../../../js/productDetailSlider.js"></script>
 </html>
