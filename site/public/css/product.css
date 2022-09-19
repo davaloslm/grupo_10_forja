@@ -75,6 +75,7 @@ main.product section.contenedorGeneral section.cajaCarrusel article.fotos img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    border-radius: 5px;
 }
 
 /* opcion 3, producto con 1 sola foto */
@@ -500,6 +501,7 @@ main.product section.mismaMarca div p.bttnVerMas {
         width: 100%;
         box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.5);
         max-width: 310px;
+        border-radius: 5px;
     }
 
     main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos article.secundarias {
@@ -509,6 +511,9 @@ main.product section.mismaMarca div p.bttnVerMas {
     
     main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos article.secundarias img {
         width: 100%;
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        cursor: pointer;
     }
 
     main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaDetalles {
@@ -531,5 +536,108 @@ main.product section.mismaMarca div p.bttnVerMas {
 
 @media(min-width: 768px) {
 
+    main.product section.contenedorGeneral {
+        animation: respiracion 5s linear alternate infinite;
+        animation-delay: 5s;
+        max-width: 1215px;
+    }
+
+    main.product section.contenedorGeneral button.bttn_editarProducto:hover {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos {
+        flex-direction: row;
+        margin-right: 0px;
+        max-height: 400px;
+    }
+
+    main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos div.div_fotos {
+        flex-direction: column;
+        width: 25%;
+        justify-content: flex-start;
+    }
+
+    main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos article.secundarias {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos article.secundarias:last-child {
+        margin-bottom: 0px;
+    }
+
+    main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos article.principal {
+        width: 90%;
+        margin-bottom: 0px;
+        margin-right: 10px;
+    }
+
+    main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos article.principal img {
+        max-width: 400px;
+    }
+
+    main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaDetalles {
+        margin-left: 10px;
+        max-width: 450px;
+        max-height: 400px;
+    }
+
+    main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaDetalles form div.cantidad div.box-quantity-container div.box-quantity button:hover {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaDetalles form div.contenedorFinal button {
+        box-shadow: none;
+    }
+
+    main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaDetalles form div.contenedorFinal button:hover {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    main.product section.contenedorGeneral section.opinionesContenedor button.masComentarios {
+        box-shadow: none;
+    }
+
+    main.product section.contenedorGeneral section.opinionesContenedor button.masComentarios:hover {
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+    }
+
+    main.product section.contenedorGeneral section.caracteristicasContenedor, main.product section.contenedorGeneral section.descripcionContenedor, main.product section.contenedorGeneral section.opinionesContenedor {
+        max-width: 1024px;
+    }
+
+    main.product section.mismaMarca, main.product section.relacionados {
+        max-width: 1215px;
+        margin: 0 auto;
+    }
+
+    main.product section.mismaMarca div p.bttnVerMas:hover {
+        text-shadow: 1px 1px 2px var(--white), 0 0 1em var(--lightBlue), 0 0 0.2em var(--lightBlue);
+    }
 }
 
+
+
+
+@keyframes respiracion {
+    0% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0);
+    }
+
+    25% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.25);
+    }
+
+    50% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.50);
+    }
+
+    75% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,0.75);
+    }
+
+    100% {
+        box-shadow: 0px 0px 10px 0px rgba(42,210,210,1);
+    }
+}
