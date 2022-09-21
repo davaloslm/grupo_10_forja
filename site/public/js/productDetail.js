@@ -4,6 +4,11 @@ window.addEventListener('load', () => {
         return document.querySelector(tag);
     }
 
+    // Query selector All //
+    const qsAll = (tag) => {
+        return document.querySelectorAll(tag)
+    }
+
     const regExNumeros = /^\d{1,3}$/;
 
     const inputCantidad = qs('#cantidad');
@@ -77,5 +82,82 @@ window.addEventListener('load', () => {
     inputCantidad.addEventListener('input', () => {
         validacionInputCantidad();
     })
+
+
+    /* Slider para vista mobile en detalle de producto */
+
+    const slider = qs('#slider');
+    let fotos = qsAll('#articles')
+    let ultFoto = fotos[fotos.length -1];
+
+    const bttnLeft = qs('#bttnLeft');
+    const bttnRight = qs('#bttnRight');
+
+
+    slider.insertAdjacentElement('afterbegin', ultFoto)
+
+    // Función siguiente imagen //
+    function Next() {
+        let priFoto = qsAll('#articles')[0];
+        slider.style.marginLeft = '-200%'
+        slider.style.transition = 'all 0.5s'
+        setTimeout(function() {
+            slider.style.transition = 'none'
+            slider.insertAdjacentElement('beforeend', priFoto)
+            slider.style.marginLeft = "-100%"
+        }, 500);
+    }
+
+    // Función anterior imagen //
+    function Prev() {
+        let fotos = qsAll('#articles');
+        let ultFoto = fotos[fotos.length -1];
+        slider.style.marginLeft = '0'
+        slider.style.transition = 'all 0.5s'
+        setTimeout(function() {
+            slider.style.transition = 'none'
+            slider.insertAdjacentElement('afterbegin', ultFoto)
+            slider.style.marginLeft = "-100%"
+        }, 500);
+    }
+
+    bttnRight.addEventListener('click', () => {
+        Next()
+    })
+
+    bttnLeft.addEventListener('click', () => {
+        Prev()
+    })
+
+
+    /* Función alerta "Agregado al carrito!" */
+
+    const formulario = qs('.formAgregarProducto');
+    const productoId = formulario.attributes.id.textContent;
+
+    formulario.addEventListener('submit', (e) => {
+        e.preventDefault()
+
+        fetch(`http://localhost:3000/api/cart/add/${productoId}/${inputCantidad.value}`, {
+            method: 'POST'
+        })
+        .then(response => response.json())
+        .then(data => {
+        
+            Swal.fire({
+                toast: true,
+                icon: 'success',
+                title: 'Se agregó el producto al carrito',
+                position: 'top-end',
+                showConfirmButton: false,
+                timer: 3000,
+                timerProgressBar: true,
+            })
+            
+        })
+        .catch(error=>console.log(error))
+
+    })
+
 
 });
