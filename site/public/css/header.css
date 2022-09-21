@@ -180,10 +180,11 @@ header nav div.menu ul.listaCategorias li.categorias span{
 header nav div.menu ul.listaCategorias li.categorias div.submenu{
     display: flex;
     flex-direction: column;
-    /* position: absolute; */ /* solo en laptop y + */
     background-color: var(--lightBlue);
     max-height: 0;
     transition: .5s;
+    z-index: 300;
+    position: relative;
 }
 
 
