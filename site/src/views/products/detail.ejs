@@ -63,34 +63,34 @@
                 <% if (producto.imagen[1]) { %>
                     <% if (producto.imagen[2]) { %>
                         <div class="cajaFotos">
-                            <article class="principal">
-                                <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
+                            <article class="principal" id="artImg1">
+                                <img id="img1" src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
                             </article>
                             <div class="div_fotos">
-                                <article class="secundarias">
-                                    <img src="/img/productos/<%= producto.imagen[1].nombre %>" alt="<%= producto.nombre %>">
+                                <article class="secundarias" id="artImg2">
+                                    <img id="img2" src="/img/productos/<%= producto.imagen[1].nombre %>" alt="<%= producto.nombre %>">
                                 </article>
-                                <article class="secundarias">
-                                    <img src="/img/productos/<%= producto.imagen[2].nombre %>" alt="<%= producto.nombre %>">
+                                <article class="secundarias" id="artImg3">
+                                    <img id="img3" src="/img/productos/<%= producto.imagen[2].nombre %>" alt="<%= producto.nombre %>">
                                 </article>
                             </div>
                         </div>
                         <% } else { %>
                             <div class="cajaFotos">
-                                <article class="principal">
-                                    <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
+                                <article class="principal" id="artImg1">
+                                    <img id="img1" src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
                                 </article>
                                 <div class="div_fotos">
-                                    <article class="secundarias">
-                                        <img src="/img/productos/<%= producto.imagen[1].nombre %>" alt="<%= producto.nombre %>">
+                                    <article class="secundarias" id="artImg2">
+                                        <img id="img2" src="/img/productos/<%= producto.imagen[1].nombre %>" alt="<%= producto.nombre %>">
                                     </article>
                                 </div>
                             </div>
                         <% } %>
                     <% } else { %>
                         <div class="cajaFotos">
-                            <article class="principal">
-                                <img src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
+                            <article class="principal" id="artImg1">
+                                <img id="img1" src="/img/productos/<%= producto.imagen[0].nombre %>" alt="<%= producto.nombre %>">
                             </article>
                         </div>
                     <% } %>

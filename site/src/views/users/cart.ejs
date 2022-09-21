@@ -36,13 +36,13 @@
             <% carritos.forEach(carrito=>{%>
                 <article class="product_info">
                 <div class="foto_product">
-                    <a href="#" target="blank"><img src="/img/productos/<%=carrito.carritoProducto.imagen[0].nombre%>" alt=""></a>
-                        <button id="<%= carrito.carritoProducto.id%>" class="eliminar" onclick=<%= `eliminarProducto(${carrito.carritoProducto.id})`%> >Eliminar<i class="fas fa-trash trash"></i></button>
-                    <p class="modelo_article"></p>
+                    <img src="/img/productos/<%=carrito.carritoProducto.imagen[0].nombre%>" alt="">
+                    <button id="<%= carrito.carritoProducto.id%>" class="eliminar" onclick=<%= `eliminarProducto(${carrito.carritoProducto.id})`%> >Eliminar<i class="fas fa-trash trash"></i></button>
                 </div>
                 <div class="detail_product">
                     <div class="detail_article_cart">
                         <h4 class="tittle_article"><%=carrito.carritoProducto.nombre%></h4>
+                        <a href="/product/<%= carrito.carritoProducto.id %> ">Ver</a>
                     </div>
                     <div class="cantidad_container">
                         <div class="box_quantity">

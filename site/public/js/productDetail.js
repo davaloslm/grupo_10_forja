@@ -129,6 +129,7 @@ window.addEventListener('load', () => {
         Prev()
     })
 
+    /* Función cambio entre fotos para tablet y desktop (proximamente) */
 
     /* Función alerta "Agregado al carrito!" */
 

@@ -511,9 +511,8 @@ main.product section.mismaMarca div p.bttnVerMas {
     
     main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos article.secundarias img {
         width: 100%;
-        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
+        border: 1px solid rgba(176, 176, 176, 0.5);
         border-radius: 5px;
-        cursor: pointer;
     }
 
     main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaDetalles {
@@ -570,7 +569,7 @@ main.product section.mismaMarca div p.bttnVerMas {
     main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos article.principal {
         width: 90%;
         margin-bottom: 0px;
-        margin-right: 10px;
+        margin-right: 12px;
     }
 
     main.product section.contenedorGeneral section.fotosDetalle_contenedor div.cajaFotos article.principal img {
@@ -607,7 +606,7 @@ main.product section.mismaMarca div p.bttnVerMas {
         max-width: 1024px;
     }
 
-    main.product section.mismaMarca, main.product section.relacionados {
+    main.product section.mismaMarca div.relacionados_contenedor, main.product section.relacionados div.relacionados_contenedor, main.product section.mismaMarca div {
         max-width: 1215px;
         margin: 0 auto;
     }

@@ -1,7 +1,8 @@
 .admin h1.tittle {
-    margin: 20px 0px 20px 0px;
+    margin: 20px auto;
     text-align: center;
     color: var(--white);
+    max-width: 1215px;
 }
 
 .admin section.tarjetas_container {
@@ -10,6 +11,8 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: flex-start;
+    max-width: 1215px;
+    margin: 0 auto;
 }
 
 .admin section.tarjetas_container article.tarjetas {
@@ -98,14 +101,17 @@
 }
 
 .admin p.redirect_container {
-    margin: 15px 0px 15px 20px;
+    margin: 15px auto;
+    max-width: 1215px;
 }
 
 .admin p.redirect_container2 {
     background-color: var(--white);
+    margin: 0 auto;
     margin-bottom: 15px;
     text-align: center;
     padding: 5px;
+    max-width: 1215px;
 }
 
 .admin p.redirect_container2 a {
@@ -118,7 +124,9 @@
 
 .admin section.list_container {
     display: flex;
-    background-color: var(--white)
+    background-color: var(--white);
+    margin: 0 auto;
+    max-width: 1215px;
 }
 
 .admin section.list_container div.subtitulo_container {
@@ -175,6 +183,8 @@
     width: 100%;
     border: 1px solid #ebebeb;
     border-bottom: none;
+    max-width: 1215px;
+    margin: 0 auto;
 }
 
 .admin table.table thead tr th {
@@ -405,7 +415,6 @@
 
     .admin h1.tittle {
         text-align: start;
-        margin-left: 20px;
     }
     
     .admin p.redirect_container a.redirect:hover {
