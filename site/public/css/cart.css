@@ -131,15 +131,15 @@ div.quantity-layer .quantity-accept{
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
+    margin-left: 15px;
 }
 
-.cart section.container article.product_info div.foto_product a {
+.cart section.container article.product_info div.detail_product div.detail_article_cart a {
     width: inherit;
-    align-self: center;
+    width: 25px;
 }
 
-.cart section.container article.product_info div.foto_product a img {
-    padding-left: 10px;
+.cart section.container article.product_info div.foto_product img {
     width: 100%;
 }
 
@@ -192,7 +192,6 @@ div.quantity-layer .quantity-accept{
     width: 32%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     overflow: hidden;
 }
 
@@ -344,6 +343,8 @@ div.quantity-layer .quantity-accept{
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    max-width: 1215px;
+    margin: 0 auto;
 }
 /* los destacados */
 .cart section.similares div.similares_contenedor article.producto_des{
@@ -465,6 +466,10 @@ div.quantity-layer .quantity-accept{
     .cart section.container article.product_info div.detail_product div.monto_container p.precio, .cart section.container article.product_info div.detail_product div.monto_container p.precio_ant, .cart section.container article.product_info div.detail_product div.monto_container p.precio_des, .cart section.monto_final div.total_container div.totales h5, .cart section.monto_final div.total_container div.precio_total h5, .cart section.container article.product_info div.foto_product p.modelo_article, .cart section.container article.product_info div.detail_product div.detail_article_cart h4.tittle_article, .cart section.monto_final div.total_container div.seguro h5, .cart section.container article.product_info div.detail_product div.detail_article_cart a, .cart section.container article.product_info div.detail_product div.cantidad_container p.stock {
         font-weight: 600;
         font-size: 17px;
+    }
+
+    .cart section.container article.product_info div.detail_product div.detail_article_cart a {
+        width: 40px;
     }
 
     .cart section.monto_final div.mercado_pago {
@@ -589,7 +594,7 @@ div.quantity-layer .quantity-accept{
     }
 
     .cart section.similares div.similares_contenedor article.producto_ofer, .cart section.similares div.similares_contenedor article.producto_des {
-        max-width: 250px;
+        max-width: 225px;
         box-shadow: none
     }
     .cart section.similares div.similares_contenedor article.producto_ofer div.detail_container p.descuento {
@@ -609,6 +614,8 @@ div.quantity-layer .quantity-accept{
 
     .cart section.similares p.ver_mas {
         text-align: start;
+        max-width: 1215px;
+        margin: 0 auto;
     }
 
 
