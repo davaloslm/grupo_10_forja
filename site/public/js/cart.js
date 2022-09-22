@@ -4,6 +4,7 @@
         return document.querySelector(tag)
     }
 
+    const main = qs('#cart');
     const botonEliminar = qs('.eliminar');
     const form = qs(".deleteForm")
     const seccionMonto = qs(".monto_final") 
@@ -103,6 +104,12 @@
                 </section>`
                 
                 
+                }else{
+                    let divH2 = document.createElement("div")
+                    main.appendChild(divH2)
+                    document.body.childNodes[5].insertBefore(divH2, cartContainer)
+                    divH2.innerHTML= "<h2>No hay productos en el carrito</h2>"
+                    cartContainer.innerHTML= ""
                 }
         })
         .catch(error=>console.log(error))
